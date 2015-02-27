@@ -147,10 +147,10 @@ ro.vendor.qti.va_odm.support=1
 vendor.gatekeeper.disable_spu=true
 
 # Graphics
-debug.egl.hw=0
+debug.egl.hw=1
 debug.mdpcomp.logs=0
 debug.sf.enable_hwc_vds=1
-debug.sf.hw=0
+debug.sf.hw=1
 debug.sf.latch_unsignaled=1
 ro.hardware.egl=adreno
 ro.opengles.version=196610
