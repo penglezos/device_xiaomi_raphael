@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.custom.ambient.display"
+    android:sharedUserId="android.uid.system">
+
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.INTERACT_ACROSS_USERS" />
+
+    <protected-broadcast android:name="com.android.systemui.doze.pulse" />
+
+    <uses-sdk
+        android:targetSdkVersion="29"/>
+
+    <application
+        android:label="CustomDoze"
+        android:persistent="true"
+        android:supportsRtl="true"
+        android:theme="@style/CustomOptionsTheme">
+
+        <receiver android:name="com.custom.ambient.display.BootCompletedReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </receiver>
+
+        <service android:name="com.custom.ambient.display.DozeService"
+                 android:permission="CustomDozeService">
+        </service>
+
+        <activity
+            android:name=".DozeSettings"
+            android:label="@string/ambient_display_custom_title"
+            android:theme="@style/CustomOptionsTheme">
+        </activity>
+
+    </application>
+</manifest>

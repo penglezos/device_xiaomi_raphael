@@ -1,0 +1,17 @@
+android_app {
+    name: "CustomDoze",
+
+    static_libs: [
+        "androidx.preference_preference",
+    ],
+
+    srcs: ["src/**/*.java"],
+
+    certificate: "platform",
+    privileged: true,
+    platform_apis: true,
+
+    optimize: {
+        proguard_flags_files: ["proguard.flags"],
+    },
+}
