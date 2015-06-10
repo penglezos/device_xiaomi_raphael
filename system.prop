@@ -53,6 +53,9 @@ mmp.enable.3g2=true
 media.settings.xml=/vendor/etc/media_profiles_vendor.xml
 persist.mm.enable.prefetch=true
 
+# Additional buffers shared between Camera and Video
+vidc.enc.dcvs.extra-buff-count=2
+
 # Netflix custom property
 ro.netflix.bsp_rev=Q855-16947-1
 
