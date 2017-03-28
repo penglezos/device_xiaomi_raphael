@@ -69,6 +69,17 @@
         </interface>
         <fqname>@1.1::ISurfaceFlingerConfigs/default</fqname>
     </hal>
+    <!-- Context Hub HAL Service -->
+    <hal format="hidl">
+        <name>android.hardware.contexthub</name>
+        <transport>hwbinder</transport>
+        <version>1.0</version>
+        <interface>
+            <name>IContexthub</name>
+            <instance>default</instance>
+        </interface>
+        <fqname>@1.0::IContexthub/default</fqname>
+    </hal>
     <hal format="hidl">
         <name>android.hardware.drm</name>
         <transport>hwbinder</transport>
