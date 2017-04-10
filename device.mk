@@ -259,6 +259,7 @@ PRODUCT_PACKAGES += \
     init.qcom.usb.rc \
     init.qti.dcvs.sh \
     init.raphael.rc \
+    init.recovery.qcom.rc \
     init.target.rc \
     ueventd.qcom.rc
 
