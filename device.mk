@@ -28,7 +28,7 @@ PRODUCT_CHARACTERISTICS := nosdcard
 $(call inherit-product, frameworks/native/build/phone-xhdpi-6144-dalvik-heap.mk)
 
 # Get non-open-source specific aspects
-$(call inherit-product-if-exists, vendor/xiaomi/raphael/raphael-vendor.mk)
+$(call inherit-product, vendor/xiaomi/raphael/raphael-vendor.mk)
 
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
