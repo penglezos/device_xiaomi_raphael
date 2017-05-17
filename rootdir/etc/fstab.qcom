@@ -19,6 +19,6 @@
 /dev/block/bootdevice/by-name/recovery       /recovery               emmc    defaults                                                                                          recoveryonly
 /dev/block/bootdevice/by-name/system         /                       ext4    ro,barrier=1,discard                                                                              wait,avb
 /dev/block/bootdevice/by-name/vendor         /vendor                 ext4    ro,barrier=1                                                                                      wait,recoveryonly
-/dev/block/zram0                             none                    swap    defaults                                                                                          zramsize=536870912
+/dev/block/zram0                             none                    swap    defaults                                                                                          zramsize=536870912,max_comp_streams=8
 
 /devices/platform/soc/*.ssusb/*.dwc3/xhci-hcd.*.auto*    /storage/usbotg    vfat    nosuid,nodev    wait,voldmanaged=usbotg:auto
