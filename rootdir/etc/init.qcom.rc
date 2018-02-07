@@ -1,3 +1,4 @@
 on init
+    mount none /sbin/chargeonlymode /sbin/charger bind
     mount none /system/lib64/soundfx/libvolumelistener.so /vendor/lib64/soundfx/libvolumelistener.so bind
     mount none /system/lib/soundfx/libvolumelistener.so /vendor/lib/soundfx/libvolumelistener.so bind
