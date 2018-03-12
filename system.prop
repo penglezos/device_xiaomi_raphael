@@ -1,6 +1,7 @@
 # Bluetooth
 persist.bt.enableAptXHD=true
 persist.service.btui.use_aptx=1
+ro.bluetooth.library_name=libbluetooth_qti.so
 
 # Camera
 persist.camera.sat.fallback.dist.d=10

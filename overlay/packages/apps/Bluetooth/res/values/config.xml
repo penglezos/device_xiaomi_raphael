@@ -27,9 +27,12 @@
      IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 -->
 <resources>
-    <bool name="profile_supported_hfpclient">false</bool>
-    <bool name="profile_supported_avrcp_controller">false</bool>
+    <bool name="profile_supported_hfpclient">true</bool>
+    <bool name="profile_supported_avrcp_controller">true</bool>
     <bool name="profile_supported_a2dp_sink">false</bool>
-    <bool name="profile_supported_sap">false</bool>
+    <bool name="profile_supported_sap">true</bool>
     <bool name="profile_supported_ba">true</bool>
+    <bool name="profile_supported_hid_device">true</bool>
+    <bool name="profile_supported_hid_host">true</bool>
+    <bool name="profile_supported_avrcp_target">false</bool>
 </resources>
