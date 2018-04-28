@@ -19,8 +19,8 @@
 #include "FingerprintInscreen.h"
 
 #include <android-base/logging.h>
-#include <fstream>
 #include <cmath>
+#include <fstream>
 #include <thread>
 
 #include <fcntl.h>
@@ -70,7 +70,7 @@ static bool readBool(int fd) {
     return c != '0';
 }
 
-} // anonymous namespace
+}  // anonymous namespace
 
 namespace vendor {
 namespace lineage {
@@ -92,9 +92,9 @@ FingerprintInscreen::FingerprintInscreen() {
         }
 
         struct pollfd fodUiPoll = {
-            .fd = fd,
-            .events = POLLERR | POLLPRI,
-            .revents = 0,
+                .fd = fd,
+                .events = POLLERR | POLLPRI,
+                .revents = 0,
         };
 
         while (true) {
@@ -105,7 +105,7 @@ FingerprintInscreen::FingerprintInscreen() {
             }
 
             xiaomiFingerprintService->extCmd(COMMAND_NIT,
-                    readBool(fd) ? PARAM_NIT_FOD : PARAM_NIT_NONE);
+                                             readBool(fd) ? PARAM_NIT_FOD : PARAM_NIT_NONE);
         }
     }).detach();
 }

@@ -14,8 +14,8 @@
  * limitations under the License.
  */
 
-#include <stdint.h>
 #include <compositionengine/FodExtension.h>
+#include <stdint.h>
 
 uint32_t getFodZOrder(uint32_t z, bool touched) {
     if (touched) {
@@ -26,6 +26,6 @@ uint32_t getFodZOrder(uint32_t z, bool touched) {
 }
 
 uint64_t getFodUsageBits(uint64_t usageBits, bool touched) {
-    (void) touched;
+    (void)touched;
     return usageBits;
 }

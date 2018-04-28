@@ -1,0 +1,13 @@
+BasedOnStyle: Google
+AccessModifierOffset: -2
+AllowShortFunctionsOnASingleLine: Inline
+ColumnLimit: 99
+CommentPragmas: NOLINT:.*
+DerivePointerAlignment: false
+IndentWidth: 4
+PointerAlignment: Right
+TabWidth: 4
+UseTab: Never
+PenaltyExcessCharacter: 32
+AllowShortIfStatementsOnASingleLine: false
+SpacesBeforeTrailingComments: 2
