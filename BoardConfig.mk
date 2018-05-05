@@ -68,6 +68,9 @@ TARGET_USES_DRM_PP := true
 TARGET_USES_GRALLOC4 := true
 TARGET_USES_HWC2 := true
 
+# DRM
+TARGET_ENABLE_MEDIADRM_64 := true
+
 # Filesystem
 TARGET_FS_CONFIG_GEN := $(DEVICE_PATH)/config.fs
 
