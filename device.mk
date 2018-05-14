@@ -77,7 +77,6 @@ PRODUCT_PACKAGES += \
     libqcompostprocbundle
 
 PRODUCT_PACKAGES += \
-    tinymix \
     libaudio-resampler
 
 PRODUCT_COPY_FILES += \
