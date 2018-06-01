@@ -7,6 +7,7 @@
 cc_library_static {
     name: "libinit_raphael",
     srcs: ["init_raphael.cpp"],
+    shared_libs: ["libbase"],
     recovery_available: true,
     include_dirs: [
         "system/core/base/include",
