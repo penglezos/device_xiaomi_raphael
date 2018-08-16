@@ -376,6 +376,7 @@
          Zone N:        array[N - 1] <= LUX < array[N]
          Zone N + 1     array[N] <= LUX < infinity
          Must be overridden in platform specific overlays -->
+    <integer name="config_lightSensorWarmupTime">200</integer>
     <integer-array name="config_autoBrightnessLevels">
         <item>1</item>
         <item>2</item>
