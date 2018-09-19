@@ -1,4 +1,5 @@
 # Audio
+/system/etc/audio_policy_configuration.xml    u:object_r:vendor_configs_file:s0
 /system/lib64/soundfx/libvolumelistener\.so   u:object_r:vendor_file:s0
 /system/lib/soundfx/libvolumelistener\.so     u:object_r:vendor_file:s0
 
