@@ -57,6 +57,10 @@ PRODUCT_PACKAGES += \
     android.hidl.base@1.0 \
     android.hidl.manager@1.0
 
+# Init
+PRODUCT_PACKAGES += \
+    init.qcom.rc
+
 # IR
 PRODUCT_PACKAGES += \
     android.hardware.ir@1.0-impl \
