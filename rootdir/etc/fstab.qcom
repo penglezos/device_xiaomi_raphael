@@ -21,4 +21,4 @@
 /dev/block/bootdevice/by-name/vendor         /vendor                 ext4    ro,barrier=1                                                                                      wait,recoveryonly
 /dev/block/zram0                             none                    swap    defaults                                                                                          zramsize=536870912
 
-/devices/platform/soc/a600000.ssusb/a600000.dwc3/xhci-hcd.0.auto*    /storage/usbotg    vfat    nosuid,nodev    wait,voldmanaged=usbotg:auto
+/devices/platform/soc/*.ssusb/*.dwc3/xhci-hcd.*.auto*    /storage/usbotg    vfat    nosuid,nodev    wait,voldmanaged=usbotg:auto
