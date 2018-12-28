@@ -13,6 +13,7 @@ allow xiaomiparts_app {
   autofill_service
   cameraserver_service
   gpu_service
+  media_session_service
   mediaextractor_service
   mediametrics_service
   mediaserver_service
