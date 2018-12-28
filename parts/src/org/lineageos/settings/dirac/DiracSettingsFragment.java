@@ -56,34 +56,10 @@ public class DiracSettingsFragment extends PreferenceFragment implements
         mHeadsetType = (ListPreference) findPreference(PREF_HEADSET);
         mHeadsetType.setOnPreferenceChangeListener(this);
         mHeadsetType.setEnabled(enhancerEnabled);
-        // TODO: adapt to real values
-        String[] headsetEntries = new String[]{
-                getString(R.string.dirac_headset_0),
-                getString(R.string.dirac_headset_1),
-                getString(R.string.dirac_headset_2),
-                getString(R.string.dirac_headset_3)
-        };
-        String[] headsetValues = new String[]{
-                "0", "1", "2", "3"
-        };
-        mHeadsetType.setEntries(headsetEntries);
-        mHeadsetType.setEntryValues(headsetValues);
 
         mPreset = (ListPreference) findPreference(PREF_PRESET);
         mPreset.setOnPreferenceChangeListener(this);
         mPreset.setEnabled(enhancerEnabled);
-        // TODO: adapt to real values
-        String[] presetEntries = new String[]{
-                getString(R.string.dirac_preset_0),
-                getString(R.string.dirac_preset_1),
-                getString(R.string.dirac_preset_2),
-                getString(R.string.dirac_preset_3)
-        };
-        String[] presetValues = new String[]{
-                "0", "1", "2", "3"
-        };
-        mPreset.setEntries(presetEntries);
-        mPreset.setEntryValues(presetValues);
     }
 
     @Override
@@ -120,10 +96,10 @@ public class DiracSettingsFragment extends PreferenceFragment implements
     public boolean onPreferenceChange(Preference preference, Object newValue) {
         switch (preference.getKey()) {
             case PREF_HEADSET:
-                // TODO: on Headset changed
+                DiracUtils.setHeadsetType(Integer.parseInt(newValue.toString()));
                 return true;
             case PREF_PRESET:
-                // TODO: on Preset changed
+                DiracUtils.setLevel((String) newValue);
                 return true;
             default:
                 return false;
@@ -132,11 +108,10 @@ public class DiracSettingsFragment extends PreferenceFragment implements
 
     @Override
     public void onCheckedChanged(CompoundButton compoundButton, boolean isChecked) {
-        // TODO: Toggle enhancer
-
         mTextView.setText(getString(isChecked ? R.string.switch_bar_on : R.string.switch_bar_off));
         mSwitchBar.setActivated(isChecked);
 
+        DiracUtils.setMusic(isChecked);
         mHeadsetType.setEnabled(isChecked);
         mPreset.setEnabled(isChecked);
     }
