@@ -5,6 +5,6 @@ on boot
     chmod 0660 /sys/devices/platform/soc/soc:qcom,dsi-display-primary/msm_fb_ea_enable
 
 service vendor.livedisplay-hal-2-1 /vendor/bin/hw/vendor.lineage.livedisplay@2.1-service.raphael
-    class hal
+    class late_start
     user system
     group system
