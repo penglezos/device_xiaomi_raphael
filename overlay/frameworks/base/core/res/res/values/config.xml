@@ -581,4 +581,7 @@
 
     <!-- Whether device has screen off FOD support -->
     <bool name="config_supportScreenOffFod">true</bool>
+
+    <!-- reference volume index for music stream to limit headphone volume and display warning -->
+    <integer name="config_safe_media_volume_index">17</integer>
 </resources>
