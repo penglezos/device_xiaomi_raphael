@@ -27,6 +27,7 @@ ro.sf.lcd_density=440
 # Graphics
 ro.surface_flinger.has_wide_color_display=true
 ro.surface_flinger.has_HDR_display=true
+debug.cpurend.vsync=false
 
 # Set lmkd options
 ro.config.low_ram = false
