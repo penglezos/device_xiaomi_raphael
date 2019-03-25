@@ -235,22 +235,6 @@ Only the three quirks included above are recognized at this point:
             <Limit name="performance-point-512x512" value="480" />
             <Feature name="bitrate-modes" value="CQ" />
         </MediaCodec>
-        <MediaCodec name="OMX.qcom.video.encoder.heic" type="image/vnd.android.heic" >
-            <Quirk name="requires-allocate-on-input-ports" />
-            <Quirk name="requires-allocate-on-output-ports" />
-            <Quirk name="requires-loaded-to-idle-after-allocation" />
-            <Limit name="size" min="512x512" max="8192x8192" />
-            <Limit name="frame-rate" range="1-20" />
-            <Limit name="concurrent-instances" max="6" />
-            <Limit name="quality" range="0-100" default="80" />
-            <Limit name="performance-point-8192x4320" value="3" />
-            <Limit name="performance-point-4096x2304" value="12" />
-            <Limit name="performance-point-1920x1080" value="40" />
-            <Limit name="performance-point-1920x1080" value="30" />
-            <Limit name="performance-point-1280x720" value="80" />
-            <Limit name="performance-point-1280x720" value="60" />
-            <Feature name="bitrate-modes" value="CQ" />
-        </MediaCodec>
         <!-- Video Software -->
         <MediaCodec name="OMX.qcom.video.encoder.h263sw" type="video/3gpp" >
             <Quirk name="requires-allocate-on-input-ports" />
