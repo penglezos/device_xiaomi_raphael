@@ -6,6 +6,7 @@
 #       /proc/device-tree/firmware/android/fstab/vendor
 
 #<src>                                      <mnt_point>             <type>  <mnt_flags and options>                                                                           <fs_mgr_flags>
+/dev/block/by-name/metadata                  /metadata               ext4    noatime,nosuid,nodev,discard                                                                      wait,formattable,wrappedkey
 /dev/block/bootdevice/by-name/userdata       /data                   ext4    noatime,nosuid,nodev,barrier=0,noauto_da_alloc                                                    latemount,wait,check,fileencryption=ice,wrappedkey,quota,reservedsize=128M
 /dev/block/bootdevice/by-name/userdata       /data                   f2fs    noatime,nosuid,nodev,discard,background_gc=sync,fsync_mode=nobarrier                              latemount,wait,check,fileencryption=ice,wrappedkey,quota,formattable,reservedsize=128M
 /dev/block/bootdevice/by-name/modem          /vendor/firmware_mnt    vfat    ro,shortname=lower,uid=0,gid=1000,dmask=227,fmask=337,context=u:object_r:firmware_file:s0         wait
