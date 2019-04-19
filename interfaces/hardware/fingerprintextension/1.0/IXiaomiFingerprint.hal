@@ -1,0 +1,16 @@
+package vendor.xiaomi.hardware.fingerprintextension@1.0;
+
+interface IXiaomiFingerprint {
+  /**
+   * Call a fingerprint extension command.
+   *
+   * @param cmd the command to run, 10 for setting nit value.
+   * @param param a parameter for the command; in case of command
+   * 10, 0 will disable the fingerprint sensor, while { 1, 3, 4 }
+   * will enable it, with 1 being the brightest and 4 being the
+   * least bright.
+   *
+   * @return result the result of the operation.
+   */
+  extCmd(int32_t cmd, int32_t param) generates (int32_t result);
+};
