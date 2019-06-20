@@ -136,6 +136,10 @@ on boot
     # Sensors log dir
     mkdir /data/vendor/sensors 0770 system system
 
+    # Block layer tuning: discard chunk size up to 128MB
+    # Otherwise, contiguous discards can be merged
+    write /sys/block/sda/queue/discard_max_bytes 134217728
+
 on post-fs-data
     # Create directory used by display clients
     mkdir /data/vendor/display 0770 system graphics
