@@ -164,6 +164,7 @@ persist.dbg.wfc_avail_ovr=1
 ro.telephony.default_network=22,22
 
 # Media
+debug.stagefright.ccodec=1
 debug.stagefright.omx_default_rank=0
 
 # Memory
