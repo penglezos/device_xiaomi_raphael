@@ -2,4 +2,6 @@ type adsprpcd_file, file_type;
 type bt_firmware_file, file_type;
 type firmware_file, file_type;
 type persist_file, file_type;
+type sysfs_battery_supply, sysfs_type, fs_type;
+type sysfs_usb_supply, sysfs_type, fs_type;
 type sysfs_white_led, sysfs_type, fs_type;
