@@ -1,0 +1,6 @@
+service fingerprint-inscreen-1-0 /system/bin/hw/pa.biometrics.fingerprint.inscreen@1.0-service.xiaomi_cepheus
+    interface vendor.pa.biometrics.fingerprint.inscreen@1.0::IFingerprintInscreen default
+    class hal
+    user system
+    group system
+    shutdown critical
