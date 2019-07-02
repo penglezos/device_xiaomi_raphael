@@ -163,6 +163,9 @@ persist.dbg.vt_avail_ovr=1
 persist.dbg.wfc_avail_ovr=1
 ro.telephony.default_network=22,22
 
+# Media
+debug.stagefright.omx_default_rank=0
+
 # Memory
 ro.vendor.qti.va_aosp.support=1
 
