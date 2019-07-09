@@ -63,7 +63,12 @@ else
 BOARD_BOOTIMG_HEADER_VERSION := 1
 endif
 BOARD_MKBOOTIMG_ARGS := --header_version $(BOARD_BOOTIMG_HEADER_VERSION)
+#Generate DTBO image
 BOARD_KERNEL_SEPARATED_DTBO := true
+ifeq ($(BOARD_KERNEL_SEPARATED_DTBO),true)
+    # Enable DTBO for recovery image
+    BOARD_INCLUDE_RECOVERY_DTBO := true
+endif
 TARGET_KERNEL_ARCH := arm64
 TARGET_KERNEL_CLANG_COMPILE := true
 TARGET_KERNEL_CONFIG := raphael_defconfig
