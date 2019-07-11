@@ -123,10 +123,6 @@ persist.data.df.dev_name=rmnet_usb0
 # Sensors
 persist.vendor.sensors.enable.mag_filter=true
 
-# SSR
-persist.vendor.ssr.enable_ramdumps=1
-persist.vendor.ssr.restart_level=ALL_ENABLE
-
 # SurfaceFlinger
 debug.sf.use_phase_offsets_as_durations=1
 debug.sf.late.sf.duration=10500000
