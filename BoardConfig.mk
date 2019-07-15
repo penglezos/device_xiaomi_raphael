@@ -52,7 +52,16 @@ BOARD_KERNEL_CMDLINE += androidboot.selinux=permissive
 BOARD_KERNEL_CMDLINE += msm_drm.timing_override=1
 BOARD_KERNEL_IMAGE_NAME := Image.gz-dtb
 BOARD_KERNEL_PAGESIZE := 4096
+#Disable appended dtb
+TARGET_KERNEL_APPEND_DTB := true
+# Set Header version for bootimage
+ifneq ($(strip $(TARGET_KERNEL_APPEND_DTB)),true)
+#Enable dtb in boot image and Set Header version
+BOARD_INCLUDE_DTB_IN_BOOTIMG := true
+BOARD_BOOTIMG_HEADER_VERSION := 2
+else
 BOARD_BOOTIMG_HEADER_VERSION := 1
+endif
 BOARD_MKBOOTIMG_ARGS := --header_version $(BOARD_BOOTIMG_HEADER_VERSION)
 BOARD_KERNEL_SEPARATED_DTBO := true
 TARGET_KERNEL_ARCH := arm64
