@@ -69,6 +69,11 @@ PRODUCT_PACKAGES += \
 # Perf
 include vendor/qcom/common/qti-vendor.mk
 
+# QCOM
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/privapp-permissions-qti.xml:system/etc/permissions/privapp-permissions-qti.xml \
+    $(LOCAL_PATH)/configs/qti_whitelist.xml:system/etc/sysconfig/qti_whitelist.xml
+
 # Recovery
 PRODUCT_PACKAGES += \
     librecovery_updater_xiaomi
