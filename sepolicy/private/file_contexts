@@ -1,0 +1,2 @@
+# Light HAL
+/system/bin/hw/android\.hardware\.light@2\.0-service\.xiaomi_msmnile    u:object_r:hal_light_msmnile_exec:s0

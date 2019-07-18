@@ -1,0 +1,1 @@
+type sysfs_white_led, sysfs_type, fs_type;
