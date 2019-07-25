@@ -121,6 +121,9 @@ vendor.qcom.bluetooth.soc=cherokee
 # Camera
 persist.camera.gyro.disable=0
 camera.disable_zsl_mode=true
+
+# Crypto
+ro.crypto.volume.filenames_mode=aes-256-cts
 	
 # Data modules
 persist.vendor.data.mode=concurrent
