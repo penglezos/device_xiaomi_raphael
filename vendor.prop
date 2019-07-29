@@ -124,6 +124,9 @@ ro.vendor.use_data_netmgrd=true
 # NFC
 ro.nfc.port=I2C
 
+# PASR
+vendor.power.pasr.enabled=true
+
 # Perf
 ro.vendor.extension_library=libqti-perfd-client.so
 
