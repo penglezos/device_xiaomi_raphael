@@ -144,7 +144,7 @@ ro.vendor.nfc.repair=1
 ro.vendor.se.type=eSE,HCE,UICC
 
 # PASR
-vendor.power.pasr.enabled=false
+vendor.power.pasr.enabled=true
 
 # Perf
 ro.vendor.extension_library=libqti-perfd-client.so
