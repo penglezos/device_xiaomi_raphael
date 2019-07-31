@@ -2,5 +2,11 @@
 /system/lib64/soundfx/libvolumelistener\.so   u:object_r:vendor_file:s0
 /system/lib/soundfx/libvolumelistener\.so     u:object_r:vendor_file:s0
 
+# Files in rootfs
+/bt_firmware(/.*)?       u:object_r:bt_firmware_file:s0
+/dsp(/.*)?               u:object_r:adsprpcd_file:s0
+/firmware(/.*)?          u:object_r:firmware_file:s0
+/persist(/.*)?           u:object_r:persist_file:s0
+
 # Light HAL
 /system/bin/hw/android\.hardware\.light@2\.0-service\.xiaomi_msmnile    u:object_r:hal_light_msmnile_exec:s0
