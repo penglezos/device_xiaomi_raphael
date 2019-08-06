@@ -97,6 +97,10 @@ PRODUCT_PACKAGES += \
 # Perf
 include vendor/qcom/common/qti-vendor.mk
 
+# Power
+PRODUCT_PACKAGES += \
+    power.qcom
+
 # QCOM
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/privapp-permissions-qti.xml:system/etc/permissions/privapp-permissions-qti.xml \
