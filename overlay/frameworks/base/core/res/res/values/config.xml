@@ -964,6 +964,9 @@
         <item>40</item>
     </integer-array>
 
+    <!-- Flag specifying whether pocked mode is available on device -->
+    <bool name="config_pocketModeSupported">false</bool>
+
     <!-- Vibrator pattern for feedback about a long screen/key press -->
     <integer-array name="config_longPressVibePattern">
         <item>0</item>
