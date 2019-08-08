@@ -138,6 +138,7 @@ TARGET_COPY_OUT_VENDOR := vendor
 
 # Power
 TARGET_POWER_BINDMOUNT_VENDOR := true
+GENERIC_TAP_TO_WAKE_NODE := "/dev/input/event4"
 TARGET_USES_INTERACTION_BOOST := true
 
 # Recovery
