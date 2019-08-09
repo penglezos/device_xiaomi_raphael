@@ -110,6 +110,9 @@ DEVICE_FRAMEWORK_MANIFEST_FILE := $(DEVICE_PATH)/framework_manifest.xml
 # Lights
 TARGET_PROVIDES_LIBLIGHT := true
 
+# NFC
+TARGET_USES_NQ_NFC := true
+
 # Partitions
 BOARD_BUILD_SYSTEM_ROOT_IMAGE := true
 

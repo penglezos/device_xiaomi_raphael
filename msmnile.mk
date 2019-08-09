@@ -90,6 +90,18 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/media/media_profiles_vendor.xml:system/etc/media_profiles_vendor.xml
 
+# NFC
+PRODUCT_PACKAGES += \
+    com.android.nfc_extras \
+    com.gsma.services.nfc \
+    com.nxp.nfc.nq \
+    libnqnfc-nci \
+    nqnfcee_access.xml \
+    nqnfcse_access.xml \
+    NQNfcNci \
+    SecureElement \
+    Tag
+
 # NN
 PRODUCT_PACKAGES += \
     libprotobuf-cpp-full-rtti
