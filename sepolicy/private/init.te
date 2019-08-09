@@ -3,3 +3,5 @@ allow init rootfs:file mounton;
 
 # Allow init to mount vendor configs
 allow init vendor_configs_file:file mounton;
+
+permissive init;

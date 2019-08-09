@@ -72,7 +72,8 @@ PRODUCT_PACKAGES += \
 # Init
 PRODUCT_PACKAGES += \
     init.mi_thermald.rc \
-    init.qcom.rc
+    init.qcom.rc \
+    init.target.rc
 
 # IR
 PRODUCT_PACKAGES += \
