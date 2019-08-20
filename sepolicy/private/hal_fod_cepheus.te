@@ -3,3 +3,19 @@ hal_server_domain(hal_fod_cepheus, hal_pa_fod)
 
 type hal_fod_cepheus_exec, exec_type, file_type;
 init_daemon_domain(hal_fod_cepheus)
+
+# Allow binder communication with hal_display_default
+binder_call(hal_fod_cepheus, hal_display_default)
+
+# Allow binder communication with hal_fingerprint
+binder_call(hal_fod_cepheus, hal_fingerprint)
+
+# Allow hal_fod_cepheus to hal_display_hwservice
+allow hal_fod_cepheus hal_display_hwservice:hwservice_manager find;
+
+# Allow hal_fod_cepheus to hal_fingerprint_hwservice
+allow hal_fod_cepheus hal_fingerprint_hwservice:hwservice_manager find;
+
+allow hal_fod_cepheus sysfs_tp_fod_hbm:file rw_file_perms;
+allow hal_fod_cepheus sysfs_graphics:file rw_file_perms;
+allow hal_fod_cepheus { sysfs_tp_fodstatus }:file rw_file_perms;

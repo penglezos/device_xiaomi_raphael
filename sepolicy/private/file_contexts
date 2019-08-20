@@ -12,5 +12,9 @@
 # Fingerprint under display HAL
 /system/bin/hw/pa\.biometrics\.fingerprint\.inscreen@1.0-service\.xiaomi_cepheus    u:object_r:hal_fod_cepheus_exec:s0
 
+# Fingerprint nodes
+/sys/devices/platform/soc/soc:qcom,dsi-display-primary/fod_hbm                      u:object_r:sysfs_tp_fod_hbm:s0
+/sys/devices/virtual/touch/tp_dev/fod_status                                        u:object_r:sysfs_tp_fodstatus:s0
+
 # Light HAL
 /system/bin/hw/android\.hardware\.light@2\.0-service\.xiaomi_msmnile    u:object_r:hal_light_msmnile_exec:s0

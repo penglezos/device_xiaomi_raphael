@@ -17,4 +17,7 @@ init_daemon_domain(hal_light_msmnile)
 
 allow hal_light_msmnile sysfs_white_led:lnk_file read;
 allow hal_light_msmnile sysfs_white_led:file rw_file_perms;
+allow hal_light_msmnile sysfs_graphics:dir search;
+allow hal_light_msmnile sysfs_graphics:file rw_file_perms;
+allow hal_light_msmnile sysfs_leds:dir search;
 allow hal_light_msmnile { sysfs_leds sysfs_white_led }:dir r_dir_perms;
