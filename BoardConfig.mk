@@ -22,7 +22,7 @@ TARGET_2ND_CPU_VARIANT := generic
 TARGET_2ND_CPU_VARIANT_RUNTIME := cortex-a76
 
 # Assert
-TARGET_OTA_ASSERT_DEVICE := raphael
+TARGET_OTA_ASSERT_DEVICE := raphael,raphaelin
 
 # Bootloader
 TARGET_BOOTLOADER_BOARD_NAME := msmnile
