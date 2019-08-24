@@ -1,12 +1,38 @@
 on boot
+    # Backlight
     chown system system /sys/class/backlight/panel0-backlight/brightness
-    chown system system /sys/class/backlight/panel0-backlight/max_brightness
-    chown system system /sys/class/leds/white/brightness
-    chown system system /sys/class/leds/white/breath
     chmod 0644 /sys/class/backlight/panel0-backlight/brightness
-    chmod 0644 /sys/class/backlight/panel0-backlight/max_brightness
-    chmod 0644 /sys/class/leds/white/brightness
-    chmod 0644 /sys/class/leds/white/breath
+
+    # Real notification light
+    chown system system /sys/class/leds/green/brightness
+
+    chown system system /sys/class/leds/green/breath
+    chown system system /sys/class/leds/green/delay_off
+    chown system system /sys/class/leds/green/delay_on
+
+    chmod 660 /sys/class/leds/green/breath
+    chmod 660 /sys/class/leds/green/delay_off
+    chmod 660 /sys/class/leds/green/delay_on
+
+    # Camera motor light
+    chown system system /sys/class/leds/blue/brightness
+
+    chown system system /sys/class/leds/blue/breath
+    chown system system /sys/class/leds/blue/delay_off
+    chown system system /sys/class/leds/blue/delay_on
+
+    chmod 660 /sys/class/leds/blue/breath
+    chmod 660 /sys/class/leds/blue/delay_off
+    chmod 660 /sys/class/leds/blue/delay_on
+
+    chown system system /sys/class/leds/green/step_ms
+    chown system system /sys/class/leds/green/pause_lo_count
+    chown system system /sys/class/leds/green/lut_pattern
+    chown system system /sys/class/leds/green/lo_idx
+    chown system system /sys/class/leds/blue/step_ms
+    chown system system /sys/class/leds/blue/pause_lo_count
+    chown system system /sys/class/leds/blue/lut_pattern
+    chown system system /sys/class/leds/blue/lo_idx
 
 service vendor.light-hal-2-0 /vendor/bin/hw/android.hardware.light@2.0-service.xiaomi_msmnile
     interface android.hardware.light@2.0::ILight default
