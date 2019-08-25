@@ -36,8 +36,8 @@ on init
 	write /dev/stune/rt/blkio.weight 1000
 
 on post-fs
-    # Disable sched autogroup
-    write /proc/sys/kernel/sched_autogroup_enabled 0
+	# Disable sched autogroup
+	write /proc/sys/kernel/sched_autogroup_enabled 0
 
 on post-fs-data
 # Tune Core_CTL for proper task placement
@@ -52,34 +52,19 @@ on property:vendor.post_boot.parsed=1
 	write /proc/sys/kernel/sched_boost 0
 
 # Set default schedTune value for foreground/top-app
-	write /dev/stune/top-app/schedtune.boost 0
-
-# Stune configuration
-	write /sys/module/cpu_boost/parameters/dynamic_stune_boost 40
-	write /sys/module/cpu_boost/parameters/dynamic_stune_boost_ms 1000
-
-# Dynamic Stune Boost during sched_boost
-	write /dev/stune/top-app/schedtune.sched_boost 40
-
-# Input boost
-	write /sys/module/cpu_boost/parameters/input_boost_freq "0:1056000 1:0 2:0 3:0 4:1056000 5:0 6:0 7:0"
-	write /sys/module/cpu_boost/parameters/input_boost_ms 120
+	write /dev/stune/foreground/schedtune.prefer_idle 1
+	write /dev/stune/top-app/schedtune.boost 10
+	write /dev/stune/top-app/schedtune.prefer_idle 1
 
 # Setup Schedutil Governor for Silver Cluster
 	write /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor schedutil
-	write /sys/devices/system/cpu/cpufreq/policy0/schedutil/up_rate_limit_us 500
-	write /sys/devices/system/cpu/cpufreq/policy0/schedutil/down_rate_limit_us 20000
 	write /sys/devices/system/cpu/cpufreq/policy0/schedutil/iowait_boost_enable 1
 	write /sys/devices/system/cpu/cpufreq/policy0/schedutil/pl 0
-	write /sys/devices/system/cpu/cpufreq/policy0/schedutil/hispeed_freq 0
 
 # Setup Schedutil Governor for Gold Cluster
 	write /sys/devices/system/cpu/cpu4/cpufreq/scaling_governor schedutil
-	write /sys/devices/system/cpu/cpufreq/policy4/schedutil/up_rate_limit_us 500
-	write /sys/devices/system/cpu/cpufreq/policy4/schedutil/down_rate_limit_us 20000
 	write /sys/devices/system/cpu/cpufreq/policy4/schedutil/iowait_boost_enable 1
 	write /sys/devices/system/cpu/cpufreq/policy4/schedutil/pl 0
-	write /sys/devices/system/cpu/cpufreq/policy4/schedutil/hispeed_freq 0
 
 # Setup EAS cpusets values for better load balancing
 	write /dev/cpuset/top-app/cpus 0-7
