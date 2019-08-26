@@ -42,6 +42,10 @@ TARGET_KERNEL_CONFIG := raphael_user_defconfig
 # Platform
 TARGET_BOARD_PLATFORM := msmnile
 
+# Init
+TARGET_INIT_VENDOR_LIB := //$(DEVICE_PATH):libinit_raphael
+TARGET_RECOVERY_DEVICE_MODULES := libinit_raphael
+
 # Partitions
 BOARD_BUILD_SYSTEM_ROOT_IMAGE := true
 
