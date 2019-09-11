@@ -128,6 +128,7 @@ on boot && property:persist.vendor.usb.controller.default=*
 
 on property:sys.boot_completed=1
     # Enable ZRAM on boot_complete
+    rm /data/unencrypted/zram_swap
     swapon_all /vendor/etc/fstab.qcom
     write /proc/sys/vm/swappiness 100
 
