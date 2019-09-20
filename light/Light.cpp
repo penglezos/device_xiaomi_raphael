@@ -23,7 +23,8 @@
 #include <fstream>
 
 #define LCD_LED         "/sys/class/backlight/panel0-backlight/"
-#define BLUE_LED        "/sys/class/leds/green/"
+#define BLUE_LED        "/sys/class/leds/blue/"
+#define GREEN_LED       "/sys/class/leds/green/"
 
 #define BREATH          "breath"
 #define BRIGHTNESS      "brightness"
@@ -92,20 +93,25 @@ static void handleBacklight(const LightState& state) {
 
 static void handleNotification(const LightState& state) {
     uint32_t blueBrightness = getScaledBrightness(state, MAX_LED_BRIGHTNESS);
+    uint32_t greenBrightness = getScaledBrightness(state, MAX_LED_BRIGHTNESS);
 
     /* Disable breathing or blinking */
     set(BLUE_LED BREATH, 0);
-    set(BLUE_LED BRIGHTNESS, 0);
+    set(GREEN_LED BREATH, 0);
 
     if (state.flashMode == Flash::TIMED) {
-        /* Blue */
+        /* Blue and Green */
         set(BLUE_LED DELAY_OFF, state.flashOnMs);
         set(BLUE_LED DELAY_ON, state.flashOffMs);
+        set(GREEN_LED DELAY_OFF, state.flashOnMs);
+        set(GREEN_LED DELAY_ON, state.flashOffMs);
 
         /* Enable Breathing */
         set(BLUE_LED BREATH, 1);
+        set(BLUE_LED BREATH, 1);
     } else {
         set(BLUE_LED BRIGHTNESS, blueBrightness);
+        set(GREEN_LED BRIGHTNESS, greenBrightness);
     }
 }
 
