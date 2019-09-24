@@ -342,16 +342,6 @@
         <fqname>@1.2::IVibrator/default</fqname>
     </hal>
     <hal format="hidl">
-        <name>android.hardware.wifi</name>
-        <transport>hwbinder</transport>
-        <version>1.3</version>
-        <interface>
-            <name>IWifi</name>
-            <instance>default</instance>
-        </interface>
-        <fqname>@1.3::IWifi/default</fqname>
-    </hal>
-    <hal format="hidl">
         <name>android.hardware.wifi.supplicant</name>
         <transport>hwbinder</transport>
         <version>1.2</version>
