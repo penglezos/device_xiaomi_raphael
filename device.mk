@@ -165,7 +165,7 @@ PRODUCT_PACKAGES += \
     vendor.qti.hardware.display.allocator-service
 
 PRODUCT_PACKAGES += \
-    android.hardware.graphics.mapper@2.0-impl-qti-display
+    android.hardware.graphics.mapper@3.0-impl-qti-display
 
 PRODUCT_PACKAGES += \
     vendor.qti.hardware.display.mapper@3.0.vendor
