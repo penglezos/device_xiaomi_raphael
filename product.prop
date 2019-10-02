@@ -1,2 +1,5 @@
 # Device
 ro.build.characteristics=nosdcard
+
+# IORap
+iorapd.readahead.enable=true
