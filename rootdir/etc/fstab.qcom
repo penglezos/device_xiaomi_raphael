@@ -48,4 +48,4 @@
 # The update_engine code looks for this entry in order to determine the boot device address
 # and fails if it does not find it.
 /dev/block/bootdevice/by-name/misc                      /misc                    emmc    defaults                                             defaults
-/dev/block/zram0                                        none                     swap    defaults                                             zramsize=1073741824,max_comp_streams=8
+/dev/block/zram0                                        none                     swap    defaults                                             zramsize=1073741824,max_comp_streams=8,zram_backingdev_size=512M
