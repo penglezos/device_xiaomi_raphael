@@ -66,6 +66,8 @@ static inline const char *BtmGetDefaultName()
 // Disables read remote device feature
 #define MAX_ACL_CONNECTIONS   16
 #define MAX_L2CAP_CHANNELS    32
+#define BTM_WBS_INCLUDED   TRUE
+#define BTIF_HF_WBS_PREFERRED   TRUE
 #define BLE_VND_INCLUDED   TRUE
 #define GATT_MAX_PHY_CHANNEL  10
 // Skips conn update at conn completion
