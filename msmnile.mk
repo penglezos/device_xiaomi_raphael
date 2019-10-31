@@ -99,6 +99,9 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     libprotobuf-cpp-full-rtti
 
+# Paranoid Doze
+PRODUCT_PACKAGES += ParanoidDoze
+
 # Perf
 -include vendor/qcom/common/av/qti-av.mk
 -include vendor/qcom/common/bt/qti-bt.mk

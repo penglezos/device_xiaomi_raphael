@@ -57,6 +57,11 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.netflix.bsp_rev=Q855-16947-1
 
+# Paranoid Doze
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.sensor.pickup=xiaomi.sensor.pickup \
+    ro.sensor.proximity=true
+
 # Perf
 PRODUCT_PROPERTY_OVERRIDES += \
     vendor.perf.iop_v3.enable=true
