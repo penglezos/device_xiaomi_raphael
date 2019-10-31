@@ -84,16 +84,16 @@ PRODUCT_PACKAGES += \
     android.hardware.light@2.0-service.xiaomi_msmnile
 
 # NFC
-PRODUCT_PACKAGES += \
-    com.android.nfc_extras \
-    com.gsma.services.nfc \
-    com.nxp.nfc.nq \
-    libnqnfc-nci \
-    nqnfcee_access.xml \
-    nqnfcse_access.xml \
-    NQNfcNci \
-    SecureElement \
-    Tag
+#PRODUCT_PACKAGES += \
+#    com.android.nfc_extras \
+#    com.gsma.services.nfc \
+#    com.nxp.nfc.nq \
+#    libnqnfc-nci \
+#    nqnfcee_access.xml \
+#    nqnfcse_access.xml \
+#    NQNfcNci \
+#    SecureElement \
+#    Tag
 
 # NN
 PRODUCT_PACKAGES += \
