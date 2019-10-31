@@ -26,9 +26,6 @@
     <!-- Boolean indicating if current platform supports BLE peripheral mode -->
      <bool name="config_bluetooth_le_peripheral_mode_supported">true</bool>
 
-    <!-- Whether camera shutter sound is forced or not  (country specific). -->
-     <bool name="config_camera_sound_forced">false</bool>
-
     <!-- Flag specifying whether VoLTE should be available for carrier: independent of
          carrier provisioning. If false: hard disabled. If true: then depends on carrier
          provisioning, availability etc -->
@@ -55,22 +52,11 @@
          and the screen off animation has been performed. -->
      <bool name="config_dozeAfterScreenOffByDefault">true</bool>
 
+    <!-- ImsService package name to bind to by default, if config_dynamic_bind_ims is true -->
+    <string name="config_ims_package">org.codeaurora.ims</string>
+
     <!-- Flag specifying whether or not IMS will use the ImsResolver dynamically -->
      <bool name="config_dynamic_bind_ims">true</bool>
-
-    <!--  Whether Multiuser UI should be shown -->
-     <bool name="config_enableMultiUserUI">true</bool>
-
-    <!-- Whether to enable network location overlay which allows network
-         location provider to be replaced by an app at run-time. When disabled,
-         only the config_networkLocationProviderPackageName package will be
-         searched for network location provider, otherwise packages whose
-         signature matches the signatures of config_locationProviderPackageNames
-         will be searched, and the service with the highest version number will
-         be picked. Anyone who wants to disable the overlay mechanism can set it
-         to false.
-    -->
-     <bool name="config_enableNetworkLocationOverlay">true</bool>
 
     <!-- Whether WiFi display is supported by this device.
          There are many prerequisites for this feature to work correctly.
@@ -108,13 +94,6 @@
          it causes the device to wake up.
          The default is false. -->
      <bool name="config_lidControlsSleep">true</bool>
-
-    <!-- Indicate whether to allow the device to suspend when the screen is off
-         due to the proximity sensor.  This resource should only be set to true
-         if the sensor HAL correctly handles the proximity sensor as a wake-up source.
-         Otherwise, the device may fail to wake out of suspend reliably.
-         The default is false. -->
-    <bool name="config_suspendWhenScreenOffDueToProximity">true</bool>
 
     <!-- Whether the display blanks itself when transitioning from a doze to a non-doze state -->
     <bool name="config_displayBlanksAfterDoze">true</bool>
@@ -160,9 +139,6 @@
     <!-- Boolean indicating whether the HWC setColorTransform function can be performed efficiently in hardware. -->
      <bool name="config_setColorTransformAccelerated">true</bool>
 
-    <!-- Whether the device has outdated qti-telephony-common.jar -->
-     <bool name="config_oldQtiTelephony">false</bool>
-
     <!-- Whether a software navigation bar should be shown. NOTE: in the future this may be
          autodetected from the Configuration. -->
      <bool name="config_showNavigationBar">true</bool>
@@ -182,9 +158,6 @@
 
     <!-- Whether device supports double tap to wake -->
      <bool name="config_supportDoubleTapWake">true</bool>
-
-    <!-- True if the device supports Sustained Performance Mode-->
-     <bool name="config_sustainedPerformanceModeSupported">true</bool>
 
     <!-- Whether or not swipe up gesture's opt-in setting is available on this device -->
      <bool name="config_swipe_up_gesture_setting_available">true</bool>
@@ -263,43 +236,6 @@
     <!-- Operating volatage for bluetooth controller. 0 by default-->
      <integer name="config_bluetooth_operating_voltage_mv">0</integer>
 
-    <!--  Maximum number of supported users -->
-     <integer name="config_multiuserMaximumUsers">4</integer>
-
-    <!-- All the capabilities of the LEDs on this device, stored as a bit field.
-         This integer should equal the sum of the corresponding value for each
-         of the following capabilities present:
-         // Device has a color adjustable battery light.
-         LIGHTS_RGB_NOTIFICATION_LED = 1
-         // Device has a color adjustable notification light.
-         LIGHTS_RGB_BATTERY_LED = 2
-         LIGHTS_MULTIPLE_NOTIFICATION_LED = 4 (deprecated)
-         // The notification light has adjustable pulsing capability.
-         LIGHTS_PULSATING_LED = 8
-         // Device has a multi-segment battery light that is able to
-         // use the light brightness value to determine how many
-         // segments to show (in order to represent battery level).
-         LIGHTS_SEGMENTED_BATTERY_LED = 16
-         // The notification light supports HAL adjustable brightness
-         // via the alpha channel.
-         // Note: if a device notification light supports LIGHTS_RGB_NOTIFICATION_LED
-         // then HAL support is not necessary for brightness control.  In this case,
-         // brightness support will be provided by lineage-sdk through the scaling of
-         // RGB color values.
-         LIGHTS_ADJUSTABLE_NOTIFICATION_LED_BRIGHTNESS = 32
-         // Device has a battery light.
-         LIGHTS_BATTERY_LED = 64
-         // The battery light supports HAL adjustable brightness via
-         // the alpha channel.
-         // Note: if a device battery light supports LIGHTS_RGB_BATTERY_LED then HAL
-         // support is not necessary for brightness control.  In this case,
-         // brightness support will be provided by lineage-sdk through the scaling of
-         // RGB color values.
-         LIGHTS_ADJUSTABLE_BATTERY_LED_BRIGHTNESS = 128
-         For example, a device with notification and battery lights that supports
-         pulsating and RGB control would set this config to 75. -->
-    <integer name="config_deviceLightCapabilities">224</integer>
-
     <!-- Number of physical SIM slots on the device. This includes both eSIM and pSIM slots, and
          is not necessarily the same as the number of phones/logical modems supported by the device.
          For example, a multi-sim device can have 2 phones/logical modems, but 3 physical slots,
@@ -327,13 +263,6 @@
 
     <!-- Shutdown if the battery temperature exceeds (this value * 0.1) Celsius. -->
      <integer name="config_shutdownBatteryTemperature">680</integer>
-
-    <!-- Integer parameters of the wifi to cellular handover feature
-         wifi should not stick to bad networks -->
-     <integer name="config_wifi_framework_wifi_score_bad_rssi_threshold_24GHz">-83</integer>
-     <integer name="config_wifi_framework_wifi_score_bad_rssi_threshold_5GHz">-80</integer>
-     <integer name="config_wifi_framework_wifi_score_low_rssi_threshold_24GHz">-73</integer>
-     <integer name="config_wifi_framework_wifi_score_low_rssi_threshold_5GHz">-70</integer>
 
     <!-- ComponentName of a dream to show whenever the system would otherwise have
          gone to sleep.  When the PowerManager is asked to go to sleep, it will instead
