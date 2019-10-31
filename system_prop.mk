@@ -58,10 +58,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
     vendor.iop.enable_uxe=0
     vendor.iop.enable_prefetch_ofr=0
 
-# Media
-PRODUCT_PROPERTY_OVERRIDES += \
-    media.settings.xml=/system/etc/media_profiles_vendor.xml
-
 # Netflix custom property
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.netflix.bsp_rev=Q855-16947-1
