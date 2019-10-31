@@ -19,6 +19,9 @@ BOARD_VENDOR := xiaomi
 
 DEVICE_PATH := device/xiaomi/cepheus
 
+# Soong
+PRODUCT_SOONG_NAMESPACES += $(DEVICE_PATH)
+
 # Architecture
 TARGET_ARCH := arm64
 TARGET_ARCH_VARIANT := armv8-2a
