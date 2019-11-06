@@ -119,3 +119,6 @@ PRODUCT_COPY_FILES += \
 # Recovery
 PRODUCT_PACKAGES += \
     librecovery_updater_xiaomi
+
+# VNDK
+PRODUCT_TARGET_VNDK_VERSION := 29
