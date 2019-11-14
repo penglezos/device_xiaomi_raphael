@@ -44,6 +44,9 @@ on init
     write /config/usb_gadget/g1/os_desc/qw_sign "MSFT100"
     setprop sys.usb.configfs 1
 
+on property:ro.boot.usbconfigfs=false
+   setprop sys.usb.configfs 0
+
 on property:ro.boot.usbcontroller=*
     setprop sys.usb.controller ${ro.boot.usbcontroller}
 
