@@ -911,6 +911,17 @@
         </interface>
         <fqname>@1.0::IEmbms/embmsslServer0</fqname>
     </hal>
+    <!-- QCC HAL Service -->
+    <hal format="hidl">
+        <name>vendor.qti.hardware.qccvndhal</name>
+        <transport>hwbinder</transport>
+        <version>1.0</version>
+        <interface>
+            <name>IQccvndhal</name>
+            <instance>qccvndhal</instance>
+        </interface>
+        <fqname>@1.0::IQccvndhal/qccvndhal</fqname>
+    </hal> <!-- QCC HAL Service -->
     <sepolicy>
         <version>29.0</version>
     </sepolicy>
