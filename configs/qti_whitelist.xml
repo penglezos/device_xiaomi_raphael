@@ -113,5 +113,9 @@
     <hidden-api-whitelisted-app package="com.qualcomm.wfd.service" />
     <hidden-api-whitelisted-app package="com.qualcomm.qti.server.wigigapp" />
     <hidden-api-whitelisted-app package="com.qti.service.colorservice" />
+    <!-- These are location components that need to freely run in the background -->
+    <allow-in-power-save package="com.qualcomm.location" />
+    <allow-in-power-save package="com.qualcomm.location.XT" />
+
     <allow-implicit-broadcast action="org.codeaurora.intent.action.CALL_COMPOSER_INFO" />
 </config>
