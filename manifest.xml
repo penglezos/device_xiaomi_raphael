@@ -489,6 +489,18 @@
         </interface>
         <fqname>@1.0::IQtiAllocator/default</fqname>
     </hal>
+    <!--ANT-->
+    <hal format="hidl">
+        <name>com.dsi.ant</name>
+        <transport>hwbinder</transport>
+        <version>1.0</version>
+        <interface>
+            <name>IAnt</name>
+            <instance>default</instance>
+        </interface>
+        <fqname>@1.0::IAnt/default</fqname>
+    </hal>
+    <!--ANT-->
     <hal format="hidl">
         <name>vendor.qti.hardware.display.mapper</name>
         <transport arch="32+64">passthrough</transport>
