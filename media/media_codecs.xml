@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- Copyright (C) 2012-2019 The Linux Foundation. All rights reserved.
+<!-- Copyright (C) 2012-2020 The Linux Foundation. All rights reserved.
      Not a contribution.
      Copyright (C) 2012-2013 The Android Open Source Project
 
@@ -111,7 +111,6 @@ Only the three quirks included above are recognized at this point:
  |             | 7680    4320    30      220     3888000             |
  |             | 8192    4320    24      220     3317760             |
  | vc1         | 1920    1088    30      20      244800      244800  |
- | div4/5/6-sw | 1920    1088    30      10      244800      244800  |
  | h263-sw     | 864     480     30      16       48600       48600  |
  | mpeg2       | 1920    1088    30      40      244800      244800  |
  |_____________|_____________________________________________________|
@@ -466,30 +465,6 @@ Only the three quirks included above are recognized at this point:
                 <Limit name="concurrent-instances" max="16" />
                 <Limit name="performance-point-1920x1080" value="30" />
              </Type>
-        </MediaCodec>
-        <MediaCodec name="OMX.qti.video.decoder.divxsw" type="video/divx" >
-            <Quirk name="requires-allocate-on-input-ports" />
-            <Quirk name="requires-allocate-on-output-ports" />
-            <Limit name="size" min="96x96" max="1920x1088" />
-            <Limit name="alignment" value="2x2" />
-            <Limit name="block-size" value="16x16" />
-            <Limit name="blocks-per-second" min="36" max="244800" />
-            <Limit name="frame-rate" range="1-30" />
-            <Limit name="bitrate" range="1-10000000" />
-            <Limit name="concurrent-instances" max="16" />
-            <Limit name="performance-point-1920x1080" value="30" />
-        </MediaCodec>
-        <MediaCodec name="OMX.qti.video.decoder.divx4sw" type="video/divx4" >
-            <Quirk name="requires-allocate-on-input-ports" />
-            <Quirk name="requires-allocate-on-output-ports" />
-            <Limit name="size" min="96x96" max="1920x1088" />
-            <Limit name="alignment" value="2x2" />
-            <Limit name="block-size" value="16x16" />
-            <Limit name="blocks-per-second" min="36" max="244800" />
-            <Limit name="frame-rate" range="1-30" />
-            <Limit name="bitrate" range="1-10000000" />
-            <Limit name="concurrent-instances" max="16" />
-            <Limit name="performance-point-1920x1080" value="30" />
         </MediaCodec>
         <MediaCodec name="OMX.qti.video.decoder.vc1sw" type="video/x-ms-wmv" >
             <Quirk name="requires-allocate-on-input-ports" />
