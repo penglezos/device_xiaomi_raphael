@@ -5,6 +5,7 @@ persist.vendor.bt.a2dp.aac_whitelist=false
 ro.bluetooth.library_name=libbluetooth_qti.so
 
 # Camera
+persist.camera.managebuffer.enable=1
 persist.camera.sat.fallback.dist.d=10
 persist.camera.sat.fallback.dist=40
 persist.camera.sat.fallback.lux.d=50
