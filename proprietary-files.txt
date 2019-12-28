@@ -516,7 +516,6 @@ vendor/lib64/vendor.qti.esepowermanager@1.1.so
 # Fingerprint
 vendor/lib64/hw/fingerprint.goodix_fod.so
 vendor/lib64/libgf_hal.so
-vendor/lib64/vendor.goodix.hardware.biometrics.fingerprint@2.1.so
 
 # FM
 vendor/lib/vendor.qti.hardware.fm@1.0.so
