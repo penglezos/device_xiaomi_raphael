@@ -1,0 +1,10 @@
+# HALs
+/vendor/bin/hw/android\.hardware\.light@2\.0-service\.xiaomi_sm8150                                     u:object_r:hal_light_default_exec:s0
+/vendor/bin/hw/pa\.biometrics\.fingerprint\.inscreen@1.0-service\.xiaomi_sm8150                         u:object_r:hal_pa_fod_default_exec:s0
+
+# WiFi
+/vendor/bin/wifi-mac-generator                                                                          u:object_r:wifi-mac-generator_exec:s0
+
+# Xiaomi thermal daemon
+/vendor/bin/mi_thermald		u:object_r:mi_thermald_exec:s0
+/data/vendor/thermal(/.*)?          u:object_r:thermal_data_file:s0

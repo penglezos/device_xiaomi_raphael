@@ -1,3 +1,0 @@
-type vendor_camera_prop, property_type;
-type camera_prop, property_type;
-type vendor_display_prop, property_type;

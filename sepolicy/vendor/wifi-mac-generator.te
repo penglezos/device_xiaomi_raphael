@@ -1,0 +1,22 @@
+type wifi-mac-generator, domain;
+type wifi-mac-generator_exec, exec_type, vendor_file_type, file_type;
+
+init_daemon_domain(wifi-mac-generator)
+
+# Allow wifi-mac-generator to read and execute vendor_shell_exec
+allow wifi-mac-generator vendor_shell_exec:file rx_file_perms;
+
+# Allow wifi-mac-generator to read and execute vendor_toolbox_exec
+allow wifi-mac-generator vendor_toolbox_exec:file rx_file_perms;
+
+# Allow wifi-mac-generator to read vendor_data_file
+r_dir_file(wifi-mac-generator, vendor_data_file)
+
+# Allow wifi-mac-generator to read and write to mnt_vendor_file
+allow wifi-mac-generator mnt_vendor_file:dir search;
+allow wifi-mac-generator mnt_vendor_file:file rw_file_perms;
+
+# Allow wifi-mac-generator to insmod vendor module
+allow wifi-mac-generator self:capability sys_module;
+allow wifi-mac-generator vendor_file:system module_load;;
+allow wifi-mac-generator kernel:key search;

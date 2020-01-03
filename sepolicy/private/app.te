@@ -1,3 +1,0 @@
-# Allow appdomain to get camera_prop and vendor_camera_prop
-get_prop(appdomain, vendor_camera_prop)
-get_prop(appdomain, camera_prop)

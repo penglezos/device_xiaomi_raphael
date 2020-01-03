@@ -1,0 +1,34 @@
+type mi_thermald, domain;
+type mi_thermald_exec, exec_type, vendor_file_type, file_type;
+
+type thermal_normal_prop, property_type;
+type thermal_data_file, data_file_type, file_type;
+
+init_daemon_domain(mi_thermald)
+
+set_prop(mi_thermald, thermal_normal_prop)
+
+allow mi_thermald thermal_data_file:dir rw_dir_perms;
+allow mi_thermald thermal_data_file:file rw_file_perms;
+
+allow mi_thermald self:capability { chown fowner fsetid sys_boot };
+allow mi_thermald self:capability2 { wake_alarm block_suspend };
+
+allow mi_thermald sysfs_devices_system_cpu:file rw_file_perms;
+
+r_dir_file(mi_thermald, sysfs_thermal)
+allow mi_thermald sysfs_thermal:file w_file_perms;
+
+r_dir_file(mi_thermald, sysfs_leds)
+
+allow mi_thermald sysfs_kgsl:dir r_dir_perms;
+allow mi_thermald sysfs_kgsl:file rw_file_perms;
+allow mi_thermald sysfs_kgsl:lnk_file r_file_perms;
+
+allow mi_thermald sysfs_battery_supply:dir r_dir_perms;
+allow mi_thermald sysfs_battery_supply:file rw_file_perms;
+allow mi_thermald sysfs_battery_supply:lnk_file r_file_perms;
+
+allow mi_thermald sysfs_graphics:dir r_dir_perms;
+allow mi_thermald sysfs_graphics:file rw_file_perms;
+allow mi_thermald sysfs_graphics:lnk_file r_file_perms;
