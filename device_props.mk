@@ -117,6 +117,14 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # Camera
 PRODUCT_PROPERTY_OVERRIDES += \
+    persist.camera.sat.fallback.dist.d=10 \
+    persist.camera.sat.fallback.dist=40 \
+    persist.camera.sat.fallback.lux.d=50 \
+    persist.camera.sat.fallback.luxindex=360 \
+    persist.vendor.camera.enableNCSService=TRUE \
+    persist.vendor.camera.enableTOFInterface=TRUE \
+    persist.vendor.camera.mfnrframenum=8 \
+    persist.vendor.camera.multicam=TRUE \
     persist.camera.gyro.disable=0 \
     camera.disable_zsl_mode=true \
     vendor.camera.aux.packagelist=org.codeaurora.snapcam,com.android.camera,org.lineageos.snap
@@ -143,6 +151,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.vendor.display.ad.hdr_calib_data=/vendor/etc/hdr_config.cfg \
     ro.vendor.display.ad.sdr_calib_data=/vendor/etc/sdr_config.cfg \
     ro.vendor.display.sensortype=2 \
+    ro.sf.lcd_density=440 \
     vendor.display.comp_mask=0 \
     vendor.display.dataspace_saturation_matrix=1.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,1.0 \
     vendor.display.disable_decimation=1 \
@@ -154,6 +163,15 @@ PRODUCT_PROPERTY_OVERRIDES += \
     vendor.display.enable_default_color_mode=1 \
     vendor.display.enable_null_display=0 \
     vendor.display.enable_optimize_refresh=1
+
+# Display features
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.displayfeature.histogram.enable=true \
+    ro.eyecare.brightness.threshold=11 \
+    ro.eyecare.brightness.level=5 \
+    ro.hist.brightness.threshold=7 \
+    sys.displayfeature.hbm.enable=true \
+    sys.displayfeature_hidl=true
 
 # FRP
 PRODUCT_PROPERTY_OVERRIDES += \
