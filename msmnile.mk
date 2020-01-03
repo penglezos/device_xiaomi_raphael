@@ -28,7 +28,7 @@ DEVICE_PACKAGE_OVERLAYS += \
     $(LOCAL_PATH)/overlay-pa
 
 # Properties
--include $(LOCAL_PATH)/system_prop.mk
+-include $(LOCAL_PATH)/device_props.mk
 
 # Device uses high-density artwork where available
 PRODUCT_AAPT_CONFIG := normal
