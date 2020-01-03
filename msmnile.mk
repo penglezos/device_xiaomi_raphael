@@ -139,8 +139,12 @@ PRODUCT_COPY_FILES += \
 
 # Init
 PRODUCT_PACKAGES += \
-    init.mi_thermald.rc \
-    init.qcom.rc
+    init.qcom.post_boot.sh \
+    init.qcom.rc \
+    init.qcom.sh \
+    init.qcom.usb.rc \
+    init.target.rc \
+    init.panel_info.sh
 
 # IR
 PRODUCT_PACKAGES += \
