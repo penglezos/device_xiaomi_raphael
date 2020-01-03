@@ -298,6 +298,11 @@ PRODUCT_PACKAGES += ParanoidDoze
 PRODUCT_PACKAGES += \
     android.hardware.power@1.2-service
 
+# QMI
+PRODUCT_PACKAGES += \
+    libqti_vndfwk_detect \
+    libqti_vndfwk_detect.vendor
+
 # QCOM
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/permissions/product_privapp-permissions-qti.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/product_privapp-permissions-qti.xml \
