@@ -198,6 +198,11 @@ PRODUCT_PACKAGES += \
     init.target.rc \
     init.panel_info.sh
 
+# IPA
+PRODUCT_PACKAGES += \
+    ipacm \
+    IPACM_cfg.xml
+
 # IR
 PRODUCT_PACKAGES += \
     android.hardware.ir@1.0-impl \
