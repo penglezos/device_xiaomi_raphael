@@ -1,0 +1,8 @@
+service vendor.wifi-mac-generator /vendor/bin/wifi-mac-generator
+    class main
+    user root
+    oneshot
+    disabled
+
+on post-fs-data
+    start vendor.wifi-mac-generator

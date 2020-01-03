@@ -236,6 +236,9 @@ PRODUCT_TARGET_VNDK_VERSION := 29
 
 # WiFi
 PRODUCT_PACKAGES += \
+    wifi-mac-generator
+
+PRODUCT_PACKAGES += \
     android.hardware.wifi@1.0-service \
     hostapd \
     libwifi-hal-qcom \
