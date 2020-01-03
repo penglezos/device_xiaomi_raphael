@@ -128,8 +128,7 @@ PRODUCT_COPY_FILES += \
 
 # Display
 PRODUCT_PACKAGES += \
-    libdisplayconfig \
-    libqdMetaData.system
+    vendor.display.config@1.10.vendor
 
 # Fingerprint
 PRODUCT_PACKAGES += \
