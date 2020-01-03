@@ -138,10 +138,10 @@ PRODUCT_PACKAGES += \
 
 # Fingerprint
 PRODUCT_PACKAGES += \
-    pa.biometrics.fingerprint.inscreen@1.0-service.xiaomi_cepheus
+    vendor.pa.biometrics.fingerprint.inscreen@1.0-service.xiaomi_cepheus
 
 PRODUCT_COPY_FILES += \
-    vendor/pa/config/permissions/vendor.pa.biometrics.fingerprint.inscreen.xml:system/etc/permissions/vendor.pa.biometrics.fingerprint.inscreen.xml
+    vendor/pa/config/permissions/vendor.pa.biometrics.fingerprint.inscreen.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/vendor.pa.biometrics.fingerprint.inscreen.xml
 
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.fingerprint.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.fingerprint.xml
