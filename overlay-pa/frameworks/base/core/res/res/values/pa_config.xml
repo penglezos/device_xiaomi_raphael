@@ -20,7 +20,7 @@
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
 
     <!-- Gestures' key codes. If the gesture is not supported set it to 0. -->
-    <integer name="config_doubleTapKeyCode">354</integer>
+    <integer name="config_doubleTapKeyCode">750</integer>
 
     <!-- Default settings for gestures
          0 - Disabled
