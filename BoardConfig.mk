@@ -19,9 +19,6 @@ BOARD_VENDOR := xiaomi
 
 DEVICE_PATH := device/xiaomi/cepheus
 
-# Soong
-PRODUCT_SOONG_NAMESPACES += $(DEVICE_PATH)
-
 # APEX
 DEXPREOPT_GENERATE_APEX_IMAGE := true
 
