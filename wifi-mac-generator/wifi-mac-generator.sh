@@ -39,23 +39,19 @@ if [ ! -f "${WLAN_MAC_PERSIST_PATH}" ]; then
     # Strip wlan0= from the string
     raw_mac="${raw_mac_data#*=}"
 
-    # Convert lowercase to uppercase
-    mac=$(echo "${raw_mac}" | tr "[:lower:]" "[:upper:]")
+    # Convert to decimal
+    dec_mac=$(printf "%d" "0x$raw_mac")
 
-    # The resulting MAC is the MAC of the first interface
-    first_mac="${mac}"
+    # The MAC of the first interface is the decimal mac,
+    # converted to uppercase
+    first_mac=$(printf "%012X" "$dec_mac")
 
-    # Grab the first 11 chars
-    mac_start="${mac:0:11}"
+    # Increment the decimal mac by one
+    dec_mac=$(echo "$dec_mac + 1" | bc)
 
-    # Grab the last char
-    mac_end="${mac:11:12}"
-
-    # Increase the last char by one
-    second_mac_end=$(echo ${mac_end} | tr "0-9a-f" "1-9a-fa")
-
-    # Form the MAC of the second interface
-    second_mac="${mac_start}${second_mac_end}"
+    # The MAC of the first interface is the decimal mac
+    # plus one, converted to uppercase
+    second_mac=$(printf "%012X" "$dec_mac")
 
     # Write the MACs
     echo "Intf0MacAddress=${first_mac}" > "${WLAN_MAC_PERSIST_PATH}"
