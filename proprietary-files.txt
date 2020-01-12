@@ -402,6 +402,7 @@ vendor/lib64/vendor.qti.hardware.display.mapperextensions@1.1.so
 
 # Display-calibration
 vendor/etc/qdcm_calib_data_samsung_ea8076_fhd_cmd_dsi_panel.xml
+vendor/etc/sdr_config.cfg
 
 # Factory
 vendor/lib64/vendor.qti.data.factory@2.0.so
