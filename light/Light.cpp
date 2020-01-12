@@ -29,7 +29,7 @@
 #define BRIGHTNESS      "brightness"
 
 #define MAX_LED_BRIGHTNESS    255
-#define MAX_LCD_BRIGHTNESS    4095
+#define MAX_LCD_BRIGHTNESS    2047
 
 namespace {
 /*
