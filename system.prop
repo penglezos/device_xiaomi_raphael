@@ -24,6 +24,9 @@ persist.vendor.dpm.nsrm.bkg.evt=3955
 # Display
 ro.sf.lcd_density=440
 
+# Google keyboard
+ro.com.google.ime.height_ratio=1.2
+
 # Graphics
 ro.surface_flinger.has_wide_color_display=true
 ro.surface_flinger.has_HDR_display=true
