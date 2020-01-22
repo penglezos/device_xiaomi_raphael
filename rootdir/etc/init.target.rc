@@ -57,6 +57,9 @@ on init
     write /sys/block/sde/queue/read_ahead_kb 2048
     write /sys/block/sde/queue/nr_requests 256
 
+    # Freezer setup
+    write /dev/freezer/frozen/freezer.killable 1
+
     # Add a cpuset for the camera daemon
     # We want all cores for camera
     mkdir /dev/cpuset/camera-daemon
