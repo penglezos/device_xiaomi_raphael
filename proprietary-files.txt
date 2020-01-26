@@ -11,10 +11,11 @@ vendor/lib64/libsdsprpc.so
 vendor/lib/rfsa/adsp/capi_v2_aptX_Classic.so
 vendor/lib/rfsa/adsp/capi_v2_aptX_CLHDAD_Encoder.so
 vendor/lib/rfsa/adsp/capi_v2_aptX_HD.so
-vendor/lib/rfsa/adsp/capi_v2_cirrus_sp.so
+vendor/lib/rfsa/adsp/dirac_resource.dar
 vendor/lib/rfsa/adsp/libapps_mem_heap.so
 vendor/lib/rfsa/adsp/libarcsoft_dualcam_refocus_skel.so
 vendor/lib/rfsa/adsp/libcamera_nn_skel.so
+vendor/lib/rfsa/adsp/libdirac-capiv2.so
 vendor/lib/rfsa/adsp/libdspCV_skel.so
 vendor/lib/rfsa/adsp/libdsp_streamer_add_constant.so
 vendor/lib/rfsa/adsp/libdsp_streamer_binning.so
@@ -123,35 +124,25 @@ vendor/bin/hw/android.hardware.camera.provider@2.4-service_64
 vendor/lib/libcapiv2svacnn.so
 vendor/lib/libcapiv2vop.so
 vendor/lib/libswvdec.so
-vendor/lib64/camera/com.qti.sensor.imx481.so
-vendor/lib64/camera/com.qti.sensor.imx586.so
-vendor/lib64/camera/com.qti.sensor.s5k3m5.so
-vendor/lib64/camera/com.qti.sensor.s5k3t1.so
-vendor/lib64/camera/com.qti.sensormodule.f1a_imx481.bin
-vendor/lib64/camera/com.qti.sensormodule.f1a_imx586.bin
-vendor/lib64/camera/com.qti.sensormodule.f1a_s5k3m5.bin
-vendor/lib64/camera/com.qti.sensormodule.luxvisions_imx481.bin
-vendor/lib64/camera/com.qti.sensormodule.luxvisions_imx586.bin
-vendor/lib64/camera/com.qti.sensormodule.luxvisions_s5k3m5.bin
-vendor/lib64/camera/com.qti.sensormodule.ofilm_s5k3t1.bin
-vendor/lib64/camera/com.qti.sensormodule.semco_imx481.bin
-vendor/lib64/camera/com.qti.sensormodule.semco_imx586.bin
-vendor/lib64/camera/com.qti.sensormodule.semco_s5k3m5.bin
-vendor/lib64/camera/com.qti.sensormodule.sunny_largan_s5k3t1.bin
-vendor/lib64/camera/com.qti.sensormodule.sunny_s5k3t1.bin
+vendor/lib64/camera/com.qti.sensor.imx586_raphael.so
+vendor/lib64/camera/com.qti.sensor.ov8856_raphael.so
+vendor/lib64/camera/com.qti.sensor.s5k3l6_raphael.so
+vendor/lib64/camera/com.qti.sensor.s5k3t2_raphael.so
+vendor/lib64/camera/com.qti.sensormodule.raphael_luxvisions_imx586.bin
+vendor/lib64/camera/com.qti.sensormodule.raphael_luxvisions_ov8856.bin
+vendor/lib64/camera/com.qti.sensormodule.raphael_luxvisions_s5k3l6.bin
+vendor/lib64/camera/com.qti.sensormodule.raphael_ofilm_imx586.bin
+vendor/lib64/camera/com.qti.sensormodule.raphael_ofilm_ov8856.bin
+vendor/lib64/camera/com.qti.sensormodule.raphael_ofilm_s5k3l6.bin
+vendor/lib64/camera/com.qti.sensormodule.raphael_sunny_s5k3t2.bin
 vendor/lib64/camera/com.qti.tuned.default.bin
-vendor/lib64/camera/com.qti.tuned.f1a_semco_imx481.bin
-vendor/lib64/camera/com.qti.tuned.f1a_semco_imx586.bin
-vendor/lib64/camera/com.qti.tuned.f1a_semco_s5k3m5.bin
-vendor/lib64/camera/com.qti.tuned.luvis_imx481.bin
-vendor/lib64/camera/com.qti.tuned.luvis_imx586.bin
-vendor/lib64/camera/com.qti.tuned.luvis_s5k3m5.bin
-vendor/lib64/camera/com.qti.tuned.ofilm_s5k3t1.bin
-vendor/lib64/camera/com.qti.tuned.semco_imx481.bin
-vendor/lib64/camera/com.qti.tuned.semco_imx586.bin
-vendor/lib64/camera/com.qti.tuned.semco_s5k3m5.bin
-vendor/lib64/camera/com.qti.tuned.sunny_largan_s5k3t1.bin
-vendor/lib64/camera/com.qti.tuned.sunny_s5k3t1.bin
+vendor/lib64/camera/com.qti.tuned.raphael_luxvisions_imx586.bin
+vendor/lib64/camera/com.qti.tuned.raphael_luxvisions_ov8856.bin
+vendor/lib64/camera/com.qti.tuned.raphael_luxvisions_s5k3l6.bin
+vendor/lib64/camera/com.qti.tuned.raphael_ofilm_imx586.bin
+vendor/lib64/camera/com.qti.tuned.raphael_ofilm_ov8856.bin
+vendor/lib64/camera/com.qti.tuned.raphael_ofilm_s5k3l6.bin
+vendor/lib64/camera/com.qti.tuned.raphael_sunny_s5k3t2.bin
 vendor/lib64/camera/components/com.almalence.node.sr.so
 vendor/lib64/camera/components/com.altek.node.depurple.so
 vendor/lib64/camera/components/com.altek.node.distortioncorrection.so
@@ -304,7 +295,7 @@ vendor/etc/camera/eisoverridesettings.txt
 vendor/etc/camera/eyelineblush.cng
 vendor/etc/camera/LDC_FPC_TUNING_DATA.bin
 vendor/etc/camera/LDC_PACKDATA_VENDORID_0x01.bin
-vendor/etc/camera/LDC_PACKDATA_VENDORID_0x03.bin
+vendor/etc/camera/LDC_PACKDATA_VENDORID_0x07.bin
 vendor/etc/camera/LDC_table_src1.dat
 vendor/etc/camera/lf_facerank_model.bin
 vendor/etc/camera/megviifacepp_0_5_2_model
@@ -320,9 +311,6 @@ vendor/lib64/libmmcamera_faceproc2.so
 
 # Charger
 vendor/bin/hvdcp_opti
-
-# Consumerir
-vendor/lib64/hw/consumerir.default.so
 
 # DPM
 framework/tcmclient.jar
@@ -350,7 +338,6 @@ vendor/lib64/libdrmfs.so
 vendor/lib64/libdrmtime.so
 vendor/lib64/libGPreqcancel.so
 vendor/lib64/libGPreqcancel_svc.so
-vendor/lib64/liboemcrypto.so
 vendor/lib64/libqisl.so
 vendor/lib64/libQSEEComAPI.so
 vendor/lib64/librpmb.so
@@ -425,15 +412,14 @@ vendor/firmware/a640_zap.b01
 vendor/firmware/a640_zap.b02
 vendor/firmware/a640_zap.elf
 vendor/firmware/a640_zap.mdt
-vendor/firmware/cs35l41-dsp1-spk-prot.bin
-vendor/firmware/cs35l41-dsp1-spk-prot.wmfw
+vendor/firmware/goodix_gt9886_limit_f11_first.tporder
+vendor/firmware/goodix_gt9886_limit_f11_second.tporder
 vendor/firmware/ipa_uc.b00
 vendor/firmware/ipa_uc.b01
 vendor/firmware/ipa_uc.b02
 vendor/firmware/ipa_uc.elf
 vendor/firmware/ipa_uc.mdt
-vendor/firmware/tas2557_uCDSP_aac.bin
-vendor/firmware/tas2557_uCDSP_goer.bin
+vendor/firmware/tfa98xx.cnt
 
 # GPS
 vendor/bin/hw/android.hardware.gnss@2.0-service-qti
@@ -833,13 +819,11 @@ vendor/bin/ssr_setup
 # Sensor-configs
 vendor/etc/sensors/config/adux1050_0.json
 vendor/etc/sensors/config/ak991x_dri_0.json
-vendor/etc/sensors/config/bmp285_0.json
-vendor/etc/sensors/config/lsm6ds3c_0.json
+vendor/etc/sensors/config/icm4x6xx_0.json
 vendor/etc/sensors/config/shtw2_0.json
 vendor/etc/sensors/config/sm8150_adux1050_0.json
 vendor/etc/sensors/config/sm8150_ak991x_0.json
-vendor/etc/sensors/config/sm8150_bmp285_0.json
-vendor/etc/sensors/config/sm8150_lsm6ds3c_0.json
+vendor/etc/sensors/config/sm8150_icm4x6xx_0.json
 vendor/etc/sensors/config/sm8150_power_0.json
 vendor/etc/sensors/config/sm8150_shtw2_0.json
 vendor/etc/sensors/config/sm8150_tcs3701.json
@@ -878,15 +862,11 @@ vendor/etc/sensors/sns_reg_config
 
 # Sensors
 vendor/bin/sensors.qti
-vendor/etc/elliptic_sensor.xml
 vendor/etc/sensors/hals.conf
-vendor/lib64/libnotifyaudiohal.so
 vendor/lib64/libsensorslog.so
 vendor/lib64/libssc.so
 vendor/lib64/libssc_default_listener.so
-vendor/lib64/sensors.elliptic.so
 vendor/lib64/sensors.ssc.so
-vendor/lib64/sensors.touch.so
 
 # Thermal
 vendor/bin/mi_thermald
@@ -999,7 +979,6 @@ vendor/lib64/libqcrildatactl.so
 vendor/lib64/libqsap_sdk.so
 vendor/lib64/libskewknob.so
 vendor/lib64/libsns_registry_skel.so
-vendor/lib64/libultrasound.so
 vendor/lib64/qtibus.so
 vendor/lib64/qtimutex.so
 vendor/lib64/unnhal-acc-adreno.so
