@@ -297,6 +297,10 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     libprotobuf-cpp-full-rtti
 
+# PixelLiveWallpaper
+PRODUCT_PACKAGES += \
+    PixelLiveWallpaperPrebuilt
+
 # Power
 PRODUCT_PACKAGES += \
     android.hardware.power@1.2-service.xiaomi_msmnile
