@@ -421,6 +421,11 @@ vendor/firmware/ipa_uc.elf
 vendor/firmware/ipa_uc.mdt
 vendor/firmware/tfa98xx.cnt
 
+# FM
+product/lib64/vendor.qti.hardware.fm@1.0.so
+vendor/lib/vendor.qti.hardware.fm@1.0.so
+vendor/lib64/vendor.qti.hardware.fm@1.0.so
+
 # GPS
 vendor/bin/hw/android.hardware.gnss@2.0-service-qti
 vendor/bin/loc_launcher
