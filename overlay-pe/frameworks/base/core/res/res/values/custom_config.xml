@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
 /*
-** Copyright 2019, The Paranoid Android Project
+** Copyright 2020 The PixelExperience Project
 **
 ** Licensed under the Apache License, Version 2.0 (the "License");
 ** you may not use this file except in compliance with the License.
@@ -19,23 +19,10 @@
 
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
 
-    <!-- Gestures' key codes. If the gesture is not supported set it to 0. -->
-    <integer name="config_doubleTapKeyCode">750</integer>
+<!-- Whether device has a notch -->
+    <bool name="config_haveNotch">true</bool>
 
-    <!-- Default settings for gestures
-         0 - Disabled
-         1 - Wake device
-         2 - Toggle flashlight
-         3 - Toggle airplane mode
-         4 - Play/Pause music
-         5 - Next music
-         6 - Previous music
-         7 - Open camera
-         8 - Open dialer
-    -->
-    <integer name="config_doubleTapDefault">143</integer>
-
-    <!-- Whether to intercept inputs on screen off -->
-    <bool name="config_enableKeyHandler">true</bool>
+    <!-- Shows the required view for in-display fingerprint -->
+    <bool name="config_supportsInDisplayFingerprint">true</bool>
 
 </resources>

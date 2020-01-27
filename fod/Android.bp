@@ -16,8 +16,8 @@
 cc_binary {
     relative_install_path: "hw",
     defaults: ["hidl_defaults"],
-    name: "vendor.pa.biometrics.fingerprint.inscreen@1.0-service.xiaomi_cepheus",
-    init_rc: ["vendor.pa.biometrics.fingerprint.inscreen@1.0-service.xiaomi_cepheus.rc"],
+    name: "vendor.lineage.biometrics.fingerprint.inscreen@1.0-service.xiaomi_cepheus",
+    init_rc: ["vendor.lineage.biometrics.fingerprint.inscreen@1.0-service.xiaomi_cepheus.rc"],
     srcs: [
 	"service.cpp",
         "FingerprintInscreen.cpp",
@@ -31,7 +31,7 @@ cc_binary {
         "liblog",
         "libhwbinder",
         "libutils",
-        "vendor.pa.biometrics.fingerprint.inscreen@1.0",
+        "vendor.lineage.biometrics.fingerprint.inscreen@1.0",
         "vendor.xiaomi.hardware.fingerprintextension@1.0",
     ],
 }
