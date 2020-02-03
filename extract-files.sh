@@ -18,7 +18,7 @@
 
 set -e
 
-DEVICE=cepheus
+DEVICE=raphael
 VENDOR=xiaomi
 
 # Load extract_utils and do some sanity checks

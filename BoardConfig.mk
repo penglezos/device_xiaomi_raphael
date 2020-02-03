@@ -17,7 +17,7 @@
 
 BOARD_VENDOR := xiaomi
 
-DEVICE_PATH := device/xiaomi/cepheus
+DEVICE_PATH := device/xiaomi/raphael
 
 BUILD_BROKEN_DUP_RULES := true
 
@@ -54,7 +54,7 @@ BOARD_RAMDISK_OFFSET := 0x01000000
 BOARD_KERNEL_SEPARATED_DTBO := true
 TARGET_KERNEL_ARCH := arm64
 TARGET_KERNEL_NEW_GCC_COMPILE := true
-TARGET_KERNEL_CONFIG := cepheus_defconfig
+TARGET_KERNEL_CONFIG := raphael_defconfig
 ifeq ($(TARGET_PREBUILT_KERNEL),)
   TARGET_KERNEL_SOURCE := kernel/xiaomi/sm8150
 endif
@@ -175,8 +175,8 @@ BOARD_PLAT_PUBLIC_SEPOLICY_DIR += $(DEVICE_PATH)/sepolicy/public
 BOARD_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/vendor
 
 # Vendor init
-TARGET_INIT_VENDOR_LIB := //$(DEVICE_PATH):libinit_cepheus
-TARGET_RECOVERY_DEVICE_MODULES := libinit_cepheus
+TARGET_INIT_VENDOR_LIB := //$(DEVICE_PATH):libinit_raphael
+TARGET_RECOVERY_DEVICE_MODULES := libinit_raphael
 
 # Verified Boot
 BOARD_AVB_ENABLE := true
@@ -199,4 +199,4 @@ WIFI_HIDL_FEATURE_DUAL_INTERFACE := true
 WPA_SUPPLICANT_VERSION := VER_0_8_X
 
 # Inherit from the proprietary version
--include vendor/xiaomi/cepheus/BoardConfigVendor.mk
+-include vendor/xiaomi/raphael/BoardConfigVendor.mk

@@ -15,9 +15,9 @@
 //
 
 cc_library_static {
-    name: "libinit_cepheus",
+    name: "libinit_raphael",
     recovery_available: true,
-    srcs: ["init_cepheus.cpp"],
+    srcs: ["init_raphael.cpp"],
     include_dirs: [
         "system/core/base/include",
         "system/core/init"
