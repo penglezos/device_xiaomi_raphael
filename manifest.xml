@@ -882,6 +882,15 @@
         </interface>
         <fqname>@1.0::IXiaomiFingerprint/default</fqname>
     </hal>
+    <hal format="hidl">
+        <name>vendor.xiaomi.hardware.motor</name>
+        <transport>hwbinder</transport>
+        <version>1.0</version>
+        <interface>
+            <name>IMotor</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
     <sepolicy>
         <version>29.0</version>
     </sepolicy>
