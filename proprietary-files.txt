@@ -305,6 +305,22 @@ vendor/etc/camera/sdm_ys_32p_120_21_5_perturb50.bin
 # Camera-firmware
 vendor/firmware/CAMERA_ICP.elf
 
+# Camera Popup
+lib/vendor.xiaomi.hardware.motor@1.0.so
+lib64/vendor.xiaomi.hardware.motor@1.0.so
+vendor/lib/vendor.xiaomi.hardware.motor@1.0.so
+vendor/lib/hw/vendor.xiaomi.hardware.motor@1.0-impl.so
+vendor/lib/libmivendor_module_motor.so
+vendor/lib/mi.motor.daemon.so
+vendor/bin/hw/vendor.xiaomi.hardware.motor@1.0-service
+vendor/etc/step_motor/mi_camera_config.xml
+vendor/lib64/hw/vendor.xiaomi.hardware.motor@1.0-impl.so
+vendor/lib64/libmivendor_module_calibration.so
+vendor/lib64/libmivendor_module_hall.so
+vendor/lib64/libmivendor_module_motor.so
+vendor/lib64/mi.motor.daemon.so
+vendor/lib64/vendor.xiaomi.hardware.motor@1.0.so
+
 # Camera-sensors
 vendor/lib64/libmmcamera_faceproc.so
 vendor/lib64/libmmcamera_faceproc2.so
