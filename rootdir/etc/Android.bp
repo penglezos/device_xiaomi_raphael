@@ -1,0 +1,19 @@
+prebuilt_etc {
+    name: "init.qcom.usb.rc",
+    src: "init.qcom.usb.rc",
+    vendor: true,
+    sub_dir: "init/hw",
+}
+
+prebuilt_etc {
+    name: "init.msm.usb.configfs.rc",
+    src: "init.msm.usb.configfs.rc",
+    vendor: true,
+    sub_dir: "init",
+}
+
+sh_binary {
+    name: "init.qcom.usb.sh",
+    src: "init.qcom.usb.sh",
+    vendor: true,
+}

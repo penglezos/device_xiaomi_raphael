@@ -265,10 +265,12 @@ PRODUCT_BOOT_JARS += \
 
 # Init
 PRODUCT_PACKAGES += \
+    init.msm.usb.configfs.rc \
     init.qcom.post_boot.sh \
     init.qcom.rc \
     init.qcom.sh \
     init.qcom.usb.rc \
+    init.qcom.usb.sh \
     init.qti.dcvs.sh \
     init.raphael.rc \
     init.recovery.qcom.rc \
