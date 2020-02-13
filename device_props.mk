@@ -191,6 +191,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
     vendor.gralloc.disable_ubwc=0 \
     ro.opengles.version=196610 \
     ro.hardware.egl=adreno \
+    ro.surface_flinger.has_HDR_display=true \
+    ro.surface_flinger.has_wide_color_display=true \
     ro.hardware.vulkan=adreno \
     vendor.gralloc.disable_ubwc=0
 
