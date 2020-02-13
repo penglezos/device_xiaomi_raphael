@@ -69,7 +69,6 @@ vendor/etc/acdbdata/Forte/Forte_workspaceFile.qwsp
 
 # Audio-Hardware
 vendor/lib/hw/audio.primary.msmnile.so
-vendor/lib64/libtinycompress.so
 vendor/lib64/libtinyxml.so
 
 # Bluetooth
