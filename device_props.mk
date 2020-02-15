@@ -143,9 +143,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # Display
 PRODUCT_PROPERTY_OVERRIDES += \
-    persist.vendor.df.color.temp=0 \
-    persist.vendor.df.extcolor.proc=0 \
-    ro.vendor.df.effect.conflict=1 \
     ro.vendor.display.cabl=0 \
     ro.vendor.display.ad=1 \
     ro.vendor.display.ad.hdr_calib_data=/vendor/etc/hdr_config.cfg \
@@ -163,15 +160,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
     vendor.display.enable_default_color_mode=1 \
     vendor.display.enable_null_display=0 \
     vendor.display.enable_optimize_refresh=1
-
-# Display features
-PRODUCT_PROPERTY_OVERRIDES += \
-    ro.displayfeature.histogram.enable=true \
-    ro.eyecare.brightness.threshold=11 \
-    ro.eyecare.brightness.level=5 \
-    ro.hist.brightness.threshold=7 \
-    sys.displayfeature.hbm.enable=true \
-    sys.displayfeature_hidl=true
 
 # FRP
 PRODUCT_PROPERTY_OVERRIDES += \
