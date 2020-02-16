@@ -1,4 +1,3 @@
-#
 # Copyright 2019 The Android Open Source Project
 # Copyright 2019 Paranoid Android
 #
@@ -103,6 +102,9 @@ TARGET_ENABLE_MEDIADRM_64 := true
 
 # Filesystem
 TARGET_FS_CONFIG_GEN := $(DEVICE_PATH)/config.fs
+
+# FM
+BOARD_HAVE_QCOM_FM := true
 
 # HIDL
 DEVICE_FRAMEWORK_MANIFEST_FILE := $(DEVICE_PATH)/framework_manifest.xml
