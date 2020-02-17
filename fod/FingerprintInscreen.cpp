@@ -23,7 +23,7 @@
 #include <cmath>
 
 #define COMMAND_NIT 10
-#define PARAM_NIT_FOD 3
+#define PARAM_NIT_FOD 1
 #define PARAM_NIT_NONE 0
 
 #define FOD_HBM_PATH "/sys/devices/platform/soc/soc:qcom,dsi-display-primary/fod_hbm"
