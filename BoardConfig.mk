@@ -38,6 +38,9 @@ TARGET_2ND_CPU_VARIANT := cortex-a75
 
 TARGET_USES_64_BIT_BINDER := true
 
+# Assert
+TARGET_OTA_ASSERT_DEVICE := raphael,raphaelin
+
 # Bootloader
 TARGET_BOOTLOADER_BOARD_NAME := msmnile
 TARGET_NO_BOOTLOADER := true
