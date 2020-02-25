@@ -633,6 +633,16 @@
         <fqname>@1.0::IQdutilsDisp/default</fqname>
     </hal>
     <hal format="hidl">
+        <name>vendor.qti.hardware.qseecom</name>
+        <transport>hwbinder</transport>
+        <version>1.0</version>
+        <interface>
+            <name>IQSEECom</name>
+            <instance>default</instance>
+        </interface>
+        <fqname>@1.0::IQSEECom/default</fqname>
+    </hal>
+    <hal format="hidl">
         <name>vendor.qti.hardware.qteeconnector</name>
         <transport>hwbinder</transport>
         <version>1.0</version>
