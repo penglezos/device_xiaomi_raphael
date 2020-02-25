@@ -226,12 +226,10 @@
             <instance>qti-default</instance>
             <instance>qti-dsp</instance>
             <instance>qti-gpu</instance>
-            <instance>qti-hta</instance>
         </interface>
         <fqname>@1.2::IDevice/qti-default</fqname>
         <fqname>@1.2::IDevice/qti-dsp</fqname>
         <fqname>@1.2::IDevice/qti-gpu</fqname>
-        <fqname>@1.2::IDevice/qti-hta</fqname>
     </hal>
     <hal format="hidl">
         <name>android.hardware.nfc</name>
