@@ -58,4 +58,16 @@
     <string name="dirac_preset_country">Country</string>
     <string name="dirac_preset_dance">Dance</string>
     <string name="dirac_preset_metal">Metal</string>
+
+    <!-- Popup camera settings -->
+    <string name="popup_led_title">Camera LED</string>
+    <string name="popup_led_summary">Show LED light when the front camera appears and retracts</string>
+    <string name="popup_title">Front camera sound effects</string>
+    <string name="popup_title_muqin">Xylophone</string>
+    <string name="popup_title_yingyan">Condor</string>
+    <string name="popup_title_mofa">Magic</string>
+    <string name="popup_title_jijia">Mecha</string>
+    <string name="popup_title_chilun">Gearwheel</string>
+    <string name="popup_title_cangmen">Cabin door</string>
+
 </resources>
