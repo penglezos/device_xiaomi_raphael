@@ -95,4 +95,24 @@
         <item>"0,4,2,0,-2,-2,4"</item>
         <item>"2,0,0,-2,-4,0,0"</item>
     </string-array>
+
+    <string-array name="popupcamera_effects_entries">
+        <item>@string/action_none</item>
+        <item>@string/popup_title_muqin</item>
+        <item>@string/popup_title_yingyan</item>
+        <item>@string/popup_title_mofa</item>
+        <item>@string/popup_title_jijia</item>
+        <item>@string/popup_title_chilun</item>
+        <item>@string/popup_title_cangmen</item>
+    </string-array>
+
+    <string-array name="popupcamera_effects_values">
+        <item>-1</item>
+        <item>0</item>
+        <item>2</item>
+        <item>4</item>
+        <item>6</item>
+        <item>8</item>
+        <item>10</item>
+    </string-array>
 </resources>
