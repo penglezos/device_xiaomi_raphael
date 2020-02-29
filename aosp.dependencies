@@ -1,0 +1,20 @@
+[
+  {
+    "remote"     : "github",
+    "repository" : "markakash/vendor_xiaomi_raphael",
+    "target_path": "vendor/xiaomi/raphael",
+    "branch": "ten"
+  },
+  {
+    "remote"     : "github",
+    "repository" : "markakash/kernel_xiaomi_sm8150",
+    "target_path": "kernel/xiaomi/sm8150",
+    "branch": "pe"
+  },
+  {
+    "repository": "packages_apps_PixelLiveWallpaper",
+    "target_path": "packages/apps/PixelLiveWallpaper",
+    "branch": "ten",
+    "remote": "pixel-gitlab"
+  }
+]
