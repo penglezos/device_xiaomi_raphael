@@ -935,7 +935,6 @@ vendor/etc/thermal-phone.conf
 vendor/etc/thermal-tgame.conf
 vendor/etc/thermald-devices.conf
 vendor/lib64/libthermalclient.so
-vendor/lib64/hw/thermal.msmnile.so
 
 # Time
 -vendor/app/TimeService/TimeService.apk
