@@ -139,7 +139,7 @@ case "$target" in
     # Setup final blkio
     # value for group_idle is us
     echo 1000 > /dev/blkio/blkio.weight
-    echo 100 > /dev/blkio/background/blkio.weight
+    echo 200 > /dev/blkio/background/blkio.weight
     echo 2000 > /dev/blkio/blkio.group_idle
     echo 0 > /dev/blkio/background/blkio.group_idle
 
