@@ -29,9 +29,8 @@
 
 target=`getprop ro.board.platform`
 
-function configure_read_ahead_kb_values() {
-    echo 512 > /sys/block/sda/bdi/read_ahead_kb
-}
+# Setup readahead
+find /sys/devices -name read_ahead_kb | while read node; do echo 128 > $node; done
 
 function configure_memory_parameters() {
     # Set Memory parameters.
