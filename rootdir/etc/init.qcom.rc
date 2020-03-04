@@ -197,9 +197,6 @@ on post-fs-data
     # Create directories for wifihal services
     mkdir /dev/socket/wifihal 2770 wifi wifi
 
-    # Create directory for hostapd
-    mkdir /data/hostapd 0770 system wifi
-
     # Create /data/time folder for time-services
     mkdir /data/vendor/time 0700 system system
 
