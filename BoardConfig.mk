@@ -18,6 +18,8 @@ BOARD_VENDOR := xiaomi
 
 DEVICE_PATH := device/xiaomi/raphael
 
+# Build
+BUILD_BROKEN_PREBUILT_ELF_FILES := true
 BUILD_BROKEN_DUP_RULES := true
 
 # Architecture
