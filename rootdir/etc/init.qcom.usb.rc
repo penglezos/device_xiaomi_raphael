@@ -45,9 +45,9 @@ on charger
     symlink /config/usb_gadget/g1/configs/b.1 /config/usb_gadget/g1/os_desc/b.1
     mount functionfs adb /dev/usb-ffs/adb uid=2000,gid=2000
     write /sys/class/android_usb/android0/f_ffs/aliases adb
-    enable vendor.qcom-usb-sh
-    start vendor.qcom-usb-sh
+    exec u:r:vendor_qti_init_shell:s0 -- /vendor/bin/init.qcom.usb.sh
     setprop sys.usb.config mass_storage
+    setprop sys.usb.configfs 1
 
 on boot
     write /sys/class/android_usb/android0/iSerial ${ro.serialno}
@@ -116,21 +116,14 @@ on boot
     write /sys/class/android_usb/android0/f_ffs/aliases adb
     setprop sys.mtp.device_type 2
     setprop vendor.usb.controller ${sys.usb.controller}
-    enable vendor.qcom-usb-sh
-
-service vendor.qcom-usb-sh /vendor/bin/init.qcom.usb.sh
-    class core
-    user root
-    oneshot
-    disabled
+    exec u:r:vendor_qti_init_shell:s0 -- /vendor/bin/init.qcom.usb.sh
+    setprop sys.usb.config ${persist.vendor.usb.config}
+    setprop sys.usb.configfs 1
 
 on property:persist.vendor.usb.config=*
     setprop persist.sys.usb.config ${persist.vendor.usb.config}
 
 on boot && property:ro.boot.usbconfigfs=true
-        setprop sys.usb.configfs 1
-
-on property:vendor.usb.configfs=1 && property:sys.usb.configfs=0
         setprop sys.usb.configfs 1
 
 # Following are the parameters required for usb functionality. They provide configurable options like
