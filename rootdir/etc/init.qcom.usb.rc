@@ -73,6 +73,8 @@ on boot
     mkdir /config/usb_gadget/g1/functions/midi.gs5
     mkdir /config/usb_gadget/g1/functions/ffs.adb
     mkdir /config/usb_gadget/g1/functions/ffs.diag
+    mkdir /config/usb_gadget/g1/functions/ffs.diag_mdm
+    mkdir /config/usb_gadget/g1/functions/ffs.diag_mdm2
     mkdir /config/usb_gadget/g1/functions/diag.diag
     mkdir /config/usb_gadget/g1/functions/diag.diag_mdm
     mkdir /config/usb_gadget/g1/functions/diag.diag_mdm2
@@ -107,6 +109,10 @@ on boot
     mount functionfs adb /dev/usb-ffs/adb uid=2000,gid=1000,rmode=0770,fmode=0660
     mkdir /dev/ffs-diag 0770 shell system
     mount functionfs diag /dev/ffs-diag uid=2000,gid=1000,rmode=0770,fmode=0660,no_disconnect=1
+    mkdir /dev/ffs-diag-1 0770 shell system
+    mount functionfs diag_mdm /dev/ffs-diag-1 uid=2000,gid=1000,rmode=0770,fmode=0660,no_disconnect=1
+    mkdir /dev/ffs-diag-2 0770 shell system
+    mount functionfs diag_mdm2 /dev/ffs-diag-2 uid=2000,gid=1000,rmode=0770,fmode=0660,no_disconnect=1
     write /sys/class/android_usb/android0/f_ffs/aliases adb
     setprop sys.mtp.device_type 2
     setprop vendor.usb.controller ${sys.usb.controller}
