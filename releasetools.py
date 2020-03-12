@@ -1,5 +1,5 @@
 # Copyright (C) 2009 The Android Open Source Project
-# Copyright (c) 2011 The Linux Foundation. All rights reserved.
+# Copyright (C) 2019 The LineageOS Open Source Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -13,27 +13,28 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-import hashlib
 import common
+import re
 
 def FullOTA_InstallEnd(info):
-  OTA_InstallEnd(info)
+  OTA_InstallEnd(info, False)
   return
 
 def IncrementalOTA_InstallEnd(info):
-  OTA_InstallEnd(info)
+  OTA_InstallEnd(info, True)
   return
 
-def AddImage(info, basename, dest):
-  path = "IMAGES/" + basename
-  if path not in info.input_zip.namelist():
-    return
+def AddImage(info, basename, dest, incremental):
+  name = basename
+  if incremental:
+    input_zip = info.source_zip
+  else:
+    input_zip = info.input_zip
+  data = input_zip.read("IMAGES/" + basename)
+  common.ZipWriteStr(info.output_zip, name, data)
+  info.script.AppendExtra('package_extract_file("%s", "%s");' % (name, dest))
 
-  data = info.input_zip.read(path)
-  common.ZipWriteStr(info.output_zip, basename, data)
-  info.script.AppendExtra('package_extract_file("%s", "%s");' % (basename, dest))
-
-def OTA_InstallEnd(info):
+def OTA_InstallEnd(info, incremental):
   info.script.Print("Patching firmware images...")
-  AddImage(info, "dtbo.img", "/dev/block/bootdevice/by-name/dtbo")
+  AddImage(info, "dtbo.img", "/dev/block/bootdevice/by-name/dtbo", incremental)
   return
