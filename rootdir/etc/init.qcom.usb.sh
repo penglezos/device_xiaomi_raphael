@@ -43,10 +43,6 @@ esoc_name=`cat /sys/bus/esoc/devices/esoc0/esoc_name 2> /dev/null`
 
 target=`getprop ro.board.platform`
 
-if [ -f /sys/class/android_usb/f_mass_storage/lun/nofua ]; then
-	echo 1  > /sys/class/android_usb/f_mass_storage/lun/nofua
-fi
-
 #
 # Override USB default composition
 #
@@ -141,19 +137,6 @@ case "$soc_machine" in
 	fi
     ;;
 esac
-
-# set rndis transport to BAM2BAM_IPA for 8920 and 8940
-if [ "$target" == "msm8937" ]; then
-	if [ ! -d /config/usb_gadget ]; then
-	   case "$soc_id" in
-		"313" | "320")
-		   echo BAM2BAM_IPA > /sys/class/android_usb/android0/f_rndis_qc/rndis_transports
-		;;
-		*)
-		;;
-	   esac
-	fi
-fi
 
 # check configfs is mounted or not
 if [ -d /config/usb_gadget ]; then

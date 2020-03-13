@@ -265,7 +265,6 @@ PRODUCT_BOOT_JARS += \
 
 # Init
 PRODUCT_PACKAGES += \
-    init.msm.usb.configfs.rc \
     init.qcom.post_boot.sh \
     init.qcom.rc \
     init.qcom.sh \
