@@ -243,7 +243,7 @@ Value* VerifyVendorFn(const char* name, State* state,
     return StringValue(strdup(ret ? "1" : "0"));
 }
 
-void Register_librecovery_updater_xiaomi() {
+void Register_librecovery_updater_raphael() {
     RegisterFunction("xiaomi.verify_modem", VerifyModemFn);
     RegisterFunction("xiaomi.verify_vendor", VerifyVendorFn);
 }
