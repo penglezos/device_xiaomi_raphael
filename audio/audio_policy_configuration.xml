@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<!-- Copyright (c) 2016-2019, The Linux Foundation. All rights reserved
+<!-- Copyright (c) 2016-2020, The Linux Foundation. All rights reserved
      Not a Contribution.
 -->
 <!-- Copyright (C) 2015 The Android Open Source Project
@@ -21,7 +21,7 @@
     <!-- version section contains a “version” tag in the form “major.minor” e.g version=”1.0” -->
 
     <!-- Global configuration Decalaration -->
-    <globalConfiguration speaker_drc_enabled="true"/>
+    <globalConfiguration speaker_drc_enabled="true" call_screen_mode_supported="true"/>
 
 
     <!-- Modules section:

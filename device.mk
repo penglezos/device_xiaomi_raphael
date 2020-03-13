@@ -116,6 +116,7 @@ PRODUCT_COPY_FILES += \
 
 PRODUCT_COPY_FILES += \
     hardware/qcom-caf/sm8150/audio/configs/msmnile/audio_tuning_mixer_tavil.txt:$(TARGET_COPY_OUT_VENDOR)/etc/audio_tuning_mixer_tavil.txt \
+    hardware/qcom-caf/sm8150/audio/configs/msmnile/mixer_paths_pahu.xml:$(TARGET_COPY_OUT_VENDOR)/etc/mixer_paths_pahu.xml \
     hardware/qcom-caf/sm8150/audio/configs/msmnile/graphite_ipc_platform_info.xml:$(TARGET_COPY_OUT_VENDOR)/etc/graphite_ipc_platform_info.xml
 
 # Bluetooth
