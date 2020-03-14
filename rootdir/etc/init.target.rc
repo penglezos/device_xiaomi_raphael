@@ -138,7 +138,6 @@ on property:sys.shutdown.requested=*
     stop vendor.per_proxy
 
 on charger
-    load_system_props
     wait /dev/block/bootdevice/by-name/system
     mount ext4 /dev/block/bootdevice/by-name/system / ro barrier=1
 
