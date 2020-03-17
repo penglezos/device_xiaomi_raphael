@@ -20,6 +20,7 @@
 
 #include <android-base/file.h>
 #include <android-base/logging.h>
+#include <hardware_legacy/power.h>
 
 #include <chrono>
 #include <cmath>
@@ -142,11 +143,13 @@ Return<void> FingerprintInscreen::onFinishEnroll() {
 }
 
 Return<void> FingerprintInscreen::onPress() {
+    acquire_wake_lock(PARTIAL_WAKE_LOCK, LOG_TAG);
     WriteToFile(DIM_LAYER_HBM_PATH, 1);
     return Void();
 }
 
 Return<void> FingerprintInscreen::onRelease() {
+    release_wake_lock(LOG_TAG);
     return Void();
 }
 

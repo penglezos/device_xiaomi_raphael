@@ -11,5 +11,5 @@ service fingerprint-inscreen-1-0 /vendor/bin/hw/vendor.lineage.biometrics.finger
     interface vendor.lineage.biometrics.fingerprint.inscreen@1.0::IFingerprintInscreen default
     class hal
     user system
-    group system
+    group system wakelock
     shutdown critical
