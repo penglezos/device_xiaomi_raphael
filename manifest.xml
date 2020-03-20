@@ -96,18 +96,6 @@
         <fqname>@4.0::IKeymasterDevice/default</fqname>
     </hal>
     <hal format="hidl">
-        <name>android.hardware.media.c2</name>
-        <transport>hwbinder</transport>
-        <version>1.0</version>
-        <interface>
-            <name>IComponentStore</name>
-            <instance>default</instance>
-            <instance>software</instance>
-        </interface>
-        <fqname>@1.0::IComponentStore/default</fqname>
-        <fqname>@1.0::IComponentStore/software</fqname>
-    </hal>
-    <hal format="hidl">
         <name>android.hardware.media.omx</name>
         <transport>hwbinder</transport>
         <version>1.0</version>
