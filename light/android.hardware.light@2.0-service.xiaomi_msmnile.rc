@@ -1,12 +1,8 @@
 on boot
     chown system system /sys/class/backlight/panel0-backlight/brightness
     chown system system /sys/class/backlight/panel0-backlight/max_brightness
-    chown system system /sys/class/leds/white/brightness
-    chown system system /sys/class/leds/white/breath
     chmod 0644 /sys/class/backlight/panel0-backlight/brightness
     chmod 0644 /sys/class/backlight/panel0-backlight/max_brightness
-    chmod 0644 /sys/class/leds/white/brightness
-    chmod 0644 /sys/class/leds/white/breath
 
 service vendor.light-hal-2-0 /vendor/bin/hw/android.hardware.light@2.0-service.xiaomi_msmnile
     interface android.hardware.light@2.0::ILight default
