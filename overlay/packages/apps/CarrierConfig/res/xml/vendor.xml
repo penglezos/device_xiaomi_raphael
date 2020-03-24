@@ -89,6 +89,7 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.-->
         <boolean name="carrier_rtt_downgrade_supported" value="false"/>
         <boolean name="show_rtt_visibility_setting_bool" value="false" />
         <boolean name="rtt_always_enabled_bool" value="false" />
+        <int name="default_rtt_mode_int" value="0" />
 
         <!-- HD/VOLTE icon support -->
         <boolean name="config_update_service_status" value="false"/>
