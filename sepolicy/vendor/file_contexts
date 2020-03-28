@@ -15,7 +15,7 @@
 # HALs
 /vendor/bin/hw/android\.hardware\.light@2\.0-service\.xiaomi_msmnile                                   u:object_r:hal_light_default_exec:s0
 /vendor/bin/hw/android\.hardware\.power@1\.2-service\.xiaomi_msmnile                                   u:object_r:hal_power_default_exec:s0
-/vendor/bin/hw/vendor\.lineage\.biometrics\.fingerprint\.inscreen@1.0-service\.xiaomi_raphael          u:object_r:hal_lineage_fod_default_exec:s0
+/vendor/bin/hw/vendor\.p404\.biometrics\.fingerprint\.inscreen@1.0-service\.xiaomi_raphael            u:object_r:hal_p404_fod_default_exec:s0
 /vendor/bin/hw/vendor\.xiaomi\.hardware\.motor@1.0-service                                             u:object_r:hal_motor_default_default_exec:s0
 
 # Mlipay

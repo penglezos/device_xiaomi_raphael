@@ -13,4 +13,4 @@
 # limitations under the License.
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/aosp_raphael.mk
+    $(LOCAL_DIR)/p404_raphael.mk

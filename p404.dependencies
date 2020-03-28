@@ -1,0 +1,42 @@
+[
+    { 
+        "remote"       : "github",
+        "repository"   : "markakash/vendor_xiaomi_raphael",
+        "target_path"  : "vendor/xiaomi/raphael",
+        "branch"       : "ten"
+    },
+    { 
+        "remote"       : "github",
+        "repository"   : "UtsavBalar1231/kernel_xiaomi_raphael",
+        "target_path"  : "kernel/xiaomi/sm8150",
+        "branch"       : "sm8150-common"
+    },
+    {
+        "remote":       "github",
+        "repository":   "markakash/platform_vendor_nxp_opensource_external_libnfc-nci",
+        "target_path":  "vendor/nxp/opensource/commonsys/external/libnfc-nci",
+        "override":     "platform_vendor_nxp_opensource_external_libnfc-nci",
+        "revision":     "queen-cake"
+    },
+    {
+        "remote":       "github",
+        "repository":   "markakash/platform_vendor_nxp_opensource_frameworks",
+        "target_path":  "vendor/nxp/opensource/commonsys/frameworks",
+        "override":     "platform_vendor_nxp_opensource_frameworks",
+        "revision":     "queen-cake"
+    },
+    {
+        "remote":       "github",
+        "repository":   "markakash/platform_vendor_nxp_opensource_sn100x_halimpl",
+        "target_path":  "vendor/nxp/opensource/sn100x/halimpl",
+        "override":     "platform_vendor_nxp_opensource_sn100x_halimpl",
+        "revision":     "queen-cake"
+    },
+    {
+        "remote":       "github",
+        "repository":   "markakash/platform_vendor_nxp_opensource_packages_apps_Nfc",
+        "target_path":  "vendor/nxp/opensource/commonsys/packages/apps/Nfc",
+        "override":     "platform_vendor_nxp_opensource_packages_apps_Nfc",
+        "revision":     "queen-cake"
+    }
+]
