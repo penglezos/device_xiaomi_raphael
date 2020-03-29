@@ -96,6 +96,22 @@
         <item>"2,0,0,-2,-4,0,0"</item>
     </string-array>
 
+    <!-- Popup camera effect names -->
+    <string-array name="popupcamera_effects_names" translatable="false">
+        <item>popup_muqin_up.ogg</item>
+        <item>popup_muqin_down.ogg</item>
+        <item>popup_yingyan_up.ogg</item>
+        <item>popup_yingyan_down.ogg</item>
+        <item>popup_mofa_up.ogg</item>
+        <item>popup_mofa_down.ogg</item>
+        <item>popup_jijia_up.ogg</item>
+        <item>popup_jijia_down.ogg</item>
+        <item>popup_chilun_up.ogg</item>
+        <item>popup_chilun_down.ogg</item>
+        <item>popup_cangmen_up.ogg</item>
+        <item>popup_cangmen_down.ogg</item>
+    </string-array>
+
     <string-array name="popupcamera_effects_entries">
         <item>@string/action_none</item>
         <item>@string/popup_title_muqin</item>
