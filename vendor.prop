@@ -97,7 +97,6 @@ vendor.audio_hal.period_size=192
 # Bluetooth
 persist.bluetooth.a2dp_offload.cap=sbc-aac-aptx-aptxhd-ldac
 persist.bluetooth.a2dp_offload.disabled=false
-persist.vendor.bt.a2dp_offload_cap=sbc-aptx-aptxtws-aptxhd-aptxadaptive-aac-ldac
 persist.vendor.bt.aac_frm_ctl.enabled=false
 persist.vendor.btstack.a2dp_offload_cap=sbc-aptx-aptxtws-aptxhd-aptxadaptive-aac-ldac
 persist.vendor.btstack.connect.peer_earbud=true
@@ -108,7 +107,6 @@ persist.vendor.qcom.bluetooth.aac_frm_ctl.enabled=true
 persist.vendor.qcom.bluetooth.enable.splita2dp=true
 persist.vendor.qcom.bluetooth.twsp_state.enabled=false
 ro.bluetooth.a2dp_offload.supported=true
-vendor.bluetooth.soc=cherokee
 vendor.qcom.bluetooth.soc=cherokee
 	
 # Camera
@@ -120,11 +118,6 @@ persist.vendor.data.mode=concurrent
 persist.vendor.data.iwlan.enable=true
 	
 # Display
-ro.vendor.display.ad=1
-ro.vendor.display.ad.hdr_calib_data=/vendor/etc/hdr_config.cfg
-ro.vendor.display.ad.sdr_calib_data=/vendor/etc/sdr_config.cfg
-ro.vendor.display.sensortype=2
-ro.vendor.display.cabl=0
 vendor.display.comp_mask=0
 vendor.display.dataspace_saturation_matrix=1.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,1.0
 vendor.display.disable_decimation=1
@@ -164,7 +157,6 @@ persist.dbg.vt_avail_ovr=1
 persist.dbg.wfc_avail_ovr=1
 
 # Memory
-ro.vendor.qti.sys.fw.bservice_enable=true
 ro.vendor.qti.va_aosp.support=1
 
 # Property to enable/disable PASR
