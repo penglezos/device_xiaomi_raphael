@@ -162,11 +162,6 @@ service vendor.hvdcp_opti /vendor/bin/hvdcp_opti
     user root
     group system wakelock
 
-service panel-info-sh /vendor/bin/sh /vendor/etc/init.panel_info.sh
-    class core
-    user root
-    oneshot
-
 service nv_mac /vendor/bin/nv_mac
     class main
     user system
