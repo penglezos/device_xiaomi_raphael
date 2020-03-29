@@ -393,7 +393,6 @@ vendor/lib64/mediadrm/libwvdrmengine.so
 # Display-Hardware (from LA.UM.8.1.r1-13500-sm8150.0)
 vendor/lib64/libdisp-aba.so|a7f8975e5a323100bb9e5feb14085c0c4479ce96
 vendor/lib64/libdisplayqos.so|8e5f13a5b7ea0efa8db2902c8719380d710bc857
-vendor/lib64/libdpps.so|d4e1ae93184554bbbb2c896d8afd3ee5eef8ff5c
 vendor/lib64/libhdr_tm.so|4f08d65045893e0ec2b351581d6378f2e187ca82
 vendor/lib64/libqseed3.so|3fb480721b26a2df0a2a96359814ef37a5da9148
 vendor/lib64/libsdedrm.so|1a6d6ac050678dbc2b7d724ff7c642e4946b573b
