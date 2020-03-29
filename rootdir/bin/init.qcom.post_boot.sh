@@ -29,9 +29,6 @@
 
 target=`getprop ro.board.platform`
 
-# Setup readahead
-find /sys/devices -name read_ahead_kb | while read node; do echo 128 > $node; done
-
 function configure_memory_parameters() {
     # Set Memory parameters.
     #
@@ -91,7 +88,6 @@ function configure_memory_parameters() {
     echo 0 > /sys/module/vmpressure/parameters/allocstall_threshold
     echo 100 > /proc/sys/vm/swappiness
 
-    configure_read_ahead_kb_values
 }
 
 case "$target" in
