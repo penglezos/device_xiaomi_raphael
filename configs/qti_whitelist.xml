@@ -40,7 +40,6 @@
     <allow-in-power-save package="com.qualcomm.simcontacts" />
     <allow-in-power-save package="com.qualcomm.qti.autoregistration" />
     <allow-in-power-save package="com.qualcomm.qti.server.wigigapp" />
-    <allow-in-power-save package="com.qualcomm.qti.StatsPollManager" />
     <allow-in-power-save package="com.qualcomm.qti.gsma.services.nfc" />
     <allow-in-power-save package="com.quicinc.voice.activation" />
     <allow-in-power-save package="com.android.mms" />
