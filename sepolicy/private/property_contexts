@@ -1,0 +1,2 @@
+ro.product.mod_device    u:object_r:exported2_default_prop:s0
+ro.product.system.manufacturer u:object_r:exported2_default_prop:s0 exact string

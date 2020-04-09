@@ -9,15 +9,19 @@ init_daemon_domain(mi_thermald)
 set_prop(mi_thermald, thermal_normal_prop)
 
 allow mi_thermald thermal_data_file:dir rw_dir_perms;
-allow mi_thermald thermal_data_file:file rw_file_perms;
+allow mi_thermald thermal_data_file:file create_file_perms;
 
-allow mi_thermald self:capability { chown fowner fsetid sys_boot };
-allow mi_thermald self:capability2 { wake_alarm block_suspend };
+allow mi_thermald self:capability { fsetid sys_boot };
+allow mi_thermald mi_thermald:capability { chown fowner };
+allow mi_thermald mi_thermald:capability2 { wake_alarm block_suspend };
 
 allow mi_thermald sysfs_devices_system_cpu:file rw_file_perms;
 
 r_dir_file(mi_thermald, sysfs_thermal)
 allow mi_thermald sysfs_thermal:file w_file_perms;
+
+r_dir_file(mi_thermald, sysfs)
+allow mi_thermald sysfs:file w_file_perms;
 
 r_dir_file(mi_thermald, sysfs_leds)
 

@@ -1,0 +1,13 @@
+type remosaic_daemon, domain;
+type remosaic_daemon_exec, exec_type, vendor_file_type, file_type;
+type remosaic_daemon_service, vndservice_manager_type;
+
+allow remosaic_daemon ion_device:chr_file r_file_perms;
+
+r_dir_file(remosaic_daemon, vendor_camera_data_file)
+
+init_daemon_domain(remosaic_daemon)
+
+vndbinder_use(remosaic_daemon)
+
+allow remosaic_daemon remosaic_daemon_service:service_manager add;

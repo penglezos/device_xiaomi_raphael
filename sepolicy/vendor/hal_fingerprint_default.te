@@ -1,0 +1,23 @@
+type hal_fingerprint_hwservice_xiaomi, hwservice_manager_type;
+type fingerprint_device, dev_type;
+type fingerprint_data_file, data_file_type, file_type;
+type vendor_fp_prop, property_type;
+
+allow hal_fingerprint_default fingerprint_device:chr_file rw_file_perms;
+allow hal_fingerprint_default fingerprint_data_file:dir create_dir_perms;
+allow hal_fingerprint_default fingerprint_data_file:file create_file_perms;
+allow hal_fingerprint_default input_device:dir r_dir_perms;
+allow hal_fingerprint_default input_device:chr_file rw_file_perms;
+allow hal_fingerprint_default qdsp_device:chr_file r_file_perms;
+allow hal_fingerprint_default self:netlink_socket create_socket_perms_no_ioctl;
+allow hal_fingerprint_default tee_device:chr_file rw_file_perms;
+allow hal_fingerprint_default uhid_device:chr_file rw_file_perms;
+allow hal_fingerprint_default xdsp_device:chr_file r_file_perms;
+
+r_dir_file(hal_fingerprint_default, firmware_file)
+
+get_prop(hal_fingerprint_default, vendor_adsprpc_prop)
+set_prop(hal_fingerprint_default, vendor_fp_prop)
+hal_client_domain(hal_fingerprint_default, hal_perf)
+
+add_hwservice(hal_fingerprint_default, hal_fingerprint_hwservice_xiaomi)

@@ -1,0 +1,14 @@
+type camera_persist_file, file_type, vendor_persist_type;
+
+hal_client_domain(hal_camera_default, hal_power)
+
+allow hal_camera_default proc_meminfo:file r_file_perms;
+
+r_dir_file(hal_camera_default, sysfs_kgsl)
+r_dir_file(hal_camera_default, camera_persist_file)
+r_dir_file(hal_camera_default, mnt_vendor_file)
+
+set_prop(hal_camera_default, vendor_camera_prop)
+
+allow hal_camera_default remosaic_daemon_service:service_manager find;
+binder_call(hal_camera_default, remosaic_daemon)

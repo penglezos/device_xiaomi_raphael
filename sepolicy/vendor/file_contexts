@@ -1,10 +1,38 @@
+# Audio
+/dev/socket/audio_hw_socket                                                                            u:object_r:audio_socket:s0
+
+# Camera
+/mnt/vendor/persist/camera(/.*)?                                                                       u:object_r:camera_persist_file:s0
+
+# Fingerprint
+/dev/goodix_fp                                                                                         u:object_r:fingerprint_device:s0
+/data/vendor/goodix(/.*)?                                                                              u:object_r:fingerprint_data_file:s0
+
+# FOD
+/sys/devices/platform/soc/soc:qcom,dsi-display-primary/fod_hbm                                         u:object_r:sysfs_fod:s0
+/sys/devices/virtual/touch/tp_dev/fod_status                                                           u:object_r:sysfs_fod:s0
+
 # HALs
-/vendor/bin/hw/android\.hardware\.light@2\.0-service\.xiaomi_sm8150                                     u:object_r:hal_light_default_exec:s0
-/vendor/bin/hw/lineage\.biometrics\.fingerprint\.inscreen@1.0-service\.xiaomi_raphael                   u:object_r:hal_lineage_fod_default_exec:s0
+/vendor/bin/hw/android\.hardware\.light@2\.0-service\.xiaomi_msmnile                                   u:object_r:hal_light_default_exec:s0
+/vendor/bin/hw/android\.hardware\.power@1\.2-service\.xiaomi_msmnile                                   u:object_r:hal_power_default_exec:s0
+/vendor/bin/hw/vendor\.lineage\.biometrics\.fingerprint\.inscreen@1.0-service\.xiaomi_raphael          u:object_r:hal_lineage_fod_default_exec:s0
+
+# IR
+/dev/lirc0                                                                                             u:object_r:ir_dev_file:s0
+
+# Mlipay
+/vendor/bin/mlipayd@1\.1                                                                               u:object_r:hal_mlipay_default_exec:s0
+
+# Remosaic
+/vendor/bin/remosaic_daemon                                                                            u:object_r:remosaic_daemon_exec:s0
+
+# Sensors
+/dev/elliptic(.*)?                                                                                     u:object_r:sound_device:s0
 
 # WiFi
-/vendor/bin/wifi-mac-generator                                                                          u:object_r:wifi-mac-generator_exec:s0
+/vendor/bin/nv_mac                                                                                     u:object_r:wcnss_service_exec:s0
+/vendor/bin/wifi-mac-generator                                                                         u:object_r:wifi-mac-generator_exec:s0
 
 # Xiaomi thermal daemon
-/vendor/bin/mi_thermald		u:object_r:mi_thermald_exec:s0
-/data/vendor/thermal(/.*)?          u:object_r:thermal_data_file:s0
+/vendor/bin/mi_thermald		                                                                       u:object_r:mi_thermald_exec:s0
+/data/vendor/thermal(/.*)?                                                                             u:object_r:thermal_data_file:s0

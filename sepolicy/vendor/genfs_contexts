@@ -1,0 +1,6 @@
+# Lights
+genfscon sysfs /devices/platform/soc/c440000.qcom,spmi/spmi-0/spmi0-05/c440000.qcom,spmi:qcom,pm8150l@5:qcom,leds@d000/leds/white u:object_r:sysfs_graphics:s0
+
+# Wireless charger
+genfscon sysfs /devices/platform/soc/c440000.qcom,spmi/spmi-0/spmi0-02/c440000.qcom,spmi:qcom,pm8150b@2:qcom,qpnp-smb5/power_supply/wireless u:object_r:sysfs_battery_supply:s0
+genfscon sysfs /devices/platform/soc/890000.i2c/i2c-0/0-003b/power_supply/idt u:object_r:sysfs_battery_supply:s0

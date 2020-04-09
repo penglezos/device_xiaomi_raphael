@@ -1,0 +1,10 @@
+type audio_socket, file_type;
+
+allow hal_audio_default mnt_vendor_file:dir search;
+allow hal_audio_default sysfs:dir { read };
+allow hal_audio_default sysfs:dir { open };
+r_dir_file(hal_audio_default, persist_audio_file)
+
+set_prop(hal_audio_default, vendor_audio_prop)
+
+allow hal_audio_default audio_socket:sock_file rw_file_perms;

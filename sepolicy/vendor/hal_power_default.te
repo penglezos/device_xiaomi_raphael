@@ -1,0 +1,2 @@
+allow hal_power_default input_device:chr_file { read write };
+allow hal_power_default input_device:chr_file { open };

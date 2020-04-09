@@ -1,0 +1,2 @@
+allow qti_init_shell sysfs:file { write };
+allow qti_init_shell sysfs_loop:file { write };

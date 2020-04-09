@@ -1,0 +1,3 @@
+# Allow vendor_init to set persist_camera_prop
+set_prop(vendor_init, vendor_camera_prop)
+set_prop(vendor_init, persist_camera_prop)
