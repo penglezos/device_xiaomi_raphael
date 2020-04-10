@@ -1,0 +1,19 @@
+type hal_motor_hwservice_xiaomi, hwservice_manager_type;
+type akm09970_device, dev_type, mlstrustedobject;
+type drv8846_device, dev_type, mlstrustedobject;
+type sysfs_oem, sysfs_type, fs_type;
+
+get_prop(hal_motor_default, system_manufacturer_prop)
+
+add_hwservice(hal_motor_default, hal_motor_hwservice_xiaomi)
+
+allow hal_motor_default mnt_vendor_file:dir { search };
+allow hal_motor_default drv8846_device:chr_file rw_file_perms;
+allow hal_motor_default akm09970_device:chr_file rw_file_perms;
+allow hal_motor_default persist_sensors_file:dir { search };
+
+allow hal_motor_default sysfs_oem:file rw_file_perms;
+allow hal_motor_default sysfs_oem:dir { search };
+allow hal_motor_default persist_sensors_file:file r_file_perms;
+
+allow hal_motor_default system_app:binder { call transfer };

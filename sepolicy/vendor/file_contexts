@@ -16,12 +16,16 @@
 /vendor/bin/hw/android\.hardware\.light@2\.0-service\.xiaomi_msmnile                                   u:object_r:hal_light_default_exec:s0
 /vendor/bin/hw/android\.hardware\.power@1\.2-service\.xiaomi_msmnile                                   u:object_r:hal_power_default_exec:s0
 /vendor/bin/hw/vendor\.lineage\.biometrics\.fingerprint\.inscreen@1.0-service\.xiaomi_raphael          u:object_r:hal_lineage_fod_default_exec:s0
-
-# IR
-/dev/lirc0                                                                                             u:object_r:ir_dev_file:s0
+/vendor/bin/hw/vendor\.xiaomi\.hardware\.motor@1.0-service                                             u:object_r:hal_motor_default_default_exec:s0
 
 # Mlipay
 /vendor/bin/mlipayd@1\.1                                                                               u:object_r:hal_mlipay_default_exec:s0
+
+# Motor
+/dev/akm09970                                                                                          u:object_r:akm09970_device:s0
+/dev/drv8846_dev                                                                                       u:object_r:drv8846_device:s0
+/sys/class/leds/blue/brightness                                                                        u:object_r:sysfs_oem:s0
+/sys/class/leds/green/brightness                                                                       u:object_r:sysfs_oem:s0
 
 # Remosaic
 /vendor/bin/remosaic_daemon                                                                            u:object_r:remosaic_daemon_exec:s0

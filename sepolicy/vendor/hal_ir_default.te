@@ -1,4 +1,0 @@
-type ir_dev_file, file_type;
-
-allow hal_ir_default ir_dev_file:chr_file { open read write ioctl };
-allow ueventd ir_dev_file:chr_file { create getattr };

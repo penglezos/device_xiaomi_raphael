@@ -1,0 +1,6 @@
+# Allow system_app domain to access the camera motor
+allow system_app hal_motor_hwservice_xiaomi:hwservice_manager { find };
+allow system_app hal_motor_default:binder { call transfer };
+allow system_app sysfs_leds:dir { search };
+allow system_app sysfs_graphics:dir { search };
+allow system_app sysfs_graphics:file rw_file_perms;
