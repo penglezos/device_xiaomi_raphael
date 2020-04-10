@@ -3,3 +3,24 @@ type sound_device, dev_type;
 allow hal_sensors_default hal_audio_default:unix_stream_socket connectto;
 allow hal_sensors_default audio_socket:sock_file rw_file_perms;
 allow hal_sensors_default sound_device:chr_file rw_file_perms;
+
+allow hal_sensors_default fwk_scheduler_hwservice:hwservice_manager find;
+allow hal_sensors_default input_device:dir r_dir_perms;
+allow hal_sensors_default input_device:chr_file r_file_perms;
+
+# Allow sensor hals to access and use gralloc memory allocated by
+# android.hardware.graphics.allocator
+allow hal_sensors_default hal_graphics_allocator_default:fd use;
+allow hal_sensors_default ion_device:chr_file r_file_perms;
+
+# allow sensor hal to use lock for keeping system awake for wake up
+# events delivery.
+wakelock_use(hal_sensors_default);
+
+# allow sensor hal to use ashmem fd from system_server.
+allow hal_sensors_default system_server:fd use;
+
+allow hal_sensors_default diag_device:chr_file { open read write ioctl };
+
+get_prop(hal_sensors_default, persist_sensors_prop)
+get_prop(hal_sensors_default, vendor_camera_prop)

@@ -15,7 +15,11 @@ ro.hardware.fp                           u:object_r:vendor_fp_prop:s0
 vendor.fps_hal.                          u:object_r:vendor_fp_prop:s0
 sys.panel.display                        u:object_r:vendor_fp_prop:s0
 
+# Manufracturer
 ro.product.system.manufacturer           u:object_r:system_manufacturer_prop:s0
+
+# Sensor
+persist.sensor.                          u:object_r:persist_sensors_prop:s0
 
 # Xiaomi thermal daemon
 sys.thermal.                             u:object_r:thermal_normal_prop:s0

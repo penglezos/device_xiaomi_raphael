@@ -1,1 +1,5 @@
 r_dir_file(sensors, sysfs_graphics)
+
+allow sensors diag_device:chr_file { read write open ioctl };
+allow sensors sysfs_graphics:dir { search };
+allow sensors sysfs_graphics:file { read open getattr };
