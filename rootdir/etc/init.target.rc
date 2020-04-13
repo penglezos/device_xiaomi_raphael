@@ -76,6 +76,7 @@ on fs
     mkdir /mnt/vendor/persist/data 0700 system system
     mkdir /mnt/vendor/persist/audio 0755 system system
     mkdir /mnt/vendor/persist/camera 0777 root root
+    restorecon_recursive /mnt/vendor/persist
 
 on late-fs
     wait_for_prop hwservicemanager.ready true
