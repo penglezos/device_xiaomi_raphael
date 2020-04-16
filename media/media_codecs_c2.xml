@@ -190,22 +190,6 @@
             <Limit name="performance-point-1280x720" value="480" />
             <Feature name="adaptive-playback" />
         </MediaCodec>
-        <MediaCodec name="c2.qti.vp9.decoder.secure" type="video/x-vnd.on2.vp9" >
-            <Alias name="OMX.qcom.video.decoder.vp9.secure" />
-            <Limit name="size" min="96x96" max="4096x2304" />
-            <Limit name="block-count" range="36-36864" /> <!--max-spatial: 4096x2304 -->
-            <Limit name="alignment" value="2x2" />
-            <Limit name="block-size" value="16x16" />
-            <Limit name="blocks-per-second" min="24" max="2073600" />
-            <Limit name="bitrate" range="1-40000000" />
-            <Limit name="frame-rate" range="1-480" />
-            <Limit name="concurrent-instances" max="4" />
-            <Limit name="performance-point-4096x2304" value="30" />
-            <Limit name="performance-point-4096x2160" value="60" />
-            <Limit name="performance-point-3840x2160" value="60" />
-            <Feature name="adaptive-playback" />
-            <Feature name="secure-playback" required="true" />
-        </MediaCodec>
     </Decoders>
 
     <Encoders>
