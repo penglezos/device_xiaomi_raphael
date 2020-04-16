@@ -118,6 +118,8 @@ persist.vendor.data.mode=concurrent
 persist.vendor.data.iwlan.enable=true
 	
 # Display
+ro.vendor.display.ad.hdr_calib_data=/vendor/etc/hdr_config.cfg
+ro.vendor.display.ad.sdr_calib_data=/vendor/etc/sdr_config.cfg
 vendor.display.comp_mask=0
 vendor.display.dataspace_saturation_matrix=1.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,1.0
 vendor.display.disable_decimation=1
