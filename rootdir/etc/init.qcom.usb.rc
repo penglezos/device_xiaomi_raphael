@@ -27,23 +27,17 @@
 #
 
 on charger
-    mkdir /dev/usb-ffs 0770 shell shell
-    mkdir /dev/usb-ffs/adb 0770 shell shell
     mount configfs none /config
-    mkdir /config/usb_gadget/g1 0770 shell shell
+    mkdir /config/usb_gadget/g1 0770
     mkdir /config/usb_gadget/g1/strings/0x409 0770
     write /config/usb_gadget/g1/bcdUSB 0x0200
-    write /config/usb_gadget/g1/os_desc/use 1
     write /config/usb_gadget/g1/strings/0x409/serialnumber ${ro.serialno}
     write /config/usb_gadget/g1/strings/0x409/manufacturer ${ro.product.manufacturer}
     mkdir /config/usb_gadget/g1/functions/mass_storage.0
-    mkdir /config/usb_gadget/g1/functions/ffs.adb
-    mkdir /config/usb_gadget/g1/configs/b.1 0770 shell shell
-    mkdir /config/usb_gadget/g1/configs/b.1/strings/0x409 0770 shell shell
+    mkdir /config/usb_gadget/g1/configs/b.1 0770
+    mkdir /config/usb_gadget/g1/configs/b.1/strings/0x409 0770
     write /config/usb_gadget/g1/configs/b.1/MaxPower 900
-    write /config/usb_gadget/g1/os_desc/b_vendor_code 0x1
     symlink /config/usb_gadget/g1/configs/b.1 /config/usb_gadget/g1/os_desc/b.1
-    mount functionfs adb /dev/usb-ffs/adb uid=2000,gid=2000
     exec u:r:vendor_qti_init_shell:s0 -- /vendor/bin/init.qcom.usb.sh
     write /config/usb_gadget/g1/strings/0x409/product ${vendor.usb.product_string}
     setprop sys.usb.config mass_storage
