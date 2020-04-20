@@ -15,6 +15,9 @@ persist.vendor.camera.mfnrframenum=8
 persist.vendor.camera.multicam=TRUE
 vendor.camera.aux.packagelist=org.codeaurora.snapcam,com.android.camera,org.lineageos.snap
 
+# Charger
+ro.charger.enable_suspend=true
+
 # CNE and DPM
 persist.vendor.cne.feature=1
 persist.vendor.dpm.feature=1
