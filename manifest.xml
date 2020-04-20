@@ -610,6 +610,17 @@
         </interface>
         <fqname>@1.0::IFmHci/default</fqname>
     </hal>
+    <!-- IMS CM Service -->
+    <hal format="hidl">
+        <name>com.qualcomm.qti.imscmservice</name>
+        <transport>hwbinder</transport>
+        <version>2.2</version>
+        <interface>
+           <name>IImsCmService</name>
+           <instance>qti.ims.connectionmanagerservice</instance>
+        </interface>
+        <fqname>@2.2::IImsCmService/qti.ims.connectionmanagerservice</fqname>
+    </hal>
     <hal format="hidl">
         <name>vendor.qti.hardware.radio.am</name>
         <transport>hwbinder</transport>
