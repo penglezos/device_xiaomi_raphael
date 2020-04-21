@@ -41,6 +41,9 @@ TARGET_2ND_CPU_VARIANT_RUNTIME := cortex-a76
 # Assert
 TARGET_OTA_ASSERT_DEVICE := raphael,raphaelin
 
+# ANT+
+BOARD_ANT_WIRELESS_DEVICE := "qualcomm-hidl"
+
 # Bootloader
 TARGET_BOOTLOADER_BOARD_NAME := msmnile
 TARGET_NO_BOOTLOADER := true
