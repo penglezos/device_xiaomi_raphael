@@ -527,3 +527,7 @@ PRODUCT_PACKAGES += \
 # Override heap growth limit due to high display density on device
 PRODUCT_PROPERTY_OVERRIDES += \
     dalvik.vm.heapgrowthlimit=256m
+
+# Use 64-bit dex2oat for better dexopt time.
+PRODUCT_PROPERTY_OVERRIDES += \
+    dalvik.vm.dex2oat64.enabled=true
