@@ -58,6 +58,9 @@ persist.vendor.cne.feature=1
 # Crypto
 ro.crypto.volume.filenames_mode=aes-256-cts
 
+# Dalvik dex2oat
+dalvik.vm.dex2oat64.enabled=true
+
 # Display
 debug.sf.hw=0
 debug.egl.hw=0
