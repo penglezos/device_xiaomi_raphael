@@ -86,6 +86,7 @@ vendor.audio.flac.sw.decoder.24bit=true
 vendor.audio.hal.output.suspend.supported=false
 vendor.audio.hw.aac.encoder=false
 vendor.audio.offload.buffer.size.kb=256
+vendor.audio.hal.boot.timeout.ms=20000
 vendor.audio.offload.gapless.enabled=true
 vendor.audio.offload.multiaac.enable=true
 vendor.audio.offload.multiple.enabled=false
