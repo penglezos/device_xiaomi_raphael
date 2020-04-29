@@ -144,7 +144,6 @@ debug.egl.hw=0
 debug.mdpcomp.logs=0
 debug.sf.enable_hwc_vds=1
 debug.sf.hw=0
-persist.sys.sf.color_saturation=1.0
 debug.sf.latch_unsignaled=1
 ro.hardware.egl=adreno
 ro.opengles.version=196610
