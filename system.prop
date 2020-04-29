@@ -73,7 +73,6 @@ persist.vendor.radio.enable_temp_dds=true
 persist.vendor.radio.force_on_dc=true
 ril.subscription.types=RUIM
 ro.telephony.default_cdma_sub=0
-ro.telephony.default_network=22,22
 telephony.lteOnCdmaDevice=1
 
 # SurfaceFlinger
