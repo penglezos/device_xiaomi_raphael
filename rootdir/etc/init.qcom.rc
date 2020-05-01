@@ -43,6 +43,9 @@ on early-init
     chown system graphics /sys/kernel/debug/dri/0/debug/recovery_vbif_dbgbus
     chown system graphics /sys/kernel/debug/dri/0/debug/recovery_dsi_dbgbus
 
+    # Change ownership of sysfs power control node
+    chown system graphics /sys/class/drm/card0/device/power/control
+
 on init
     # Create cgroup mount point for memory
     mkdir /sys/fs/cgroup/memory/bg 0750 root system
