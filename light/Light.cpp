@@ -23,7 +23,9 @@
 #include <fstream>
 
 #define LCD_LED         "/sys/class/backlight/panel0-backlight/"
+#define WHITE_LED       "/sys/class/leds/white/"
 
+#define BREATH          "breath"
 #define BRIGHTNESS      "brightness"
 
 #define MAX_LED_BRIGHTNESS    255
@@ -86,6 +88,29 @@ static void handleBacklight(const LightState& state) {
     set(LCD_LED BRIGHTNESS, brightness);
 }
 
+static void handleNotification(const LightState& state) {
+    uint32_t whiteBrightness = getScaledBrightness(state, MAX_LED_BRIGHTNESS);
+
+    /* Disable breathing or blinking */
+    set(WHITE_LED BREATH, 0);
+    set(WHITE_LED BRIGHTNESS, 0);
+
+    if (!whiteBrightness) {
+        return;
+    }
+
+    switch (state.flashMode) {
+        case Flash::HARDWARE:
+        case Flash::TIMED:
+            /* Breathing */
+            set(WHITE_LED BREATH, 1);
+            break;
+        case Flash::NONE:
+        default:
+            set(WHITE_LED BRIGHTNESS, whiteBrightness);
+    }
+}
+
 static inline bool isStateLit(const LightState& state) {
     return state.color & 0x00ffffff;
 }
@@ -103,6 +128,9 @@ static inline bool isStateEqual(const LightState& first, const LightState& secon
 
 /* Keep sorted in the order of importance. */
 static std::vector<LightBackend> backends = {
+    { Type::ATTENTION, handleNotification },
+    { Type::NOTIFICATIONS, handleNotification },
+    { Type::BATTERY, handleNotification },
     { Type::BACKLIGHT, handleBacklight },
 };
 
