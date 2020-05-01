@@ -52,6 +52,9 @@ ro.netflix.bsp_rev=Q855-16947-1
 # NFC DT
 ro.nfc.port=I2C
 
+# Product
+ro.product.mod_device=raphael_eea_global
+
 # RCS
 persist.rcs.supported=1
 
