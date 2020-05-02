@@ -161,8 +161,8 @@ case "$target" in
     echo 1 > /sys/devices/system/cpu/cpufreq/policy7/schedutil/pl
 
     # Configure input boost settings
-    echo "0:1324800" > /sys/module/cpu_boost/parameters/input_boost_freq
-    echo 120 > /sys/module/cpu_boost/parameters/input_boost_ms
+    echo "0:1017600" > /sys/module/cpu_boost/parameters/input_boost_freq
+    echo 80 > /sys/module/cpu_boost/parameters/input_boost_ms
 
     # Disable wsf, beacause we are using efk.
     # wsf Range : 1..1000 So set to bare minimum value 1.
