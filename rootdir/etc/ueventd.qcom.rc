@@ -1,4 +1,4 @@
-# Copyright (c) 2012-2015, 2017-2019, The Linux Foundation. All rights reserved.
+# Copyright (c) 2012-2015, 2017-2020, The Linux Foundation. All rights reserved.
 #
 # Redistribution and use in source and binary forms, with or without
 # modification, are permitted provided that the following conditions are met:
@@ -143,7 +143,7 @@ firmware_directories /vendor/firmware_mnt/image/
 /dev/cryptoapp            0660   system     system
 /dev/spdaemon_ssr         0660   system     system
 /dev/spu_hal_ssr          0660   system     system
-/dev/iuicc                0660   system     system
+/dev/iuicc*               0660   system     system
 /dev/gemini0              0660   system     camera
 /dev/jpeg0                0660   system     camera
 /dev/jpeg1                0660   system     camera
