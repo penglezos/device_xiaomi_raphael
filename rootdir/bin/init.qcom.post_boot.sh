@@ -238,7 +238,7 @@ case "$target" in
         for latfloor in $device/*cpu-ddr-latfloor*/devfreq/*cpu-ddr-latfloor*
         do
         echo "compute" > $latfloor/governor
-        echo 10 > $latfloor/polling_interval
+        echo 8 > $latfloor/polling_interval
         done
 
         # Gold L3 ratio ceil
