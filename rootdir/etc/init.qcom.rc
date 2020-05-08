@@ -233,6 +233,8 @@ service vendor.ssr_setup /vendor/bin/ssr_setup
 
 on property:sys.boot_completed=1
     chown media audio /sys/kernel/wdsp0/boot
+    #Reinit lmkd to reconfigure lmkd properties
+    setprop lmkd.reinit 1
 
     start qcom-post-boot
 
