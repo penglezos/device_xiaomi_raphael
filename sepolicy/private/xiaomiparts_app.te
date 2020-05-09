@@ -17,6 +17,7 @@ allow xiaomiparts_app {
   mediametrics_service
   mediaserver_service
   sensorservice_service
+  storagestats_service
   surfaceflinger_service
   tethering_service
 }:service_manager find;
@@ -25,4 +26,9 @@ allow xiaomiparts_app system_app_data_file:dir create_dir_perms;
 allow xiaomiparts_app system_app_data_file:{ file lnk_file } create_file_perms;
 
 allow xiaomiparts_app sysfs_leds:dir r_dir_perms;
-allow xiaomiparts_app sysfs_leds:file rw_file_perms;
+
+allow xiaomiparts_app {
+  cgroup
+  sysfs_leds
+  sysfs_thermal
+}:file rw_file_perms;

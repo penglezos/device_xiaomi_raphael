@@ -24,6 +24,7 @@ import android.util.Log;
 
 import org.lineageos.settings.doze.DozeUtils;
 import org.lineageos.settings.popupcamera.PopupCameraUtils;
+import org.lineageos.settings.thermal.ThermalUtils;
 
 public class BootCompletedReceiver extends BroadcastReceiver {
 
@@ -35,5 +36,6 @@ public class BootCompletedReceiver extends BroadcastReceiver {
         if (DEBUG) Log.d(TAG, "Received boot completed intent");
         DozeUtils.checkDozeService(context);
         PopupCameraUtils.startService(context);
+        ThermalUtils.startService(context);
     }
 }
