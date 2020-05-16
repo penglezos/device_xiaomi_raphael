@@ -45,5 +45,5 @@
     <string name="thermal_camera">Camera</string>
     <string name="thermal_dialer">Dialer</string>
     <string name="thermal_gaming">Gaming</string>
-    <string name="thermal_youtube">Youtube</string>
+    <string name="thermal_streaming">Streaming</string>
 </resources>

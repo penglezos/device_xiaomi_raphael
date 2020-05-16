@@ -35,7 +35,7 @@ public final class ThermalUtils {
     protected static final int STATE_CAMERA = 3;
     protected static final int STATE_DIALER = 4;
     protected static final int STATE_GAMING = 5;
-    protected static final int STATE_YOUTUBE = 6;
+    protected static final int STATE_STREAMING = 6;
 
     private static final String THERMAL_STATE_DEFAULT = "0";
     private static final String THERMAL_STATE_BENCHMARK = "10";
@@ -43,14 +43,14 @@ public final class ThermalUtils {
     private static final String THERMAL_STATE_CAMERA = "12";
     private static final String THERMAL_STATE_DIALER = "8";
     private static final String THERMAL_STATE_GAMING = "13";
-    private static final String THERMAL_STATE_YOUTUBE = "14";
+    private static final String THERMAL_STATE_STREAMING = "14";
 
     private static final String THERMAL_BENCHMARK = "thermal.benchmark=";
     private static final String THERMAL_BROWSER = "thermal.browser=";
     private static final String THERMAL_CAMERA = "thermal.camera=";
     private static final String THERMAL_DIALER = "thermal.dialer=";
     private static final String THERMAL_GAMING = "thermal.gaming=";
-    private static final String THERMAL_YOUTUBE = "thermal.youtube=";
+    private static final String THERMAL_STREAMING = "thermal.streaming=";
 
     private static final String THERMAL_SCONFIG = "/sys/class/thermal/thermal_message/sconfig";
 
@@ -74,7 +74,7 @@ public final class ThermalUtils {
 
         if (value == null || value.isEmpty()) {
             value = THERMAL_BENCHMARK + ":" + THERMAL_BROWSER + ":" + THERMAL_CAMERA + ":" +
-                    THERMAL_DIALER + ":" + THERMAL_GAMING + ":" + THERMAL_YOUTUBE;
+                    THERMAL_DIALER + ":" + THERMAL_GAMING + ":" + THERMAL_STREAMING;
             writeValue(value);
         }
         return value;
@@ -102,7 +102,7 @@ public final class ThermalUtils {
             case STATE_GAMING:
                 modes[4] = modes[4] + packageName + ",";
                 break;
-            case STATE_YOUTUBE:
+            case STATE_STREAMING:
                 modes[5] = modes[5] + packageName + ",";
                 break;
         }
@@ -128,7 +128,7 @@ public final class ThermalUtils {
         } else if (modes[4].contains(packageName + ",")) {
             state = STATE_GAMING;
         } else if (modes[5].contains(packageName + ",")) {
-            state = STATE_YOUTUBE;
+            state = STATE_STREAMING;
         }
 
         return state;
@@ -153,7 +153,7 @@ public final class ThermalUtils {
             } else if (modes[4].contains(packageName + ",")) {
                 state = THERMAL_STATE_GAMING;
             } else if (modes[5].contains(packageName + ",")) {
-                state = THERMAL_STATE_YOUTUBE;
+                state = THERMAL_STATE_STREAMING;
             }
         }
         FileUtils.writeLine(THERMAL_SCONFIG, state);

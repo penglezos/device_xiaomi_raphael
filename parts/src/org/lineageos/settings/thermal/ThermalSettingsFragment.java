@@ -212,8 +212,8 @@ public class ThermalSettingsFragment extends PreferenceFragment
                 return R.drawable.ic_thermal_dialer;
             case ThermalUtils.STATE_GAMING:
                 return R.drawable.ic_thermal_gaming;
-            case ThermalUtils.STATE_YOUTUBE:
-                return R.drawable.ic_thermal_youtube;
+            case ThermalUtils.STATE_STREAMING:
+                return R.drawable.ic_thermal_streaming;
             case ThermalUtils.STATE_DEFAULT:
             default:
                 return R.drawable.ic_thermal_default;
@@ -250,7 +250,7 @@ public class ThermalSettingsFragment extends PreferenceFragment
                 R.string.thermal_camera,
                 R.string.thermal_dialer,
                 R.string.thermal_gaming,
-                R.string.thermal_youtube
+                R.string.thermal_streaming
         };
 
         private ModeAdapter(Context context) {
@@ -394,8 +394,9 @@ public class ThermalSettingsFragment extends PreferenceFragment
                 case ThermalUtils.STATE_GAMING:
                     mThermalUtils.writePackage(entry.info.packageName, ThermalUtils.STATE_GAMING);
                     break;
-                case ThermalUtils.STATE_YOUTUBE:
-                    mThermalUtils.writePackage(entry.info.packageName, ThermalUtils.STATE_YOUTUBE);
+                case ThermalUtils.STATE_STREAMING:
+                    mThermalUtils.writePackage(entry.info.packageName,
+                            ThermalUtils.STATE_STREAMING);
                     break;
             }
             notifyDataSetChanged();
