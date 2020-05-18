@@ -1,5 +1,5 @@
 //
-// Copyright (C) 2017-2018 The LineageOS Project
+// Copyright (C) 2017-2020 The LineageOS Project
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -27,6 +27,7 @@ cc_binary {
         "libutils",
         "libcutils",
         "android.hardware.biometrics.fingerprint@2.1",
+        "vendor.xiaomi.hardware.fingerprintextension@1.0",
     ],
     proprietary: true,
 }

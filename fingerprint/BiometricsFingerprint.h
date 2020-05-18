@@ -1,5 +1,6 @@
 /*
  * Copyright (C) 2017 The Android Open Source Project
+ * Copyright (C) 2020 The LineageOS Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -19,11 +20,13 @@
 
 #include <android/hardware/biometrics/fingerprint/2.1/IBiometricsFingerprint.h>
 #include <android/log.h>
-#include <hardware/fingerprint.h>
 #include <hardware/hardware.h>
 #include <hidl/MQDescriptor.h>
 #include <hidl/Status.h>
 #include <log/log.h>
+#include <vendor/xiaomi/hardware/fingerprintextension/1.0/IXiaomiFingerprint.h>
+
+#include "fingerprint.h"
 
 namespace android {
 namespace hardware {
@@ -41,10 +44,13 @@ using ::android::hardware::biometrics::fingerprint::V2_1::IBiometricsFingerprint
 using ::android::hardware::biometrics::fingerprint::V2_1::IBiometricsFingerprintClientCallback;
 using ::android::hardware::biometrics::fingerprint::V2_1::RequestStatus;
 
-struct BiometricsFingerprint : public IBiometricsFingerprint {
-  public:
+using ::vendor::xiaomi::hardware::fingerprintextension::V1_0::IXiaomiFingerprint;
+
+struct BiometricsFingerprint : public IBiometricsFingerprint, public IXiaomiFingerprint {
     BiometricsFingerprint();
     ~BiometricsFingerprint();
+
+    status_t registerAsSystemService();
 
     // Method to wrap legacy HAL with BiometricsFingerprint class
     static IBiometricsFingerprint* getInstance();
@@ -63,7 +69,8 @@ struct BiometricsFingerprint : public IBiometricsFingerprint {
     Return<RequestStatus> setActiveGroup(uint32_t gid, const hidl_string& storePath) override;
     Return<RequestStatus> authenticate(uint64_t operationId, uint32_t gid) override;
 
-  private:
+    Return<int32_t> extCmd(int32_t cmd, int32_t param) override;
+
     static fingerprint_device_t* openHal();
     static void notify(
         const fingerprint_msg_t* msg); /* Static callback for legacy HAL implementation */
