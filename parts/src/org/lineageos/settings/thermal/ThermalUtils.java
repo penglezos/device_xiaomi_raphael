@@ -134,6 +134,10 @@ public final class ThermalUtils {
         return state;
     }
 
+    protected void setDefaultThermalProfile() {
+        FileUtils.writeLine(THERMAL_SCONFIG, THERMAL_STATE_DEFAULT);
+    }
+
     protected void setThermalProfile(String packageName) {
         String value = getValue();
         String modes[];
