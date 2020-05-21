@@ -96,11 +96,11 @@ public class ThermalService extends Service {
             if (runningTasks != null && runningTasks.size() > 0) {
                 ComponentName topActivity = runningTasks.get(0).topActivity;
                 String foregroundApp = topActivity.getPackageName();
-                mHandler.postDelayed(this, 500);
                 if (!foregroundApp.equals(mPreviousApp)) {
                     mThermalUtils.setThermalProfile(foregroundApp);
                     mPreviousApp = foregroundApp;
                 }
+                mHandler.postDelayed(this, 5000);
             }
         }
     }
