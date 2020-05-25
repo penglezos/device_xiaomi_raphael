@@ -37,3 +37,11 @@ cc_binary {
     ],
     proprietary: true,
 }
+
+cc_library_static {
+    name: "libfod_extension.xiaomi_raphael",
+    srcs: ["fod_extension.cpp"],
+    include_dirs: [
+        "frameworks/native/services/surfaceflinger/CompositionEngine/include"
+    ],
+}
