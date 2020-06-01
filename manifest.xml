@@ -223,16 +223,6 @@
         <fqname>@1.0::IOffloadControl/default</fqname>
     </hal>
     <hal format="hidl">
-        <name>android.hardware.thermal</name>
-        <transport>hwbinder</transport>
-        <version>1.0</version>
-        <interface>
-            <name>IThermal</name>
-            <instance>default</instance>
-        </interface>
-        <fqname>@1.0::IThermal/default</fqname>
-    </hal>
-    <hal format="hidl">
         <name>android.hardware.usb</name>
         <transport>hwbinder</transport>
         <version>1.0</version>
