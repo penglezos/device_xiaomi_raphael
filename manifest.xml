@@ -889,6 +889,17 @@
         </interface>
         <fqname>@1.0::IMotor/default</fqname>
     </hal>
+    <!-- eMBMS HAL Service -->
+    <hal format="hidl">
+        <name>vendor.qti.hardware.embmssl</name>
+        <transport>hwbinder</transport>
+        <version>1.0</version>
+        <interface>
+            <name>IEmbms</name>
+            <instance>embmsslServer0</instance>
+        </interface>
+        <fqname>@1.0::IEmbms/embmsslServer0</fqname>
+    </hal>
     <sepolicy>
         <version>29.0</version>
     </sepolicy>
