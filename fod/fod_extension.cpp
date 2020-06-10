@@ -24,7 +24,7 @@ uint32_t getFodZOrder(uint32_t z, bool touched) {
     return z;
 }
 
-uint32_t getFodUsageBits(uint32_t usageBits, bool touched) {
+uint64_t getFodUsageBits(uint64_t usageBits, bool touched) {
     (void) touched;
     return usageBits;
 }
