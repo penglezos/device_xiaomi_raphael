@@ -520,6 +520,16 @@
         <fqname>@2.2::IPerf/default</fqname>
     </hal>
     <hal format="hidl">
+        <name>vendor.qti.hardware.fstman</name>
+        <transport>hwbinder</transport>
+        <version>1.0</version>
+        <interface>
+            <name>IFstManager</name>
+            <instance>default</instance>
+        </interface>
+        <fqname>@1.0::IFstManager/default</fqname>
+    </hal>
+    <hal format="hidl">
         <name>vendor.qti.hardware.qseecom</name>
         <transport>hwbinder</transport>
         <version>1.0</version>
