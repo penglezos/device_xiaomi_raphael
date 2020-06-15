@@ -113,8 +113,11 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.-->
     </carrier_config>
 
     <carrier_config mcc="001" mnc="01">
+        <boolean name="carrier_volte_available_bool" value="true" />
         <boolean name="carrier_vt_available_bool" value="true" />
         <boolean name="ignore_data_enabled_changed_for_video_calls" value="true"/>
+        <boolean name="support_adhoc_conference_calls_bool" value="true" />
+        <boolean name="support_add_conference_participants_bool" value="true" />
     </carrier_config>
 
     <carrier_config mcc="202" mnc="01">
@@ -1249,6 +1252,10 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.-->
         <boolean name="carrier_vt_available_bool" value="true" />
     </carrier_config>
 
+    <carrier_config mcc="440" mnc="11">
+        <boolean name="carrier_volte_available_bool" value="true" />
+    </carrier_config>
+
     <carrier_config mcc="440" mnc="20">
         <boolean name="carrier_volte_available_bool" value="true" />
     </carrier_config>
@@ -1261,9 +1268,11 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.-->
 
     <carrier_config mcc="440" mnc="51">
         <boolean name="carrier_volte_available_bool" value="true" />
-        <boolean name="carrier_wfc_ims_available_bool" value="true" />
         <boolean name="carrier_allow_deflect_ims_call_bool" value="true" />
-        <int name="carrier_default_wfc_ims_mode_int" value="2" />
+    </carrier_config>
+
+    <carrier_config mcc="440" mnc="53">
+        <boolean name="carrier_volte_available_bool" value="true" />
     </carrier_config>
 
     <carrier_config mcc="450" mnc="05">
