@@ -2,6 +2,7 @@
 persist.bt.enableAptXHD=true
 persist.service.btui.use_aptx=1
 persist.vendor.bt.a2dp.aac_whitelist=false
+persist.bluetooth.a2dp_aac.vbr_supported=true
 ro.bluetooth.library_name=libbluetooth_qti.so
 
 # Camera
