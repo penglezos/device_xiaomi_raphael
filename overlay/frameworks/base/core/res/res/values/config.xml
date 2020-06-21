@@ -654,10 +654,10 @@
     <integer name="config_burnInProtectionMaxRadius">70</integer>
 
     <!-- Specifies the minimum burn-in offset horizontally. -->
-    <integer name="config_burnInProtectionMinHorizontalOffset">-60</integer>
+    <integer name="config_burnInProtectionMinHorizontalOffset">-15</integer>
 
     <!-- Specifies the maximum burn-in offset horizontally. -->
-    <integer name="config_burnInProtectionMaxHorizontalOffset">60</integer>
+    <integer name="config_burnInProtectionMaxHorizontalOffset">15</integer>
 
     <!-- Specifies the minimum burn-in offset vertically. -->
     <integer name="config_burnInProtectionMinVerticalOffset">-40</integer>
