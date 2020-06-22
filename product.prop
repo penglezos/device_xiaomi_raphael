@@ -3,3 +3,6 @@ ro.build.characteristics=nosdcard
 
 # IORap
 iorapd.readahead.enable=true
+
+# Seamless transfer
+sys.fflag.override.settings_seamless_transfer=true
