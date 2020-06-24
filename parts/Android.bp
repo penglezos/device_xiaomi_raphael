@@ -20,6 +20,7 @@ android_app {
         "androidx.preference_preference",
         "org.lineageos.settings.resources",
         "vendor.xiaomi.hardware.motor-V1.0-java",
+        "SettingsLib",
     ],
 
     optimize: {
