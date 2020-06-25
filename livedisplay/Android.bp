@@ -20,6 +20,7 @@ cc_binary {
     init_rc: ["vendor.lineage.livedisplay@2.0-service.raphael.rc"],
     relative_install_path: "hw",
     srcs: [
+        ":vendor.lineage.livedisplay@2.0-sdm-utils",
         "SunlightEnhancement.cpp",
         "service.cpp",
     ],
@@ -30,5 +31,8 @@ cc_binary {
         "libhidlbase",
         "libutils",
         "vendor.lineage.livedisplay@2.0",
+    ],
+    header_libs: [
+        "vendor.lineage.livedisplay@2.0-sdm-headers",
     ],
 }

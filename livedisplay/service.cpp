@@ -21,17 +21,36 @@
 #include <hidl/HidlTransportSupport.h>
 
 #include "SunlightEnhancement.h"
+#include "livedisplay/sdm/SDMController.h"
+
+using android::OK;
+using android::sp;
+using android::status_t;
 
 using ::vendor::lineage::livedisplay::V2_0::ISunlightEnhancement;
 using ::vendor::lineage::livedisplay::V2_0::implementation::SunlightEnhancement;
+using ::vendor::lineage::livedisplay::V2_0::sdm::SDMController;
 
 int main() {
-    android::sp<ISunlightEnhancement> sunlightEnhancement = new SunlightEnhancement();
+    status_t status = OK;
+    std::shared_ptr<SDMController> controller = std::make_shared<SDMController>();
+    sp<SunlightEnhancement> se;
 
     android::hardware::configureRpcThreadpool(1, true /*callerWillJoin*/);
 
-    if (sunlightEnhancement->registerAsService() != android::OK) {
-        LOG(ERROR) << "Cannot register sunlight enhancement HAL service.";
+    // SunlightEnhancement
+    se = new SunlightEnhancement();
+    if (se == nullptr) {
+        LOG(ERROR) << "Can not create an instance of LiveDisplay HAL SunlightEnhancement Iface, "
+                      "exiting.";
+        return 1;
+    }
+
+    // SunlightEnhancement service
+    status = se->registerAsService();
+    if (status != OK) {
+        LOG(ERROR) << "Could not register service for LiveDisplay HAL SunlightEnhancement Iface ("
+                   << status << ")";
         return 1;
     }
 
