@@ -34,17 +34,8 @@ using ::vendor::lineage::livedisplay::V2_0::sdm::SDMController;
 int main() {
     status_t status = OK;
     std::shared_ptr<SDMController> controller = std::make_shared<SDMController>();
-    sp<SunlightEnhancement> se;
-
+    sp<SunlightEnhancement> se = new SunlightEnhancement();
     android::hardware::configureRpcThreadpool(1, true /*callerWillJoin*/);
-
-    // SunlightEnhancement
-    se = new SunlightEnhancement();
-    if (se == nullptr) {
-        LOG(ERROR) << "Can not create an instance of LiveDisplay HAL SunlightEnhancement Iface, "
-                      "exiting.";
-        return 1;
-    }
 
     // SunlightEnhancement service
     status = se->registerAsService();
