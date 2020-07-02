@@ -55,6 +55,16 @@ void property_override_dual(char const system_prop[], char const vendor_prop[],
 
 void vendor_load_properties()
 {
+    std::string region = android::base::GetProperty("ro.boot.hwc", "");
+
+    // correct model naming
+    if (region.find("CN") != std::string::npos ||
+        region.find("INDIA") != std::string::npos) {
+        property_override("ro.product.model", "Redmi K20 Pro");
+    } else {
+        property_override("ro.product.model", "Mi 9T Pro");
+    }
+
     // fingerprint
     property_override("ro.build.description", "raphael-user 10 QKQ1.190825.002 V11.0.8.0 release-keys");
     property_override_dual("ro.build.fingerprint", "ro.vendor.build.fingerprint", "google/coral/coral:10/QQ3A.200605.001/6392402:user/release-keys");
