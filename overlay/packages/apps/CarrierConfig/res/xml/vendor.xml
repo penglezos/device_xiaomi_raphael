@@ -2090,6 +2090,7 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.-->
         <boolean name="support_video_conference_call_bool" value="false"/>
         <boolean name="carrier_rtt_supported_on_vtcalls" value="false"/>
         <boolean name="carrier_rtt_upgrade_supported" value="false"/>
+        <boolean name="tty_supported_bool" value="false" />
         <boolean name="support_downgrade_vt_to_audio_bool" value="true" />
         <boolean name="support_emergency_sms_over_ims_bool" value="true" />
         <boolean name="carrier_call_composer_supported_bool" value="true"/>
