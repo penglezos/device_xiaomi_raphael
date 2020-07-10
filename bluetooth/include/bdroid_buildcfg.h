@@ -70,9 +70,7 @@ static inline const char *BtmGetDefaultName()
 #define BTIF_HF_WBS_PREFERRED   TRUE
 #define BLE_VND_INCLUDED   TRUE
 #define GATT_MAX_PHY_CHANNEL  10
-// Skips conn update at conn completion
-#define BT_CLEAN_TURN_ON_DISABLED 1
-// Increasing SEPs to 12 from 6 to support SHO/MCast i.e. two streams per codec
+
 #define AVDT_NUM_SEPS 35
 
 #endif
