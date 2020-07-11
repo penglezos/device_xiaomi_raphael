@@ -536,7 +536,7 @@
          brightness modes but only the maximum brightness value obtainable in a sustainable manner.
          This array should be equal in size to config_screenBrightnessBacklight -->
     <array name="config_screenBrightnessNits">
-        <item>1.68</item>   <!-- index 1 -->
+        <item>13.44</item>  <!-- index 1 -->
         <item>430.0</item>  <!-- index 2 -->
     </array>
 
