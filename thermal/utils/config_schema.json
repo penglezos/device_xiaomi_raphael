@@ -1,0 +1,219 @@
+{
+  "definitions":{
+
+  },
+  "$schema":"http://json-schema.org/draft-07/schema#",
+  "$id":"http://example.com/root.json",
+  "type":"object",
+  "title":"The Root Schema",
+  "required":[
+    "Sensors"
+  ],
+  "properties":{
+    "Sensors":{
+      "$id":"#/properties/Sensors",
+      "type":"array",
+      "title":"The Sensors Schema",
+      "items":{
+        "$id":"#/properties/Sensors/items",
+        "type":"object",
+        "title":"The Items Schema",
+        "required":[
+          "Name",
+          "Type",
+          "HotThreshold",
+          "VrThreshold",
+          "Multiplier"
+        ],
+        "properties":{
+          "Name":{
+            "$id":"#/properties/Sensors/items/properties/Name",
+            "type":"string",
+            "title":"The Name Schema",
+            "default":"",
+            "examples":[
+              "cpu0-silver-usr"
+            ],
+            "pattern":"^(.+)$"
+          },
+          "Type":{
+            "$id":"#/properties/Sensors/items/properties/Type",
+            "type":"string",
+            "title":"The Type Schema",
+            "default":"",
+            "examples":[
+              "CPU"
+            ],
+            "pattern":"^(.+)$"
+          },
+          "HotThreshold":{
+            "$id":"#/properties/Sensors/items/properties/HotThreshold",
+            "type":"array",
+            "title":"The hot threshold Schema, values are thresholds from ThrottlingSeverity::NONE to ThrottlingSeverity::SHUTDOWN",
+            "default":"NAN",
+            "maxItems":7,
+            "minItems":7,
+            "items":{
+              "$id":"#/properties/Sensors/items/properties/HotThreshold/items",
+              "type":[
+                "string",
+                "number"
+              ],
+              "title":"The Items Schema",
+              "default":"",
+              "examples":[
+                "NAN",
+                "NAN",
+                "NAN",
+                95,
+                "NAN",
+                "NAN",
+                125
+              ],
+              "pattern":"^([-+]?[0-9]*\\.?[0-9]+|NAN)$"
+            }
+          },
+          "HotHysteresis":{
+            "$id":"#/properties/Sensors/items/properties/HotHysteresis",
+            "type":"array",
+            "title":"The hot hysteresis Schema, values are thresholds from ThrottlingSeverity::NONE to ThrottlingSeverity::SHUTDOWN. Throttling status will be cleared HotThreshold - HotHysteresis.",
+            "default":null,
+            "maxItems":7,
+            "minItems":7,
+            "items":{
+              "$id":"#/properties/Sensors/items/properties/HotHysteresis/items",
+              "type":[
+                "number"
+              ],
+              "title":"The Items Schema",
+              "default":0.0,
+              "examples":[
+                0.0,
+                0.0,
+                0.0,
+                1.0,
+                1.5,
+                1.0,
+                2.0
+              ]
+            }
+          },
+          "ColdThreshold":{
+            "$id":"#/properties/Sensors/items/properties/ColdThreshold",
+            "type":"array",
+            "title":"The cold threshold Schema, values are thresholds from ThrottlingSeverity::NONE to ThrottlingSeverity::SHUTDOWN, default to NAN",
+            "default":null,
+            "maxItems":7,
+            "minItems":7,
+            "items":{
+              "$id":"#/properties/Sensors/items/properties/ColdThreshold/items",
+              "type":"string",
+              "title":"The Items Schema",
+              "default":"NAN",
+              "examples":[
+                "NAN",
+                "NAN",
+                "NAN",
+                "NAN",
+                "NAN",
+                "NAN",
+                "NAN"
+              ],
+              "pattern":"^([-+]?[0-9]*\\.?[0-9]+|NAN)$"
+            }
+          },
+          "ColdHysteresis":{
+            "$id":"#/properties/Sensors/items/properties/ColdHysteresis",
+            "type":"array",
+            "title":"The cold hysteresis Schema, values are thresholds from ThrottlingSeverity::NONE to ThrottlingSeverity::SHUTDOWN. Throttling status will be cleared ColdThreshold + ColdHysteresis.",
+            "default":null,
+            "maxItems":7,
+            "minItems":7,
+            "items":{
+              "$id":"#/properties/Sensors/items/properties/ColdHysteresis/items",
+              "type":[
+                "number"
+              ],
+              "title":"The Items Schema",
+              "default":0.0,
+              "examples":[
+                0.0,
+                0.0,
+                0.0,
+                1.0,
+                1.5,
+                1.0,
+                2.0
+              ]
+            }
+          },
+          "VrThreshold":{
+            "$id":"#/properties/Sensors/items/properties/VrThreshold",
+            "type":"string",
+            "title":"The Vrthreshold Schema",
+            "default":"",
+            "examples":[
+              "NAN"
+            ],
+            "pattern":"^(.*)$"
+          },
+          "Multiplier":{
+            "$id":"#/properties/Sensors/items/properties/Multiplier",
+            "type":"number",
+            "title":"The Multiplier Schema",
+            "default":0.001,
+            "examples":[
+              0.001
+            ],
+            "exclusiveMinimum":0.0
+          },
+          "Monitor":{
+            "$id":"#/properties/Sensors/items/properties/Monitor",
+            "type":"boolean",
+            "title":"The Monitor Schema, if the sensor will be monitored and used to trigger throttling event",
+            "default":false,
+            "examples":[
+              true
+            ]
+          }
+        }
+      }
+    },
+    "CoolingDevices":{
+      "$id":"#/properties/CoolingDevices",
+      "type":"array",
+      "title":"The Coolingdevices Schema",
+      "items":{
+        "$id":"#/properties/CoolingDevices/items",
+        "type":"object",
+        "title":"The Items Schema",
+        "required":[
+          "Name",
+          "Type"
+        ],
+        "properties":{
+          "Name":{
+            "$id":"#/properties/CoolingDevices/items/properties/Name",
+            "type":"string",
+            "title":"The Name Schema",
+            "default":"",
+            "examples":[
+              "thermal-cpufreq-0"
+            ],
+            "pattern":"^(.+)$"
+          },
+          "Type":{
+            "$id":"#/properties/CoolingDevices/items/properties/Type",
+            "type":"string",
+            "title":"The Type Schema",
+            "default":"",
+            "examples":[
+              "CPU"
+            ],
+            "pattern":"^(.+)$"
+          }
+        }
+      }
+    }
+  }
+}
