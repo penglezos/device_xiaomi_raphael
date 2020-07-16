@@ -348,6 +348,12 @@ service vendor.msm_irqbalance /vendor/bin/msm_irqbalance -f /vendor/etc/msm_irqb
     user root
     group root
 
+service vendor.power-hal-1-2 /vendor/bin/hw/android.hardware.power@1.2-service-qti
+    override
+    class hal
+    user system
+    group system input
+
 on charger
     setprop persist.sys.usb.config mass_storage
     start vendor.qcom-post-boot

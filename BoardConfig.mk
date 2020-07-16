@@ -195,9 +195,7 @@ TARGET_USES_MKE2FS := true
 TARGET_BOARD_PLATFORM := msmnile
 
 # Power
-TARGET_TAP_TO_WAKE_EVENT_NODE := "/dev/input/event3"
-TARGET_USES_INTERACTION_BOOST := true
-TARGET_USES_NON_LEGACY_POWERHAL := true
+TARGET_POWER_SET_FEATURE_LIB := libpower_feature.raphael
 
 # Properties
 TARGET_ODM_PROP += $(DEVICE_PATH)/odm.prop
