@@ -944,10 +944,6 @@ vendor/lib64/libthermalclient.so
 vendor/bin/time_daemon
 vendor/lib64/libtime_genoff.so
 
-# Vibrator
-vendor/bin/hw/vendor.qti.hardware.vibrator@1.2-service
-vendor/etc/init/vendor.qti.hardware.vibrator@1.2-service.rc
-
 # WFD
 vendor/lib64/libhdcpsrm.so
 
