@@ -560,14 +560,14 @@ vendor/lib64/libspcom.so
 vendor/lib64/vendor.qti.hardware.data.latency@1.0.so
 vendor/lib64/vendor.qti.latency@2.0.so
 
-# Listen
-vendor/lib/hw/sound_trigger.primary.msmnile.so
-vendor/lib/libadpcmdec.so
-vendor/lib/libgcs-calwrapper.so
-vendor/lib/libgcs-ipc.so
-vendor/lib/libgcs-osal.so
-vendor/lib/libgcs.so
-vendor/lib/libsmwrapper.so
+# Listen - from LA.UM.8.1.r1-15600-sm8150.0
+vendor/lib/hw/sound_trigger.primary.msmnile.so|594df3720b6d8e1b5d8b306242a2adb7ee4f8658
+vendor/lib/libadpcmdec.so|3edd1c7ca6e5614f907d74032fb2ae24c738b857
+vendor/lib/libgcs-calwrapper.so|f35026f2c1a16d10b642914210e47711872815be
+vendor/lib/libgcs-ipc.so|f780e51610d895d7efa3cec347089b79fe3d1e89
+vendor/lib/libgcs-osal.so|98b04d0dacbd13bec4d77114ab3c271a386d82f6
+vendor/lib/libgcs.so|e5e5d068a1ce2d7610cf7ea0bcaeae13f346122c
+vendor/lib/libsmwrapper.so|7f70af63945b4d338d035cb7750b17aeab5c7e65
 
 # Media
 vendor/bin/hw/vendor.qti.media.c2@1.0-service
