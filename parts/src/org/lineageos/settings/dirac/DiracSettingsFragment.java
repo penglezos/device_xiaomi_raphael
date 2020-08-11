@@ -72,6 +72,7 @@ public class DiracSettingsFragment extends PreferenceFragment implements
         boolean hifiEnable = DiracUtils.getHifiMode();
         mHeadsetType.setEnabled(!hifiEnable && enhancerEnabled);
         mPreset.setEnabled(!hifiEnable && enhancerEnabled);
+        mHifi.setEnabled(enhancerEnabled);
     }
 
     @Override
@@ -130,10 +131,13 @@ public class DiracSettingsFragment extends PreferenceFragment implements
         mSwitchBar.setActivated(isChecked);
 
         DiracUtils.setMusic(isChecked);
+        mHifi.setEnabled(isChecked);
+        mHeadsetType.setEnabled(isChecked);
+        mPreset.setEnabled(isChecked);
 
-        if (!DiracUtils.getHifiMode()) {
-            mHeadsetType.setEnabled(isChecked);
-            mPreset.setEnabled(isChecked);
+        if (!isChecked){
+            mHifi.setChecked(false);
+            DiracUtils.setHifiMode(0);
         }
     }
 
