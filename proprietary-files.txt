@@ -196,7 +196,6 @@ vendor/etc/camera/hdr_ui9_params.config
 vendor/etc/camera/lf_facerank_model.bin
 vendor/etc/camera/male_bg.png
 vendor/etc/camera/male_icon.png
-vendor/etc/camera/megviifacepp_0_5_2_model
 vendor/etc/camera/sceneDetection.xml
 vendor/etc/camera/score_bg.png
 vendor/etc/camera/score_icon.png
@@ -306,7 +305,6 @@ vendor/lib64/hw/camera.qcom.so
 vendor/lib64/hw/com.qti.chi.override.so
 vendor/lib64/libFaceGrade.so
 vendor/lib64/libHalSuperSensorServer.so
-vendor/lib64/libMegviiFacepp-0.5.2.so
 vendor/lib64/libSuperSensor.so
 vendor/lib64/libSuperSensorCPU.so
 vendor/lib64/libVDClearShot.so
@@ -349,7 +347,6 @@ vendor/lib64/libcapiv2vop.so
 vendor/lib64/libcom.qti.chinodeutils.so
 vendor/lib64/libft2vendor.so
 vendor/lib64/libgui_vendor.so
-vendor/lib64/libmegface.so
 vendor/lib64/libmialgo_fs.so
 vendor/lib64/libmialgo_rfs.so
 vendor/lib64/libmialgo_sd.so
