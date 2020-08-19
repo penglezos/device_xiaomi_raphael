@@ -1,1 +1,1 @@
-type deviceid_prop, property_type;
+vendor_public_prop(deviceid_prop)
