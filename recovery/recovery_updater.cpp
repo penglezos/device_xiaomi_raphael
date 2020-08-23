@@ -179,7 +179,7 @@ Value* VerifyTrustZoneFn(const char* name, State* state,
 
     ret = 0;
     for (auto &tz_version : args) {
-        if (strncmp(tz_version.c_str(), current_tz_version, tz_version.length()) <= 0) {
+        if (strncmp(tz_version.c_str(), current_tz_version, tz_version.length()) == 0) {
             ret = 1;
             break;
         }
