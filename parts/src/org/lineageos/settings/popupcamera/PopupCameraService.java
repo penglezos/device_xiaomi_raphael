@@ -19,9 +19,11 @@ package org.lineageos.settings.popupcamera;
 import android.annotation.NonNull;
 import android.app.AlertDialog;
 import android.app.Service;
+import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.IntentFilter;
 import android.content.res.Resources;
 import android.hardware.Sensor;
 import android.hardware.SensorEvent;
@@ -53,7 +55,9 @@ public class PopupCameraService extends Service implements Handler.Callback {
     private boolean mMotorBusy = false;
     private long mClosedEvent;
     private long mOpenEvent;
+    private boolean mScreenOn = true;
 
+    private AlertDialog mAlertDialog;
     private Handler mHandler = new Handler(this);
     private IMotor mMotor = null;
     private IMotorCallback mMotorStatusCallback;
@@ -64,6 +68,18 @@ public class PopupCameraService extends Service implements Handler.Callback {
     private Sensor mFreeFallSensor;
     private PopupCameraPreferences mPopupCameraPreferences;
     private SoundPool mSoundPool;
+
+    private BroadcastReceiver mIntentReceiver = new BroadcastReceiver() {
+        @Override
+        public void onReceive(Context context, Intent intent) {
+            String action = intent.getAction();
+            if (action.equals(Intent.ACTION_SCREEN_OFF)) {
+                mScreenOn = false;
+            } else if (action.equals(Intent.ACTION_SCREEN_ON)) {
+                mScreenOn = true;
+            }
+        }
+    };
 
     private CameraManager.AvailabilityCallback availabilityCallback =
             new CameraManager.AvailabilityCallback() {
@@ -118,6 +134,10 @@ public class PopupCameraService extends Service implements Handler.Callback {
 
     @Override
     public void onCreate() {
+        IntentFilter intentFilter = new IntentFilter();
+        intentFilter.addAction(Intent.ACTION_SCREEN_OFF);
+        intentFilter.addAction(Intent.ACTION_SCREEN_ON);
+        registerReceiver(mIntentReceiver, intentFilter);
         CameraManager cameraManager = getSystemService(CameraManager.class);
         cameraManager.registerAvailabilityCallback(availabilityCallback, null);
         mSensorManager = getSystemService(SensorManager.class);
@@ -213,6 +233,7 @@ public class PopupCameraService extends Service implements Handler.Callback {
     public void onDestroy() {
         if (DEBUG)
             Log.d(TAG, "Destroying service");
+        unregisterReceiver(mIntentReceiver);
         super.onDestroy();
     }
 
@@ -408,9 +429,28 @@ public class PopupCameraService extends Service implements Handler.Callback {
     public boolean handleMessage(Message msg) {
         switch (msg.what) {
             case Constants.MSG_CAMERA_CLOSED: {
+                if (mAlertDialog != null && mAlertDialog.isShowing()) {
+                    mAlertDialog.dismiss();
+                }
                 updateMotor(Constants.CLOSE_CAMERA_STATE);
             } break;
             case Constants.MSG_CAMERA_OPEN: {
+            if (!mScreenOn) {
+                if (mAlertDialog == null) {
+                    mAlertDialog = new AlertDialog.Builder(this)
+                            .setMessage(R.string.popup_camera_dialog_message)
+                            .setNegativeButton(R.string.popup_camera_dialog_no, (dialog, which) -> {
+                            goBackHome();
+                        })
+                    .setPositiveButton(R.string.popup_camera_dialog_raise, (dialog, which) -> {
+                    updateMotor(Constants.OPEN_CAMERA_STATE);
+                        })
+                        .create();
+                    mAlertDialog.getWindow().setType(WindowManager.LayoutParams.TYPE_SYSTEM_ERROR);
+                    mAlertDialog.setCanceledOnTouchOutside(false);
+                }
+                mAlertDialog.show();
+            } else
                 updateMotor(Constants.OPEN_CAMERA_STATE);
             } break;
         }

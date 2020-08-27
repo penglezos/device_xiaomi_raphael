@@ -88,4 +88,8 @@
     <string name="raise_to_wake_title">Wake up</string>
     <string name="raise_to_wake_summary">Wake up the device instead of pulsing notifications</string>
 
+    <!-- Popup camera dialog -->
+    <string name="popup_camera_dialog_message">Do you want to raise the front facing camera?</string>
+    <string name="popup_camera_dialog_no">No</string>
+    <string name="popup_camera_dialog_raise">Yes</string>
 </resources>
