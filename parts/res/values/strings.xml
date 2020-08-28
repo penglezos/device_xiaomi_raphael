@@ -92,4 +92,8 @@
     <string name="popup_camera_dialog_message">Do you want to raise the front facing camera?</string>
     <string name="popup_camera_dialog_no">No</string>
     <string name="popup_camera_dialog_raise">Yes</string>
+    <string name="always_on_camera_dialog_title">Front camera raise dialog</string>
+    <string name="always_on_camera_dialog_summary_on">Always ask before opening</string>
+    <string name="always_on_camera_dialog_summary_off">Only ask when the screen is off</string>
+
 </resources>

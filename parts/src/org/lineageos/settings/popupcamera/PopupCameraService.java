@@ -39,6 +39,7 @@ import android.os.Message;
 import android.os.RemoteException;
 import android.os.SystemClock;
 import android.os.UserHandle;
+import android.provider.Settings;
 import android.util.Log;
 import android.view.WindowManager;
 import org.lineageos.settings.R;
@@ -50,6 +51,7 @@ import vendor.xiaomi.hardware.motor.V1_0.MotorEvent;
 public class PopupCameraService extends Service implements Handler.Callback {
     private static final String TAG = "PopupCameraService";
     private static final boolean DEBUG = false;
+    private static final String alwaysOnDialogKey = "always_on_camera_dialog";
 
     private int[] mSounds;
     private boolean mMotorBusy = false;
@@ -435,7 +437,9 @@ public class PopupCameraService extends Service implements Handler.Callback {
                 updateMotor(Constants.CLOSE_CAMERA_STATE);
             } break;
             case Constants.MSG_CAMERA_OPEN: {
-            if (!mScreenOn) {
+            boolean alwaysOnDialog = Settings.System.getInt(getContentResolver(),
+                        alwaysOnDialogKey, 0) == 1;
+            if (alwaysOnDialog || !mScreenOn) {
                 if (mAlertDialog == null) {
                     mAlertDialog = new AlertDialog.Builder(this)
                             .setMessage(R.string.popup_camera_dialog_message)

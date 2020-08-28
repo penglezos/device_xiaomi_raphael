@@ -22,17 +22,22 @@ import android.app.Dialog;
 import android.app.DialogFragment;
 import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.provider.Settings;
 import android.view.MenuItem;
 import androidx.preference.Preference;
 import androidx.preference.Preference.OnPreferenceChangeListener;
 import androidx.preference.Preference.OnPreferenceClickListener;
 import androidx.preference.PreferenceFragment;
+import androidx.preference.SwitchPreference;
+
 import org.lineageos.settings.R;
 
 public class PopupCameraSettingsFragment extends PreferenceFragment
         implements OnPreferenceChangeListener, OnPreferenceClickListener {
     private Preference mCalibrationPreference;
+    private SwitchPreference mAlwaysCameraSwitch;
     private static final String MOTOR_CALIBRATION_KEY = "motor_calibration";
+    public static final String KEY_ALWAYS_CAMERA_DIALOG = "always_on_camera_dialog";
 
     private PopupCameraService mPopupCameraService = new PopupCameraService();
 
@@ -43,11 +48,22 @@ public class PopupCameraSettingsFragment extends PreferenceFragment
 
         mCalibrationPreference = (Preference) findPreference(MOTOR_CALIBRATION_KEY);
         mCalibrationPreference.setOnPreferenceClickListener(this);
+
+        mAlwaysCameraSwitch = (SwitchPreference) findPreference(KEY_ALWAYS_CAMERA_DIALOG);
+        boolean enabled = Settings.System.getInt(getContext().getContentResolver(),KEY_ALWAYS_CAMERA_DIALOG, 0) == 1;
+        mAlwaysCameraSwitch.setChecked(enabled);
+        mAlwaysCameraSwitch.setOnPreferenceChangeListener(this);
     }
 
     @Override
     public boolean onPreferenceChange(Preference preference, Object newValue) {
-        return false;
+        if (preference == mAlwaysCameraSwitch) {
+            boolean enabled = (Boolean) newValue;
+            Settings.System.putInt(getContext().getContentResolver(),
+                KEY_ALWAYS_CAMERA_DIALOG,
+                enabled ? 1 : 0);
+        }
+        return true;
     }
 
     @Override
