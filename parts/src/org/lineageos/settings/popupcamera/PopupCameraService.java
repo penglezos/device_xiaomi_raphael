@@ -24,6 +24,7 @@ import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.IntentFilter;
+import android.content.res.Configuration;
 import android.content.res.Resources;
 import android.hardware.Sensor;
 import android.hardware.SensorEvent;
@@ -58,6 +59,7 @@ public class PopupCameraService extends Service implements Handler.Callback {
     private long mClosedEvent;
     private long mOpenEvent;
     private boolean mScreenOn = true;
+    private int mDialogThemeResID;
 
     private AlertDialog mAlertDialog;
     private Handler mHandler = new Handler(this);
@@ -142,6 +144,7 @@ public class PopupCameraService extends Service implements Handler.Callback {
         registerReceiver(mIntentReceiver, intentFilter);
         CameraManager cameraManager = getSystemService(CameraManager.class);
         cameraManager.registerAvailabilityCallback(availabilityCallback, null);
+        mDialogThemeResID = android.R.style.Theme_DeviceDefault_Light_Dialog_Alert;
         mSensorManager = getSystemService(SensorManager.class);
         mFreeFallSensor = mSensorManager.getDefaultSensor(Constants.FREE_FALL_SENSOR_ID);
         mPopupCameraPreferences = new PopupCameraPreferences(this);
@@ -440,8 +443,9 @@ public class PopupCameraService extends Service implements Handler.Callback {
             boolean alwaysOnDialog = Settings.System.getInt(getContentResolver(),
                         alwaysOnDialogKey, 0) == 1;
             if (alwaysOnDialog || !mScreenOn) {
+                updateDialogTheme();
                 if (mAlertDialog == null) {
-                    mAlertDialog = new AlertDialog.Builder(this)
+                    mAlertDialog = new AlertDialog.Builder(this, mDialogThemeResID)
                             .setMessage(R.string.popup_camera_dialog_message)
                             .setNegativeButton(R.string.popup_camera_dialog_no, (dialog, which) -> {
                             goBackHome();
@@ -459,5 +463,20 @@ public class PopupCameraService extends Service implements Handler.Callback {
             } break;
         }
         return true;
+    }
+
+    private void updateDialogTheme() {
+        int nightModeFlags = getResources().getConfiguration().uiMode
+                & Configuration.UI_MODE_NIGHT_MASK;
+        int themeResId;
+        if (nightModeFlags == Configuration.UI_MODE_NIGHT_YES)
+            themeResId = android.R.style.Theme_DeviceDefault_Dialog_Alert;
+        else
+            themeResId = android.R.style.Theme_DeviceDefault_Light_Dialog_Alert;
+        if (mDialogThemeResID != themeResId) {
+            mDialogThemeResID = themeResId;
+            // if the theme changed force re-creating the dialog
+            mAlertDialog = null;
+        }
     }
 }
