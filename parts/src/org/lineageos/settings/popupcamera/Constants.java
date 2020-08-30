@@ -36,7 +36,8 @@ public class Constants {
     public static final String OPEN_CAMERA_STATE = "1";
 
     public static final String FRONT_CAMERA_ID = "1";
-    public static final String BLUE_LED_PATH = "/sys/class/leds/blue/brightness";
-    public static final String GREEN_LED_PATH = "/sys/class/leds/green/brightness";
+    public static final String LEFT_LED_BREATH_PATH = "/sys/class/leds/green/breath";
+    public static final String LEFT_LED_PATH = "/sys/class/leds/green/brightness";
+    public static final String RIGHT_LED_PATH = "/sys/class/leds/blue/brightness";
     public static final String POPUP_SOUND_PATH = "/system/media/audio/ui/";
 }
