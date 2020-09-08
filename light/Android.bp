@@ -16,6 +16,7 @@ cc_binary {
     relative_install_path: "hw",
     defaults: ["hidl_defaults"],
     name: "android.hardware.light@2.0-service.xiaomi_msmnile",
+    vintf_fragments: ["android.hardware.light@2.0-service.xiaomi_msmnile.xml"],
     init_rc: ["android.hardware.light@2.0-service.xiaomi_msmnile.rc"],
     srcs: ["service.cpp", "Light.cpp"],
     vendor: true,
