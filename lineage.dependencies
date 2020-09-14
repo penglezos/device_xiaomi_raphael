@@ -1,16 +1,4 @@
 [
-    { 
-        "remote"       : "github",
-        "repository"   : "markakash/vendor_xiaomi_raphael",
-        "target_path"  : "vendor/xiaomi/raphael",
-        "branch"       : "ten"
-    },
-    { 
-        "remote"       : "github",
-        "repository"   : "UtsavBalar1231/kernel_xiaomi_raphael",
-        "target_path"  : "kernel/xiaomi/sm8150",
-        "branch"       : "sm8150-common"
-    },
     {
         "remote":       "github",
         "repository":   "markakash/platform_vendor_nxp_opensource_external_libnfc-nci",

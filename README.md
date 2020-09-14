@@ -1,4 +1,4 @@
-Copyright (C) 2020 Project 404
+Copyright (C) 2020 LineageOS
 
 Device configuration for Xiaomi Mi 9T Pro / Redmi K20 Pro
 =========================================

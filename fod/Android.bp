@@ -16,8 +16,8 @@
 cc_binary {
     relative_install_path: "hw",
     defaults: ["hidl_defaults"],
-    name: "vendor.p404.biometrics.fingerprint.inscreen@1.0-service.xiaomi_raphael",
-    init_rc: ["vendor.p404.biometrics.fingerprint.inscreen@1.0-service.xiaomi_raphael.rc"],
+    name: "vendor.lineage.biometrics.fingerprint.inscreen@1.0-service.xiaomi_raphael",
+    init_rc: ["vendor.lineage.biometrics.fingerprint.inscreen@1.0-service.xiaomi_raphael.rc"],
     srcs: [
 	"service.cpp",
         "FingerprintInscreen.cpp",
@@ -32,7 +32,7 @@ cc_binary {
         "libhwbinder",
         "libutils",
         "vendor.goodix.hardware.biometrics.fingerprint@2.1",
-        "vendor.p404.biometrics.fingerprint.inscreen@1.0",
+        "vendor.lineage.biometrics.fingerprint.inscreen@1.0",
         "vendor.xiaomi.hardware.fingerprintextension@1.0",
     ],
     proprietary: true,

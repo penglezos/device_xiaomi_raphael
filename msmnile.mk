@@ -1,5 +1,5 @@
 #
-# Copyright 2020 Project 404
+# Copyright 2020 LineageOS
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -39,7 +39,7 @@ PRODUCT_COPY_FILES += \
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += \
     $(LOCAL_PATH)/overlay \
-    $(LOCAL_PATH)/overlay-p404
+    $(LOCAL_PATH)/overlay-lineage
 
 # Device uses high-density artwork where available
 PRODUCT_AAPT_CONFIG := normal
@@ -171,10 +171,7 @@ PRODUCT_PACKAGES += \
 
 # Fingerprint
 PRODUCT_PACKAGES += \
-    vendor.p404.biometrics.fingerprint.inscreen@1.0-service.xiaomi_raphael
-
-PRODUCT_COPY_FILES += \
-    vendor/404/configs/permissions/vendor.p404.biometrics.fingerprint.inscreen.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/vendor.p404.biometrics.fingerprint.inscreen.xml
+    vendor.lineage.biometrics.fingerprint.inscreen@1.0-service.xiaomi_raphael
 
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.fingerprint.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.fingerprint.xml

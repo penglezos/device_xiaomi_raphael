@@ -71,7 +71,7 @@ static bool readBool(int fd) {
 } // anonymous namespace
 
 namespace vendor {
-namespace p404 {
+namespace lineage {
 namespace biometrics {
 namespace fingerprint {
 namespace inscreen {
@@ -179,5 +179,5 @@ Return<void> FingerprintInscreen::setCallback(const sp<IFingerprintInscreenCallb
 }  // namespace inscreen
 }  // namespace fingerprint
 }  // namespace biometrics
-}  // namespace p404
+}  // namespace lineage
 }  // namespace vendor
