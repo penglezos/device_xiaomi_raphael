@@ -1,2 +1,4 @@
 allow init firmware_file:dir mounton;
 allow init firmware_file:filesystem { mount relabelfrom getattr };
+
+allow init vendor_file:file execute;
