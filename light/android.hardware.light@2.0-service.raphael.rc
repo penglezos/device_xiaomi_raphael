@@ -34,7 +34,7 @@ on boot
     chown system system /sys/class/leds/blue/lut_pattern
     chown system system /sys/class/leds/blue/lo_idx
 
-service vendor.light-hal-2-0 /vendor/bin/hw/android.hardware.light@2.0-service.xiaomi_msmnile
+service vendor.light-hal-2-0 /vendor/bin/hw/android.hardware.light@2.0-service.raphael
     interface android.hardware.light@2.0::ILight default
     class hal
     user system

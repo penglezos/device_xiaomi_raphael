@@ -17,8 +17,8 @@ cc_binary {
     relative_install_path: "hw",
     defaults: ["hidl_defaults"],
     vintf_fragments: ["vendor.lineage.biometrics.fingerprint.inscreen@1.0-service.raphael.xml"],
-    name: "vendor.lineage.biometrics.fingerprint.inscreen@1.0-service.xiaomi_raphael",
-    init_rc: ["vendor.lineage.biometrics.fingerprint.inscreen@1.0-service.xiaomi_raphael.rc"],
+    name: "vendor.lineage.biometrics.fingerprint.inscreen@1.0-service.raphael",
+    init_rc: ["vendor.lineage.biometrics.fingerprint.inscreen@1.0-service.raphael.rc"],
     srcs: [
 	"service.cpp",
         "FingerprintInscreen.cpp",
@@ -40,7 +40,7 @@ cc_binary {
 }
 
 cc_library_static {
-    name: "libfod_extension.xiaomi_raphael",
+    name: "libfod_extension.raphael",
     srcs: ["fod_extension.cpp"],
     include_dirs: [
         "frameworks/native/services/surfaceflinger/CompositionEngine/include"

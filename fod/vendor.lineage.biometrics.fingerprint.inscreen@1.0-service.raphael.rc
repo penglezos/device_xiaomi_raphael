@@ -5,7 +5,7 @@ on boot
     chmod 0444 /sys/devices/platform/soc/soc:qcom,dsi-display-primary/fod_ui
     chmod 0644 /sys/devices/virtual/touch/tp_dev/fod_status
 
-service fingerprint-inscreen-1-0 /vendor/bin/hw/vendor.lineage.biometrics.fingerprint.inscreen@1.0-service.xiaomi_raphael
+service fingerprint-inscreen-1-0 /vendor/bin/hw/vendor.lineage.biometrics.fingerprint.inscreen@1.0-service.raphael
     interface vendor.lineage.biometrics.fingerprint.inscreen@1.0::IFingerprintInscreen default
     class hal
     user system
