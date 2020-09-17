@@ -1,0 +1,2 @@
+# allow light hal to search in msm_subsys
+allow hal_light_default sysfs_msm_subsys:dir search;
