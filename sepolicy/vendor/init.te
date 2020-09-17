@@ -2,3 +2,8 @@ allow init firmware_file:dir mounton;
 allow init firmware_file:filesystem { mount relabelfrom getattr };
 
 allow init vendor_file:file execute;
+allow init {
+  akm09970_device
+  drv8846_device
+}:chr_file {rw_file_perms open};
+allow init akm09970_device:file ioctl;
