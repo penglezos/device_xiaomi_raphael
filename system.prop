@@ -1,6 +1,5 @@
 # Display
 debug.sf.disable_backpressure=1
-debug.sf.enable_hwc_vds=1
 
 # GPS
 persist.vendor.overlay.izat.optin=rro
