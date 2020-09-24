@@ -16,6 +16,7 @@
 cc_binary {
     relative_install_path: "hw",
     defaults: ["hidl_defaults"],
+    vintf_fragments: ["vendor.lineage.biometrics.fingerprint.inscreen@1.0-service.raphael.xml"],
     name: "vendor.lineage.biometrics.fingerprint.inscreen@1.0-service.xiaomi_raphael",
     init_rc: ["vendor.lineage.biometrics.fingerprint.inscreen@1.0-service.xiaomi_raphael.rc"],
     srcs: [
