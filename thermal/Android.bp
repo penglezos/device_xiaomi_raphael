@@ -1,13 +1,13 @@
 cc_binary {
-  name: "android.hardware.thermal@2.0-service.pixel",
+  name: "android.hardware.thermal@2.0-service.xiaomi_msmnile",
   defaults: [
     "hidl_defaults",
   ],
   vendor: true,
   relative_install_path: "hw",
-  vintf_fragments: ["android.hardware.thermal@2.0-service.pixel.xml"],
+  vintf_fragments: ["android.hardware.thermal@2.0-service.xiaomi_msmnile.xml"],
   init_rc: [
-    "android.hardware.thermal@2.0-service.pixel.rc",
+    "android.hardware.thermal@2.0-service.xiaomi_msmnile.rc",
   ],
   srcs: [
     "service.cpp",

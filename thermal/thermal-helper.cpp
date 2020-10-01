@@ -56,7 +56,7 @@ namespace {
 using android::base::StringPrintf;
 
 /*
- * Pixel don't offline CPU, so std::thread::hardware_concurrency(); should work.
+ * This phone doesn't offline CPU, so std::thread::hardware_concurrency(); should work.
  * However /sys/devices/system/cpu/present is preferred.
  * The file is expected to contain single text line with two numbers %d-%d,
  * which is a range of available cpu numbers, e.g. 0-7 would mean there
