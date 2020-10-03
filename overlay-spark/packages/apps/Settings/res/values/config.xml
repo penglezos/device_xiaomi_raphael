@@ -20,7 +20,7 @@
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
 
     <!-- Device specific doze package -->
-    <string name="config_customDozePackage">org.lineageos.settings/org.lineageos.settings.doze.DozeSettingsActivity</string>
+    <string name="config_customDozePackage">com.custom.ambient.display/com.custom.ambient.display.DozeSettings</string>
 
     <!-- Smart Charging -->
     <bool name="config_supportSmartCharging">true</bool>
