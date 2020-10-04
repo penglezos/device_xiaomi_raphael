@@ -8,7 +8,7 @@
         android:title="@string/popup_led_title" />
 
     <ListPreference
-        android:defaultValue="0"
+        android:defaultValue="-1"
         android:entries="@array/popupcamera_effects_entries"
         android:entryValues="@array/popupcamera_effects_values"
         android:key="popup_sound_effect"
