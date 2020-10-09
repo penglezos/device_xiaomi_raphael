@@ -87,6 +87,7 @@ void vendor_load_properties() {
         set_device_props(
             "Xiaomi", "raphael", "Mi 9T Pro");
     }
+    property_override("ro.boot.verifiedbootstate", "green");
 
     load_dalvik_properties();
 }
