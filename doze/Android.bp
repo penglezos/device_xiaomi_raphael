@@ -1,5 +1,5 @@
 android_app {
-    name: "CustomDoze",
+    name: "XiaomiCustomDoze",
 
     static_libs: [
         "androidx.preference_preference",
