@@ -14,17 +14,12 @@
  * limitations under the License.
  */
 
-#include <dirent.h>
-#include <hardware/power.h>
+#include <aidl/android/hardware/power/BnPower.h>
+#include <android-base/file.h>
+#include <android-base/logging.h>
 #include <linux/input.h>
-#include <string.h>
-#include <unistd.h>
-#include <utils.h>
-#include <utils/Log.h>
 
-#define INPUT_EVENT_WAKUP_MODE_OFF 4
-#define INPUT_EVENT_WAKUP_MODE_ON 5
-
+namespace {
 int open_ts_input() {
     int fd = -1;
     DIR* dir = opendir("/dev/input");
@@ -56,23 +51,53 @@ int open_ts_input() {
 
     return fd;
 }
+}  // anonymous namespace
 
-void set_device_specific_feature(feature_t feature, int state) {
-    switch (feature) {
-        case POWER_FEATURE_DOUBLE_TAP_TO_WAKE: {
+namespace aidl {
+namespace android {
+namespace hardware {
+namespace power {
+namespace impl {
+
+static constexpr int kInputEventWakeupModeOff = 4;
+static constexpr int kInputEventWakeupModeOn = 5;
+
+using ::aidl::android::hardware::power::Mode;
+
+bool isDeviceSpecificModeSupported(Mode type, bool* _aidl_return) {
+    switch (type) {
+        case Mode::DOUBLE_TAP_TO_WAKE:
+            *_aidl_return = true;
+            return true;
+        default:
+            return false;
+    }
+}
+
+bool setDeviceSpecificMode(Mode type, bool enabled) {
+    switch (type) {
+        case Mode::DOUBLE_TAP_TO_WAKE: {
             int fd = open_ts_input();
             if (fd == -1) {
-                ALOGW("DT2W won't work because no supported touchscreen input devices were found");
-                return;
+                LOG(WARNING)
+                    << "DT2W won't work because no supported touchscreen input devices were found";
+                return false;
             }
             struct input_event ev;
             ev.type = EV_SYN;
             ev.code = SYN_CONFIG;
-            ev.value = state ? INPUT_EVENT_WAKUP_MODE_ON : INPUT_EVENT_WAKUP_MODE_OFF;
+            ev.value = enabled ? kInputEventWakeupModeOff : kInputEventWakeupModeOn;
             write(fd, &ev, sizeof(ev));
             close(fd);
-        } break;
+        }
+            return true;
         default:
-            break;
+            return false;
     }
 }
+
+}  // namespace impl
+}  // namespace power
+}  // namespace hardware
+}  // namespace android
+}  // namespace aidl

@@ -348,7 +348,7 @@ service vendor.msm_irqbalance /vendor/bin/msm_irqbalance -f /vendor/etc/msm_irqb
     user root
     group root
 
-service vendor.power-hal-1-2 /vendor/bin/hw/android.hardware.power@1.2-service-qti
+service vendor.power-hal /vendor/bin/hw/android.hardware.power-service-qti
     override
     class hal
     user system
