@@ -17,4 +17,10 @@
         android:summary="%s"
         android:title="@string/popup_title" />
 
+    <Preference
+        android:key="motor_calibration"
+        android:title="@string/popup_calibration_title"
+        android:summary="@string/popup_calibration_summary"
+        android:icon="@drawable/ic_popup_calibration" />
+
 </PreferenceScreen>
