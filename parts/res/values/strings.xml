@@ -73,7 +73,6 @@
     <string name="popup_calibration_summary">Calibrate the popup camera motor</string>
     <string name="popup_calibration_warning_title">Motor calibration</string>
     <string name="popup_calibration_warning_text">Unnecessary use of calibration may cause permanent damage. It is recommended to calibrate the popup camera motor only in case of it not moving properly or it being in incorrect position!</string>
-    <string name="popup_calibration_warning_hide">Do not show again</string>
 
     <!-- Popup camera strings -->
     <string name="popup_camera_tip">Warning</string>
