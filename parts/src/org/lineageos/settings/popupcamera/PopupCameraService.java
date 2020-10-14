@@ -103,7 +103,12 @@ public class PopupCameraService extends Service implements Handler.Callback {
         @Override
         public void onSensorChanged(SensorEvent event) {
             if (event.values[0] == 2.0f) {
-                updateMotor(Constants.CLOSE_CAMERA_STATE);
+                try {
+                    mMotor.takebackMotorShortly();
+                    mSensorManager.unregisterListener(mFreeFallListener, mFreeFallSensor);
+                } catch (RemoteException e) {
+                    // Do nothing
+                }
                 goBackHome();
             }
         }
