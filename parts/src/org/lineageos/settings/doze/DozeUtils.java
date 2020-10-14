@@ -23,6 +23,8 @@ import android.content.pm.PackageManager;
 import android.hardware.display.AmbientDisplayConfiguration;
 import android.hardware.Sensor;
 import android.hardware.SensorManager;
+import android.os.PowerManager;
+import android.os.SystemClock;
 import android.os.UserHandle;
 import android.provider.Settings;
 import android.util.Log;
@@ -39,6 +41,8 @@ public final class DozeUtils {
     private static final String DOZE_INTENT = "com.android.systemui.doze.pulse";
 
     protected static final String ALWAYS_ON_DISPLAY = "always_on_display";
+
+    protected static final String RAISE_TO_WAKE_KEY = "raise_to_wake";
 
     protected static final String CATEG_PICKUP_SENSOR = "pickup_sensor";
     protected static final String CATEG_PROX_SENSOR = "proximity_sensor";
@@ -89,9 +93,16 @@ public final class DozeUtils {
     }
 
     protected static void launchDozePulse(Context context) {
-        if (DEBUG) Log.d(TAG, "Launch doze pulse");
-        context.sendBroadcastAsUser(new Intent(DOZE_INTENT),
-                new UserHandle(UserHandle.USER_CURRENT));
+        if (DEBUG)
+            Log.d(TAG, "Launch doze pulse");
+
+        if (isRaiseToWakeEnabled(context)) {
+            PowerManager mPowerManager = (PowerManager) context.getSystemService(Context.POWER_SERVICE);
+            mPowerManager.wakeUp(SystemClock.uptimeMillis(), PowerManager.WAKE_REASON_GESTURE, TAG);
+        } else {
+            context.sendBroadcastAsUser(
+                    new Intent(DOZE_INTENT), new UserHandle(UserHandle.USER_CURRENT));
+        }
     }
 
     protected static boolean enableAlwaysOn(Context context, boolean enable) {
@@ -115,6 +126,10 @@ public final class DozeUtils {
     protected static boolean isGestureEnabled(Context context, String gesture) {
         return PreferenceManager.getDefaultSharedPreferences(context)
                 .getBoolean(gesture, false);
+    }
+
+    protected static boolean isRaiseToWakeEnabled(Context context) {
+        return isGestureEnabled(context, RAISE_TO_WAKE_KEY);
     }
 
     protected static boolean isPickUpEnabled(Context context) {

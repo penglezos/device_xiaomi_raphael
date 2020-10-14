@@ -25,6 +25,13 @@
         android:persistent="false"
         android:icon="@drawable/ic_eye" />
 
+    <SwitchPreference
+        android:key="raise_to_wake"
+        android:defaultValue="false"
+        android:icon="@drawable/ic_doze_wake"
+        android:title="@string/raise_to_wake_title"
+        android:summary="@string/raise_to_wake_summary" />
+
     <PreferenceCategory
         android:key="pickup_sensor"
         android:title="@string/pickup_sensor_title">
