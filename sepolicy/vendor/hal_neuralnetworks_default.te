@@ -1,0 +1,4 @@
+get_prop(vendor_hal_neuralnetworks_default, vendor_adsprpc_prop)
+
+# Allow vendor_hal_neuralnetworks_default to read fastrpc_shell_3
+allow vendor_hal_neuralnetworks_default public_adsprpcd_file:file r_file_perms;

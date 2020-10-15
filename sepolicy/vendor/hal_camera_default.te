@@ -1,3 +1,6 @@
 r_dir_file(hal_camera_default, mnt_vendor_file)
 r_dir_file(hal_camera_default, persist_camera_file)
 r_dir_file(hal_camera_default, vendor_sysfs_kgsl)
+
+# Allow hal_camera_default to read fastrpc_shell_3
+allow hal_camera_default public_adsprpcd_file:file r_file_perms;

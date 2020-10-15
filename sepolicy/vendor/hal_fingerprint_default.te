@@ -13,3 +13,6 @@ allow hal_fingerprint_default {
 }:chr_file rw_file_perms;
 
 set_prop(hal_fingerprint_default, vendor_fp_prop)
+
+# Allow hal_fingerprint_default to read fastrpc_shell_3
+allow hal_fingerprint_default public_adsprpcd_file:file r_file_perms;

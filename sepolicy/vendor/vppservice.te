@@ -1,0 +1,2 @@
+# Allow vppservice to read fastrpc_shell_3
+allow vendor_vppservice public_adsprpcd_file:file r_file_perms;
