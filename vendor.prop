@@ -178,7 +178,6 @@ persist.radio.multisim.config=dsds
 persist.radio.NO_STAPA=1
 persist.radio.sar_sar_sensor=true
 persist.radio.VT_HYBRID_ENABLE=1
-persist.sys.fflag.override.settings_network_and_internet_v2=true
 persist.vendor.radio.apm_sim_not_pwdn=1
 persist.vendor.radio.custom_ecc=1
 persist.vendor.radio.enableadvancedscan=
