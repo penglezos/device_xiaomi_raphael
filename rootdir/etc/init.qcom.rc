@@ -234,9 +234,11 @@ on post-fs-data
     # Create dir for TUI
     mkdir /data/vendor/tui 0700 system drmrpc
 
-    # Start qcrild
+    # Start qcrild and data services
     start vendor.qcrild
     start vendor.qcrild2
+    start vendor.dataqti
+    start vendor.dataadpl
 
     setprop vold.post_fs_data_done 1
 
