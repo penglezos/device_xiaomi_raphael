@@ -379,6 +379,7 @@
             <name>IdpmQmi</name>
             <instance>dpmQmiService</instance>
         </interface>
+        <fqname>@1.0::IdpmQmi/dpmQmiService</fqname>
     </hal>
     <hal format="hidl">
         <name>com.qualcomm.qti.uceservice</name>
@@ -637,6 +638,7 @@
             <name>IFmHci</name>
             <instance>default</instance>
         </interface>
+        <fqname>@1.0::IFmHci/default</fqname>
     </hal>
     <hal format="hidl">
         <name>vendor.qti.hardware.radio.am</name>
@@ -666,7 +668,7 @@
         <name>vendor.qti.hardware.radio.lpa</name>
         <transport>hwbinder</transport>
         <version>1.0</version>
-        <interface>
+        <interface>									
             <name>IUimLpa</name>
             <instance>UimLpa0</instance>
             <instance>UimLpa1</instance>
@@ -821,6 +823,10 @@
             <name>IWifiDisplaySessionImageTrack</name>
             <instance>wifidisplaysessionimagetrack</instance>
         </interface>
+        <fqname>@1.0::IWifiDisplaySession/wifidisplaysession</fqname>
+        <fqname>@1.0::IWifiDisplaySessionVideoTrack/wifidisplaysessionvideotrack</fqname>
+        <fqname>@1.0::IWifiDisplaySessionAudioTrack/wifidisplaysessionaudiotrack</fqname>
+        <fqname>@1.0::IWifiDisplaySessionImageTrack/wifidisplaysessionimagetrack</fqname>
     </hal>
     <hal format="hidl">
         <name>vendor.qti.hardware.vpp</name>
@@ -880,6 +886,7 @@
             <name>IMlipayService</name>
             <instance>default</instance>
         </interface>
+        <fqname>@1.1::IMlipayService/default</fqname>
     </hal>
     <hal format="hidl">
         <name>vendor.xiaomi.hardware.motor</name>
@@ -889,6 +896,7 @@
             <name>IMotor</name>
             <instance>default</instance>
         </interface>
+        <fqname>@1.0::IMotor/default</fqname>
     </hal>
     <sepolicy>
         <version>29.0</version>
