@@ -15,7 +15,7 @@
         android:icon="@drawable/ic_popup_sound"
         android:key="popup_sound_effect"
         android:summary="%s"
-        android:title="@string/popup_title" />
+        android:title="@string/popup_sound_title" />
 
     <Preference
         android:key="motor_calibration"

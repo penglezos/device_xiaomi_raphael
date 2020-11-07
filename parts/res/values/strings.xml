@@ -63,6 +63,7 @@
     <string name="popup_title">Front camera settings</string>
     <string name="popup_led_title">Camera LED</string>
     <string name="popup_led_summary">Show LED light when the front camera appears and retracts</string>
+    <string name="popup_sound_title">Front camera sound effects</string>
     <string name="popup_title_muqin">Xylophone</string>
     <string name="popup_title_yingyan">Condor</string>
     <string name="popup_title_mofa">Magic</string>
