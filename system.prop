@@ -129,6 +129,10 @@ persist.vendor.ssr.restart_level=ALL_ENABLE
 # Vendor
 ro.vendor.qti.va_aosp.support=1
 
+# Vulkan
+PRODUCT_PROPERTY_OVERRIDES += \
+    debug.hwui.renderer=skiavk
+
 # Time Services
 persist.timed.enable=true
 
