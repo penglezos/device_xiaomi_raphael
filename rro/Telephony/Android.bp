@@ -1,0 +1,5 @@
+runtime_resource_overlay {
+    name: "TelephonyResRaphael",
+    system_ext_specific: true,
+    sdk_version: "current",
+}
