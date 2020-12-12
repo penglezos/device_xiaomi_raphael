@@ -35,6 +35,13 @@ soc_machine=${soc_machine:0:2}
 soc_id=`cat /sys/devices/soc0/soc_id 2> /dev/null`
 
 #
+# Allow USB enumeration with default PID/VID
+#
+baseband=`getprop ro.baseband`
+debuggable=`getprop ro.debuggable`
+buildvariant=`getprop ro.build.type`
+
+#
 # Check ESOC for external modem
 #
 # Note: currently only a single MDM/SDX is supported
@@ -49,19 +56,61 @@ target=`getprop ro.board.platform`
 # If USB persist config not set, set default configuration
 if [ "$(getprop persist.vendor.usb.config)" == "" -a "$(getprop ro.build.type)" != "user" -a \
 	"$(getprop init.svc.vendor.usb-gadget-hal-1-0)" != "running" ]; then
-    if [ "$esoc_name" != "" ]; then
-	  setprop persist.vendor.usb.config diag,diag_mdm,qdss,qdss_mdm,serial_cdev,dpl,rmnet,adb
-    else
-	  case "$(getprop ro.baseband)" in
-	      "apq")
-	          setprop persist.vendor.usb.config diag,adb
-	      ;;
-	      *)
-	      case "$soc_hwplatform" in
-	          "Dragon" | "SBC")
-	              setprop persist.vendor.usb.config diag,adb
-	          ;;
-                  *)
+	if [ "$esoc_name" == "" ]; then
+	#setprop persist.vendor.usb.config adb
+		case "$soc_hwplatform" in
+			"ALIOTH")
+				if [ "$(getprop ro.boot.factorybuild)" == "1" ]; then
+					setprop persist.vendor.usb.config diag,diag_mdm,qdss,qdss_mdm,serial_cdev,dpl,rmnet,adb
+				elif [ "$buildvariant" = "eng" ]; then
+					setprop persist.vendor.usb.config diag,diag_mdm,qdss,qdss_mdm,serial_cdev,dpl,rmnet,adb
+				else
+					if [ -z "$debuggable" -o "$debuggable" = "1"  ]; then
+						setprop persist.vendor.usb.config adb
+					else
+						setprop persist.vendor.usb.config none
+					fi
+				fi
+			;;
+			"COURBET" | "SWEET" | "VAYU")
+				if [ "$(getprop ro.boot.factorybuild)" == "1" ]; then
+					setprop persist.vendor.usb.config diag,serial_cdev,rmnet,dpl,qdss,adb
+				elif [ "$buildvariant" = "eng" ]; then
+					setprop persist.vendor.usb.config diag,serial_cdev,rmnet,dpl,qdss,adb
+				else
+					if [ -z "$debuggable" -o "$debuggable" = "1"  ]; then
+						setprop persist.vendor.usb.config adb
+					else
+						setprop persist.vendor.usb.config none
+					fi
+				fi
+			;;
+		esac
+
+	else
+		case "$(getprop ro.baseband)" in
+			"apq")
+				setprop persist.vendor.usb.config diag,adb
+			;;
+		*)
+		case "$soc_hwplatform" in
+			"Dragon" | "SBC")
+				setprop persist.vendor.usb.config diag,adb
+			;;
+			"CMI" | "UMI" | "PICASSO" | "MONET" | "VANGOGH" | "LMI" | "COURBET" | "SWEET" | "ALIOTH" | "THYME" | "VAYU")
+				if [ "$(getprop ro.boot.factorybuild)" == "1" ]; then
+					setprop persist.vendor.usb.config diag,diag_mdm,qdss,qdss_mdm,serial_cdev,dpl,rmnet,adb
+				elif [ "$buildvariant" = "eng" ]; then
+					setprop persist.vendor.usb.config diag,diag_mdm,qdss,qdss_mdm,serial_cdev,dpl,rmnet,adb
+				else
+					if [ -z "$debuggable" -o "$debuggable" = "1"  ]; then
+						setprop persist.vendor.usb.config adb
+					else
+						setprop persist.vendor.usb.config none
+					fi
+				fi
+			;;
+		*)
 		  case "$soc_machine" in
 		    "SA")
 	              setprop persist.vendor.usb.config diag,adb
@@ -139,11 +188,6 @@ esac
 
 # check configfs is mounted or not
 if [ -d /config/usb_gadget ]; then
-	# Chip-serial is used for unique MSM identification in Product string
-	msm_serial=`cat /sys/devices/soc0/serial_number`;
-	msm_serial_hex=`printf %08X $msm_serial`
-	machine_type=`cat /sys/devices/soc0/machine`
-	setprop vendor.usb.product_string "$machine_type-$soc_hwplatform _SN:$msm_serial_hex"
 
 	# ADB requires valid iSerialNumber; if ro.serialno is missing, use dummy
 	serialnumber=`cat /config/usb_gadget/g1/strings/0x409/serialnumber 2> /dev/null`
@@ -152,6 +196,14 @@ if [ -d /config/usb_gadget ]; then
 		echo $serialno > /config/usb_gadget/g1/strings/0x409/serialnumber
 	fi
 	setprop vendor.usb.configfs 1
+fi
+
+# update product
+marketname=`getprop ro.product.marketname`
+if [ "$marketname" != "" ]; then
+    setprop vendor.usb.product_string "$marketname"
+else
+    setprop vendor.usb.product_string "$(getprop ro.product.model)"
 fi
 
 #
