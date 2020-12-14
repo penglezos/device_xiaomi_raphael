@@ -121,6 +121,12 @@ on boot
     # limit discard size to 128MB in order to avoid long IO latency
     write /sys/block/sda/queue/discard_max_bytes 134217728
 
+    # Enable qcrild and data services
+    enable vendor.qcrild
+    enable vendor.qcrild2
+    enable vendor.dataqti
+    enable vendor.dataadpl
+
 on post-fs-data
     # Create directory used by display clients
     mkdir /data/vendor/display 0770 system graphics
@@ -233,12 +239,6 @@ on post-fs-data
 
     # Create dir for TUI
     mkdir /data/vendor/tui 0700 system drmrpc
-
-    # Start qcrild and data services
-    start vendor.qcrild
-    start vendor.qcrild2
-    start vendor.dataqti
-    start vendor.dataadpl
 
     setprop vold.post_fs_data_done 1
 
