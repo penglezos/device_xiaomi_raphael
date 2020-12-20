@@ -8,6 +8,10 @@
     "target_path": "kernel/xiaomi/raphael"
   },
   {
+    "repository": "android_packages_apps_GCamGOPrebuilt",
+    "target_path": "packages/apps/GCamGOPrebuilt"
+  },
+  {
     "repository": "android_vendor_xiaomi_raphael",
     "target_path": "vendor/xiaomi/raphael"
   }
