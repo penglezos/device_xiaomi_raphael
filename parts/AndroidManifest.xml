@@ -74,6 +74,17 @@
             </intent-filter>
         </service>
 
+        <service
+            android:name=".display.HBMTileService"
+            android:icon="@drawable/ic_hbm_tile"
+            android:label="@string/hbm_mode_title"
+            android:permission="android.permission.BIND_QUICK_SETTINGS_TILE">
+            <intent-filter>
+                <action
+                    android:name="android.service.quicksettings.action.QS_TILE"/>
+            </intent-filter>
+        </service>
+
         <activity
             android:name=".doze.DozeSettingsActivity"
             android:label="@string/ambient_display_title"
