@@ -74,7 +74,6 @@ vendor/lib/libaudioalsa.so
 vendor/lib/libaudioconfigstore.so
 vendor/lib/libaudioparsers.so
 vendor/lib/libaudioroute_ext.so
-vendor/lib/libbatterylistener.so
 vendor/lib/libcomprcapture.so
 vendor/lib/libdrc.so
 vendor/lib/libexthwplugin.so
@@ -98,7 +97,6 @@ vendor/lib64/libaudioalsa.so
 vendor/lib64/libaudioconfigstore.so
 vendor/lib64/libaudioparsers.so
 vendor/lib64/libaudioroute_ext.so
-vendor/lib64/libbatterylistener.so
 vendor/lib64/libcomprcapture.so
 vendor/lib64/libexthwplugin.so
 vendor/lib64/libhdmiedid.so
