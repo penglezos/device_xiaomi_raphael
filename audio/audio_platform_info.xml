@@ -59,6 +59,7 @@
         <device name="SND_DEVICE_OUT_USB_HEADSET" acdb_id="10012"/>
         <device name="SND_DEVICE_OUT_GAME_USB_HEADSET" acdb_id="10022"/>
         <device name="SND_DEVICE_OUT_USB_HEADPHONES" acdb_id="10012"/>
+        <device name="SND_DEVICE_OUT_BT_A2DP" acdb_id="10012"/>
         <device name="SND_DEVICE_IN_USB_REALIME_LOOPBACK_MIC" acdb_id="10019"/>
         <device name="SND_DEVICE_OUT_USB_HEADSET_KARA" acdb_id="10020"/>
     </acdb_ids>
@@ -119,6 +120,7 @@
         <usecase name="USECASE_AUDIO_A2DP_ABR_FEEDBACK" type="in" id="40" />
         <usecase name="USECASE_INCALL_MUSIC_UPLINK" type="out" id="27" />
         <usecase name="USECASE_INCALL_MUSIC_UPLINK2" type="out" id="27" />
+        <usecase name="USECASE_AUDIO_RECORD_COMPRESS2" type="in" id="41" />
         <usecase name="USECASE_INCALL_REC_UPLINK" type="in" id="27" />
         <usecase name="USECASE_INCALL_REC_DOWNLINK" type="in" id="27" />
         <usecase name="USECASE_INCALL_REC_UPLINK_AND_DOWNLINK" type="in" id="27" />
@@ -162,21 +164,32 @@
         <device name="SND_DEVICE_OUT_SPEAKER_AND_ANC_FB_HEADSET" backend="speaker-and-headphones" interface="QUAT_MI2S_RX-and-SLIMBUS_6_RX"/>
         <device name="SND_DEVICE_OUT_VOICE_SPEAKER" backend="speaker" interface="QUAT_MI2S_RX"/>
         <device name="SND_DEVICE_OUT_VOICE_HEADPHONES" backend="headphones" interface="SLIMBUS_6_RX"/>
+        <device name="SND_DEVICE_OUT_VOICE_HEADSET" backend="headset" interface="SLIMBUS_6_RX"/>
         <device name="SND_DEVICE_OUT_VOICE_ANC_HEADSET" backend="headphones" interface="SLIMBUS_6_RX"/>
         <device name="SND_DEVICE_OUT_VOICE_ANC_FB_HEADSET" backend="headphones" interface="SLIMBUS_6_RX"/>
         <device name="SND_DEVICE_OUT_VOICE_LINE" backend="headphones" interface="SLIMBUS_6_RX"/>
         <device name="SND_DEVICE_OUT_VOICE_TTY_FULL_HEADPHONES" backend="headphones" interface="SLIMBUS_6_RX"/>
+        <device name="SND_DEVICE_OUT_VOICE_TTY_FULL_HEADSET" backend="headset" interface="SLIMBUS_6_RX"/>
         <device name="SND_DEVICE_OUT_VOICE_TTY_VCO_HEADPHONES" backend="headphones" interface="SLIMBUS_6_RX"/>
+        <device name="SND_DEVICE_OUT_VOICE_TTY_VCO_HEADSET" backend="headset" interface="SLIMBUS_6_RX"/>
         <device name="SND_DEVICE_OUT_SPEAKER_AND_BT_SCO" backend="speaker-and-bt-sco" interface="QUAT_MI2S_RX-and-SLIMBUS_7_RX"/>
         <device name="SND_DEVICE_OUT_SPEAKER_AND_BT_SCO_WB" backend="speaker-and-bt-sco-wb" interface="QUAT_MI2S_RX-and-SLIMBUS_7_RX"/>
         <device name="SND_DEVICE_OUT_SPEAKER_AND_BT_A2DP" backend="speaker-and-bt-a2dp" interface="QUAT_MI2S_RX-and-SLIMBUS_7_RX"/>
         <device name="SND_DEVICE_OUT_HEADPHONES_KARA" backend="headphones" interface="SLIMBUS_6_RX"/>
         <device name="SND_DEVICE_OUT_USB_HEADSET_KARA" backend="usb-headset" interface="USB_AUDIO_RX"/>
-
         <device name="SND_DEVICE_IN_REALIME_LOOPBACK_MIC" interface="SLIMBUS_0_TX"/>
         <device name="SND_DEVICE_IN_USB_REALIME_LOOPBACK_MIC" interface="USB_AUDIO_TX"/>
         <device name="SND_DEVICE_IN_MAIN_MIC" interface="SLIMBUS_0_TX"/>
         <device name="SND_DEVICE_IN_TOP_MIC" interface="SLIMBUS_0_TX"/>
+        <device name="SND_DEVICE_IN_HEADSET_MIC" backend="headset-mic" interface="SLIMBUS_1_TX"/>
+        <device name="SND_DEVICE_IN_HEADSET_MIC_FLUENCE" backend="headset-mic" interface="SLIMBUS_1_TX"/>
+        <device name="SND_DEVICE_IN_VOICE_HEADSET_MIC" backend="headset-mic" interface="SLIMBUS_1_TX"/>
+        <device name="SND_DEVICE_IN_VOICE_TTY_FULL_HEADSET_MIC" backend="headset-mic" interface="SLIMBUS_1_TX"/>
+        <device name="SND_DEVICE_IN_VOICE_TTY_HCO_HEADSET_MIC" backend="headset-mic" interface="SLIMBUS_1_TX"/>
+        <device name="SND_DEVICE_IN_UNPROCESSED_HEADSET_MIC" backend="headset-mic" interface="SLIMBUS_1_TX"/>
+        <device name="SND_DEVICE_IN_VOICE_REC_HEADSET_MIC" backend="headset-mic" interface="SLIMBUS_1_TX"/>
+        <device name="SND_DEVICE_IN_HEADSET_MIC_AEC" backend="headset-mic" interface="SLIMBUS_1_TX"/>
+        <device name="SND_DEVICE_IN_HEADSET_MIC_FLUENCE" backend="headset-mic" interface="SLIMBUS_1_TX"/>
     </backend_names>
     <!-- below values are for ref purpose to OEM, doesn't contain actual hardware info on MTP -->
     <microphone_characteristics>
