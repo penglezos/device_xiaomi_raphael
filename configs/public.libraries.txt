@@ -3,36 +3,31 @@ libadsprpc.so
 libcdsprpc.so
 libsdsprpc.so
 libfastcvopt.so
-liblistenjni.so
 liblistensoundmodel2.so
 libOpenCL.so
 libnpu.so
-libmpbase.so
-libmialgoengine.so
+libmpbase.so 64
+libmialgoengine.so 64
 libVDClearShot.so
-libVDDualCameraClearShot.so
 libHalSuperSensorServer.so
 libSuperSensor.so
 libSuperSensorCPU.so
-libSuperSensor_skel.so
-libdspCV_skel.so
-libarcsoft_beautyshot.so
-libarcsoft_dualcam_refocus.so
-libarcsoft_dualcam_refocus_rear_t.so
-libarcsoft_dualcam_refocus_rear_w.so
-libarcsoft_dualcam_refocus_front.so
-libarcsoft_portrait_lighting.so
-libarcsoft_portrait_lighting_c.so
-libarcsoft_high_dynamic_range.so
-libarcsoft_low_light_hdr.so
-libmibokeh_855.so
-libarcsoft_distortion_correction.so
-libarcsoft_bodyslim.so
+libarcsoft_beautyshot.so 64
+libarcsoft_dualcam_refocus.so 64
+libarcsoft_dualcam_refocus_rear_t.so 64
+libarcsoft_dualcam_refocus_rear_w.so 64
+libarcsoft_dualcam_refocus_front.so 64
+libarcsoft_portrait_lighting.so 64
+libarcsoft_portrait_lighting_c.so 64
+libarcsoft_high_dynamic_range.so 64
+libarcsoft_low_light_hdr.so 64
+libmibokeh_855.so 64
+libarcsoft_distortion_correction.so 64
+libarcsoft_bodyslim.so 64
 libalCFR.so
 libcvp.so
 libcvp_stub.so
 libcvp_common.so
-libhta_controller.so
 libhta_hexagon_runtime.so
 unnhal-acc-hta.so
 libalhLDC.so
