@@ -1,4 +1,4 @@
-# Copyright (c) 2013-2019, The Linux Foundation. All rights reserved.
+# Copyright (c) 2013-2020, The Linux Foundation. All rights reserved.
 #
 # Redistribution and use in source and binary forms, with or without
 # modification, are permitted provided that the following conditions are
@@ -26,8 +26,11 @@
 # IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #
 #
+
+import /vendor/etc/init/init.mi_thermald.rc
+
 on early-init
-    exec u:r:vendor_modprobe:s0 -- /vendor/bin/modprobe -a -d /vendor/lib/modules adsp_loader_dlkm apr_dlkm cs35l41_dlkm hdmi_dlkm machine_dlkm mbhc_dlkm native_dlkm pinctrl_wcd_dlkm platform_dlkm q6_dlkm q6_notifier_dlkm q6_pdr_dlkm stub_dlkm swr_ctrl_dlkm swr_dlkm tas2557_dlkm usf_dlkm wcd934x_dlkm wcd9360_dlkm wcd9xxx_dlkm wcd_core_dlkm wcd_cpe_dlkm wcd_spi_dlkm wglink_dlkm wsa881x_dlkm
+    exec u:r:vendor_modprobe:s0 -- /vendor/bin/modprobe -a -d /vendor/lib/modules audio_wglink audio_q6_pdr audio_q6_notifier audio_apr audio_adsp_loader audio_q6 audio_native audio_usf audio_pinctrl_wcd audio_swr audio_platform audio_hdmi audio_wcd_spi audio_stub audio_wcd_core audio_wsa881x audio_wcd9360 audio_hdmi audio_cs35l41 audio_tas2557 audio_tas256x audio_tfa98xx audio_machine_msmnile
     write /proc/sys/kernel/sched_boost 1
     symlink /data/tombstones /tombstones
 
@@ -82,6 +85,7 @@ on fs
 
     mkdir /mnt/vendor/persist/data 0700 system system
     mkdir /mnt/vendor/persist/audio 0755 system system
+    mkdir /mnt/vendor/persist/subsys 0770 root system
     mkdir /mnt/vendor/persist/camera 0777 root root
     restorecon_recursive /mnt/vendor/persist
 
@@ -104,6 +108,18 @@ on post-fs-data
 
     chmod 0644 /dev/elliptic0
     chmod 0644 /dev/elliptic1
+
+    chown system system /dev/tfa_reg
+    chown system system /dev/tfa_rw
+    chown system system /dev/tfa_rpc
+    chown system system /dev/tfa_control
+    chmod 0660 /dev/tfa_reg
+    chmod 0660 /dev/tfa_rw
+    chmod 0660 /dev/tfa_rpc
+    chmod 0660 /dev/tfa_control
+
+on early-boot
+    start vendor.sensors
 
 on boot
     start rmt_storage
@@ -135,6 +151,27 @@ on property:sys.boot_completed=1
     write /dev/cpuset/foreground/cpus 0-2,4-7
     write /dev/cpuset/foreground/boost/cpus 4-7
 
+    # Add a cpuset for the camera daemon
+    # We want all cores for camera
+    mkdir /dev/cpuset/camera-daemon
+    write /dev/cpuset/camera-daemon/cpus 0-7
+    write /dev/cpuset/camera-daemon/mems 0
+    chown cameraserver cameraserver /dev/cpuset/camera-daemon
+    chown cameraserver cameraserver /dev/cpuset/camera-daemon/tasks
+    chmod 0660 /dev/cpuset/camera-daemon/tasks
+
+    # palm_sensor
+    chown system system /sys/class/touch/touch_dev/palm_sensor
+
+    #USB controller configuration
+    setprop vendor.usb.rndis.func.name "gsi"
+    setprop vendor.usb.rmnet.func.name "gsi"
+    setprop vendor.usb.rmnet.inst.name "rmnet"
+    setprop vendor.usb.dpl.inst.name "dpl"
+    setprop vendor.usb.qdss.inst.name "qdss"
+    setprop vendor.usb.controller a600000.dwc3
+    setprop sys.usb.configfs 1
+
 on property:vendor.post_boot.parsed=1
     # Enable idle state listener
     write /sys/class/drm/card0/device/idle_encoder_mask 1
@@ -142,6 +179,9 @@ on property:vendor.post_boot.parsed=1
 
     # Enable PowerHAL hint processing
     setprop vendor.powerhal.init 1
+
+on property:vendor.usb.controller=*
+    setprop sys.usb.controller ${vendor.usb.controller}
 
 service vendor.pd_mapper /vendor/bin/pd-mapper
     class core
@@ -174,6 +214,9 @@ on charger
     wait /dev/block/platform/soc/1d84000.ufshc/by-name/persist
     mount ext4 /dev/block/bootdevice/by-name/persist /mnt/vendor/persist nosuid nodev barrier=1
 
+    start vendor.power_off_alarm
+    setprop sys.usb.controller a600000.dwc3
+    setprop sys.usb.configfs 1
     start qcom-post-boot
     start vendor.hvdcp_opti
 
@@ -192,7 +235,7 @@ service vendor.hvdcp_opti /vendor/bin/hvdcp_opti
     group system wakelock
 
 service nv_mac /vendor/bin/nv_mac
-    class main
+    class late_start
     user system
     group system inet net_admin wifi net_raw
     oneshot
