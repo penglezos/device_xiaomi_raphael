@@ -164,7 +164,6 @@ Only the three quirks included above are recognized at this point:
 
 <MediaCodecs>
     <Include href="media_codecs_google_audio.xml" />
-    <Include href="media_codecs_vendor_audio.xml" />
     <Include href="media_codecs_google_telephony.xml" />
     <Settings>
         <Setting name="max-video-encoder-input-buffers" value="11" />
@@ -424,6 +423,18 @@ Only the three quirks included above are recognized at this point:
              <Feature name="adaptive-playback" />
              <Limit name="concurrent-instances" max="16" />
              <Limit name="performance-point-720x480" value="30" />
+        </MediaCodec>
+        <MediaCodec name="OMX.qti.video.decoder.mpeg4sw" type="video/mp4v-es">
+             <Quirk name="requires-allocate-on-input-ports" />
+             <Quirk name="requires-allocate-on-output-ports" />
+             <Limit name="size" min="96x96" max="1920x1088" />
+             <Limit name="alignment" value="2x2" />
+             <Limit name="block-size" value="16x16" />
+             <Limit name="blocks-per-second" min="36" max="244800" />
+             <Limit name="bitrate" range="1-40000000" />
+             <Limit name="frame-rate" range="1-30" />
+             <Limit name="concurrent-instances" max="16" />
+             <Limit name="performance-point-1920x1080" value="30" />
         </MediaCodec>
         <MediaCodec name="OMX.google.opus.decoder" type="audio/opus" update="true" rank="100"/>
     </Decoders>
