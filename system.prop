@@ -4,102 +4,137 @@ dalvik.vm.boot-dex2oat-threads=8
 dalvik.vm.dex2oat-cpu-set=0,1,2,3,4,5,6,7
 dalvik.vm.dex2oat-filter=everything
 dalvik.vm.dex2oat-threads=8
+dalvik.vm.dexopt.secondary=true
 dalvik.vm.image-dex2oat-cpu-set=0,1,2,3,4,5,6,7
 dalvik.vm.image-dex2oat-filter=everything
 dalvik.vm.image-dex2oat-threads=8
 
 # Bluetooth
-persist.bt.enableAptXHD=true
-persist.service.btui.use_aptx=1
-persist.vendor.bt.a2dp.aac_whitelist=false
-persist.bluetooth.a2dp_aac.vbr_supported=true
+persist.vendor.btstack.enable.twsplus=true
+persist.vendor.btstack.connect.peer_earbud=true
 ro.bluetooth.library_name=libbluetooth_qti.so
+ro.bluetooth.emb_wp_mode=false
+ro.bluetooth.wipower=false
+vendor.bluetooth.soc=cherokee
 
 # Camera
-persist.camera.managebuffer.enable=1
-persist.camera.sat.fallback.dist.d=10
 persist.camera.sat.fallback.dist=40
+persist.camera.sat.fallback.dist.d=10
+persist.camera.sat.fallback.luxindex=330
 persist.camera.sat.fallback.lux.d=50
-persist.camera.sat.fallback.luxindex=360
-persist.vendor.camera.enableNCSService=TRUE
-persist.vendor.camera.enableTOFInterface=TRUE
-persist.vendor.camera.mfnrframenum=8
-persist.vendor.camera.multicam=TRUE
 vendor.camera.aux.packagelist=org.codeaurora.snapcam,com.android.camera,org.lineageos.snap
+vendor.camera.enableNCSService=TRUE
+vendor.camera.enableTOFInterface=TRUE
+
+# CNE
+persist.vendor.cne.feature=1
 
 # Charger
 ro.charger.enable_suspend=true
 
-# CNE and DPM
-persist.vendor.cne.feature=1
+# Display
+debug.sf.latch_unsignaled=1
+
+# DPM
 persist.vendor.dpm.feature=1
 persist.vendor.dpm.loglevel=0
 persist.vendor.dpm.nsrm.bkg.evt=3955
 
-# Display
-ro.sf.lcd_density=440
-
-# Google keyboard
-ro.com.google.ime.height_ratio=1.2
+# GPS
+persist.vendor.overlay.izat.optin=rro
 
 # Graphics
-ro.surface_flinger.has_wide_color_display=true
-ro.surface_flinger.has_HDR_display=true
-debug.cpurend.vsync=false
-debug.sf.enable_gl_backpressure=1
+ro.opengles.version=196610
 
-# Set lmkd options
-ro.config.low_ram = false
-ro.lmk.log_stats = true
+# HWUI
+ro.hwui.texture_cache_size=72
+ro.hwui.layer_cache_size=48
+ro.hwui.r_buffer_cache_size=8
+ro.hwui.path_cache_size=32
+ro.hwui.gradient_cache_size=1
+ro.hwui.drop_shadow_cache_size=6
+ro.hwui.texture_cache_flushrate=0.4
+ro.hwui.text_small_cache_width=1024
+ro.hwui.text_small_cache_height=1024
+ro.hwui.text_large_cache_width=2048
+ro.hwui.text_large_cache_height=1024
+
+# IMS
+persist.dbg.volte_avail_ovr=1
+persist.dbg.vt_avail_ovr=1
+persist.dbg.wfc_avail_ovr=1
+persist.vendor.ims.disableADBLogs=1
+persist.vendor.ims.disableIMSLogs=1
+
+# LMKD
+ro.config.low_ram=false
+ro.lmk.log_stats=true
+
+# Logd buffer size
+ro.logd.size=2M
 
 # Media
-media.aac_51_output_enabled=true
-media.stagefright.enable-aac=true
-media.stagefright.enable-fma2dp=true
-media.stagefright.enable-http=true
+av.offload.enable=true
 media.stagefright.enable-player=true
+media.stagefright.enable-http=true
+media.stagefright.enable-aac=true
 media.stagefright.enable-qcp=true
+media.stagefright.enable-fma2dp=true
 media.stagefright.enable-scan=true
 media.stagefright.thumbnail.prefer_hw_codecs=true
-ro.media.recorder-max-base-layer-fps=60
-mmp.enable.3g2=true
+media.aac_51_output_enabled=true
 media.settings.xml=/vendor/etc/media_profiles_vendor.xml
+mmp.enable.3g2=true
 persist.mm.enable.prefetch=true
-
-# Additional buffers shared between Camera and Video
-vidc.enc.dcvs.extra-buff-count=2
-vidc.enc.disable.pq=1
 
 # Netflix custom property
 ro.netflix.bsp_rev=Q855-16947-1
 
-# NFC DT
+# NFC
 ro.nfc.port=I2C
 
 # RCS
 persist.rcs.supported=1
 
-# RIL
+# Radio
 DEVICE_PROVISIONED=1
-persist.vendor.radio.enable_temp_dds=true
-persist.vendor.radio.force_on_dc=true
-ril.subscription.types=RUIM
+persist.radio.dynamic_sar=false
+persist.radio.multisim.config=dsds
+persist.radio.NO_STAPA=1
+persist.radio.VT_HYBRID_ENABLE=1
+ril.subscription.types=NV,RUIM
+rild.libpath=/vendor/lib64/libril-qc-hal-qmi.so
 ro.telephony.default_cdma_sub=0
+ro.telephony.default_network=22,22
 telephony.lteOnCdmaDevice=1
 
-# SurfaceFlinger
-ro.surface_flinger.max_frame_buffer_acquired_buffers=3
-debug.sf.use_phase_offsets_as_durations=1
-debug.sf.late.sf.duration=10500000
-debug.sf.late.app.duration=20500000
-debug.sf.early.sf.duration=16000000
-debug.sf.early.app.duration=16500000
-debug.sf.earlyGl.sf.duration=13500000
-debug.sf.earlyGl.app.duration=21000000
-ro.surface_flinger.protected_contents=true
+# RmNet Data
+persist.rmnet.data.enable=true
+persist.data.wda.enable=true
+persist.data.df.dl_mode=5
+persist.data.df.ul_mode=5
+persist.data.df.agg.dl_pkt=10
+persist.data.df.agg.dl_size=4096
+persist.data.df.mux_count=8
+persist.data.df.iwlan_mux=9
+persist.data.df.dev_name=rmnet_usb0
+
+# Sensors
+persist.vendor.sensors.enable.mag_filter=true
+
+# SSR
+persist.vendor.ssr.enable_ramdumps=1
+persist.vendor.ssr.restart_level=ALL_ENABLE
+
+# Vendor
+ro.vendor.qti.va_aosp.support=1
+
+# Time Services
+persist.timed.enable=true
 
 # WiFi
-wifi.interface=wlan0
+config.disable_rtt=true
 
-# Zygote
-persist.device_config.runtime_native.usap_pool_enabled=true
+# Wifi Display
+persist.debug.wfd.enable=1
+persist.sys.wfd.virtual=0
