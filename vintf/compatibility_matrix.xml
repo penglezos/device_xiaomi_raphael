@@ -25,6 +25,7 @@ WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE
 OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN
 IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 -->
+
 <compatibility-matrix version="1.0" type="device">
     <hal format="hidl" optional="false">
         <name>android.frameworks.schedulerservice</name>
@@ -84,11 +85,26 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
     </hal>
     <hal format="hidl" optional="true">
         <name>vendor.qti.hardware.qccsyshal</name>
-        <transport>hwbinder</transport>
         <version>1.0</version>
         <interface>
             <name>IQccsyshal</name>
             <instance>qccsyshal</instance>
+        </interface>
+    </hal>
+    <hal format="hidl" optional="true">
+        <name>vendor.qti.hardware.sigma_miracast</name>
+        <version>1.0</version>
+        <interface>
+            <name>Isigma_miracast</name>
+            <instance>sigmahal</instance>
+        </interface>
+    </hal>
+    <hal format="hidl" optional="true">
+        <name>vendor.qti.hardware.wifi.keystore</name>
+        <version>1.0</version>
+        <interface>
+            <name>IKeystoreExt</name>
+            <instance>default</instance>
         </interface>
     </hal>
 </compatibility-matrix>
