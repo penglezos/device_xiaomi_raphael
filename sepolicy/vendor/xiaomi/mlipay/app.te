@@ -1,0 +1,2 @@
+get_prop({ appdomain -isolated_app }, vendor_payment_security_prop)
+get_prop({ appdomain -isolated_app }, vendor_fp_prop)

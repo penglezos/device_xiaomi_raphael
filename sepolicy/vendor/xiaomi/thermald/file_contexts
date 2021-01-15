@@ -1,0 +1,5 @@
+# Xiaomi thermal daemon
+/vendor/bin/mi_thermald                                            u:object_r:mi_thermald_exec:s0
+
+# Thermal data
+/data/vendor/thermal(/.*)?                                         u:object_r:vendor_thermal_data_file:s0

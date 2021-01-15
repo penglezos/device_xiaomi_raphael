@@ -1,0 +1,5 @@
+# Camera
+/mnt/vendor/persist/camera(/.*)?                                                   u:object_r:camera_persist_file:s0
+
+# Remosaic
+/vendor/bin/remosaic_daemon                                                        u:object_r:remosaic_daemon_exec:s0

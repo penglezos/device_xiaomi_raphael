@@ -1,0 +1,5 @@
+# Allow Audio HAL to access calibration files in /mnt/vendor/persist/audio
+r_dir_file(hal_audio_default, vendor_persist_audio_file)
+
+# Allow HAL to set audio properties
+set_prop(hal_audio_default, vendor_audio_prop)

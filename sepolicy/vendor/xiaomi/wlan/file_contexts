@@ -1,0 +1,5 @@
+# WIFI mac data
+/data/vendor/mac_addr(/.*)?                                         u:object_r:vendor_wifi_vendor_data_file:s0
+
+# nv_mac
+/vendor/bin/nv_mac                                                  u:object_r:vendor_wcnss_service_exec:s0

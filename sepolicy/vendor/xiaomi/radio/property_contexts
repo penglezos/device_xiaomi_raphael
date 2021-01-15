@@ -1,0 +1,6 @@
+ro.build.flavor                u:object_r:exported_default_prop:s0
+ro.carrier.name                u:object_r:exported_default_prop:s0
+ro.cust.test                   u:object_r:exported_default_prop:s0
+ro.miui.                       u:object_r:exported_system_prop:s0
+ro.product.marketname          u:object_r:exported2_default_prop:s0 exact string
+ro.product.mod_device          u:object_r:exported2_default_prop:s0

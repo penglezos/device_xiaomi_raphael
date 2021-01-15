@@ -1,0 +1,2 @@
+# clean_scratch_files
+/system/bin/clean_scratch_files                 u:object_r:clean_scratch_files_exec:s0

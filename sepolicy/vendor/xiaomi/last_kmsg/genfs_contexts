@@ -1,0 +1,1 @@
+genfscon proc /last_kmsg u:object_r:proc_last_kmsg:s0

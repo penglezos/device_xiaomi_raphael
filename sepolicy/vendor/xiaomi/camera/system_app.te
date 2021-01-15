@@ -1,0 +1,2 @@
+# Allow system_app to read vendor camera props
+get_prop(hal_camera, vendor_camera_sensor_prop)

@@ -1,0 +1,1 @@
+allow vendor_qti_init_shell sysfs_wakeup:file setattr;

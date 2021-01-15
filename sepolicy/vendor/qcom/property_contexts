@@ -1,0 +1,5 @@
+# Sensors
+persist.sensor.sardisable  u:object_r:vendor_sensors_prop:s0
+
+# Graphics
+ro.gfx.driver.1            u:object_r:exported3_default_prop:s0
