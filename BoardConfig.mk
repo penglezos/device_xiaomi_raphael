@@ -230,10 +230,7 @@ USE_SENSOR_MULTI_HAL := true
 
 # Sepolicy
 include device/qcom/sepolicy_vndr/SEPolicy.mk
-
-BOARD_PLAT_PRIVATE_SEPOLICY_DIR += $(DEVICE_PATH)/sepolicy/private
-BOARD_PLAT_PUBLIC_SEPOLICY_DIR += $(DEVICE_PATH)/sepolicy/public
-BOARD_VENDOR_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/vendor
+include device/xiaomi/raphael-sepolicy/raphael-sepolicy.mk
 
 # Vendor init
 TARGET_INIT_VENDOR_LIB := //$(DEVICE_PATH):libinit_raphael

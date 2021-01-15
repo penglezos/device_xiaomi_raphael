@@ -1,2 +1,0 @@
-allow ims diag_device:chr_file { read write };
-allow ims diag_device:chr_file { open };
