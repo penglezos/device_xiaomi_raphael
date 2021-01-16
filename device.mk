@@ -352,17 +352,14 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.software.ipsec_tunnels.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.software.ipsec_tunnels.xml
 
 # NFC
-PRODUCT_SOONG_NAMESPACES += \
-    vendor/nxp/opensource/sn100x
-
 PRODUCT_PACKAGES += \
     com.android.nfc_extras \
-    com.gsma.services.nfc \
-    com.nxp.nfc.nq \
-    nfc_nci.nqx.default.hw \
     NfcNci \
-    Tag \
-    vendor.nxp.hardware.nfc@1.2-service
+    SecureElement \
+    Tag
+
+PRODUCT_PACKAGES += \
+    android.hardware.nfc@1.2-service
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/nfc/libnfc-nci.conf:$(TARGET_COPY_OUT_SYSTEM)/etc/libnfc-nci.conf \

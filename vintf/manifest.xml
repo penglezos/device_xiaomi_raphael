@@ -170,18 +170,6 @@
         <fqname>@1.0::IDevice/default</fqname>
     </hal>
     <hal format="hidl">
-        <name>android.hardware.secure_element</name>
-        <transport>hwbinder</transport>
-        <version>1.2</version>
-        <interface>
-            <name>ISecureElement</name>
-            <instance>SIM1</instance>
-            <instance>eSE1</instance>
-        </interface>
-        <fqname>@1.2::ISecureElement/SIM1</fqname>
-        <fqname>@1.2::ISecureElement/eSE1</fqname>
-    </hal>
-    <hal format="hidl">
         <name>android.hardware.sensors</name>
         <transport>hwbinder</transport>
         <version>1.0</version>
@@ -282,16 +270,6 @@
         <fqname>@2.1::IGoodixFingerprintDaemon/default</fqname>
     </hal>
     <hal format="hidl">
-        <name>vendor.nxp.hardware.nfc</name>
-        <transport>hwbinder</transport>
-        <version>1.2</version>
-        <interface>
-            <name>INqNfc</name>
-            <instance>default</instance>
-        </interface>
-        <fqname>@1.2::INqNfc/default</fqname>
-    </hal>
-    <hal format="hidl">
         <name>vendor.qti.data.factory</name>
         <transport>hwbinder</transport>
         <version>2.2</version>
@@ -300,16 +278,6 @@
             <instance>default</instance>
         </interface>
         <fqname>@2.2::IFactory/default</fqname>
-    </hal>
-    <hal format="hidl">
-        <name>vendor.qti.esepowermanager</name>
-        <transport>hwbinder</transport>
-        <version>1.1</version>
-        <interface>
-            <name>IEsePowerManager</name>
-            <instance>default</instance>
-        </interface>
-        <fqname>@1.1::IEsePowerManager/default</fqname>
     </hal>
     <hal format="hidl">
         <name>vendor.qti.gnss</name>
