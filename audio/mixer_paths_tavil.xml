@@ -303,8 +303,8 @@
     <!-- RT Proxy Cal end -->
 
     <!-- Incall Recording -->
-    <ctl name="MultiMedia9 Mixer VOC_REC_UL" value="0" />
-    <ctl name="MultiMedia9 Mixer VOC_REC_DL" value="0" />
+    <ctl name="MultiMedia1 Mixer VOC_REC_UL" value="0" />
+    <ctl name="MultiMedia1 Mixer VOC_REC_DL" value="0" />
     <ctl name="MultiMedia8 Mixer VOC_REC_UL" value="0" />
     <ctl name="MultiMedia8 Mixer VOC_REC_DL" value="0" />
     <ctl name="MultiMedia17 Mixer VOC_REC_UL" value="0" />
@@ -636,6 +636,44 @@
         <ctl name="QUAT_MI2S_RX Audio Mixer MultiMedia16" value="1" />
     </path>
 
+    <!-- Add for j20s begin -->
+    <path name="deep-buffer-playback handset">
+    </path>
+
+    <path name="low-latency-playback handset">
+    </path>
+
+    <path name="audio-ull-playback handset">
+    </path>
+
+    <path name="compress-offload-playback handset">
+    </path>
+
+    <path name="compress-offload-playback2 handset">
+    </path>
+
+    <path name="compress-offload-playback3 handset">
+    </path>
+
+    <path name="compress-offload-playback4 handset">
+    </path>
+
+    <path name="compress-offload-playback5 handset">
+    </path>
+
+    <path name="compress-offload-playback6 handset">
+    </path>
+
+    <path name="compress-offload-playback7 handset">
+    </path>
+
+    <path name="compress-offload-playback8 handset">
+    </path>
+
+    <path name="compress-offload-playback9 handset">
+    </path>
+    <!-- Add for j20s end -->
+
     <path name="compress-voip-call speaker">
         <ctl name="VOIP_EXT_EC MUX" value="QUAT_MI2S_TX" />
         <ctl name="QUAT_MI2S_RX_Voice Mixer Voip" value="1" />
@@ -786,6 +824,15 @@
         <ctl name="ADC MUX6" value="AMIC" />
         <ctl name="AMIC MUX6" value="ADC1" />
         <ctl name="IIR0 INP0 MUX" value="DEC6" />
+    </path>
+
+    <path name="back-mic">
+        <ctl name="AIF1_CAP Mixer SLIM TX7" value="1"/>
+        <ctl name="SLIM_0_TX Channels" value="One" />
+        <ctl name="CDC_IF TX7 MUX" value="DEC7" />
+        <ctl name="ADC MUX7" value="AMIC" />
+        <ctl name="AMIC MUX7" value="ADC4" />
+        <ctl name="IIR0 INP0 MUX" value="DEC7" />
     </path>
 
     <path name="front-mic">
@@ -987,6 +1034,10 @@
         <ctl name="SLIM_0_TX Channels" value="Four" />
     </path>
 
+    <path name="record-vol">
+        <ctl name="ADC1 Volume" value="20" />
+        <ctl name="ADC3 Volume" value="20" />
+    </path>
 
     <path name="handset-dmic-music">
         <path name="handset-dmic-dual-adc" />
@@ -1032,6 +1083,9 @@
         <ctl name="AUDIO_REF_EC_UL1 MUX" value="SLIM_RX" />
     </path>
 
+    <path name="echo-reference handset">
+    </path>
+
     <path name="echo-reference headphones">
         <ctl name="EC Reference Channels" value="One"/>
         <ctl name="AUDIO_REF_EC_UL1 MUX" value="SLIM_6_RX" />
@@ -1046,6 +1100,9 @@
     </path>
 
     <path name="echo-reference headphones-44.1">
+    </path>
+
+    <path name="echo-reference-voip">
     </path>
 
     <path name="echo-reference-voip earpiece">
@@ -1071,8 +1128,7 @@
         <ctl name="AUDIO_REF_EC_UL10 MUX" value="DISPLAY_PORT" />
     </path>
 
-    <path name="echo-reference display-port">
-        <ctl name="AUDIO_REF_EC_UL1 MUX" value="DISPLAY_PORT" />
+    <path name="echo-reference-voip handset">
     </path>
 
     <path name="echo-reference-voip speaker">
@@ -1093,6 +1149,9 @@
     <path name="echo-reference bt-sco-headset">
         <ctl name="EC Reference Channels" value="One"/>
         <ctl name="AUDIO_REF_EC_UL1 MUX" value="SLIM_7_RX" />
+    </path>
+
+    <path name="echo-reference-voip headphones-44.1">
     </path>
 
     <path name="echo-reference-voip usb-headphones">
@@ -2163,7 +2222,7 @@
     </path>
 
     <path name="incall-rec-uplink">
-        <ctl name="MultiMedia9 Mixer VOC_REC_UL" value="1" />
+        <ctl name="MultiMedia1 Mixer VOC_REC_UL" value="1" />
     </path>
 
     <path name="incall-rec-uplink bt-sco">
@@ -2215,7 +2274,7 @@
     </path>
 
     <path name="incall-rec-downlink">
-        <ctl name="MultiMedia9 Mixer VOC_REC_DL"  value="1" />
+        <ctl name="MultiMedia1 Mixer VOC_REC_DL"  value="1" />
     </path>
 
     <path name="incall-rec-downlink bt-sco">
@@ -2499,6 +2558,9 @@
         <ctl name="SLIMBUS_0_RX Audio Mixer MultiMedia10" value="1" />
     </path>
 
+    <path name="audio-playback-voip handset">
+    </path>
+
     <path name="audio-playback-voip headphones">
         <ctl name="SLIMBUS_6_RX Audio Mixer MultiMedia10" value="1" />
     </path>
@@ -2663,6 +2725,12 @@
         <ctl name="SpkrRight BOOST Switch" value="1" />
         <ctl name="SpkrRight VISENSE Switch" value="1" />
         <ctl name="SpkrRight SWR DAC_Port Switch" value="1" />
+    </path>
+
+    <path name="speaker-left">
+    </path>
+
+     <path name="speaker-right">
     </path>
 
     <path name="speaker-mono">
@@ -2910,6 +2978,15 @@
         <ctl name="RX INT2_1 NATIVE MUX" value="ON" />
     </path>
 
+    <path name="headphones-ce">
+    </path>
+
+    <path name="headphones-44.1-ce">
+    </path>
+
+    <path name="headphones-ce-fm">
+    </path>
+
     <path name="asrc-mode">
         <ctl name="ASRC0 Output Mode" value="FRAC" />
         <ctl name="ASRC1 Output Mode" value="FRAC" />
@@ -3040,11 +3117,6 @@
         <ctl name="DEC0 Volume" value="84" />
     </path>
 
-    <path name="voice-headset-mic-qrd">
-        <path name="amic2" />
-        <ctl name="DEC0 Volume" value="84" />
-    </path>
-
     <path name="speaker-and-headphones">
         <path name="headphones" />
         <path name="speaker" />
@@ -3052,6 +3124,9 @@
         <ctl name="COMP2 Switch" value="0" />
         <ctl name="HPHL Volume" value="15" />
         <ctl name="HPHR Volume" value="15" />
+    </path>
+
+    <path name="speaker-and-headphones-ce">
     </path>
 
     <path name="speaker-safe-and-headphones">
@@ -3792,6 +3867,9 @@
         <ctl name="SLIMBUS_0_RX Audio Mixer MultiMedia16" value="1" />
     </path>
 
+    <path name="mmap-playback handset">
+    </path>
+
     <path name="mmap-playback speaker">
         <ctl name="QUAT_MI2S_RX Audio Mixer MultiMedia16" value="1" />
     </path>
@@ -3919,6 +3997,10 @@
     </path>
 
     <path name="incall_music_uplink speaker">
+        <path name="incall_music_uplink" />
+    </path>
+
+    <path name="incall_music_uplink receiver">
         <path name="incall_music_uplink" />
     </path>
 
