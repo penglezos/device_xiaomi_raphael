@@ -383,19 +383,19 @@
     <ctl name="RX5 Digital Volume" value="84" />
     <ctl name="RX6 Digital Volume" value="84" />
     <ctl name="RX7 Digital Volume" value="84" />
-    <ctl name="ADC1 Volume" value="8" />
-    <ctl name="ADC2 Volume" value="8" />
+    <ctl name="ADC1 Volume" value="12" />
+    <ctl name="ADC2 Volume" value="12" />
     <ctl name="ADC3 Volume" value="8" />
     <ctl name="ADC4 Volume" value="8" />
-    <ctl name="DEC0 Volume" value="84" />
-    <ctl name="DEC1 Volume" value="84" />
-    <ctl name="DEC2 Volume" value="84" />
-    <ctl name="DEC3 Volume" value="84" />
-    <ctl name="DEC4 Volume" value="84" />
-    <ctl name="DEC5 Volume" value="84" />
-    <ctl name="DEC6 Volume" value="84" />
-    <ctl name="DEC7 Volume" value="84" />
-    <ctl name="DEC8 Volume" value="84" />
+    <ctl name="DEC0 Volume" value="100" />
+    <ctl name="DEC1 Volume" value="100" />
+    <ctl name="DEC2 Volume" value="100" />
+    <ctl name="DEC3 Volume" value="100" />
+    <ctl name="DEC4 Volume" value="100" />
+    <ctl name="DEC5 Volume" value="100" />
+    <ctl name="DEC6 Volume" value="100" />
+    <ctl name="DEC7 Volume" value="100" />
+    <ctl name="DEC8 Volume" value="100" />
 
     <!-- Compander controls -->
     <ctl name="COMP1 Switch" value="1" />
