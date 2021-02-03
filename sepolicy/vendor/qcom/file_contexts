@@ -1,6 +1,0 @@
-/sys/devices/[^*]+/wakeup/wakeup[0-9]+(/.*)?                    u:object_r:sysfs_wakeup:s0
-/sys/devices/platform/[^*]+/wakeup/wakeup[0-9]+(/.*)?           u:object_r:sysfs_wakeup:s0
-/sys/devices/platform/soc/[^*]+/wakeup[0-9]+(/.*)?              u:object_r:sysfs_wakeup:s0
-/sys/devices/virtual/diag/diag/wakeup[0-9]+(/.*)?               u:object_r:sysfs_wakeup:s0
-/sys/devices/virtual/misc/[^*]+/wakeup[0-9]+(/.*)?              u:object_r:sysfs_wakeup:s0
-/sys/devices/virtual/fastrpc/adsprpc-smd/wakeup[0-9]+(/.*)?     u:object_r:sysfs_wakeup:s0
