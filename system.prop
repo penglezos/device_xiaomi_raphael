@@ -32,9 +32,6 @@ persist.vendor.cne.feature=1
 # Charger
 ro.charger.enable_suspend=true
 
-# Display
-debug.sf.latch_unsignaled=1
-
 # DPM
 persist.vendor.dpm.feature=1
 persist.vendor.dpm.loglevel=0

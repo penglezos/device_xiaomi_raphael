@@ -99,31 +99,6 @@ camera.disable_zsl_mode=true
 # Crypto
 ro.crypto.volume.filenames_mode=aes-256-cts
 
-# Display
-ro.surface_flinger.has_wide_color_display=true
-ro.surface_flinger.has_HDR_display=true
-ro.surface_flinger.use_color_management=true
-ro.surface_flinger.wcg_composition_dataspace=143261696
-ro.surface_flinger.protected_contents=true
-ro.surface_flinger.force_hwc_copy_for_virtual_displays=true
-vendor.display.comp_mask=0
-vendor.display.dataspace_saturation_matrix=1.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,1.0
-vendor.display.disable_decimation=1
-vendor.display.disable_excl_rect=0
-vendor.display.disable_hw_recovery_dump=1
-vendor.display.disable_inline_rotator=1
-vendor.display.disable_scaler=0
-vendor.display.disable_ui_3d_tonemap=1
-vendor.display.enable_force_split=1
-vendor.display.enable_null_display=0
-vendor.display.enable_optimize_refresh=1
-
-# Display post-processing
-ro.vendor.display.ad=1
-ro.vendor.display.ad.hdr_calib_data=/vendor/etc/hdr_config.cfg
-ro.vendor.display.ad.sdr_calib_data=/vendor/etc/sdr_config.cfg
-ro.vendor.display.sensortype=2
-
 # DRM
 drm.service.enabled=true
 
