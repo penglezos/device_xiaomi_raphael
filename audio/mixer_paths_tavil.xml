@@ -2956,7 +2956,7 @@
         <path name="amic2" />
         <ctl name="External AMIC2 Mux" value="default" />
         <ctl name="ADC2 Volume" value="5" />
-        <ctl name="DEC1 Volume" value="84" />
+        <ctl name="DEC1 Volume" value="95" />
     </path>
 
     <path name="headset-mic-liquid">
@@ -3037,12 +3037,12 @@
 
     <path name="voice-headset-mic-qrd">
         <path name="amic2" />
-        <ctl name="DEC0 Volume" value="84" />
+        <ctl name="DEC0 Volume" value="95" />
     </path>
 
     <path name="voice-headset-mic-qrd">
         <path name="amic2" />
-        <ctl name="DEC0 Volume" value="84" />
+        <ctl name="DEC0 Volume" value="95" />
     </path>
 
     <path name="speaker-and-headphones">
