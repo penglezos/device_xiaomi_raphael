@@ -168,7 +168,6 @@ on property:sys.boot_completed=1
     setprop vendor.usb.dpl.inst.name "dpl"
     setprop vendor.usb.qdss.inst.name "qdss"
     setprop vendor.usb.controller a600000.dwc3
-    setprop sys.usb.configfs 1
 
     # Restrict permissions to socket file 
     # to hide Magisk & co.
@@ -181,9 +180,6 @@ on property:vendor.post_boot.parsed=1
 
     # Enable PowerHAL hint processing
     setprop vendor.powerhal.init 1
-
-on property:vendor.usb.controller=*
-    setprop sys.usb.controller ${vendor.usb.controller}
 
 service vendor.pd_mapper /vendor/bin/pd-mapper
     class core
