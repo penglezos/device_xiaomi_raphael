@@ -1,5 +1,7 @@
 /*
    Copyright (c) 2014, The Linux Foundation. All rights reserved.
+   Copyright (C) 2021 The LineageOS Project.
+
    Redistribution and use in source and binary forms, with or without
    modification, are permitted provided that the following conditions are
    met:
@@ -12,6 +14,7 @@
     * Neither the name of The Linux Foundation nor the names of its
       contributors may be used to endorse or promote products derived
       from this software without specific prior written permission.
+
    THIS SOFTWARE IS PROVIDED "AS IS" AND ANY EXPRESS OR IMPLIED
    WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF
    MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT
@@ -25,28 +28,24 @@
    IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 
-#include <stdlib.h>
-#define _REALLY_INCLUDE_SYS__SYSTEM_PROPERTIES_H_
-#include <sys/_system_properties.h>
-#include <sys/sysinfo.h>
+#include <vector>
 
 #include <android-base/properties.h>
-#include "vendor_init.h"
+#define _REALLY_INCLUDE_SYS__SYSTEM_PROPERTIES_H_
+#include <sys/_system_properties.h>
 
-void property_override(char const prop[], char const value[]) {
+#include <sys/sysinfo.h>
+
+using android::base::GetProperty;
+
+void property_override(char const prop[], char const value[], bool add = true) {
     prop_info* pi;
 
     pi = (prop_info*)__system_property_find(prop);
     if (pi)
         __system_property_update(pi, value, strlen(value));
-    else
+    else if (add)
         __system_property_add(prop, strlen(prop), value, strlen(value));
-}
-
-void property_override_dual(char const system_prop[], char const vendor_prop[],
-                            char const value[]) {
-    property_override(system_prop, value);
-    property_override(vendor_prop, value);
 }
 
 void load_dalvikvm_properties() {
@@ -70,22 +69,70 @@ void load_dalvikvm_properties() {
     property_override("dalvik.vm.heapminfree", "8m");
 }
 
-void vendor_load_properties() {
-    std::string region = android::base::GetProperty("ro.boot.hwc", "");
+std::vector<std::string> ro_props_default_source_order = {
+        "", "bootimage.", "odm.", "product.", "system.", "system_ext.", "vendor.",
+};
 
-    // correct model naming
-    if (region.find("CN") != std::string::npos || region.find("INDIA") != std::string::npos) {
-        property_override("ro.product.model", "Redmi K20 Pro");
-    } else {
-        property_override("ro.product.model", "Mi 9T Pro");
+void set_ro_build_prop(const std::string& prop, const std::string& value) {
+    for (const auto& source : ro_props_default_source_order) {
+        auto prop_name = "ro." + source + "build." + prop;
+        if (source == "")
+            property_override(prop_name.c_str(), value.c_str());
+        else
+            property_override(prop_name.c_str(), value.c_str(), false);
+    }
+};
+
+void set_ro_product_prop(const std::string& prop, const std::string& value) {
+    for (const auto& source : ro_props_default_source_order) {
+        auto prop_name = "ro.product." + source + prop;
+        property_override(prop_name.c_str(), value.c_str(), false);
+    }
+};
+
+void vendor_load_properties() {
+    std::string region;
+    std::string hardware_revision;
+    region = GetProperty("ro.boot.hwc", "GLOBAL");
+    hardware_revision = GetProperty("ro.boot.hwversion", "UNKNOWN");
+
+    std::string model;
+    std::string device;
+    std::string fingerprint;
+    std::string description;
+    std::string mod_device;
+
+    if (region == "GLOBAL") {
+        model = "Mi 9T Pro";
+        device = "raphael";
+        fingerprint =
+                "Xiaomi/raphael/raphael:10/QKQ1.190825.002/V12.0.4.0.QFKMIXM:user/release-keys";
+        description = "raphael-user 10 QKQ1.190825.002 V12.0.4.0.QFKMIXM release-keys";
+        mod_device = "raphael_global";
+    } else if (region == "CN") {
+        model = "Redmi K20 Pro";
+        device = "raphael";
+        fingerprint =
+                "Xiaomi/raphael/raphael:10/QKQ1.190825.002/V12.0.6.0.QFKCNXM:user/release-keys";
+        description = "raphael-user 10 QKQ1.190825.002 V12.0.6.0.QFKCNXM release-keys";
+    } else if (region == "INDIA") {
+        model = "Redmi K20 Pro";
+        device = "raphaelin";
+        fingerprint =
+                "Xiaomi/raphaelin/raphaelin:10/QKQ1.190825.002/V12.0.4.0.QFKINXM:user/release-keys";
+        description = "raphaelin-user 10 QKQ1.190825.002 V12.0.4.0.QFKINXM release-keys";
+        mod_device = "raphaelin_in_global";
     }
 
-    // fingerprint
-    property_override("ro.build.description",
-                      "raphael-user 10 QKQ1.190825.002 V12.0.1.0.QFKMIXM release-keys");
-    property_override_dual(
-            "ro.build.fingerprint", "ro.vendor.build.fingerprint",
-            "google/walleye/walleye:8.1.0/OPM1.171019.011/4448085:user/release-keys");
+    set_ro_build_prop("fingerprint", fingerprint);
+    set_ro_product_prop("device", device);
+    set_ro_product_prop("model", model);
+    property_override("ro.build.description", description.c_str());
+    if (mod_device != "") {
+        property_override("ro.product.mod_device", mod_device.c_str());
+    }
+
+    property_override("ro.boot.hardware.revision", hardware_revision.c_str());
 
     load_dalvikvm_properties();
 }
