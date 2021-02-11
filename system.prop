@@ -1,6 +1,9 @@
 # Display
 debug.sf.disable_backpressure=1
 
+# FUSE passthrough
+persist.sys.fuse.passthrough.enable=true
+
 # GPS
 persist.vendor.overlay.izat.optin=rro
 
