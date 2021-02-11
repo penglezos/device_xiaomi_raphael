@@ -24,6 +24,9 @@ persist.vendor.dpm.feature=1
 persist.vendor.dpm.loglevel=0
 persist.vendor.dpm.nsrm.bkg.evt=3955
 
+# FUSE passthrough
+persist.sys.fuse.passthrough.enable=true
+
 # GPS
 persist.vendor.overlay.izat.optin=rro
 
