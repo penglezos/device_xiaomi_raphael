@@ -32,6 +32,15 @@ on init
     chmod 0660 /dev/drv8846_dev
     chmod 0660 /dev/akm09970
 
+on late-init
+    # Start services for bootanimation
+    start surfaceflinger
+    start themed_bootanimation
+    start bootanim
+    start vendor.hwcomposer-2-3
+    start vendor.configstore-hal
+    start vendor.qti.hardware.display.allocator
+
 service vendor.motor /vendor/bin/hw/vendor.xiaomi.hardware.motor@1.0-service
     class hal
     user system
