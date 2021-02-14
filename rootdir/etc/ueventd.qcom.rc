@@ -357,18 +357,24 @@ firmware_directories /vendor/firmware_mnt/image/
 /dev/input/event3                                       0666   system     system
 
 # LED class devices
-/sys/class/leds/red      delay_on     0640    system    system
-/sys/class/leds/red      delay_off    0640    system    system
-/sys/class/leds/red      breath       0640    system    system
-/sys/class/leds/red      trigger      0640    system    system
-/sys/class/leds/green    delay_on     0640    system    system
-/sys/class/leds/green    delay_off    0640    system    system
-/sys/class/leds/green    breath       0640    system    system
-/sys/class/leds/green    trigger      0640    system    system
-/sys/class/leds/blue     delay_on     0640    system    system
-/sys/class/leds/blue     delay_off    0640    system    system
-/sys/class/leds/blue     breath       0640    system    system
-/sys/class/leds/blue     trigger      0640    system    system
+/sys/class/leds/green     delay_on        0640    system    system
+/sys/class/leds/green     delay_off       0640    system    system
+/sys/class/leds/green     breath          0640    system    system
+/sys/class/leds/green     brightness      0640    system    system
+/sys/class/leds/green     lo_idx          0640    system    system
+/sys/class/leds/green     lut_pattern     0640    system    system
+/sys/class/leds/green     max_brightness  0640    system    system
+/sys/class/leds/green     pause_lo_count  0640    system    system
+/sys/class/leds/green     step_ms         0640    system    system
+/sys/class/leds/blue    delay_on        0640    system    system
+/sys/class/leds/blue    delay_off       0640    system    system
+/sys/class/leds/blue    breath          0640    system    system
+/sys/class/leds/blue    brightness      0640    system    system
+/sys/class/leds/blue    lo_idx          0640    system    system
+/sys/class/leds/blue    lut_pattern     0640    system    system
+/sys/class/leds/blue    max_brightness  0640    system    system
+/sys/class/leds/blue    pause_lo_count  0640    system    system
+/sys/class/leds/blue    step_ms         0640    system    system
 
 # NPU device
 /dev/msm_npu             0644   system     system
