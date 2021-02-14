@@ -233,14 +233,14 @@ public class PopupCameraService extends Service implements Handler.Callback {
                 if (cameraState.equals(Constants.OPEN_CAMERA_STATE)
                         && (status == Constants.MOTOR_STATUS_TAKEBACK_OK
                                    || status == Constants.MOTOR_STATUS_CALIB_OK)) {
-                    lightUp();
+                    lightUp(true);
                     playSoundEffect(Constants.OPEN_CAMERA_STATE);
                     mMotor.popupMotor(1);
                     mSensorManager.registerListener(mFreeFallListener, mFreeFallSensor,
                             SensorManager.SENSOR_DELAY_NORMAL);
                 } else if (cameraState.equals(Constants.CLOSE_CAMERA_STATE)
                         && status == Constants.MOTOR_STATUS_POPUP_OK) {
-                    lightUp();
+                    lightUp(false);
                     playSoundEffect(Constants.CLOSE_CAMERA_STATE);
                     mMotor.takebackMotor(1);
                     mSensorManager.unregisterListener(mFreeFallListener, mFreeFallSensor);
@@ -276,23 +276,46 @@ public class PopupCameraService extends Service implements Handler.Callback {
         }
     }
 
-    private void lightUp() {
-        if (mPopupCameraPreferences.isLedAllowed()) {
-            String ledBreathing = FileUtils.readOneLine(Constants.LEFT_LED_BREATH_PATH);
-            String ledBrightness = FileUtils.readOneLine(Constants.LEFT_LED_PATH);
+    private void setLed(String mode, String value) {
+        FileUtils.writeLine(Constants.LEFT_LED_PATH + mode, value);
+        FileUtils.writeLine(Constants.RIGHT_LED_PATH + mode, value);
+    }
 
-            FileUtils.writeLine(Constants.LEFT_LED_BREATH_PATH, "0");
-            FileUtils.writeLine(Constants.LEFT_LED_PATH, "255");
-            FileUtils.writeLine(Constants.RIGHT_LED_PATH, "255");
+    private void lightUp(boolean open) {
+        if (mPopupCameraPreferences.isLedAllowed()) {
+            // Save the active LED effects
+            String ledBreathing = FileUtils.readOneLine(Constants.LEFT_LED_BREATH_PATH);
+            String ledBrightness = FileUtils.readOneLine(Constants.LEFT_LED_BRIGHTNESS_PATH);
+
+            // Reset the active LED effects
+            setLed("breath", "0");
+            setLed("brightness", "0");
+
+            // Tune the breath parameters for popup
+            setLed("lo_idx", open ? "0" : "22");
+            setLed("pause_lo_count", open ? "5" : "0");
+            setLed("step_ms", "35");
+            setLed("lut_pattern", "1");
+
+            // Enable the breath effect
+            setLed("breath", "1");
 
             mHandler.postDelayed(() -> {
+                // Disable the breth effect
+                setLed("brightness", "0");
+
+                // Restore default breath parameters
+                setLed("lo_idx", "0");
+                setLed("pause_lo_count", "30");
+                setLed("step_ms", "70");
+
+                // Restore the previous LED effects
                 if (ledBreathing.equals("1")) {
                     FileUtils.writeLine(Constants.LEFT_LED_BREATH_PATH, ledBreathing);
                 } else {
-                    FileUtils.writeLine(Constants.LEFT_LED_PATH, ledBrightness);
+                    FileUtils.writeLine(Constants.LEFT_LED_BRIGHTNESS_PATH, ledBrightness);
                 }
-                FileUtils.writeLine(Constants.RIGHT_LED_PATH, "0");
-            }, 1200);
+            }, 1400);
         }
     }
 
