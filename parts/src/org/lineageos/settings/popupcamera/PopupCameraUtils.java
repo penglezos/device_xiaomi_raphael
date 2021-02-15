@@ -21,11 +21,11 @@ import android.content.Intent;
 import android.os.UserHandle;
 
 public class PopupCameraUtils {
-
     private static final String TAG = "PopupCameraUtils";
     private static final boolean DEBUG = false;
 
     public static void startService(Context context) {
-        context.startServiceAsUser(new Intent(context, PopupCameraService.class), UserHandle.CURRENT);
+        context.startServiceAsUser(
+                new Intent(context, PopupCameraService.class), UserHandle.CURRENT);
     }
 }

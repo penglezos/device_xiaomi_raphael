@@ -17,7 +17,6 @@
 package org.lineageos.settings.utils;
 
 import android.util.Log;
-
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.File;
@@ -62,7 +61,7 @@ public final class FileUtils {
             }
         }
 
-         return line;
+        return line;
     }
 
     /**

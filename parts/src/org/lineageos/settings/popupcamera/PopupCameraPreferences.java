@@ -21,7 +21,6 @@ import android.content.SharedPreferences;
 import android.preference.PreferenceManager;
 
 public class PopupCameraPreferences {
-
     private static final String TAG = "PopupCameraUtils";
     private static final boolean DEBUG = false;
     private static final String LED_EFFECT_KEY = "popup_led_effect";

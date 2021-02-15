@@ -15,5 +15,5 @@
  */
 
 namespace android {
-    extern "C" void mg_facepp() {}
-}
+extern "C" void mg_facepp() {}
+}  // namespace android

@@ -22,17 +22,17 @@
 
 #include <fstream>
 
-#define LCD_LED         "/sys/class/backlight/panel0-backlight/"
+#define LCD_LED "/sys/class/backlight/panel0-backlight/"
 //#define BLUE_LED        "/sys/class/leds/blue/"  //Right LED
-#define GREEN_LED       "/sys/class/leds/green/"  //Left LED
+#define GREEN_LED "/sys/class/leds/green/"  // Left LED
 
-#define BREATH          "breath"
-#define BRIGHTNESS      "brightness"
-#define DELAY_OFF       "delay_off"
-#define DELAY_ON        "delay_on"
+#define BREATH "breath"
+#define BRIGHTNESS "brightness"
+#define DELAY_OFF "delay_off"
+#define DELAY_ON "delay_on"
 
-#define MAX_LED_BRIGHTNESS    255
-#define MAX_LCD_BRIGHTNESS    2047
+#define MAX_LED_BRIGHTNESS 255
+#define MAX_LCD_BRIGHTNESS 2047
 
 namespace {
 /*
@@ -102,7 +102,7 @@ static void handleNotification(const LightState& state) {
 
     switch (state.flashMode) {
         case Flash::HARDWARE:
-            /* Breathing */  
+            /* Breathing */
             set(GREEN_LED BREATH, 1);
             break;
         case Flash::TIMED:
@@ -121,9 +121,8 @@ static inline bool isStateLit(const LightState& state) {
 
 static inline bool isStateEqual(const LightState& first, const LightState& second) {
     if (first.color == second.color && first.flashMode == second.flashMode &&
-            first.flashOnMs == second.flashOnMs &&
-            first.flashOffMs == second.flashOffMs &&
-            first.brightnessMode == second.brightnessMode) {
+        first.flashOnMs == second.flashOnMs && first.flashOffMs == second.flashOffMs &&
+        first.brightnessMode == second.brightnessMode) {
         return true;
     }
 
@@ -132,10 +131,10 @@ static inline bool isStateEqual(const LightState& first, const LightState& secon
 
 /* Keep sorted in the order of importance. */
 static std::vector<LightBackend> backends = {
-    { Type::ATTENTION, handleNotification },
-    { Type::NOTIFICATIONS, handleNotification },
-    { Type::BATTERY, handleNotification },
-    { Type::BACKLIGHT, handleBacklight },
+        {Type::ATTENTION, handleNotification},
+        {Type::NOTIFICATIONS, handleNotification},
+        {Type::BATTERY, handleNotification},
+        {Type::BACKLIGHT, handleBacklight},
 };
 
 static LightStateHandler findHandler(Type type) {

@@ -39,16 +39,13 @@ import android.os.SystemClock;
 import android.os.UserHandle;
 import android.util.Log;
 import android.view.WindowManager;
-
 import org.lineageos.settings.R;
 import org.lineageos.settings.utils.FileUtils;
-
 import vendor.xiaomi.hardware.motor.V1_0.IMotor;
 import vendor.xiaomi.hardware.motor.V1_0.IMotorCallback;
 import vendor.xiaomi.hardware.motor.V1_0.MotorEvent;
 
 public class PopupCameraService extends Service implements Handler.Callback {
-
     private static final String TAG = "PopupCameraService";
     private static final boolean DEBUG = false;
 
@@ -76,12 +73,12 @@ public class PopupCameraService extends Service implements Handler.Callback {
                     if (cameraId.equals(Constants.FRONT_CAMERA_ID)) {
                         mClosedEvent = SystemClock.elapsedRealtime();
                         if (SystemClock.elapsedRealtime() - mOpenEvent
-                                < Constants.CAMERA_EVENT_DELAY_TIME && mHandler.hasMessages(
-                                Constants.MSG_CAMERA_OPEN)) {
+                                        < Constants.CAMERA_EVENT_DELAY_TIME
+                                && mHandler.hasMessages(Constants.MSG_CAMERA_OPEN)) {
                             mHandler.removeMessages(Constants.MSG_CAMERA_OPEN);
                         }
-                        mHandler.sendEmptyMessageDelayed(Constants.MSG_CAMERA_CLOSED,
-                                Constants.CAMERA_EVENT_DELAY_TIME);
+                        mHandler.sendEmptyMessageDelayed(
+                                Constants.MSG_CAMERA_CLOSED, Constants.CAMERA_EVENT_DELAY_TIME);
                     }
                 }
 
@@ -91,12 +88,12 @@ public class PopupCameraService extends Service implements Handler.Callback {
                     if (cameraId.equals(Constants.FRONT_CAMERA_ID)) {
                         mOpenEvent = SystemClock.elapsedRealtime();
                         if (SystemClock.elapsedRealtime() - mClosedEvent
-                                < Constants.CAMERA_EVENT_DELAY_TIME && mHandler.hasMessages(
-                                Constants.MSG_CAMERA_CLOSED)) {
+                                        < Constants.CAMERA_EVENT_DELAY_TIME
+                                && mHandler.hasMessages(Constants.MSG_CAMERA_CLOSED)) {
                             mHandler.removeMessages(Constants.MSG_CAMERA_CLOSED);
                         }
-                        mHandler.sendEmptyMessageDelayed(Constants.MSG_CAMERA_OPEN,
-                                Constants.CAMERA_EVENT_DELAY_TIME);
+                        mHandler.sendEmptyMessageDelayed(
+                                Constants.MSG_CAMERA_OPEN, Constants.CAMERA_EVENT_DELAY_TIME);
                     }
                 }
             };
@@ -116,8 +113,7 @@ public class PopupCameraService extends Service implements Handler.Callback {
         }
 
         @Override
-        public void onAccuracyChanged(Sensor sensor, int accuracy) {
-        }
+        public void onAccuracyChanged(Sensor sensor, int accuracy) {}
     };
 
     @Override
@@ -127,12 +123,16 @@ public class PopupCameraService extends Service implements Handler.Callback {
         mSensorManager = getSystemService(SensorManager.class);
         mFreeFallSensor = mSensorManager.getDefaultSensor(Constants.FREE_FALL_SENSOR_ID);
         mPopupCameraPreferences = new PopupCameraPreferences(this);
-        mSoundPool = new SoundPool.Builder().setMaxStreams(1)
-                .setAudioAttributes(new AudioAttributes.Builder()
-                        .setUsage(AudioAttributes.USAGE_ASSISTANCE_SONIFICATION)
-                        .setContentType(AudioAttributes.CONTENT_TYPE_SONIFICATION)
-                        .setFlags(AudioAttributes.FLAG_AUDIBILITY_ENFORCED)
-                        .build()).build();
+        mSoundPool =
+                new SoundPool.Builder()
+                        .setMaxStreams(1)
+                        .setAudioAttributes(
+                                new AudioAttributes.Builder()
+                                        .setUsage(AudioAttributes.USAGE_ASSISTANCE_SONIFICATION)
+                                        .setContentType(AudioAttributes.CONTENT_TYPE_SONIFICATION)
+                                        .setFlags(AudioAttributes.FLAG_AUDIBILITY_ENFORCED)
+                                        .build())
+                        .build();
 
         String[] soundNames = getResources().getStringArray(R.array.popupcamera_effects_names);
         mSounds = new int[soundNames.length];
@@ -211,7 +211,8 @@ public class PopupCameraService extends Service implements Handler.Callback {
 
     @Override
     public void onDestroy() {
-        if (DEBUG) Log.d(TAG, "Destroying service");
+        if (DEBUG)
+            Log.d(TAG, "Destroying service");
         super.onDestroy();
     }
 
@@ -232,12 +233,12 @@ public class PopupCameraService extends Service implements Handler.Callback {
                     Log.d(TAG, "updateMotor: status=" + status + ", cameraState=" + cameraState);
                 if (cameraState.equals(Constants.OPEN_CAMERA_STATE)
                         && (status == Constants.MOTOR_STATUS_TAKEBACK_OK
-                                   || status == Constants.MOTOR_STATUS_CALIB_OK)) {
+                                || status == Constants.MOTOR_STATUS_CALIB_OK)) {
                     lightUp(true);
                     playSoundEffect(Constants.OPEN_CAMERA_STATE);
                     mMotor.popupMotor(1);
-                    mSensorManager.registerListener(mFreeFallListener, mFreeFallSensor,
-                            SensorManager.SENSOR_DELAY_NORMAL);
+                    mSensorManager.registerListener(
+                            mFreeFallListener, mFreeFallSensor, SensorManager.SENSOR_DELAY_NORMAL);
                 } else if (cameraState.equals(Constants.CLOSE_CAMERA_STATE)
                         && status == Constants.MOTOR_STATUS_POPUP_OK) {
                     lightUp(false);
@@ -329,8 +330,8 @@ public class PopupCameraService extends Service implements Handler.Callback {
             int dialogMessageResId = mMotorCalibrating
                     ? R.string.popup_camera_calibrate_running
                     : (status == Constants.MOTOR_STATUS_CALIB_OK
-                                      ? R.string.popup_camera_calibrate_success
-                                      : R.string.popup_camera_calibrate_failed);
+                                    ? R.string.popup_camera_calibrate_success
+                                    : R.string.popup_camera_calibrate_failed);
             AlertDialog.Builder alertDialogBuilder =
                     new AlertDialog.Builder(this, R.style.SystemAlertDialogTheme);
             alertDialogBuilder.setMessage(res.getString(dialogMessageResId));
@@ -382,7 +383,8 @@ public class PopupCameraService extends Service implements Handler.Callback {
     }
 
     private void playSoundEffect(String state) {
-        AudioManager audioManager = (AudioManager) getApplicationContext().getSystemService(Context.AUDIO_SERVICE);
+        AudioManager audioManager =
+                (AudioManager) getApplicationContext().getSystemService(Context.AUDIO_SERVICE);
         if (audioManager.getRingerMode() != AudioManager.RINGER_MODE_NORMAL) {
             return;
         }
@@ -407,12 +409,10 @@ public class PopupCameraService extends Service implements Handler.Callback {
         switch (msg.what) {
             case Constants.MSG_CAMERA_CLOSED: {
                 updateMotor(Constants.CLOSE_CAMERA_STATE);
-            }
-            break;
+            } break;
             case Constants.MSG_CAMERA_OPEN: {
                 updateMotor(Constants.OPEN_CAMERA_STATE);
-            }
-            break;
+            } break;
         }
         return true;
     }

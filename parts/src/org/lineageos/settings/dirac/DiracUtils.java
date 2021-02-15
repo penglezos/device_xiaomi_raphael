@@ -18,12 +18,10 @@ package org.lineageos.settings.dirac;
 
 import android.content.Context;
 import android.content.Intent;
-import android.os.UserHandle;
 import android.media.AudioManager;
-
+import android.os.UserHandle;
 
 public final class DiracUtils {
-
     protected static DiracSound mDiracSound;
     private static boolean mInitialized;
     private static Context mContext;
@@ -36,13 +34,9 @@ public final class DiracUtils {
         }
     }
 
-    protected static void setMusic(boolean enable) {
-        mDiracSound.setMusic(enable ? 1 : 0);
-    }
+    protected static void setMusic(boolean enable) { mDiracSound.setMusic(enable ? 1 : 0); }
 
-    protected static boolean isDiracEnabled() {
-        return mDiracSound.getMusic() == 1;
-    }
+    protected static boolean isDiracEnabled() { return mDiracSound.getMusic() == 1; }
 
     protected static void setLevel(String preset) {
         String[] level = preset.split("\\s*,\\s*");
@@ -52,18 +46,16 @@ public final class DiracUtils {
         }
     }
 
-    protected static void setHeadsetType(int paramInt) {
-         mDiracSound.setHeadsetType(paramInt);
-    }
+    protected static void setHeadsetType(int paramInt) { mDiracSound.setHeadsetType(paramInt); }
 
     protected static void setHifiMode(int paramInt) {
-         AudioManager audioManager = mContext.getSystemService(AudioManager.class);
-         audioManager.setParameters("hifi_mode=" + (paramInt == 1 ? true : false));
-         mDiracSound.setHifiMode(paramInt);
+        AudioManager audioManager = mContext.getSystemService(AudioManager.class);
+        audioManager.setParameters("hifi_mode=" + (paramInt == 1 ? true : false));
+        mDiracSound.setHifiMode(paramInt);
     }
 
     protected static boolean getHifiMode() {
-         AudioManager audioManager = mContext.getSystemService(AudioManager.class);
-         return audioManager.getParameters("hifi_mode").contains("true");
+        AudioManager audioManager = mContext.getSystemService(AudioManager.class);
+        return audioManager.getParameters("hifi_mode").contains("true");
     }
 }
