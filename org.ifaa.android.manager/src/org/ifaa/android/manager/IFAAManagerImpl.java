@@ -16,10 +16,8 @@ import android.os.Parcel;
 import android.os.RemoteException;
 import android.os.SystemProperties;
 import android.util.Slog;
-
 import java.util.ArrayList;
 import java.util.Arrays;
-
 import org.json.JSONObject;
 
 public class IFAAManagerImpl extends IFAAManagerV4 {
@@ -39,8 +37,7 @@ public class IFAAManagerImpl extends IFAAManagerV4 {
 
     private static final String INTERFACE_DESCRIPTOR =
             "vendor.xiaomi.hardware.mlipay@1.0::IMlipayService";
-    private static final String SERVICE_NAME =
-            "vendor.xiaomi.hardware.mlipay@1.0::IMlipayService";
+    private static final String SERVICE_NAME = "vendor.xiaomi.hardware.mlipay@1.0::IMlipayService";
     private static final String TAG = "IfaaManagerImpl";
 
     private static final String mIfaaActName = "org.ifaa.android.manager.IFAAService";
@@ -152,9 +149,7 @@ public class IFAAManagerImpl extends IFAAManagerV4 {
         return mDevModel;
     }
 
-    public int getEnabled(int bioType) {
-        return 1 == bioType ? 1000 : 1003;
-    }
+    public int getEnabled(int bioType) { return 1 == bioType ? 1000 : 1003; }
 
     public String getExtInfo(int authType, String keyExtInfo) {
         Slog.i(TAG, "getExtInfo:" + authType + CA_CERT_ALIAS_DELIMITER + keyExtInfo);
@@ -162,7 +157,7 @@ public class IFAAManagerImpl extends IFAAManagerV4 {
     }
 
     public int[] getIDList(int bioType) {
-        int[] idList = new int[]{0};
+        int[] idList = new int[] {0};
         if (1 == bioType) {
             int retry_count = 10;
             while (true) {
@@ -212,15 +207,17 @@ public class IFAAManagerImpl extends IFAAManagerV4 {
             fpVendor = SystemProperties.get("persist.sys.fp.vendor", "");
         }
 
-        int res = "none".equalsIgnoreCase(fpVendor) ?
-                ifaaProp & IFAA_TYPE_IRIS : ifaaProp & (IFAA_TYPE_FINGER | IFAA_TYPE_IRIS);
+        int res = "none".equalsIgnoreCase(fpVendor)
+                ? ifaaProp & IFAA_TYPE_IRIS
+                : ifaaProp & (IFAA_TYPE_FINGER | IFAA_TYPE_IRIS);
 
         if ((res & IFAA_TYPE_FINGER) == IFAA_TYPE_FINGER && sIsFod) {
             res |= IFAA_TYPE_SENSOR_FOD;
         }
 
-        Slog.i(TAG, "getSupportBIOTypes:" + ifaaProp + ", " + sIsFod + ", " + fpVendor +
-                ", res:" + res);
+        Slog.i(TAG,
+                "getSupportBIOTypes:" + ifaaProp + ", " + sIsFod + ", " + fpVendor
+                        + ", res:" + res);
         return res;
     }
 
@@ -241,8 +238,9 @@ public class IFAAManagerImpl extends IFAAManagerV4 {
                     break;
                 }
                 if (mService == null || !mService.pingBinder()) {
-                    Slog.i(TAG, "processCmdV2 waiting ifaaService, remain: " + retry_count2 +
-                            " time(s)");
+                    Slog.i(TAG,
+                            "processCmdV2 waiting ifaaService, remain: " + retry_count2
+                                    + " time(s)");
                     try {
                         Thread.sleep(30);
                     } catch (InterruptedException e) {
@@ -303,8 +301,7 @@ public class IFAAManagerImpl extends IFAAManagerV4 {
         return null;
     }
 
-    public void setExtInfo(int authType, String keyExtInfo, String valExtInfo) {
-    }
+    public void setExtInfo(int authType, String keyExtInfo, String valExtInfo) {}
 
     public int startBIOManager(Context context, int authType) {
         int res = ACTIVITY_START_FAILED;

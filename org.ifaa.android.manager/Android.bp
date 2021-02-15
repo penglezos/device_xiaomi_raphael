@@ -18,8 +18,8 @@ java_library {
     name: "org.ifaa.android.manager",
     installable: true,
     srcs: [
-        "src/**/*.java",
-        "src/**/I*.aidl",
+        "lib/**/*.java",
+        "lib/**/I*.aidl",
     ],
     libs: [
         "app-compat-annotations",
@@ -27,5 +27,20 @@ java_library {
     ],
     aidl: {
         local_include_dirs: ["src"],
+    },
+}
+
+
+android_app {
+    name: "IFAAService",
+
+    srcs: ["src/**/*.java"],
+
+    certificate: "platform",
+    libs: ["org.ifaa.android.manager"],
+
+    platform_apis: true,
+    optimize: {
+        enabled: false,
     },
 }
