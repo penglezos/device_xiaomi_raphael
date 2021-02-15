@@ -121,8 +121,6 @@ on early-boot
     start vendor.sensors
 
 on boot
-    start rfs_access
-
     chown system system /sys/class/thermal/thermal_message/sconfig
     write /sys/class/thermal/thermal_message/sconfig 10
 
