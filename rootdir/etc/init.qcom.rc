@@ -359,8 +359,3 @@ service vendor.power-hal /vendor/bin/hw/android.hardware.power-service-qti
 on charger
     setprop persist.sys.usb.config mass_storage
     start vendor.qcom-post-boot
-
-service vendor.power_off_alarm /vendor/bin/power_off_alarm
-    class core
-    group system
-    oneshot
