@@ -11,7 +11,6 @@ persist.vendor.audio.hifi=false
 persist.vendor.audio.ras.enabled=false
 persist.vendor.audio.ring.filter.mask=0
 persist.vendor.audio.voicecall.speaker.stereo=true
-ro.audio.recording.hd=true
 ro.config.vc_call_vol_steps=11
 ro.vendor.audio.game.effect=true
 ro.vendor.audio.hifi=true
@@ -82,19 +81,13 @@ vendor.voice.path.for.pcm.voip=false
 # Bluetooth
 persist.bluetooth.a2dp_offload.cap=sbc-aac-aptx-aptxhd-ldac
 persist.bluetooth.a2dp_offload.disabled=false
-persist.vendor.bt.a2dp_offload_cap=sbc-aptx-aptxtws-aptxhd-aptxadaptive-aac-ldac
 persist.vendor.bt.aac_frm_ctl.enabled=false
-persist.vendor.btstack.a2dp_offload_cap=sbc-aptx-aptxtws-aptxhd-aptxadaptive-aac-ldac
-persist.vendor.btstack.connect.peer_earbud=true
-persist.vendor.btstack.enable.twsplus=true
-persist.vendor.btstack.enable.twsplussho=true
 persist.vendor.qcom.bluetooth.a2dp_offload_cap=sbc-aptx-aptxtws-aptxhd-aac-ldac-aptxadaptive
 persist.vendor.qcom.bluetooth.aac_frm_ctl.enabled=true
 persist.vendor.qcom.bluetooth.aac_vbr_ctl.enabled=false
 persist.vendor.qcom.bluetooth.enable.splita2dp=true
 persist.vendor.qcom.bluetooth.scram.enabled=true
 persist.vendor.qcom.bluetooth.soc=cherokee
-persist.vendor.qcom.bluetooth.twsp_state.enabled=false
 persist.vendor.qcom.bluetooth.twsp_state.enabled=true
 ro.bluetooth.a2dp_offload.supported=true
 ro.vendor.bluetooth.wipower=false
@@ -137,13 +130,6 @@ drm.service.enabled=true
 # FM
 vendor.hw.fm.init=0
 
-# Fingerprint
-persist.vendor.qfp=false
-ro.hardware.fp.goodix_fod=true
-ro.hardware.fp.fod=true
-persist.vendor.sys.fp.fod.location.X_Y=445,1931
-persist.vendor.sys.fp.fod.size.width_height=190,190
-	
 # FRP
 ro.frp.pst=/dev/block/bootdevice/by-name/frp
 
@@ -155,7 +141,6 @@ debug.egl.hw=0
 debug.mdpcomp.logs=0
 debug.sf.hw=0
 debug.sf.latch_unsignaled=1
-persist.demo.hdmirotationlock=false
 persist.sys.sf.color_saturation=1.0
 ro.gfx.driver.1=com.qualcomm.qti.gpudrivers.msmnile.api30
 ro.hardware.egl=adreno
@@ -172,7 +157,6 @@ ro.hardware.keystore_desede=true
 # Media
 debug.stagefright.ccodec=1
 debug.stagefright.omx_default_rank=0
-vendor.mm.enable.qcom_parser=16777215
 
 # Netmgr
 ro.vendor.use_data_netmgrd=true
