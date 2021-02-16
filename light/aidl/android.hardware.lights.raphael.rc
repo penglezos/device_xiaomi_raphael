@@ -1,0 +1,12 @@
+on boot
+    # Backlight
+    chown system system /sys/class/backlight/panel0-backlight/brightness
+    chown system system /sys/class/backlight/panel0-backlight/max_brightness
+    chmod 0644 /sys/class/backlight/panel0-backlight/brightness
+    chmod 0644 /sys/class/backlight/panel0-backlight/max_brightness
+
+service vendor.light /vendor/bin/hw/android.hardware.lights-service.raphael
+    class hal
+    user system
+    group system
+    shutdown critical
