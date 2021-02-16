@@ -816,6 +816,7 @@ vendor/lib64/libmulawdec.so
 # Media
 vendor/etc/configstore/vpp.configstore.xml
 vendor/etc/init/vppservice.rc
+vendor/bin/vppservice
 vendor/lib/libAlacSwDec.so
 vendor/lib/libApeSwDec.so
 vendor/lib/libFlacSwDec.so
