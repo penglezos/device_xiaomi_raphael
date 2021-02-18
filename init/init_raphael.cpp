@@ -118,6 +118,8 @@ void vendor_load_properties() {
         mod_device = "raphaelin_in_global";
     }
 
+    property_override("ro.apex.updatable", "false");
+
     // SafetyNet workaround
     property_override("ro.boot.verifiedbootstate", "green");
 
