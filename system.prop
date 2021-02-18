@@ -34,6 +34,7 @@ ro.charger.enable_suspend=true
 
 # Display
 debug.sf.latch_unsignaled=1
+ro.sf.lcd_density=440
 
 # DPM
 persist.vendor.dpm.feature=1
