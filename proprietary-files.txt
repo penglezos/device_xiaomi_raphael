@@ -580,9 +580,20 @@ vendor/bin/hw/android.hardware.drm@1.3-service.widevine
 vendor/etc/init/android.hardware.drm@1.3-service.widevine.rc
 -vendor/etc/vintf/manifest/manifest_android.hardware.drm@1.3-service.widevine.xml
 #vendor/lib/libwvkeybox.so
-vendor/lib64/mediadrm/libwvdrmengine.so
-vendor/lib64/libwvhidl.so
 #vendor/lib64/libwvkeybox.so
+vendor/lib64/libwvhidl.so
+
+# DRM widevine - from MIUI V12.0.4.0.QFKINXM
+vendor/lib64/liboemcrypto.so|b99e70b63bb2fa92fd5660382b6b16e1998968cc
+modem/image/widevine.b00:vendor/firmware/widevine.b00|d306b8986e114b8eecf3e18e1bf66d39cdbc9389
+modem/image/widevine.b01:vendor/firmware/widevine.b01|bc5367fe588bad33af4d877e79947df8f32c9941
+modem/image/widevine.b02:vendor/firmware/widevine.b02|f270abc3c95c975bd200320b3af7bf9b1a52173e
+modem/image/widevine.b03:vendor/firmware/widevine.b03|517be4e5bed7dd8cafec2b6dcaf0f7a1127d0566
+modem/image/widevine.b04:vendor/firmware/widevine.b04|9c614f6accd047ae0ac7e99ef99f04afde1175aa
+modem/image/widevine.b05:vendor/firmware/widevine.b05|706191d55a1433a1c03a9e2571972b6b7400950d
+modem/image/widevine.b06:vendor/firmware/widevine.b06|4da05c9c81331f41e819674fe09d7fdf19f1e588
+modem/image/widevine.b07:vendor/firmware/widevine.b07|bb2ca7694e882efa803b2a9dcb6e6a91e6b60eb2
+modem/image/widevine.mdt:vendor/firmware/widevine.mdt|ae3c7f13f2a86d69aa9e32006551e1983d0d39a9
 
 # FASTCV
 vendor/lib/rfsa/adsp/libapps_mem_heap.so
@@ -1500,7 +1511,6 @@ vendor/lib64/libcpion.so
 vendor/lib64/libhdcpsrm.so
 vendor/lib64/libhdcp1prov.so
 vendor/lib64/libhdcp2p2prov.so
-vendor/lib64/liboemcrypto.so
 vendor/lib64/libops.so
 vendor/lib64/libpvr.so
 vendor/lib64/librmp.so
