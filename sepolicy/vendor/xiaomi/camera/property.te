@@ -1,1 +1,5 @@
-type vendor_camera_sensor_prop, property_type, vendor_property_type;
+# Read only camera props
+type vendor_camera_ro_prop, property_type;
+
+# Vendor Camera Props
+vendor_internal_prop(vendor_camera_sensor_prop)
