@@ -68,6 +68,10 @@ public class PopupCameraService extends Service implements Handler.Callback {
     private PopupCameraPreferences mPopupCameraPreferences;
     private SoundPool mSoundPool;
 
+    private boolean mLedBusy = false;
+    private boolean mLedBreathing = false;
+    private String mLedBrightness = "0";
+
     private CameraManager.AvailabilityCallback availabilityCallback =
             new CameraManager.AvailabilityCallback() {
                 @Override
@@ -283,9 +287,12 @@ public class PopupCameraService extends Service implements Handler.Callback {
 
     private void lightUp(boolean open) {
         if (mPopupCameraPreferences.isLedAllowed()) {
-            // Save the active LED effects
-            String ledBreathing = FileUtils.readOneLine(Constants.LEFT_LED_BREATH_PATH);
-            String ledBrightness = FileUtils.readOneLine(Constants.LEFT_LED_BRIGHTNESS_PATH);
+            // Save the active LED effects if it's not our effect and mark the LED as busy
+            if (!mLedBusy) {
+                mLedBreathing = FileUtils.readOneLine(Constants.LEFT_LED_BREATH_PATH).equals("1");
+                mLedBrightness = FileUtils.readOneLine(Constants.LEFT_LED_BRIGHTNESS_PATH);
+            }
+            mLedBusy = true;
 
             // Reset the active LED effects
             setLed("breath", "0");
@@ -301,7 +308,7 @@ public class PopupCameraService extends Service implements Handler.Callback {
             setLed("breath", "1");
 
             mHandler.postDelayed(() -> {
-                // Disable the breth effect
+                // Disable the breath effect
                 setLed("brightness", "0");
 
                 // Restore default breath parameters
@@ -310,11 +317,14 @@ public class PopupCameraService extends Service implements Handler.Callback {
                 setLed("step_ms", "70");
 
                 // Restore the previous LED effects
-                if (ledBreathing.equals("1")) {
-                    FileUtils.writeLine(Constants.LEFT_LED_BREATH_PATH, ledBreathing);
+                if (mLedBreathing) {
+                    FileUtils.writeLine(Constants.LEFT_LED_BREATH_PATH, "1");
                 } else {
-                    FileUtils.writeLine(Constants.LEFT_LED_BRIGHTNESS_PATH, ledBrightness);
+                    FileUtils.writeLine(Constants.LEFT_LED_BRIGHTNESS_PATH, mLedBrightness);
                 }
+
+                // Unmark the LED as busy since our effect is done
+                mLedBusy = false;
             }, 1400);
         }
     }
