@@ -156,6 +156,10 @@ rild.libpath=/vendor/lib64/libril-qc-hal-qmi.so
 ro.telephony.default_cdma_sub=0
 telephony.lteOnCdmaDevice=1
 
+# SoC
+ro.soc.manufacturer=Qualcomm
+ro.soc.model=SM8150
+
 # Time
 persist.timed.enable=true
 
