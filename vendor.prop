@@ -184,6 +184,10 @@ persist.vendor.radio.sib16_support=1
 # Shutdown
 sys.vendor.shutdown.waittime=500
 
+# SoC
+ro.soc.manufacturer=Qualcomm
+ro.soc.model=SM8150
+
 # Target specific Netflix custom property
 ro.netflix.bsp_rev=Q855-16947-1
 
