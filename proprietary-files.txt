@@ -1,4 +1,4 @@
-# All unpinned blobs here are extracted from raphael-user 11 RKQ1.200826.002 21.2.3 release-keys
+# All unpinned blobs here are extracted from raphael-user 11 RKQ1.200826.002 21.3.3 release-keys
 
 # ADSPRPC
 vendor/bin/adsprpcd
@@ -10,28 +10,30 @@ vendor/etc/init/vendor.qti.cdsprpc-service.rc
 vendor/etc/init/vendor.qti.hardware.dsp@1.0-service.rc
 vendor/etc/seccomp_policy/vendor.qti.hardware.dsp.policy
 vendor/lib/libadsp_default_listener.so
-vendor/lib/libadsprpc.so
+-vendor/lib/libadsprpc.so
 vendor/lib/libcdsp_default_listener.so
 vendor/lib/libcdsprpc.so
 vendor/lib/libfastcrc.so
 vendor/lib/libfastrpc_utf_stub.so
 vendor/lib/libmdsprpc.so
-vendor/lib/libsdsprpc.so
+-vendor/lib/libsdsprpc.so
 vendor/lib/libsysmon_cdsp_skel.so
 vendor/lib/vendor.qti.hardware.dsp@1.0.so
 vendor/lib64/libadsp_default_listener.so
-vendor/lib64/libadsprpc.so
+-vendor/lib64/libadsprpc.so
 vendor/lib64/libcdsp_default_listener.so
 vendor/lib64/libcdsprpc.so
 vendor/lib64/libfastrpc_utf_stub.so
 vendor/lib64/libloadalgo_stub.so
 vendor/lib64/libmdsprpc.so
-vendor/lib64/libsdsprpc.so
+-vendor/lib64/libsdsprpc.so
 vendor/lib64/libsysmon_cdsp_skel.so
 vendor/lib64/vendor.qti.hardware.dsp@1.0.so
 
 # ADSP-Modules
 vendor/lib/rfsa/adsp/capi_v2_aptX_CLHDAD_Encoder.so
+vendor/lib/rfsa/adsp/capi_v2_aptX_Classic.so
+vendor/lib/rfsa/adsp/capi_v2_aptX_HD.so
 vendor/lib/rfsa/adsp/dirac_resource.dar
 vendor/lib/rfsa/adsp/libSuperSensor_skel.so
 vendor/lib/rfsa/adsp/libVC1Dec.so
@@ -43,6 +45,8 @@ vendor/lib/rfsa/adsp/libdsp_streamer_add_constant.so
 vendor/lib/rfsa/adsp/libdsp_streamer_binning.so
 vendor/lib/rfsa/adsp/libdsp_streamer_skel.so
 vendor/lib/rfsa/adsp/libproxy_skel.so
+vendor/lib/rfsa/adsp/libsnpe_dsp_v65_domains_v2_skel.so
+vendor/lib/rfsa/adsp/libsnpe_dsp_v66_domains_v2_skel.so
 vendor/lib/rfsa/adsp/libsns_device_mode_skel.so
 vendor/lib/rfsa/adsp/libsns_low_lat_stream_skel.so
 vendor/lib/rfsa/adsp/misound_karaoke_res.bin
@@ -84,6 +88,27 @@ vendor/lib/libtinycompress.so
 vendor/lib/vendor.qti.hardware.audiohalext@1.0.so
 vendor/lib/vendor.qti.voiceprint@1.0.so
 vendor/lib/vndk/libxlog.so
+vendor/lib64/hw/vendor.qti.hardware.audiohalext@1.0-impl.so
+vendor/lib64/libadiertac.so
+vendor/lib64/libaudcal.so
+vendor/lib64/libaudio_log_utils.so
+vendor/lib64/libaudioalsa.so
+vendor/lib64/libaudioconfigstore.so
+vendor/lib64/libaudioparsers.so
+vendor/lib64/libaudioroute_ext.so
+vendor/lib64/libbatterylistener.so
+vendor/lib64/libcomprcapture.so
+vendor/lib64/libexthwplugin.so
+vendor/lib64/libhdmiedid.so
+vendor/lib64/libhdmipassthru.so
+vendor/lib64/libhfp.so
+vendor/lib64/libqtigef.so
+vendor/lib64/libsndmonitor.so
+vendor/lib64/libspkrprot.so
+vendor/lib64/libssrec.so
+vendor/lib64/libtinycompress.so
+vendor/lib64/vendor.qti.hardware.audiohalext@1.0.so
+vendor/lib64/vendor.qti.voiceprint@1.0.so
 
 # Audio (ACDB)
 vendor/etc/acdbdata/Forte/Forte_Bluetooth_cal.acdb
@@ -117,6 +142,12 @@ vendor/lib/soundfx/libqcreverb.so
 vendor/lib/soundfx/libqcvirt.so
 vendor/lib/soundfx/libdirac.so
 vendor/lib/soundfx/libshoebox.so
+vendor/lib64/soundfx/libasphere.so
+vendor/lib64/soundfx/libqcbassboost.so
+vendor/lib64/soundfx/libqcreverb.so
+vendor/lib64/soundfx/libqcvirt.so
+vendor/lib64/soundfx/libdirac.so
+vendor/lib64/soundfx/libshoebox.so
 
 # Audio (Hardware)
 vendor/lib/hw/audio.primary.msmnile.so
@@ -193,6 +224,8 @@ vendor/etc/camera/hdr_ui9_params.config
 vendor/etc/camera/lf_facerank_model.bin
 vendor/etc/camera/male_bg.png
 vendor/etc/camera/male_icon.png
+vendor/etc/camera/model_back.dlc
+vendor/etc/camera/model_front.dlc
 vendor/etc/camera/sceneDetection.xml
 vendor/etc/camera/score_bg.png
 vendor/etc/camera/score_icon.png
@@ -354,6 +387,8 @@ vendor/lib64/libmpbase.so
 vendor/lib64/libnanopb.so
 vendor/lib64/libremosaic_daemon.so
 vendor/lib64/libremosaiclib.so
+vendor/lib64/libSNPE.so
+vendor/lib64/libsnpe_dsp_domains_v2.so
 vendor/lib64/libsns_device_mode_stub.so
 vendor/lib64/libswregistrationalgo.so
 vendor/lib64/libsysmon_cdsp_skel.so
@@ -493,9 +528,6 @@ vendor/etc/cne/wqeclient/VZW/VZW_profile5.xml
 vendor/etc/cne/wqeclient/VZW/VZW_profile6.xml
 
 # ConfigStore
--system_ext/framework/vendor.qti.hardware.capabilityconfigstore-V1.0-java.jar
-system_ext/lib64/vendor.qti.hardware.capabilityconfigstore@1.0.so
-vendor/bin/hw/capabilityconfigstoretest
 vendor/bin/hw/vendor.qti.hardware.capabilityconfigstore@1.0-service
 vendor/etc/init/vendor.qti.hardware.capabilityconfigstore@1.0-service.rc
 vendor/lib64/hw/vendor.qti.hardware.capabilityconfigstore@1.0-impl.so
@@ -533,7 +565,9 @@ vendor/lib64/libdiagjni.so
 # Display (Calibration)
 vendor/etc/hdr_config.cfg
 vendor/etc/sdr_config.cfg
-vendor/etc/qdcm_calib_data_samsung_ea8076_fhd_cmd_dsi_panel.xml
+
+# Display QDCM
+vendor/etc/qdcm_calib_data_samsung_ea8076_fhd_cmd_dsi_panel.xml|466f515f4dce2e4138f894946024937f1e953a8f
 
 # Display (Postprocessing)
 vendor/bin/hw/vendor.display.color@1.0-service
@@ -601,7 +635,7 @@ vendor/lib/rfsa/adsp/libdspCV_skel.so
 vendor/lib/rfsa/adsp/libfastcvadsp.so
 vendor/lib/rfsa/adsp/libfastcvdsp_skel.so
 vendor/lib64/libfastcvdsp_stub.so
-vendor/lib64/libfastcvopt.so
+-vendor/lib64/libfastcvopt.so
 
 # Fingerprint
 vendor/bin/hw/android.hardware.biometrics.fingerprint@2.1-service
@@ -802,6 +836,7 @@ vendor/etc/sound_trigger_mixer_paths_wcd9340.xml
 vendor/etc/sound_trigger_mixer_paths_wcd9340_qrd.xml
 vendor/etc/sound_trigger_platform_info.xml
 vendor/lib/hw/android.hardware.soundtrigger@2.2-impl.so
+vendor/lib/hw/android.hardware.soundtrigger@2.3-impl.so
 vendor/lib/hw/sound_trigger.primary.msmnile.so
 vendor/lib/libadpcmdec.so
 vendor/lib/libcapiv2svacnn.so
@@ -814,6 +849,7 @@ vendor/lib/liblistensoundmodel2.so
 vendor/lib/libmulawdec.so
 vendor/lib/libsmwrapper.so
 vendor/lib64/hw/android.hardware.soundtrigger@2.2-impl.so
+vendor/lib64/hw/android.hardware.soundtrigger@2.3-impl.so
 vendor/lib64/hw/sound_trigger.primary.msmnile.so
 vendor/lib64/libcapiv2svacnn.so
 vendor/lib64/libcapiv2vop.so
@@ -898,6 +934,8 @@ vendor/bin/hw/vendor.qti.media.c2@1.0-service
 vendor/etc/init/vendor.qti.media.c2@1.0-service.rc
 vendor/lib/libqcodec2.so
 vendor/lib/libcodec2_vndk.so
+vendor/lib64/libqcodec2.so
+vendor/lib64/libcodec2_vndk.so
 
 # MDM
 vendor/bin/ks
@@ -1008,7 +1046,7 @@ vendor/bin/pm-service
 vendor/lib64/libperipheral_client.so
 
 # QCC TR
--vendor/app/QCC-TR-UI/QCC-TR-UI.apk
+#-vendor/app/QCC-TR-UI/QCC-TR-UI.apk
 vendor/bin/qcc-trd
 
 # QCC VND HAL
@@ -1118,9 +1156,9 @@ system_ext/etc/permissions/embms.xml
 system_ext/etc/permissions/qcrilhook.xml
 system_ext/etc/permissions/telephonyservice.xml
 system_ext/etc/permissions/telephony_system-ext_privapp-permissions-qti.xml
-system_ext/framework/embmslibrary.jar
-system_ext/framework/qcrilhook.jar
-system_ext/framework/qti-telephony-common.jar
+-system_ext/framework/embmslibrary.jar
+-system_ext/framework/qcrilhook.jar
+-system_ext/framework/qti-telephony-common.jar
 vendor/bin/hw/qcrild
 vendor/bin/adpl
 vendor/bin/ATFWD-daemon
@@ -1202,20 +1240,20 @@ vendor/radio/qcril_database/upgrade/7_version_update_ecc_table.sql
 
 # Radio (IMS)
 system_ext/etc/permissions/com.qualcomm.qti.imscmservice.xml
--system_ext/app/imssettings/imssettings.apk
+#-system_ext/app/imssettings/imssettings.apk
 system_ext/etc/permissions/com.qualcomm.qti.imscmservice-V2.0-java.xml
 system_ext/etc/permissions/com.qualcomm.qti.imscmservice-V2.1-java.xml
 system_ext/etc/permissions/com.qualcomm.qti.imscmservice-V2.2-java.xml
-system_ext/framework/com.qualcomm.qti.imscmservice-V2.0-java.jar
-system_ext/framework/com.qualcomm.qti.imscmservice-V2.1-java.jar
-system_ext/framework/com.qualcomm.qti.imscmservice-V2.2-java.jar
-system_ext/framework/com.qualcomm.qti.uceservice-V2.0-java.jar
-system_ext/framework/com.qualcomm.qti.uceservice-V2.1-java.jar
-system_ext/framework/vendor.qti.ims.callinfo-V1.0-java.jar
-system_ext/framework/vendor.qti.ims.rcsconfig-V1.0-java.jar
-system_ext/framework/vendor.qti.ims.rcsconfig-V1.1-java.jar
-system_ext/framework/vendor.qti.ims.rcsconfig-V2.0-java.jar
-system_ext/framework/vendor.qti.ims.rcsconfig-V2.1-java.jar
+-system_ext/framework/com.qualcomm.qti.imscmservice-V2.0-java.jar
+-system_ext/framework/com.qualcomm.qti.imscmservice-V2.1-java.jar
+-system_ext/framework/com.qualcomm.qti.imscmservice-V2.2-java.jar
+-system_ext/framework/com.qualcomm.qti.uceservice-V2.0-java.jar
+-system_ext/framework/com.qualcomm.qti.uceservice-V2.1-java.jar
+-system_ext/framework/vendor.qti.ims.callinfo-V1.0-java.jar
+-system_ext/framework/vendor.qti.ims.rcsconfig-V1.0-java.jar
+-system_ext/framework/vendor.qti.ims.rcsconfig-V1.1-java.jar
+-system_ext/framework/vendor.qti.ims.rcsconfig-V2.0-java.jar
+-system_ext/framework/vendor.qti.ims.rcsconfig-V2.1-java.jar
 system_ext/lib64/com.qualcomm.qti.imscmservice@1.0.so
 system_ext/lib64/com.qualcomm.qti.imscmservice@2.0.so
 system_ext/lib64/com.qualcomm.qti.imscmservice@2.1.so
@@ -1454,10 +1492,6 @@ vendor/lib64/hw/vendor.qti.hardware.soter@1.0-impl.so
 vendor/lib64/vendor.qti.hardware.soter@1.0.so
 
 # SCVE
-system_ext/lib64/vendor.qti.hardware.scve.objecttracker@1.0-adapter-helper.so
-system_ext/lib64/vendor.qti.hardware.scve.objecttracker@1.0.so
-system_ext/lib64/vendor.qti.hardware.scve.panorama@1.0-adapter-helper.so
-system_ext/lib64/vendor.qti.hardware.scve.panorama@1.0.so
 vendor/lib/rfsa/adsp/libscveObjectSegmentation_skel.so
 vendor/lib/rfsa/adsp/libscveT2T_skel.so
 vendor/lib64/libscveCommon.so
@@ -1476,9 +1510,12 @@ vendor/etc/ssg/ta_config.json
 vendor/etc/ssg/tz_whitelist.json
 vendor/lib64/libminkdescriptor.so
 vendor/lib64/libnative-api.so
-vendor/lib64/libqcbor.so
 
 # SecureMSM (SECDISP)
+-system_ext/app/com.qualcomm.qti.services.secureui/com.qualcomm.qti.services.secureui.apk
+system_ext/lib64/libsecureuisvc_jni.so
+system_ext/lib64/libsecureui_svcsock_system.so
+system_ext/lib64/vendor.qti.hardware.tui_comm@1.0.so
 vendor/bin/hw/vendor.qti.hardware.trustedui@1.0-service-qti
 vendor/bin/hw/vendor.qti.hardware.tui_comm@1.0-service-qti
 vendor/bin/TrustedUISampleTest
@@ -1511,6 +1548,7 @@ vendor/lib64/libcpion.so
 vendor/lib64/libhdcpsrm.so
 vendor/lib64/libhdcp1prov.so
 vendor/lib64/libhdcp2p2prov.so
+#vendor/lib64/liboemcrypto.so
 vendor/lib64/libops.so
 vendor/lib64/libpvr.so
 vendor/lib64/librmp.so
