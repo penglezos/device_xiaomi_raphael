@@ -19,7 +19,7 @@
     <dimen name="status_bar_height_portrait">35dp</dimen>
 
     <!-- Height of the status bar in landscape. -->
-    <dimen name="status_bar_height_landscape">32dp</dimen>
+    <dimen name="status_bar_height_landscape">28dp</dimen>
 
     <!-- The padding on the side of the navigation bar. Must be greater than or equal to
          navigation_extra_key_width -->
