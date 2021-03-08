@@ -21,6 +21,10 @@
      entries do not follow the convention, but all new entries should. -->
 
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+
+    <!-- Boolean indicating whether the wifi chipset has 5GHz frequency band support -->
+    <bool translatable="false" name="config_wifi5ghzSupport">true</bool>
+
     <!-- Boolean indicating whether the wifi chipset has dual frequency band support -->
     <bool name="config_wifi_dual_band_support">true</bool>
 
@@ -33,6 +37,11 @@
     <!-- Configure wifi tcp buffersizes in the form:
          rmem_min,rmem_def,rmem_max,wmem_min,wmem_def,wmem_max -->
     <string name="config_wifi_tcp_buffers" translatable="false">524288,1048576,5505024,262144,524288,5505024</string>
+
+    <!-- Channel list for softap 2G band. Empty means all channels -->
+    <string translateble="false" name="config_wifiSoftap2gChannelList"></string>
+    <!-- Channel list for softap 5G band. Empty means all channels -->
+    <string translateble="false" name="config_wifiSoftap5gChannelList"></string>
 
     <!-- True if the firmware supports p2p MAC randomization -->
     <bool name="config_wifi_p2p_mac_randomization_supported">true</bool>
@@ -57,4 +66,16 @@
 
     <!-- Disable WPA2 to WPA3 auto-upgrade -->
     <bool translatable="false" name="config_wifiSaeUpgradeEnabled">false</bool>
+
+    <!-- Wifi driver supports WPA3 Simultaneous Authentication of Equals (WPA3-SAE) for softap -->
+    <bool name="config_wifi_softap_sae_supported">true</bool>
+
+    <!-- Wifi driver Automatic channel selection (ACS) for softap to include DFS channels -->
+    <bool translatable="false" name="config_wifiSoftapAcsIncludeDfs">true</bool>
+
+    <!-- Integer indicating maximum hardware supported client number of soft ap -->
+    <integer translatable="false" name="config_wifiHardwareSoftapMaxClientCount">32</integer>
+
+    <!-- Boolean indicating that wifi only link configuratios that have exact same credentials (i.e PSK) -->
+    <bool translatable="false" name="config_wifi_only_link_same_credential_configurations">false</bool>
 </resources>
