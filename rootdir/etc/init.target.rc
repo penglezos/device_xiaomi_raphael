@@ -121,6 +121,8 @@ on early-boot
     start vendor.sensors
 
 on boot
+    chown system system /sys/kernel/hbtp/display_pwr
+    chown system system /sys/kernel/qvr_external_sensor/fd
     chown system system /sys/class/thermal/thermal_message/sconfig
 
 on property:sys.boot_completed=1
