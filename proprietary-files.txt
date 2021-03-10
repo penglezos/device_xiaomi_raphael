@@ -1429,7 +1429,6 @@ system_ext/etc/permissions/telephonyservice.xml
 system_ext/etc/permissions/telephony_system-ext_privapp-permissions-qti.xml
 -system_ext/framework/embmslibrary.jar
 -system_ext/framework/qcrilhook.jar
--system_ext/framework/qti-telephony-common.jar
 vendor/bin/hw/qcrild
 vendor/bin/adpl
 vendor/bin/ATFWD-daemon
@@ -1605,7 +1604,6 @@ system_ext/lib64/vendor.qti.ims.rcsconfig@1.1.so
 system_ext/lib64/vendor.qti.ims.rcsconfig@2.0.so
 system_ext/lib64/vendor.qti.ims.rcsconfig@2.1.so
 system_ext/lib64/vendor.qti.imsrtpservice@3.0.so
--system_ext/priv-app/ims/ims.apk
 vendor/bin/ims_rtp_daemon
 vendor/bin/imsdatadaemon
 vendor/bin/imsqmidaemon
@@ -1689,6 +1687,10 @@ vendor/lib64/vendor.qti.ims.rcsconfig@2.0.so
 vendor/lib64/vendor.qti.ims.rcsconfig@2.1.so
 vendor/lib64/vendor.qti.imsrtpservice@3.0.so
 vendor/lib64/vendor.qti.imsrtpservice@3.0-service-Impl.so
+
+# Telephony - from LA.QSSI.11.0.r1-07800-qssi.0.
+-system_ext/framework/qti-telephony-common.jar|7d684c5220f5a2a5778bac40f95d852de68dd1a6
+-system_ext/priv-app/ims/ims.apk|61507a8ad66f4f299fe66e11ff71eeb3e2fe5259
 
 # Sensor (Configs)
 vendor/etc/sensors/config/adux1050_0.json
