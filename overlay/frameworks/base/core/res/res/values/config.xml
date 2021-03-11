@@ -534,7 +534,7 @@
 
     <!-- Vibrator pattern for a very short but reliable vibration for soft keyboard tap -->
     <integer-array name="config_keyboardTapVibePattern">
-        <item>40</item>
+        <item>10</item>
     </integer-array>
 
     <!-- Vibrator pattern for feedback about a long screen/key press -->
