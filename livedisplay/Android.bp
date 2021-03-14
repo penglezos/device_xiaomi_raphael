@@ -21,6 +21,7 @@ cc_binary {
     relative_install_path: "hw",
     srcs: [
         ":vendor.lineage.livedisplay@2.0-sdm-utils",
+        "AntiFlicker.cpp",
         "SunlightEnhancement.cpp",
         "service.cpp",
     ],
