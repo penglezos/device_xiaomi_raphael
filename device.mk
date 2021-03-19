@@ -34,9 +34,6 @@ $(call inherit-product, vendor/xiaomi/raphael/raphael-vendor.mk)
 PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH)
 
-PRODUCT_VENDOR_KERNEL_HEADERS := \
-    device/xiaomi/raphael-kernel/sm8150/kernel-headers
-
 # Hardware
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/handheld_core_hardware.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/handheld_core_hardware.xml
