@@ -14,10 +14,10 @@
 // limitations under the License.
 
 cc_binary {
-    name: "vendor.lineage.livedisplay@2.0-service.raphael",
+    name: "vendor.lineage.livedisplay@2.1-service.raphael",
     defaults: ["hidl_defaults"],
-    vintf_fragments: ["vendor.lineage.livedisplay@2.0-service.raphael.xml"],
-    init_rc: ["vendor.lineage.livedisplay@2.0-service.raphael.rc"],
+    vintf_fragments: ["vendor.lineage.livedisplay@2.1-service.raphael.xml"],
+    init_rc: ["vendor.lineage.livedisplay@2.1-service.raphael.rc"],
     relative_install_path: "hw",
     srcs: [
         ":vendor.lineage.livedisplay@2.0-sdm-utils",
@@ -31,6 +31,7 @@ cc_binary {
         "libhidlbase",
         "libutils",
         "vendor.lineage.livedisplay@2.0",
+        "vendor.lineage.livedisplay@2.1",
     ],
     header_libs: [
         "vendor.lineage.livedisplay@2.0-sdm-headers",
