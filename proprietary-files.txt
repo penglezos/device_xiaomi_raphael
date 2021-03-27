@@ -17,7 +17,6 @@ vendor/lib/libfastcrc.so
 vendor/lib/libfastrpc_utf_stub.so
 vendor/lib/libmdsprpc.so
 -vendor/lib/libsdsprpc.so
-vendor/lib/libsysmon_cdsp_skel.so
 vendor/lib/vendor.qti.hardware.dsp@1.0.so
 vendor/lib64/libadsp_default_listener.so
 -vendor/lib64/libadsprpc.so
@@ -27,7 +26,6 @@ vendor/lib64/libfastrpc_utf_stub.so
 vendor/lib64/libloadalgo_stub.so
 vendor/lib64/libmdsprpc.so
 -vendor/lib64/libsdsprpc.so
-vendor/lib64/libsysmon_cdsp_skel.so
 vendor/lib64/vendor.qti.hardware.dsp@1.0.so
 
 # ADSP-Modules
@@ -727,7 +725,7 @@ vendor/lib64/libdiagjni.so
 vendor/etc/hdr_config.cfg
 vendor/etc/sdr_config.cfg
 
-# Display QDCM
+# Display QDCM - from raphael-user 11 RKQ1.200826.002 21.3.3 patched
 vendor/etc/qdcm_calib_data_samsung_ea8076_fhd_cmd_dsi_panel.xml|466f515f4dce2e4138f894946024937f1e953a8f
 
 # Display (Postprocessing)
@@ -1066,8 +1064,6 @@ vendor/lib/hw/android.hardware.soundtrigger@2.2-impl.so
 vendor/lib/hw/android.hardware.soundtrigger@2.3-impl.so
 vendor/lib/hw/sound_trigger.primary.msmnile.so
 vendor/lib/libadpcmdec.so
-vendor/lib/libcapiv2svacnn.so
-vendor/lib/libcapiv2vop.so
 vendor/lib/libgcs-calwrapper.so
 vendor/lib/libgcs-ipc.so
 vendor/lib/libgcs-osal.so
@@ -1078,8 +1074,6 @@ vendor/lib/libsmwrapper.so
 vendor/lib64/hw/android.hardware.soundtrigger@2.2-impl.so
 vendor/lib64/hw/android.hardware.soundtrigger@2.3-impl.so
 vendor/lib64/hw/sound_trigger.primary.msmnile.so
-vendor/lib64/libcapiv2svacnn.so
-vendor/lib64/libcapiv2vop.so
 vendor/lib64/libgcs-calwrapper.so
 vendor/lib64/libgcs-ipc.so
 vendor/lib64/libgcs-osal.so
@@ -1491,8 +1485,6 @@ vendor/lib/vendor.qti.hardware.radio.uim_remote_client@1.0.so
 vendor/lib/vendor.qti.hardware.radio.uim_remote_client@1.1.so
 vendor/lib/vendor.qti.hardware.radio.uim_remote_client@1.2.so
 vendor/lib/vendor.qti.hardware.radio.uim_remote_server@1.0.so
-vendor/lib/vendor.qti.ims.rcsconfig@1.1.so
-vendor/lib/vendor.qti.ims.rcsconfig@2.0.so
 vendor/lib64/deviceInfoServiceModule.so
 vendor/lib64/libconfigdb.so
 vendor/lib64/libdsi_netctrl.so
@@ -1536,8 +1528,6 @@ vendor/lib64/vendor.qti.hardware.radio.uim_remote_client@1.0.so
 vendor/lib64/vendor.qti.hardware.radio.uim_remote_client@1.1.so
 vendor/lib64/vendor.qti.hardware.radio.uim_remote_client@1.2.so
 vendor/lib64/vendor.qti.hardware.radio.uim_remote_server@1.0.so
-vendor/lib64/vendor.qti.ims.rcsconfig@1.1.so
-vendor/lib64/vendor.qti.ims.rcsconfig@2.0.so
 vendor/radio/qcril_database/qcril.db
 vendor/radio/qcril_database/upgrade/0_initial.sql
 vendor/radio/qcril_database/upgrade/1_version_intro.sql
@@ -1579,7 +1569,6 @@ system_ext/lib/libimscamera_jni.so
 system_ext/lib/libimsmedia_jni.so
 system_ext/lib/vendor.qti.ims.callinfo@1.0.so
 system_ext/lib/vendor.qti.ims.rcsconfig@1.0.so
-system_ext/lib/vendor.qti.ims.rcsconfig@1.0.so
 system_ext/lib/vendor.qti.ims.rcsconfig@1.1.so
 system_ext/lib/vendor.qti.ims.rcsconfig@2.0.so
 system_ext/lib/vendor.qti.ims.rcsconfig@2.1.so
@@ -1598,7 +1587,6 @@ system_ext/lib64/lib-imsvtutils.so
 system_ext/lib64/libimscamera_jni.so
 system_ext/lib64/libimsmedia_jni.so
 system_ext/lib64/vendor.qti.ims.callinfo@1.0.so
-system_ext/lib64/vendor.qti.ims.rcsconfig@1.0.so
 system_ext/lib64/vendor.qti.ims.rcsconfig@1.0.so
 system_ext/lib64/vendor.qti.ims.rcsconfig@1.1.so
 system_ext/lib64/vendor.qti.ims.rcsconfig@2.0.so
@@ -2032,7 +2020,6 @@ vendor/etc/init/tloc_daemon.rc
 # WiFi
 vendor/bin/athdiag
 vendor/bin/hal_proxy_daemon
-vendor/bin/myftm
 vendor/bin/pktlogconf
 vendor/bin/spectraltool
 vendor/bin/vendor_cmd_tool
