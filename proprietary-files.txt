@@ -1,4 +1,4 @@
-# All unpinned blobs here are extracted from raphael-user 11 RKQ1.200826.002 21.3.3 release-keys
+# All unpinned blobs here are extracted from raphael-user 11 RKQ1.200826.002 21.3.10 release-keys
 
 # ADSPRPC
 vendor/bin/adsprpcd
