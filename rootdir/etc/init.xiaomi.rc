@@ -62,6 +62,9 @@ on init && property:ro.boot.hwc=GLOBAL
 on init && property:ro.boot.hwc=CN
     setprop ro.boot.product.hardware.sku raphael
 
+on property:ro.boot.product.hardware.sku=raphael
+    enable vendor.nfc_hal_service
+
 on post-fs-data
     mkdir /data/vendor/mac_addr 0770 system wifi
     mkdir /data/vendor/nfc 0770 nfc nfc
@@ -138,3 +141,11 @@ service vendor.power /vendor/bin/hw/android.hardware.power-service-qti
     class hal
     user system
     group system input
+
+service vendor.nfc_hal_service /vendor/bin/hw/android.hardware.nfc@1.2-service
+    override
+    class hal
+    user nfc
+    group nfc
+    writepid /dev/cpuset/system-background/tasks
+    disabled
