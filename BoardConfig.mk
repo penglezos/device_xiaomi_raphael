@@ -221,6 +221,9 @@ include device/xiaomi/raphael-sepolicy/raphael-sepolicy.mk
 TARGET_INIT_VENDOR_LIB := //$(DEVICE_PATH):libinit_raphael
 TARGET_RECOVERY_DEVICE_MODULES := libinit_raphael
 
+# USB
+TARGET_QTI_USB_SUPPORTS_AUDIO_ACCESSORY := true
+
 # Verified Boot
 BOARD_AVB_ENABLE := true
 BOARD_AVB_MAKE_VBMETA_IMAGE_ARGS += --flags 2
