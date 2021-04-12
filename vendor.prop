@@ -11,6 +11,7 @@ persist.vendor.audio.hifi=false
 persist.vendor.audio.ras.enabled=false
 persist.vendor.audio.ring.filter.mask=0
 persist.vendor.audio.voicecall.speaker.stereo=true
+persist.vendor.audio_hal.dsp_bit_width_enforce_mode=24
 ro.config.media_vol_steps=25
 ro.config.vc_call_vol_steps=7
 ro.vendor.audio.game.effect=true
