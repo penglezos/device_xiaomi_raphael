@@ -16,7 +16,7 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
 
-    <dimen name="status_bar_height_portrait">28dp</dimen>
+    <dimen name="status_bar_height_portrait">35dp</dimen>
     <dimen name="status_bar_height_landscape">24dp</dimen>
 
     <!-- Radius of the software rounded corners. -->
