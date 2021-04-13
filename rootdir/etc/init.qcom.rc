@@ -81,6 +81,10 @@ on boot
     chown bluetooth net_bt /sys/class/rfkill/rfkill0/device/extldo
     chmod 0660 /sys/class/rfkill/rfkill0/device/extldo
 
+    # Allow system to read measured screen FPS
+    chown system graphics /sys/class/drm/card0/sde-crtc-0/measured_fps
+    chmod 0666 /sys/class/drm/card0/sde-crtc-0/measured_fps
+
     chown system system /sys/kernel/boot_slpi/ssr
 
     # This location is used by QCRIL to host UNIX domain
