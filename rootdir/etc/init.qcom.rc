@@ -84,6 +84,10 @@ on boot
     chown bluetooth net_bt /sys/class/rfkill/rfkill0/device/extldo
     chmod 0660 /sys/class/rfkill/rfkill0/device/extldo
 
+    # Allow system to read measured screen FPS
+    chown system graphics /sys/class/drm/card0/sde-crtc-0/measured_fps
+    chmod 0666 /sys/class/drm/card0/sde-crtc-0/measured_fps
+
     # Smart charging
     chown system system /sys/class/power_supply/battery/input_suspend
     chmod 0666 /sys/class/power_supply/battery/input_suspend
