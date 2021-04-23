@@ -62,6 +62,7 @@
     <string name="dirac_preset_country">Country</string>
     <string name="dirac_preset_dance">Dance</string>
     <string name="dirac_preset_metal">Metal</string>
+    <string name="dirac_preset_bass_booster">Bass Booster</string>
 
     <!-- Popup camera settings -->
     <string name="popup_title">Front camera settings</string>

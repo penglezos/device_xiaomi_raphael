@@ -39,6 +39,7 @@
         <item>@string/dirac_headset_in_ear2</item>
         <item>@string/dirac_headset_earphone_basic</item>
         <item>@string/dirac_headset_earphone</item>
+        <item>@string/dirac_preset_bass_booster</item>
     </string-array>
 
     <string-array name="dirac_headset_pref_values" translatable="false">
@@ -94,6 +95,7 @@
         <item>"0,0,-2,-2,2,2,0"</item>
         <item>"0,4,2,0,-2,-2,4"</item>
         <item>"2,0,0,-2,-4,0,0"</item>
+        <item>"10,8,-3,0,-3,5,5"</item>
     </string-array>
 
     <!-- Popup camera effect names -->
