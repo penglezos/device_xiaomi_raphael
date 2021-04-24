@@ -19,4 +19,5 @@
         orientation. If zero, the value of rounded_corner_radius is used. -->
     <dimen name="rounded_corner_content_padding">12dp</dimen>
     <dimen name="system_icons_keyguard_padding_end">4dp</dimen>
+    <dimen name="heads_up_status_bar_padding_start">18dp</dimen>
 </resources>
