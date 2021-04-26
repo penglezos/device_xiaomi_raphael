@@ -63,6 +63,17 @@
                  android:permission="PopupCameraService">
         </service>
 
+        <service
+            android:name=".display.DcDimmingTileService"
+            android:icon="@drawable/ic_dc_tile"
+            android:label="@string/dc_dimming_enable_title"
+            android:permission="android.permission.BIND_QUICK_SETTINGS_TILE">
+            <intent-filter>
+                <action
+                    android:name="android.service.quicksettings.action.QS_TILE"/>
+            </intent-filter>
+        </service>
+
         <activity
             android:name=".doze.DozeSettingsActivity"
             android:label="@string/ambient_display_title"
