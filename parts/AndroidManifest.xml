@@ -123,8 +123,8 @@
         </activity>
 
 		<activity
-            android:name=".display.DcDimmingSettingsActivity"
-            android:label="@string/dc_dimming_enable_title"
+            android:name=".display.DisplaySettingsActivity"
+            android:label="@string/display_settings_title"
             android:theme="@style/Theme.Main">
             <intent-filter>
                 <action android:name="com.android.settings.action.IA_SETTINGS" />
@@ -135,7 +135,7 @@
                 android:value="com.android.settings.category.ia.display" />
             <meta-data
                 android:name="com.android.settings.summary"
-                android:resource="@string/dc_dimming_enable_summary" />
+                android:resource="@string/display_settings_summary" />
         </activity>
         
     </application>

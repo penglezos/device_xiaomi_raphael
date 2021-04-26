@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
      Copyright (C) 2015 The CyanogenMod Project
-                   2018-2019 The LineageOS Project
+                   2020 YAAP
 
      Licensed under the Apache License, Version 2.0 (the "License"
      you may not use this file except in compliance with the License.
@@ -21,4 +21,10 @@
         android:defaultValue="false"
         android:title="@string/dc_dimming_enable_title"
         android:summary="@string/dc_dimming_enable_summary" />
+
+    <SwitchPreference
+        android:key="hbm_mode"
+        android:defaultValue="false"
+        android:title="@string/hbm_mode_title"
+        android:summary="@string/hbm_mode_summary" />
 </PreferenceScreen>

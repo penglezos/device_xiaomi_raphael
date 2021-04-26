@@ -110,9 +110,18 @@
     <string name="clear_speaker_summary">Play a 30-second audio to clear the speaker</string>
     <string name="clear_speaker_description">Run this feature once or twice if you find that your speaker is lightly blocked by dust. Set media volume to maximum.\n\nIf the speaker is blocked heavily, run this feature 2-5 times while shaking your device with the speaker facing downwards.\n\nWARNING: Ensure that any headphones are unplugged.</string>
 
+    <!--Display settings fragment -->
+    <string name="display_settings_title">Custom Display Settings</string>
+    <string name="display_settings_summary">HBM, DC Dimming</string>
+
     <!-- DC dimming settings -->
     <string name="dc_dimming_enable_title">DC Dimming</string>
     <string name="dc_dimming_enable_summary">DC Dimming reduces eye strain in low light conditions (Note: reduce image quality)</string>
     <string name="dc_dimming_enable_summary_not_supported">DC Dimming is not currently supported by the kernel</string>
+
+    <!-- HBM settings -->
+    <string name="hbm_mode_title">High Brightness Mode</string>
+    <string name="hbm_mode_summary">High Brightness Mode allows the display panel brightness to go above the maximum stock value. Which helps in improving visibility in direct sunlight</string>
+    <string name="hbm_enable_summary_not_supported">HBM is not currently supported by the kernel</string>
 
 </resources>
