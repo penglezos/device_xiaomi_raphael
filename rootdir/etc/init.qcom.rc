@@ -72,17 +72,6 @@ on early-boot
     chown system graphics /sys/devices/virtual/hdcp/msm_hdcp/min_level_change
     chmod 0660 /sys/devices/virtual/hdcp/msm_hdcp/min_level_change
 
-    # SSR setup
-    write /sys/bus/msm_subsys/devices/subsys0/restart_level "related"
-    write /sys/bus/msm_subsys/devices/subsys1/restart_level "related"
-    write /sys/bus/msm_subsys/devices/subsys2/restart_level "related"
-    write /sys/bus/msm_subsys/devices/subsys3/restart_level "related"
-    write /sys/bus/msm_subsys/devices/subsys4/restart_level "related"
-    write /sys/bus/msm_subsys/devices/subsys5/restart_level "related"
-    write /sys/bus/msm_subsys/devices/subsys6/restart_level "related"
-    write /sys/bus/msm_subsys/devices/subsys7/restart_level "related"
-    write /sys/bus/msm_subsys/devices/subsys8/restart_level "related"
-
 on boot
     chown bluetooth net_bt /sys/class/rfkill/rfkill0/state
     chown bluetooth net_bt /sys/class/rfkill/rfkill0/type
@@ -258,6 +247,9 @@ service iop /vendor/bin/iop
     user root
     group root
     socket iop seqpacket 0666 root system
+
+service vendor.ssr_setup /vendor/bin/ssr_setup
+    oneshot
 
 on property:ro.vendor.iocgrp.config=1
     mkdir /dev/blkio
