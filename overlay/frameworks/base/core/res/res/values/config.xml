@@ -574,4 +574,11 @@
 
     <!-- Enable face auth only when swiping security view -->
     <bool name="config_faceAuthOnlyOnSecurityView">true</bool>
+
+    <!-- Shows the required view for in-display fingerprint -->
+    <bool name="config_needCustomFODView">true</bool>
+    <bool name="config_supportsInDisplayFingerprint">true</bool>
+
+    <!-- Whether device has screen off FOD support -->
+    <bool name="config_supportScreenOffFod">true</bool>
 </resources>
