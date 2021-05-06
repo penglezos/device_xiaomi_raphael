@@ -21,4 +21,7 @@
     <!-- Disable UI touch sounds by default -->
     <bool name="def_sound_effects_enabled">false</bool>
 
+    <!-- 30 seconds for default screen timeout -->
+    <integer name="def_screen_off_timeout">30000</integer>
+
 </resources>
