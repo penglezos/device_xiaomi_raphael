@@ -1,9 +1,7 @@
 on boot
-    chown system system /sys/devices/platform/soc/soc:qcom,dsi-display-primary/dimlayer_hbm
     chown system system /sys/devices/platform/soc/soc:qcom,dsi-display-primary/fod_ui
     chown system system /sys/devices/virtual/touch/tp_dev/fod_status
 
-    chmod 0644 /sys/devices/platform/soc/soc:qcom,dsi-display-primary/dimlayer_hbm
     chmod 0444 /sys/devices/platform/soc/soc:qcom,dsi-display-primary/fod_ui
     chmod 0644 /sys/devices/virtual/touch/tp_dev/fod_status
 
@@ -12,4 +10,3 @@ service fingerprint-inscreen-1-0 /vendor/bin/hw/vendor.lineage.biometrics.finger
     class hal
     user system
     group system
-    shutdown critical
