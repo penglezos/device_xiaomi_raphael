@@ -56,6 +56,12 @@ on init
     chmod 0660 /dev/drv8846_dev
     chmod 0660 /dev/akm09970
 
+on init && property:ro.boot.hwc=GLOBAL
+    setprop ro.boot.product.hardware.sku raphael
+
+on init && property:ro.boot.hwc=CN
+    setprop ro.boot.product.hardware.sku raphael
+
 on post-fs-data
     mkdir /data/vendor/mac_addr 0770 system wifi
     mkdir /data/vendor/nfc 0770 nfc nfc
