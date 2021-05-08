@@ -45,3 +45,9 @@ service vendor.motor /vendor/bin/hw/vendor.xiaomi.hardware.motor@1.0-service
     class hal
     user system
     group system
+
+on init && property:ro.boot.hwc=GLOBAL
+    setprop ro.boot.product.hardware.sku raphael
+
+on init && property:ro.boot.hwc=CN
+    setprop ro.boot.product.hardware.sku raphael
