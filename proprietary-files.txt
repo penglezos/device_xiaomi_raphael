@@ -1429,7 +1429,6 @@ system_ext/etc/permissions/telephony_system-ext_privapp-permissions-qti.xml
 vendor/bin/hw/qcrild
 vendor/bin/adpl
 vendor/bin/ATFWD-daemon
-vendor/bin/ipacm-diag
 vendor/bin/netmgrd
 vendor/bin/port-bridge
 vendor/bin/qti
@@ -1443,7 +1442,6 @@ vendor/etc/init/dataadpl.rc
 vendor/etc/init/dataqti.rc
 vendor/etc/init/init-qcril-data.rc
 vendor/etc/init/ipa_fws.rc
-vendor/etc/init/ipacm-diag.rc
 vendor/etc/init/netmgrd.rc
 vendor/etc/init/port-bridge.rc
 vendor/etc/init/qcrild.rc
