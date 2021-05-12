@@ -30,10 +30,7 @@ namespace {
 #define STRINGIFY(x) STRINGIFY_INNER(x)
 
 #define LEDS(x) PPCAT(/sys/class/leds, x)
-#define BLUE_ATTR(x) STRINGIFY(PPCAT(LEDS(blue), x))
 #define GREEN_ATTR(x) STRINGIFY(PPCAT(LEDS(green), x))
-#define RED_ATTR(x) STRINGIFY(PPCAT(LEDS(red), x))
-#define WHITE_ATTR(x) STRINGIFY(PPCAT(LEDS(white), x))
 /* clang-format on */
 
 using ::android::base::ReadFileToString;
@@ -103,9 +100,7 @@ Lights::Lights() {
 
     std::string buf;
 
-    if (ReadFileToString(BLUE_ATTR(max_brightness), &buf) ||
-        ReadFileToString(RED_ATTR(max_brightness), &buf) ||
-        ReadFileToString(WHITE_ATTR(max_brightness), &buf)) {
+    if (ReadFileToString(GREEN_ATTR(max_brightness), &buf)) {
         max_led_brightness_ = std::stoi(buf);
     } else {
         max_led_brightness_ = kDefaultMaxLedBrightness;
@@ -150,8 +145,7 @@ void Lights::setLightNotification(int id, const HwLightState& state) {
 
 void Lights::applyNotificationState(const HwLightState& state) {
     std::map<std::string, int> colorValues;
-    colorValues["red"] = colorValues["green"] = colorValues["blue"] = colorValues["white"] =
-            RgbaToBrightness(state.color, max_led_brightness_);
+    colorValues["green"] = RgbaToBrightness(state.color, max_led_brightness_);
 
     auto makeLedPath = [](const std::string& led, const std::string& op) -> std::string {
         return "/sys/class/leds/" + led + "/" + op;
