@@ -32,11 +32,11 @@
         <device name="SND_DEVICE_OUT_GAME_SPEAKER" acdb_id="10024"/>
         <device name="SND_DEVICE_IN_VOICE_REC_QMIC_FLUENCE" acdb_id="131"/>
         <device name="SND_DEVICE_IN_VOICE_REC_TMIC" acdb_id="131"/>
-        <device name="SND_DEVICE_IN_VOICE_REC_MIC" acdb_id="143"/>
-        <device name="SND_DEVICE_IN_VOICE_REC_MIC_NS" acdb_id="143"/>
-        <device name="SND_DEVICE_IN_VOICE_REC_MIC_AEC" acdb_id="143"/>
-        <device name="SND_DEVICE_IN_VOICE_REC_DMIC_FLUENCE" acdb_id="143"/>
-        <device name="SND_DEVICE_IN_VOICE_REC_MIC_AEC_NS" acdb_id="143"/>
+        <device name="SND_DEVICE_IN_VOICE_REC_MIC" acdb_id="132"/>
+        <device name="SND_DEVICE_IN_VOICE_REC_MIC_NS" acdb_id="132"/>
+        <device name="SND_DEVICE_IN_VOICE_REC_MIC_AEC" acdb_id="132"/>
+        <device name="SND_DEVICE_IN_VOICE_REC_DMIC_FLUENCE" acdb_id="132"/>
+        <device name="SND_DEVICE_IN_VOICE_REC_MIC_AEC_NS" acdb_id="132"/>
         <device name="SND_DEVICE_OUT_VOICE_SPEAKER_2_PROTECTED" acdb_id="150"/>
         <device name="SND_DEVICE_OUT_VOICE_SPEAKER_2_PROTECTED_VBAT" acdb_id="150"/>
         <device name="SND_DEVICE_IN_CAPTURE_VI_FEEDBACK_MONO_1" acdb_id="151"/>
