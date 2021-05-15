@@ -124,6 +124,7 @@ TARGET_KERNEL_CLANG_COMPILE := true
 TARGET_KERNEL_CLANG_VERSION := proton
 TARGET_KERNEL_CONFIG := raphael_defconfig
 TARGET_KERNEL_SOURCE := kernel/xiaomi/raphael
+TARGET_KERNEL_CLANG_PATH := $(shell pwd)/prebuilts/clang/host/linux-x86/clang-proton
 #Disable appended dtb
 TARGET_KERNEL_APPEND_DTB := true
 # Set Header version for bootimage

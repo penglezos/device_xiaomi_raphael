@@ -152,3 +152,6 @@ persist.sys.wfd.virtual=0
 
 # Zygote
 persist.device_config.runtime_native.usap_pool_enabled=true
+
+# Spark specific properties 
+ro.spark.maintainer=nj
