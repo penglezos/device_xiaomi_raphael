@@ -2036,18 +2036,25 @@ vendor/bin/nv_mac
 
 # WiFi Display
 -framework/WfdCommon.jar
+-system_ext/priv-app/WfdService/WfdService.apk
 system_ext/bin/wfdservice
 system_ext/etc/init/wfdservice.rc
 system_ext/etc/permissions/wfd-system-ext-privapp-permissions-qti.xml
+system_ext/etc/seccomp_policy/wfdservice.policy
 system_ext/lib/libmmosal.so
 system_ext/lib/libmmparser_lite.so
 system_ext/lib/libmmrtpdecoder.so
 system_ext/lib/libmmrtpencoder.so
+system_ext/lib/libwfdavenhancements.so
 system_ext/lib/libwfdclient.so
 system_ext/lib/libwfdcommonutils.so
+system_ext/lib/libwfdconfigutils.so
+system_ext/lib/libwfddisplayconfig.so
 system_ext/lib/libwfdmminterface.so
 system_ext/lib/libwfdmmsink.so
+system_ext/lib/libwfdmmsrc_system.so
 system_ext/lib/libwfdrtsp.so
+system_ext/lib/libwfdservice.so
 system_ext/lib/libwfdsinksm.so
 system_ext/lib/libwfduibcinterface.so
 system_ext/lib/libwfduibcsink.so
@@ -2061,8 +2068,11 @@ system_ext/lib64/libmmrtpdecoder.so
 system_ext/lib64/libmmrtpencoder.so
 system_ext/lib64/libwfdclient.so
 system_ext/lib64/libwfdcommonutils.so
+system_ext/lib64/libwfdconfigutils.so
+system_ext/lib64/libwfddisplayconfig.so
 system_ext/lib64/libwfdmminterface.so
 system_ext/lib64/libwfdmmsink.so
+system_ext/lib64/libwfdnative.so
 system_ext/lib64/libwfdrtsp.so
 system_ext/lib64/libwfdsinksm.so
 system_ext/lib64/libwfduibcinterface.so
