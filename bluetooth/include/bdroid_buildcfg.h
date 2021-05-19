@@ -37,22 +37,23 @@ int property_get(const char* key, char* value, const char* default_value);
 #include "osi/include/osi.h"
 
 typedef struct {
-    const char* product_device;
+    const char* product_region;
     const char* product_model;
 } device_t;
 
 static const device_t devices[] = {
-        {"raphael", "Xiaomi Mi 9T Pro"},
-};
+        {"GLOBAL", "Mi 9T Pro"},
+        {"INDIA", "Redmi K20 Pro"},
+        {"CN", "Redmi K20 Pro"},};
 
 static inline const char* BtmGetDefaultName() {
-    char product_device[92];
-    property_get("ro.product.device", product_device, "");
+    char product_region[92];
+    property_get("ro.boot.hwc", product_region, "");
 
     for (unsigned int i = 0; i < ARRAY_SIZE(devices); i++) {
         device_t device = devices[i];
 
-        if (strcmp(device.product_device, product_device) == 0) {
+        if (strcmp(device.product_region, product_region) == 0) {
             return device.product_model;
         }
     }
