@@ -63,6 +63,9 @@ ro.lmk.log_stats=true
 # Logd buffer size
 ro.logd.size=2M
 
+# IO Prefetcher
+vendor.iop.enable_uxe=1
+
 # Media
 av.offload.enable=true
 media.stagefright.enable-player=true
