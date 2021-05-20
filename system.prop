@@ -113,6 +113,9 @@ persist.data.df.dev_name=rmnet_usb0
 # Sensors
 persist.vendor.sensors.enable.mag_filter=true
 
+# SurfaceFlinger
+ro.surface_flinger.max_frame_buffer_acquired_buffers=3
+
 # SSR
 persist.vendor.ssr.enable_ramdumps=1
 persist.vendor.ssr.restart_level=ALL_ENABLE
