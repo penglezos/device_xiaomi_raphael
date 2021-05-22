@@ -142,10 +142,6 @@ ro.incremental.enable=1
 # Keystore
 ro.hardware.keystore_desede=true
 
-# Media
-debug.stagefright.ccodec=1
-debug.stagefright.omx_default_rank=0
-
 # Netmgr
 ro.vendor.use_data_netmgrd=true
 persist.vendor.data.iwlan.enable=true

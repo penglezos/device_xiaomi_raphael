@@ -65,18 +65,12 @@ ro.logd.size=2M
 
 # Media
 av.offload.enable=true
-media.stagefright.enable-player=true
-media.stagefright.enable-http=true
-media.stagefright.enable-aac=true
-media.stagefright.enable-qcp=true
-media.stagefright.enable-fma2dp=true
-media.stagefright.enable-scan=true
-media.stagefright.thumbnail.prefer_hw_codecs=true
-media.aac_51_output_enabled=true
-media.settings.xml=/vendor/etc/media_profiles_vendor.xml
-mmp.enable.3g2=true
-persist.mm.enable.prefetch=true
+debug.media.codec2=2 
+debug.stagefright.ccodec=4
+debug.stagefright.omx_default_rank=512
+debug.stagefright.c2inputsurface=-1
 mm.enable.smoothstreaming=true
+vendor.media.omx=0
 
 # Netflix custom property
 ro.netflix.bsp_rev=Q855-16947-1
