@@ -109,9 +109,6 @@ vendor/lib64/vendor.qti.voiceprint@1.0.so
 # Audio (Configs)
 vendor/etc/audio_configs.xml
 vendor/etc/audio_configs_stock.xml
-vendor/etc/audio_effects.xml
-vendor/etc/audio_io_policy.conf
-vendor/etc/audio_platform_info.xml
 vendor/etc/audio_policy_volumes.xml
 vendor/etc/audio_tuning_mixer.txt
 vendor/etc/audio_tuning_mixer_tavil.txt
