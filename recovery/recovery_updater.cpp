@@ -42,15 +42,6 @@
 #define MODEM_VER_STR_LEN 14
 #define MODEM_VER_BUF_LEN 20
 
-#define VENDOR_PART_PATH "/dev/block/bootdevice/by-name/vendor"
-#define VENDOR_DATE_STR "ro.vendor.build.date.utc="
-#define VENDOR_DATE_STR_LEN 25
-#define VENDOR_DATE_BUF_LEN 11
-
-#define VNDK_VER_STR "ro.vndk.version="
-#define VNDK_VER_STR_LEN 16
-#define VNDK_VER_BUF_LEN 3
-
 /* Boyer-Moore string search implementation from Wikipedia */
 
 /* Return longest suffix length of suffix ending at str[p] */
@@ -204,46 +195,6 @@ Value* VerifyModemFn(const char* name, State* state,
     return StringValue(strdup(ret ? "1" : "0"));
 }
 
-/* verify_vendor("VENDOR_DATE", "VNDK_VERSION") */
-Value* VerifyVendorFn(const char* name, State* state,
-                      const std::vector<std::unique_ptr<Expr>>& argv) {
-    char current_vendor_date[VENDOR_DATE_BUF_LEN];
-    char current_vndk_version[VNDK_VER_BUF_LEN];
-    int ret;
-
-    // Check for UTC build date
-    ret = get_info(current_vendor_date, VENDOR_DATE_BUF_LEN, VENDOR_DATE_STR, VENDOR_DATE_STR_LEN,
-                   VENDOR_PART_PATH);
-    if (ret) {
-        return ErrorAbort(state, kVendorFailure,
-                          "%s() failed to read current vendor UTC build date: %d", name, ret);
-    }
-
-    std::vector<std::string> args;
-    if (!ReadArgs(state, argv, &args)) {
-        return ErrorAbort(state, kArgsParsingFailure, "%s() error parsing arguments", name);
-    }
-
-    if (std::stoi(current_vendor_date) < std::stoi(args[0])) {
-        // Fail immediately if build is older than required
-        return StringValue(strdup("0"));
-    }
-
-    // Check for VNDK version
-    ret = get_info(current_vndk_version, VNDK_VER_BUF_LEN, VNDK_VER_STR, VNDK_VER_STR_LEN,
-                   VENDOR_PART_PATH);
-    if (ret) {
-        return ErrorAbort(state, kVendorFailure,
-                          "%s() failed to read current vendor VNDK version: %d", name, ret);
-    }
-
-    if (std::stoi(current_vndk_version) == std::stoi(args[1])) {
-        ret = 1;
-    }
-    return StringValue(strdup(ret ? "1" : "0"));
-}
-
 void Register_librecovery_updater_raphael() {
     RegisterFunction("xiaomi.verify_modem", VerifyModemFn);
-    RegisterFunction("xiaomi.verify_vendor", VerifyVendorFn);
 }
