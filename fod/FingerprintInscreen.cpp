@@ -152,7 +152,6 @@ Return<void> FingerprintInscreen::onRelease() {
 
 Return<void> FingerprintInscreen::onShowFODView() {
     set(FOD_STATUS_PATH, FOD_STATUS_ON);
-    WriteToFile(DIM_LAYER_HBM_PATH, 1);
     return Void();
 }
 
