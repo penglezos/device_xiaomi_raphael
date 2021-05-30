@@ -33,11 +33,10 @@
 #include <android-base/properties.h>
 #include "vendor_init.h"
 
-void property_override(char const prop[], char const value[])
-{
-    prop_info *pi;
+void property_override(char const prop[], char const value[]) {
+    prop_info* pi;
 
-    pi = (prop_info*) __system_property_find(prop);
+    pi = (prop_info*)__system_property_find(prop);
     if (pi)
         __system_property_update(pi, value, strlen(value));
     else
@@ -45,14 +44,12 @@ void property_override(char const prop[], char const value[])
 }
 
 void property_override_dual(char const system_prop[], char const vendor_prop[],
-    char const value[])
-{
+                            char const value[]) {
     property_override(system_prop, value);
     property_override(vendor_prop, value);
 }
 
-void load_dalvikvm_properties()
-{
+void load_dalvikvm_properties() {
     struct sysinfo sys;
 
     sysinfo(&sys);
@@ -73,21 +70,22 @@ void load_dalvikvm_properties()
     property_override("dalvik.vm.heapminfree", "8m");
 }
 
-void vendor_load_properties()
-{
+void vendor_load_properties() {
     std::string region = android::base::GetProperty("ro.boot.hwc", "");
 
     // correct model naming
-    if (region.find("CN") != std::string::npos ||
-        region.find("INDIA") != std::string::npos) {
+    if (region.find("CN") != std::string::npos || region.find("INDIA") != std::string::npos) {
         property_override("ro.product.model", "Redmi K20 Pro");
     } else {
         property_override("ro.product.model", "Mi 9T Pro");
     }
 
     // fingerprint
-    property_override("ro.build.description", "raphael-user 10 QKQ1.190825.002 V12.0.1.0.QFKMIXM release-keys");
-    property_override_dual("ro.build.fingerprint", "ro.vendor.build.fingerprint", "google/walleye/walleye:8.1.0/OPM1.171019.011/4448085:user/release-keys");
+    property_override("ro.build.description",
+                      "raphael-user 10 QKQ1.190825.002 V12.0.1.0.QFKMIXM release-keys");
+    property_override_dual(
+            "ro.build.fingerprint", "ro.vendor.build.fingerprint",
+            "google/walleye/walleye:8.1.0/OPM1.171019.011/4448085:user/release-keys");
 
     load_dalvikvm_properties();
 }
