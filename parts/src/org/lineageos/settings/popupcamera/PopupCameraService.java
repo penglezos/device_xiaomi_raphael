@@ -42,6 +42,7 @@ import android.os.SystemClock;
 import android.os.UserHandle;
 import android.provider.Settings;
 import android.util.Log;
+import android.view.KeyEvent;
 import android.view.WindowManager;
 import org.lineageos.settings.R;
 import org.lineageos.settings.utils.FileUtils;
@@ -72,6 +73,7 @@ public class PopupCameraService extends Service implements Handler.Callback {
     private Sensor mFreeFallSensor;
     private PopupCameraPreferences mPopupCameraPreferences;
     private SoundPool mSoundPool;
+    Context mContext;
 
     private boolean mLedBusy = false;
     private boolean mLedBreathing = false;
@@ -80,6 +82,7 @@ public class PopupCameraService extends Service implements Handler.Callback {
     private BroadcastReceiver mIntentReceiver = new BroadcastReceiver() {
         @Override
         public void onReceive(Context context, Intent intent) {
+            mContext = context;
             String action = intent.getAction();
             if (action.equals(Intent.ACTION_SCREEN_OFF)) {
                 mScreenOn = false;
@@ -458,7 +461,7 @@ public class PopupCameraService extends Service implements Handler.Callback {
                     mAlertDialog = new AlertDialog.Builder(this, mDialogThemeResID)
                             .setMessage(R.string.popup_camera_dialog_message)
                             .setNegativeButton(R.string.popup_camera_dialog_no, (dialog, which) -> {
-                            goBackHome();
+                            PopupCameraUtils.triggerVirtualKeypress(mContext, KeyEvent.KEYCODE_BACK);
                         })
                     .setPositiveButton(R.string.popup_camera_dialog_raise, (dialog, which) -> {
                     updateMotor(Constants.OPEN_CAMERA_STATE);
