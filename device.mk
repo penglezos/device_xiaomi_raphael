@@ -18,6 +18,10 @@ PRODUCT_SOONG_NAMESPACES += \
 TARGET_SCREEN_HEIGHT := 2340
 TARGET_SCREEN_WIDTH := 1080
 
+# AID/fs configs
+PRODUCT_PACKAGES += \
+    fs_config_files
+
 # HIDL
 PRODUCT_PACKAGES += \
     android.hidl.base@1.0 \
