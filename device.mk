@@ -110,6 +110,7 @@ PRODUCT_PACKAGES += \
 
 # Init scripts
 PRODUCT_PACKAGES += \
+    fstab.qcom \
     init.class_main.sh \
     init.qcom.class_core.sh \
     init.qcom.early_boot.sh \
