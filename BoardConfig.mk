@@ -42,6 +42,9 @@ TARGET_KERNEL_CONFIG := raphael_user_defconfig
 # Platform
 TARGET_BOARD_PLATFORM := msmnile
 
+# Audio
+USE_XML_AUDIO_POLICY_CONF := 1
+
 # Bluetooth
 BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := $(DEVICE_PATH)/bluetooth/include
 
