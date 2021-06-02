@@ -34,6 +34,8 @@ firmware_directories /vendor/firmware_mnt/image/
 /dev/diag                 0660   system     oem_2901
 /dev/mhi_*_pipe_4         0660   system     system
 
+/dev/xlog                 0660   system     audio
+
 /dev/genlock              0666   system     system
 /dev/wlan                 0660   wifi       wifi
 /dev/kgsl                 0666   system     system
@@ -170,6 +172,10 @@ firmware_directories /vendor/firmware_mnt/image/
 #qg
 /dev/qg                   0660  system     system
 /dev/qg_battery           0660  system     system
+
+# Elliptic
+/dev/elliptic0            0644   system       system
+/dev/elliptic1            0644   system       system
 
 #qvr
 /dev/qvr_external_sensor_ioctl      0660  system  system
@@ -339,6 +345,9 @@ firmware_directories /vendor/firmware_mnt/image/
 /dev/uio1                 0660   system     system
 /dev/uio2                 0660   system     system
 
+#spi ir nodes
+/dev/ir_spi               0660   system     system
+
 # SSR devices
 /dev/subsys_*         0640   system     system
 
@@ -373,6 +382,12 @@ firmware_directories /vendor/firmware_mnt/image/
 
 # Kmsg device
 /dev/kmsg                                               0620   root       system
+
+# mius iio devices
+/dev/iio:device*                                        0660   system     system
+/sys/devices/platform/us_prox.0/iio:device* buffer/enable                  0600 system system
+/sys/devices/platform/us_prox.0/iio:device* scan_elements/in_proximity_en  0600 system system
+/sys/devices/platform/us_prox.0/iio:device* scan_elements/in_timestamp_en  0600 system system
 
 # LED class devices
 /sys/class/leds/red      delay_on     0640    system    system
