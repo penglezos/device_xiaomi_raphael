@@ -115,7 +115,8 @@ ndk::ScopedAStatus Lights::setLightState(int id, const HwLightState& state) {
         return ndk::ScopedAStatus::fromExceptionCode(EX_UNSUPPORTED_OPERATION);
     }
 
-    it->second(id, state);
+    if (it->second != nullptr)
+    	it->second(id, state);
 
     return ndk::ScopedAStatus::ok();
 }
