@@ -173,6 +173,11 @@ on property:sys.boot_completed=1
     # to hide Magisk & co.
     chmod 440 /proc/net/unix
 
+    # Enable ZRAM on boot_complete
+    rm /data/unencrypted/zram_swap
+    swapon_all
+    write /proc/sys/vm/swappiness 100
+
 on property:vendor.post_boot.parsed=1
     # Enable idle state listener
     write /sys/class/drm/card0/device/idle_encoder_mask 1
