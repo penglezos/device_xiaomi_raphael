@@ -1,0 +1,18 @@
+# Display
+debug.sf.disable_backpressure=1
+debug.sf.enable_hwc_vds=1
+
+# IMS
+persist.dbg.volte_avail_ovr=1
+persist.dbg.vt_avail_ovr=1
+persist.dbg.wfc_avail_ovr=1
+
+# RIL
+persist.radio.apm_sim_not_pwdn=1
+persist.vendor.radio.enable_temp_dds=true
+persist.vendor.radio.report_codec=1
+ril.subscription.types=NV,RUIM
+ro.telephony.default_network=22,22
+
+# Vendor
+ro.vendor.qti.va_aosp.support=1
