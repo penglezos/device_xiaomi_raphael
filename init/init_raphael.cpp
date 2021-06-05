@@ -124,6 +124,11 @@ void vendor_load_properties() {
         mod_device = "raphaelin_in_global";
     }
 
+    // SafetyNet workaround
+    property_override("ro.boot.verifiedbootstate", "green");
+    fingerprint = "google/walleye/walleye:8.1.0/OPM1.171019.011/4448085:user/release-keys";
+    description = "raphael-user 10 QKQ1.190825.002 20.10.15 release-keys";
+    
     set_ro_build_prop("fingerprint", fingerprint);
     set_ro_product_prop("device", device);
     set_ro_product_prop("model", model);
@@ -133,10 +138,6 @@ void vendor_load_properties() {
     }
 
     property_override("ro.boot.hardware.revision", hardware_revision.c_str());
-
-     // fingerprint
-    property_override("ro.build.description", "raphael-user 10 QKQ1.190825.002 V12.0.1.0.QFKMIXM release-keys");
-    property_override_dual("ro.build.fingerprint", "ro.vendor.build.fingerprint", "google/walleye/walleye:8.1.0/OPM1.171019.011/4448085:user/release-keys");
 
     load_dalvikvm_properties();
 }
