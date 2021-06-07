@@ -148,6 +148,9 @@ on boot && property:ro.boot.usbconfigfs=true
 on boot && property:ro.boot.factorybuild=1
     write /config/usb_gadget/g1/strings/0x409/serialnumber 1234567890ABCDEF
 
+on property:vendor.usb.mimode=*
+    setprop persist.vendor.usb.config ${vendor.usb.mimode}
+
 #
 # USB compositions
 #
