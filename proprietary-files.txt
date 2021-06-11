@@ -735,9 +735,6 @@ vendor/lib64/libdiagjni.so
 vendor/etc/hdr_config.cfg
 vendor/etc/sdr_config.cfg
 
-# Display QDCM - from raphael-user 11 RKQ1.200826.002 21.3.3 patched
-vendor/etc/qdcm_calib_data_samsung_ea8076_fhd_cmd_dsi_panel.xml|466f515f4dce2e4138f894946024937f1e953a8f
-
 # Display (Postprocessing)
 vendor/bin/hw/vendor.display.color@1.0-service
 vendor/bin/ppd
