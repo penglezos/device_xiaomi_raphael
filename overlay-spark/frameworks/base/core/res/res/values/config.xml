@@ -26,4 +26,8 @@
 
     <!-- Pocket Lock -->
     <bool name="config_pocketUseLightSensor">false</bool>
+
+    <!-- Default state for LiveDisplay -->
+    <bool name="config_liveDisplayAvailable">true</bool>
+    <bool name="config_defaultCABC">true</bool>
 </resources>
