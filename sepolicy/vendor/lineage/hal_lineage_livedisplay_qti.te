@@ -1,1 +1,2 @@
 allow hal_lineage_livedisplay_qti vendor_sysfs_hbm:file rw_file_perms;
+allow hal_lineage_livedisplay_qti vendor_sysfs_graphics:file rw_file_perms;
