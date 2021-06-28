@@ -28,6 +28,7 @@ import org.lineageos.settings.utils.FileUtils;
 public final class ThermalUtils {
 
     private static final String THERMAL_CONTROL = "thermal_control";
+    private static final String THERMAL_SERVICE = "thermal_service";
 
     protected static final int STATE_DEFAULT = 0;
     protected static final int STATE_BENCHMARK = 1;
@@ -60,9 +61,26 @@ public final class ThermalUtils {
         mSharedPrefs = PreferenceManager.getDefaultSharedPreferences(context);
     }
 
-    public static void startService(Context context) {
+    public static void initialize(Context context) {
+        if (isServiceEnabled(context))
+            startService(context);
+        else
+            setDefaultThermalProfile();
+    }
+
+    protected static void startService(Context context) {
         context.startServiceAsUser(new Intent(context, ThermalService.class),
                 UserHandle.CURRENT);
+        PreferenceManager.getDefaultSharedPreferences(context).edit().putString(THERMAL_SERVICE, "true").apply();
+    }
+
+    protected static void stopService(Context context) {
+        context.stopService(new Intent(context, ThermalService.class));
+        PreferenceManager.getDefaultSharedPreferences(context).edit().putString(THERMAL_SERVICE, "false").apply();
+    }
+
+    protected static boolean isServiceEnabled(Context context) {
+        return Boolean.valueOf(PreferenceManager.getDefaultSharedPreferences(context).getString(THERMAL_SERVICE, "false"));
     }
 
     private void writeValue(String profiles) {
@@ -134,7 +152,7 @@ public final class ThermalUtils {
         return state;
     }
 
-    protected void setDefaultThermalProfile() {
+    protected static void setDefaultThermalProfile() {
         FileUtils.writeLine(THERMAL_SCONFIG, THERMAL_STATE_DEFAULT);
     }
 
