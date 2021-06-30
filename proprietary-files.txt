@@ -1,4 +1,4 @@
-# All unpinned blobs here are extracted from raphael-user 11 RKQ1.200826.002 21.4.29 release-keys
+# All unpinned blobs here are extracted from raphael-user 11 RKQ1.200826.002 V12.5.1.0.RFKMIXM release-keys
 
 # ADSPRPC
 vendor/bin/adsprpcd
@@ -501,7 +501,7 @@ vendor/lib64/libsysmon_cdsp_skel.so
 vendor/lib64/libtriplecam_optical_zoom_control.so
 vendor/lib64/libtriplecam_video_optical_zoom.so
 vendor/lib64/libvidhance.so
-vendor/lib64/mibokeh_855_opencl.bin
+vendor/etc/camera/mibokeh_855_opencl.bin:vendor/lib64/mibokeh_855_opencl.bin
 vendor/lib64/vendor.qti.hardware.camera.device@1.0.so
 vendor/lib64/vendor.qti.hardware.camera.device@2.0.so
 vendor/lib64/vendor.qti.hardware.camera.device@3.5.so
