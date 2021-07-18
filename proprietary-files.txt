@@ -553,6 +553,25 @@ vendor/etc/init/android.hardware.gatekeeper@1.0-service-qti.rc
 vendor/lib/hw/android.hardware.gatekeeper@1.0-impl-qti.so
 vendor/lib64/hw/android.hardware.gatekeeper@1.0-impl-qti.so
 
+# GNSS
+vendor/bin/hw/android.hardware.gnss@2.1-service-qti
+vendor/etc/init/android.hardware.gnss@2.1-service-qti.rc
+-vendor/etc/vintf/manifest/android.hardware.gnss@2.1-service-qti.xml
+vendor/lib/hw/android.hardware.gnss@2.1-impl-qti.so
+vendor/lib/libbatching.so
+vendor/lib/libgeofencing.so
+vendor/lib/libgnss.so
+vendor/lib/libgps.utils.so
+vendor/lib/libloc_core.so
+vendor/lib/liblocation_api.so
+vendor/lib64/hw/android.hardware.gnss@2.1-impl-qti.so
+vendor/lib64/libbatching.so
+vendor/lib64/libgeofencing.so
+vendor/lib64/libgnss.so
+vendor/lib64/libgps.utils.so
+vendor/lib64/libloc_core.so
+vendor/lib64/liblocation_api.so
+
 # GPS
 vendor/bin/garden_app
 vendor/bin/loc_launcher
