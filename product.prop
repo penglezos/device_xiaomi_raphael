@@ -6,10 +6,6 @@ ro.sf.blurs_are_expensive=1
 # Gboard
 ro.com.google.ime.kb_pad_port_b=1
 
-# Seamless transfer
-sys.fflag.override.settings_seamless_transfer=true
-
 # IORap
 iorapd.perfetto.enable=true
 iorapd.readahead.enable=true
-
