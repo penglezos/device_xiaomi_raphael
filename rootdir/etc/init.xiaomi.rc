@@ -118,6 +118,9 @@ service vendor.motor /vendor/bin/hw/vendor.xiaomi.hardware.motor@1.0-service
     user system
     group system
 
+on property:sys.shutdown.requested=*
+    stop vendor.motor
+
 service nv_mac /vendor/bin/nv_mac
     class late_start
     user system
