@@ -1,0 +1,11 @@
+# Camera
+camera.                     u:object_r:vendor_camera_prop:s0
+persist.camera.             u:object_r:vendor_camera_prop:s0
+vendor.camera.              u:object_r:vendor_camera_prop:s0
+
+# Fingerprint
+gf.debug.                   u:object_r:vendor_fp_prop:s0
+persist.vendor.sys.fp.      u:object_r:vendor_fp_prop:s0
+
+# Mlipay
+persist.vendor.sys.pay.     u:object_r:vendor_tee_listener_prop:s0

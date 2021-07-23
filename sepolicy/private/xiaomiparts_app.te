@@ -1,0 +1,28 @@
+app_domain(xiaomiparts_app)
+
+hal_client_domain(xiaomiparts_app, hal_motor)
+
+binder_call(xiaomiparts_app, gpuservice)
+binder_call(xiaomiparts_app, hal_motor)
+
+allow xiaomiparts_app {
+  activity_service
+  activity_task_service
+  audio_service
+  audioserver_service
+  autofill_service
+  cameraserver_service
+  gpu_service
+  mediaextractor_service
+  mediametrics_service
+  mediaserver_service
+  sensorservice_service
+  surfaceflinger_service
+  tethering_service
+}:service_manager find;
+
+allow xiaomiparts_app system_app_data_file:dir create_dir_perms;
+allow xiaomiparts_app system_app_data_file:{ file lnk_file } create_file_perms;
+
+allow xiaomiparts_app sysfs_leds:dir r_dir_perms;
+allow xiaomiparts_app sysfs_leds:file rw_file_perms;

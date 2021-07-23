@@ -1,0 +1,3 @@
+r_dir_file(hal_camera_default, mnt_vendor_file)
+r_dir_file(hal_camera_default, persist_camera_file)
+r_dir_file(hal_camera_default, vendor_sysfs_kgsl)

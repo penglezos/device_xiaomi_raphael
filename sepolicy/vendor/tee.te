@@ -1,0 +1,9 @@
+allow tee {
+  fingerprint_data_file
+  mnt_vendor_file
+}:dir rw_dir_perms;
+
+allow tee {
+  fingerprint_data_file
+  mnt_vendor_file
+}:file create_file_perms;

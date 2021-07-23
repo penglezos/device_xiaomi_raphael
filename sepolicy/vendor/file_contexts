@@ -1,0 +1,36 @@
+# Audio
+/dev/socket/audio_hw_socket         u:object_r:audio_socket:s0
+
+# Camera
+/vendor/bin/remosaic_daemon         u:object_r:remosaic_daemon_exec:s0
+/mnt/vendor/persist/camera(/.*)?    u:object_r:persist_camera_file:s0
+
+# Charger
+/vendor/bin/batterysecret                                       u:object_r:batterysecret_exec:s0
+
+# Devices
+/dev/akm09970                                                   u:object_r:hall_device:s0
+/dev/drv8846_dev                                                u:object_r:motor_device:s0
+/dev/elliptic(.*)?                                              u:object_r:ultrasound_device:s0
+/dev/goodix_fp                                                  u:object_r:fingerprint_device:s0
+
+# Fingerprint
+/data/vendor/goodix(/.*)?                                       u:object_r:fingerprint_data_file:s0
+/data/vendor/fpc(/.*)?                                          u:object_r:fingerprint_data_file:s0
+/data/vendor/fpdump(/.*)?                                       u:object_r:fingerprint_data_file:s0
+/sys/devices/virtual/touch/tp_dev/fod_status                    u:object_r:sysfs_fod:s0
+
+# HALs
+/vendor/bin/hw/android\.hardware\.biometrics\.fingerprint@2\.1-service\.xiaomi_raphael              u:object_r:hal_fingerprint_default_exec:s0
+/vendor/bin/hw/android\.hardware\.light@2\.0-service\.xiaomi_raphael                                u:object_r:hal_light_default_exec:s0
+/vendor/bin/hw/vendor\.lineage\.biometrics\.fingerprint\.inscreen@1\.0-service\.xiaomi_raphael      u:object_r:hal_lineage_fod_raphael_exec:s0
+/vendor/bin/hw/vendor\.lineage\.livedisplay@2\.0-service\.xiaomi_raphael                            u:object_r:hal_lineage_livedisplay_qti_exec:s0
+/vendor/bin/hw/vendor\.xiaomi\.hardware\.motor@1\.0-service                                         u:object_r:hal_motor_default_exec:s0
+/vendor/bin/mlipayd@1\.1                                                                            u:object_r:hal_mlipay_default_exec:s0
+
+# LEDs
+/sys/devices/platform/soc/[a-z0-9]+.qcom,spmi/spmi-[0-1]/spmi0-0[0-9]/[a-z0-9]+.qcom,spmi:qcom,[a-z0-9]+@[0-9]:qcom,leds@d000/leds(/.*)?    u:object_r:sysfs_leds:s0
+
+# MAC
+/vendor/bin/nv_mac                                              u:object_r:vendor_wcnss_service_exec:s0
+/data/vendor/mac_addr(/.*)?                                     u:object_r:vendor_wifi_vendor_data_file:s0
