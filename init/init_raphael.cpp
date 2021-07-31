@@ -24,21 +24,18 @@ void property_override(char const prop[], char const value[]) {
 
 void load_raphael() {
     property_override("ro.build.fingerprint", "Xiaomi/raphael/raphael:11/RKQ1.200826.002/V12.5.4.0.RFKCNXM:user/release-keys");
-    property_override("ro.build.product", "raphael");
     property_override("ro.product.device", "raphael");
     property_override("ro.product.model", "Redmi K20 Pro");
 }
 
 void load_raphaelglobal() {
     property_override("ro.build.fingerprint", "Xiaomi/raphael/raphael:10/QKQ1.190825.002/V12.0.0.8.QFKMIXM:user/release-keys");
-    property_override("ro.build.product", "raphael");
     property_override("ro.product.device", "raphael");
     property_override("ro.product.model", "Mi 9T Pro");
 }
 
 void load_raphaelin() {
     property_override("ro.build.fingerprint", "Xiaomi/raphaelin/raphaelin:10/QKQ1.190825.002/V12.0.5.0.QFKINXM:user/release-keys");
-    property_override("ro.build.product", "raphaelin");
     property_override("ro.product.device", "raphaelin");
     property_override("ro.product.model", "Redmi K20 Pro");
 }
