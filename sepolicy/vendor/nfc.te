@@ -1,0 +1,3 @@
+allow nfc hal_nxpnfc_hwservice:hwservice_manager find;
+allow nfc hal_nxpese_hwservice:hwservice_manager find;
+

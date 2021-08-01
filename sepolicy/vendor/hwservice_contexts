@@ -2,3 +2,5 @@ vendor.goodix.hardware.biometrics.fingerprint::IGoodixFingerprintDaemon         
 vendor.xiaomi.hardware.fingerprintextension::IXiaomiFingerprint                 u:object_r:hal_fingerprint_hwservice:s0
 vendor.xiaomi.hardware.mlipay::IMlipayService                                   u:object_r:hal_mlipay_hwservice:s0
 vendor.xiaomi.hardware.motor::IMotor                                            u:object_r:hal_motor_hwservice:s0
+vendor.nxp.nxpnfc::INxpNfc                  u:object_r:hal_nxpnfc_hwservice:s0
+vendor.nxp.nxpese::INxpEse                  u:object_r:hal_nxpese_hwservice:s0
