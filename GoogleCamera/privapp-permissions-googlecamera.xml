@@ -12,7 +12,7 @@
 -->
 
 <permissions>
-    <privapp-permissions package="com.GoogleCamera.Burial16">
+    <privapp-permissions package="com.android.MGC">
         <permission name="android.permission.ACCESS_COARSE_LOCATION"/>
         <permission name="android.permission.ACCESS_FINE_LOCATION"/>
         <permission name="android.permission.ACCESS_NETWORK_STATE"/>
