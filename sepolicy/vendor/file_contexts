@@ -23,7 +23,6 @@
 # HALs
 /vendor/bin/hw/android\.hardware\.biometrics\.fingerprint@2\.3-service\.xiaomi_raphael              u:object_r:hal_fingerprint_default_exec:s0
 /vendor/bin/hw/android\.hardware\.light@2\.0-service\.xiaomi_raphael                                u:object_r:hal_light_default_exec:s0
-/vendor/bin/hw/vendor\.lineage\.livedisplay@2\.0-service\.xiaomi_raphael                            u:object_r:hal_lineage_livedisplay_qti_exec:s0
 /vendor/bin/hw/vendor\.xiaomi\.hardware\.motor@1\.0-service                                         u:object_r:hal_motor_default_exec:s0
 /vendor/bin/mlipayd@1\.1                                                                            u:object_r:hal_mlipay_default_exec:s0
 

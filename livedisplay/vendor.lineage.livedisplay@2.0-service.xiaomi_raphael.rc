@@ -1,8 +1,0 @@
-on boot
-    chown system system /sys/devices/platform/soc/soc:qcom,dsi-display-primary/hbm
-    chmod 0660 /sys/devices/platform/soc/soc:qcom,dsi-display-primary/hbm
-
-service vendor.livedisplay-hal-2-0 /vendor/bin/hw/vendor.lineage.livedisplay@2.0-service.xiaomi_raphael
-    class hal
-    user system
-    group system

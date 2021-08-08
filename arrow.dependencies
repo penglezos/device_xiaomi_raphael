@@ -6,5 +6,9 @@
   {
     "repository": "android_kernel_xiaomi_raphael",
     "target_path": "kernel/xiaomi/raphael"
+  },
+  {
+    "repository": "android_vendor_xiaomi_raphael",
+    "target_path": "vendor/xiaomi/raphael"
   }
 ]

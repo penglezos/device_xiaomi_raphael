@@ -5,8 +5,8 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/lineage_raphael.mk
+    $(LOCAL_DIR)/arrow_raphael.mk
 
 COMMON_LUNCH_CHOICES := \
-    lineage_raphael-userdebug \
-    lineage_raphael-eng
+    arrow_raphael-userdebug \
+    arrow_raphael-eng
