@@ -455,7 +455,6 @@ vendor/lib64/hw/vendor.qti.hardware.capabilityconfigstore@1.0-impl.so
 
 # Display Calibration
 vendor/etc/qdcm_calib_data_samsung_ea8076_fhd_cmd_dsi_panel.xml
-vendor/etc/qdcm_calib_data_visionox_r66456_fhd_cmd_dsi_panel.xml
 
 # Display Postprocessing
 vendor/bin/hw/vendor.display.color@1.0-service
