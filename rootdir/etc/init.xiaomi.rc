@@ -110,6 +110,8 @@ on boot
 
     chown system system /sys/class/touch/touch_dev/palm_sensor
 
+    chown system system /sys/class/thermal/thermal_message/sconfig
+
     chown system system /sys/class/drm/card0-DSI-1/dim_alpha
     chown system system /sys/class/drm/card0-DSI-1/fod_ui_ready
     chown system system /sys/class/drm/card0-DSI-1/dim_layer_enable
