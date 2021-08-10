@@ -36,6 +36,7 @@
 /dev/block/bootdevice/by-name/system                    /                        ext4    ro,barrier=1,discard                                 wait
 /dev/block/bootdevice/by-name/cache                     /cache                   ext4    nosuid,noatime,nodev,barrier=1                       wait
 /dev/block/bootdevice/by-name/userdata                  /data                    ext4    noatime,nosuid,nodev,barrier=1,noauto_da_alloc,inlinecrypt       latemount,wait,check,fileencryption=ice,wrappedkey,quota,reservedsize=128M
+/dev/block/bootdevice/by-name/userdata                  /data                    f2fs    noatime,nosuid,nodev,discard,background_gc=sync,fsync_mode=nobarrier,inlinecrypt       latemount,wait,check,fileencryption=ice,wrappedkey,quota,formattable,reservedsize=128M
 /devices/platform/soc/8804000.sdhci/mmc_host*           /storage/sdcard1         vfat    nosuid,nodev                                         wait,voldmanaged=sdcard1:auto,encryptable=footer
 /devices/platform/soc/1da4000.ufshc_card/host*          /storage/sdcard1         vfat    nosuid,nodev                                         wait,voldmanaged=sdcard1:auto,encryptable=footer
 /dev/block/bootdevice/by-name/modem                     /vendor/firmware_mnt     vfat    ro,shortname=lower,uid=0,gid=1000,dmask=227,fmask=337,context=u:object_r:firmware_file:s0 wait
