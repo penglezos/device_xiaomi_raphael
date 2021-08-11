@@ -18,9 +18,6 @@
 #include "property_service.h"
 #include "vendor_init.h"
 
-using android::base::GetProperty;
-using std::string;
-
 std::vector<std::string> ro_props_default_source_order = {
     "",
     "odm.",
@@ -95,7 +92,7 @@ void vendor_load_properties() {
     char const fp[] = "Xiaomi/raphael/raphael:11/RKQ1.200826.002/V12.5.4.0.RFKCNXM:user/release-keys";
     char const fp_desc[] = "raphael-user 11 RKQ1.200826.002 V12.5.4.0.RFKCNXM release-keys";
 
-    string region = android::base::GetProperty("ro.boot.hwc", "");
+    std::string region = android::base::GetProperty("ro.boot.hwc", "");
 
     if (region == "INDIA") {
         set_device_props(
