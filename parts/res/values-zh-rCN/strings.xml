@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     Copyright (C) 2020 The LineageOS Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+<resources>
+    <!-- Popup camera settings -->
+    <string name="popup_title">前置摄像头效果</string>
+    <string name="popup_led_title">摄像头 LED 灯</string>
+    <string name="popup_led_summary">在前置摄像头升起和收回时启用 LED 灯</string>
+    <string name="popup_sound_title">声音效果</string>
+    <string name="popup_sound_muqin">木琴</string>
+    <string name="popup_sound_yingyan">鹰眼</string>
+    <string name="popup_sound_mofa">魔法</string>
+    <string name="popup_sound_jijia">机甲</string>
+    <string name="popup_sound_chilun">齿轮</string>
+    <string name="popup_sound_cangmen">舱门</string>
+
+    <!-- Popup camera strings -->
+    <string name="popup_camera_tip">警告</string>
+    <string name="popup_camera_takeback_failed_calibrate">无法关闭前置摄像头。尝试校准电机中。</string>
+    <string name="popup_camera_popup_failed_calibrate">无法开启前置摄像头。尝试校准电机中。</string>
+    <string name="popup_camera_calibrate_running">校准期间不能使用前置摄像头。</string>
+    <string name="popup_camera_calibrate_now">校准</string>
+    <string name="popup_camera_calibrate_failed">无法校准</string>
+    <string name="popup_camera_calibrate_success">校准成功。你现在可以开启前置摄像头了。</string>
+
+    <!-- Thermal profiles -->
+    <string name="thermal_title">温控配置文件</string>
+    <string name="thermal_summary">调整每个应用的温控配置文件以获得最佳性能</string>
+    <string name="thermal_default">默认</string>
+    <string name="thermal_benchmark">基准测试</string>
+    <string name="thermal_browser">浏览器</string>
+    <string name="thermal_camera">相机</string>
+    <string name="thermal_dialer">拨号器</string>
+    <string name="thermal_gaming">游戏</string>
+    <string name="thermal_streaming">流媒体</string>
+
+    <!-- Dirac settings -->
+    <string name="dirac_title">米音</string>
+    <string name="dirac_headset_title">耳机类型</string>
+    <string name="dirac_hifi_enable_title">启用 Hi-Fi</string>
+    <string name="dirac_preset_title">声音预设</string>
+
+    <string name="dirac_hifi_title">Hi-Fi</string>
+    <string name="dirac_hifi_summary">减少噪音和失真，提高音频质量</string>
+
+    <string name="dirac_headset_default">默认</string>
+    <string name="dirac_headset_earbuds">灵动耳塞式</string>
+    <string name="dirac_headset_in_ear_2013">灵悦入耳式</string>
+    <string name="dirac_headset_piston_1">小米活塞耳机 1</string>
+    <string name="dirac_headset_general">通用耳塞式</string>
+    <string name="dirac_headset_general_inear">通用入耳式</string>
+    <string name="dirac_headset_piston_basic">小米活塞耳机基础版</string>
+    <string name="dirac_headset_piston_2">小米活塞耳机 2</string>
+    <string name="dirac_headset_piston_standard">小米活塞耳机标准版</string>
+    <string name="dirac_headset_headphone">小米头戴式耳机</string>
+    <string name="dirac_headset_piston_youth">小米活塞耳机青春版</string>
+    <string name="dirac_headset_piston_color">小米活塞耳机炫彩版</string>
+    <string name="dirac_headset_in_ear">小米圈铁耳机</string>
+    <string name="dirac_headset_capsule">小米胶囊耳机</string>
+    <string name="dirac_headset_in_ear_pro">小米圈铁耳机 Pro</string>
+    <string name="dirac_headset_comfort">小米头戴式耳机轻松版</string>
+    <string name="dirac_headset_reduction_noise">小米降噪耳机（Type-C）</string>
+    <string name="dirac_headset_cancelling">小米降噪耳机（3.5mm）</string>
+    <string name="dirac_headset_half_in_ear">小米双单元半入耳式耳机</string>
+    <string name="dirac_headset_in_ear2">小米圈铁耳机 2</string>
+    <string name="dirac_headset_earphone_basic">小米活塞耳机基础款</string>
+    <string name="dirac_headset_earphone">小米活塞耳机</string>
+
+    <string name="dirac_preset_default">默认</string>
+    <string name="dirac_preset_rock">摇滚</string>
+    <string name="dirac_preset_jazz">爵士</string>
+    <string name="dirac_preset_pop">流行</string>
+    <string name="dirac_preset_classical">古典</string>
+    <string name="dirac_preset_hiphop">嘻哈</string>
+    <string name="dirac_preset_blues">蓝调</string>
+    <string name="dirac_preset_electronic">电子</string>
+    <string name="dirac_preset_country">乡村</string>
+    <string name="dirac_preset_dance">舞蹈</string>
+    <string name="dirac_preset_metal">金属</string>
+</resources>
