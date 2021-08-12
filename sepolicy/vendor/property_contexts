@@ -9,3 +9,6 @@ persist.vendor.sys.fp.      u:object_r:vendor_fp_prop:s0
 
 # Mlipay
 persist.vendor.sys.pay.     u:object_r:vendor_tee_listener_prop:s0
+
+# Thermal
+vendor.sys.thermal.         u:object_r:thermal_normal_prop:s0

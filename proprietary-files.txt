@@ -1301,8 +1301,10 @@ vendor/lib64/vendor.qti.hardware.soter@1.0.so
 vendor/bin/ssr_setup
 
 # Thermal
+vendor/bin/mi_thermald
 vendor/bin/thermal-engine
 vendor/etc/init/init_thermal-engine.rc
+vendor/etc/init/init.mi_thermald.rc
 vendor/etc/thermal-arvr.conf
 vendor/etc/thermal-camera.conf
 vendor/etc/thermal-chg-only.conf

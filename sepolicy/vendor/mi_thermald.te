@@ -1,0 +1,32 @@
+type mi_thermald, domain;
+
+type mi_thermald_exec, exec_type, vendor_file_type, file_type;
+init_daemon_domain(mi_thermald)
+
+allow mi_thermald thermal_data_file:dir rw_dir_perms;
+allow mi_thermald thermal_data_file:file create_file_perms;
+
+allow mi_thermald self:capability { chown fowner fsetid };
+
+r_dir_file(mi_thermald, sysfs_devices_system_cpu)
+r_dir_file(mi_thermald, sysfs_leds)
+r_dir_file(mi_thermald, sysfs_thermal)
+r_dir_file(mi_thermald, sysfs)
+r_dir_file(mi_thermald, vendor_sysfs_battery_supply)
+r_dir_file(mi_thermald, vendor_sysfs_graphics)
+r_dir_file(mi_thermald, vendor_sysfs_kgsl)
+
+allow mi_thermald {
+  sysfs
+  sysfs_devices_system_cpu
+  sysfs_leds
+  sysfs_thermal
+  vendor_sysfs_battery_supply
+  vendor_sysfs_graphics
+  vendor_sysfs_kgsl
+}:{
+  file
+  lnk_file
+} rw_file_perms;
+
+set_prop(mi_thermald, thermal_normal_prop)

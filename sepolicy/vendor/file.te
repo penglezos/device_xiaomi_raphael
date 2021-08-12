@@ -2,6 +2,7 @@
 type audio_socket, file_type;
 type fingerprint_data_file, data_file_type, file_type;
 type persist_camera_file, vendor_persist_type, file_type;
+type thermal_data_file, data_file_type, file_type;
 
 # Nodes
 type sysfs_fod, sysfs_type, fs_type;
