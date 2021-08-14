@@ -30,16 +30,6 @@ on early-init
 
 on fs
     mkdir /mnt/vendor/persist/audio 0755 system system
-    mkdir /mnt/vendor/persist/subsys 0770 root system
-
-    chown system system /dev/tfa_reg
-    chown system system /dev/tfa_rw
-    chown system system /dev/tfa_rpc
-    chown system system /dev/tfa_control
-    chmod 0660 /dev/tfa_reg
-    chmod 0660 /dev/tfa_rw
-    chmod 0660 /dev/tfa_rpc
-    chmod 0660 /dev/tfa_control
 
     chmod 644 /mnt/vendor/persist/audio/us_manual_cal
 
@@ -48,8 +38,6 @@ on init
     chown system system /sys/class/leds/white/breath
     chown system system /sys/class/leds/green/brightness
     chown system system /sys/class/leds/green/breath
-
-    chown system system /sys/class/backlight/panel0-backlight/brightness
 
     chown system camera /dev/drv8846_dev
     chown system camera /dev/akm09970
@@ -69,55 +57,14 @@ on post-fs-data
     mkdir /data/vendor/mac_addr 0770 system wifi
     mkdir /data/vendor/nfc 0770 nfc nfc
 
-    chmod 0666 /dev/migt
-    chmod 0777 /sys/module/migt/parameters/boost_policy
-    chmod 0777 /sys/module/migt/parameters/fas_power_mod
-    chmod 0777 /sys/module/migt/parameters/fps_variance_ratio
-    chmod 0777 /sys/module/migt/parameters/migt_ceiling_freq
-    chmod 0777 /sys/module/migt/parameters/migt_freq
-    chmod 0777 /sys/module/migt/parameters/migt_ms
-    chmod 0777 /sys/module/migt/parameters/migt_thresh
-    chmod 0777 /sys/module/migt/parameters/stask_candidate_num
-    chmod 0777 /sys/module/migt/parameters/super_task_max_num
-    restorecon /dev/migt
-    restorecon /sys/module/migt/parameters/boost_policy
-    restorecon /sys/module/migt/parameters/fas_power_mod
-    restorecon /sys/module/migt/parameters/fps_variance_ratio
-    restorecon /sys/module/migt/parameters/migt_ceiling_freq
-    restorecon /sys/module/migt/parameters/migt_freq
-    restorecon /sys/module/migt/parameters/migt_ms
-    restorecon /sys/module/migt/parameters/migt_thresh
-    restorecon /sys/module/migt/parameters/stask_candidate_num
-    restorecon /sys/module/migt/parameters/super_task_max_num
-
     chmod 0644 /dev/elliptic0
     chmod 0644 /dev/elliptic1
 
 on boot
-    chown system system /sys/class/leds/green/step_ms
-    chown system system /sys/class/leds/green/pause_lo_count
-    chown system system /sys/class/leds/green/lut_pattern
-    chown system system /sys/class/leds/green/lo_idx
-    chown system system /sys/class/leds/green/brightness
-    chown system system /sys/class/leds/blue/step_ms
-    chown system system /sys/class/leds/blue/pause_lo_count
-    chown system system /sys/class/leds/blue/lut_pattern
-    chown system system /sys/class/leds/blue/lo_idx
-    chown system system /sys/class/leds/blue/brightness
-
     # Create persist for camera calibration data
     mkdir /mnt/vendor/persist/camera 0755 system cameraserver
 
-    chown system system /sys/class/touch/touch_dev/palm_sensor
-
     chown system system /sys/class/thermal/thermal_message/sconfig
-
-    chown system system /sys/class/drm/card0-DSI-1/dim_alpha
-    chown system system /sys/class/drm/card0-DSI-1/fod_ui_ready
-    chown system system /sys/class/drm/card0-DSI-1/dim_layer_enable
-    chown system system /sys/class/drm/card0-DSI-1/doze_backlight
-
-    chown system system /proc/tp_selftest
 
 service remosaic_daemon /system/vendor/bin/remosaic_daemon
    class late_start
