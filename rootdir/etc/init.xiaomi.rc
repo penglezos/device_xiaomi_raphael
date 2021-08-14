@@ -34,8 +34,8 @@ on fs
     chmod 644 /mnt/vendor/persist/audio/us_manual_cal
 
 on init
-    chown system system /sys/class/leds/white/brightness
-    chown system system /sys/class/leds/white/breath
+    chown system system /sys/class/leds/blue/brightness
+    chown system system /sys/class/leds/blue/breath
     chown system system /sys/class/leds/green/brightness
     chown system system /sys/class/leds/green/breath
 
