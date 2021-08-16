@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
      Copyright (C) 2015-2016 The CyanogenMod Project
-                   2017-2018 The LineageOS Project
+                   2017-2020 The LineageOS Project
 
      Licensed under the Apache License, Version 2.0 (the "License");
      you may not use this file except in compliance with the License.
@@ -21,7 +21,8 @@
     android:versionName="1.0"
     android:sharedUserId="android.uid.system">
 
-    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
     <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
     <uses-permission android:name="android.permission.GET_TASKS" />
     <uses-permission android:name="android.permission.WAKE_LOCK" />
@@ -81,7 +82,7 @@
                 android:value="-255" />
         </activity>
 
-                <activity
+        <activity
             android:name=".thermal.ThermalActivity"
             android:label="@string/thermal_title"
             android:theme="@style/Theme.Main">
@@ -98,6 +99,7 @@
                 android:name="com.android.settings.order"
                 android:value="1" />
         </activity>
+
         <service
             android:name=".thermal.ThermalService"
             android:permission="ThermalService">

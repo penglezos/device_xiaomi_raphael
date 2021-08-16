@@ -40,6 +40,5 @@ public class BootCompletedReceiver extends BroadcastReceiver {
         }
         PopupCameraUtils.startService(context);
         ThermalUtils.initialize(context);
-
     }
 }
