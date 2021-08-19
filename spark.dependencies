@@ -13,5 +13,11 @@
         "clone-depth":	"1",
         "target_path":	"prebuilts/clang/host/linux-x86/clang-proton",
         "branch":	"master"
+    },
+    {
+      "remote":"gitlab",
+      "repository":"naveenjohnsonv/android_vendor_googlecamera",
+      "target_path":"vendor/GoogleCamera",
+      "branch":"master"
     }
 ]
