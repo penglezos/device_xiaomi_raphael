@@ -1381,8 +1381,11 @@ system_ext/lib64/libwfduibcsrcinterface.so
 -system_ext/priv-app/WfdService/WfdService.apk
 system_ext/lib/vendor.qti.hardware.wifidisplaysession@1.0.so
 system_ext/lib64/vendor.qti.hardware.wifidisplaysession@1.0.so
+vendor/bin/wfdvndservice
 vendor/bin/wifidisplayhalservice
 vendor/etc/init/com.qualcomm.qti.wifidisplayhal@1.0-service.rc
+vendor/etc/init/wfdvndservice.rc
+vendor/etc/seccomp_policy/wfdvndservice.policy
 vendor/etc/seccomp_policy/wifidisplayhalservice.policy
 vendor/etc/wfdconfig.xml
 vendor/lib/libFileMux_proprietary.so
