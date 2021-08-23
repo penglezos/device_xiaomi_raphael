@@ -14,5 +14,9 @@ persist.vendor.radio.report_codec=1
 ril.subscription.types=NV,RUIM
 ro.telephony.default_network=22,22
 
+# SSR
+persist.vendor.ssr.enable_ramdumps=1
+persist.vendor.ssr.restart_level=ALL_ENABLE
+
 # Vendor
 ro.vendor.qti.va_aosp.support=1
