@@ -2,10 +2,15 @@
 debug.sf.disable_backpressure=1
 debug.sf.enable_hwc_vds=1
 
+# GPS
+persist.vendor.overlay.izat.optin=rro
+
 # IMS
 persist.dbg.volte_avail_ovr=1
 persist.dbg.vt_avail_ovr=1
 persist.dbg.wfc_avail_ovr=1
+persist.vendor.ims.disableADBLogs=1
+persist.vendor.ims.disableIMSLogs=1
 
 # RIL
 persist.radio.apm_sim_not_pwdn=1
@@ -13,6 +18,9 @@ persist.vendor.radio.enable_temp_dds=true
 persist.vendor.radio.report_codec=1
 ril.subscription.types=NV,RUIM
 ro.telephony.default_network=22,22
+
+# Sensors
+persist.vendor.sensors.enable.mag_filter=true
 
 # SSR
 persist.vendor.ssr.enable_ramdumps=1
