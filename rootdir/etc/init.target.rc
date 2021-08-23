@@ -31,7 +31,6 @@ import /vendor/etc/init/init.mi_thermald.rc
 
 on early-init
     write /proc/sys/kernel/sched_boost 1
-    symlink /data/tombstones /tombstones
 
 on init
     write /dev/stune/foreground/schedtune.sched_boost_no_override 1
