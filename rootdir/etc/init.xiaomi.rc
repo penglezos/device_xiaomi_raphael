@@ -57,6 +57,9 @@ on post-fs-data
     mkdir /data/vendor/mac_addr 0770 system wifi
     mkdir /data/vendor/nfc 0770 nfc nfc
 
+    mkdir /data/vendor/thermal 0771 root system
+    mkdir /data/vendor/thermal/config 0771 root system
+
     chmod 0644 /dev/elliptic0
     chmod 0644 /dev/elliptic1
 
