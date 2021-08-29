@@ -69,6 +69,9 @@ on boot
 
     chown system system /sys/class/thermal/thermal_message/sconfig
 
+    # Touchpanel
+    chown system system /sys/touchpanel/double_tap
+
 service remosaic_daemon /system/vendor/bin/remosaic_daemon
    class late_start
    user camera
@@ -87,12 +90,6 @@ service nv_mac /vendor/bin/nv_mac
     user system
     group system inet net_admin wifi net_raw
     oneshot
-
-service vendor.power /vendor/bin/hw/android.hardware.power-service-qti
-    override
-    class hal
-    user system
-    group system input
 
 service vendor.nfc_hal_service /vendor/bin/hw/android.hardware.nfc@1.2-service
     override
