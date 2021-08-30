@@ -1302,6 +1302,7 @@ vendor/bin/ssr_setup
 # Thermal
 vendor/bin/mi_thermald
 vendor/bin/thermal-engine
+vendor/bin/thermal_factory
 vendor/etc/init/init_thermal-engine.rc
 vendor/etc/init/init.mi_thermald.rc
 vendor/etc/thermal-arvr.conf
@@ -1316,6 +1317,7 @@ vendor/etc/thermal-normal.conf
 vendor/etc/thermal-phone.conf
 vendor/etc/thermal-tgame.conf
 vendor/etc/thermal-youtobe.conf
+vendor/etc/thermald-devices.conf
 -vendor/lib/libthermalclient.so
 -vendor/lib64/libthermalclient.so
 
