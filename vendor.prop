@@ -193,3 +193,6 @@ vendor.usb.use_ffs_mtp=0
 
 # WiFi
 wifi.aware.interface=wifi-aware0
+
+# Freezer
+persist.device_config.use_cgroup_freezer=true
