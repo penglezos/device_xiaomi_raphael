@@ -49,6 +49,7 @@
 
     <!-- Dirac settings -->
     <string name="dirac_title">Dirac sound enhancer</string>
+    <string name="dirac_summary">Optimize sound quality with Dirac, Hi-Fi</string>
     <string name="dirac_headset_title">Headset type</string>
     <string name="dirac_hifi_enable_title">Enable Hi-Fi</string>
     <string name="dirac_preset_title">Sound preset</string>
