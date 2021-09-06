@@ -25,9 +25,6 @@
 # ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #
 
-on early-init
-    exec u:r:vendor_modprobe:s0 -- /vendor/bin/modprobe -a -d /vendor/lib/modules audio_cs35l41 audio_tas2557 audio_tas256x audio_tfa98xx
-
 on fs
     mkdir /mnt/vendor/persist/audio 0755 system system
     mkdir /mnt/vendor/persist/subsys 0770 root system

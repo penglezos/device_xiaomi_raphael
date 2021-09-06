@@ -101,9 +101,6 @@ on boot
     write /dev/cpuset/background/cpus 0-7
     write /dev/cpuset/system-background/cpus 0-7
 
-#Load WLAN driver
-    insmod /vendor/lib/modules/qca_cld3_wlan.ko
-
 # Add a cpuset for the camera daemon
 # We want all cores for camera
     mkdir /dev/cpuset/camera-daemon
