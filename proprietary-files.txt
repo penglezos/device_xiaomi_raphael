@@ -735,34 +735,34 @@ vendor/lib64/libdiagjni.so
 vendor/etc/hdr_config.cfg
 vendor/etc/sdr_config.cfg
 
-# Display (Postprocessing)
-vendor/bin/hw/vendor.display.color@1.0-service
-vendor/bin/ppd
-vendor/bin/qdcmss
-vendor/etc/init/qdcmss.rc
-vendor/etc/init/vendor.display.color@1.0-service.rc
-vendor/lib/libdisp-aba.so
-vendor/lib/libdisplayqos.so
-vendor/lib/libdpps.so
-vendor/lib/libmm-hdcpmgr.so
-vendor/lib/vendor.display.color@1.0.so
-vendor/lib/vendor.display.color@1.1.so
-vendor/lib/vendor.display.color@1.2.so
-vendor/lib/vendor.display.color@1.3.so
-vendor/lib/vendor.display.color@1.4.so
-vendor/lib/vendor.display.color@1.5.so
-vendor/lib/vendor.display.postproc@1.0.so
-vendor/lib64/libdisp-aba.so
-vendor/lib64/libdisplayqos.so
-vendor/lib64/libdpps.so
-vendor/lib64/libmm-hdcpmgr.so
-vendor/lib64/vendor.display.color@1.0.so
-vendor/lib64/vendor.display.color@1.1.so
-vendor/lib64/vendor.display.color@1.2.so
-vendor/lib64/vendor.display.color@1.3.so
-vendor/lib64/vendor.display.color@1.4.so
-vendor/lib64/vendor.display.color@1.5.so
-vendor/lib64/vendor.display.postproc@1.0.so
+# Display (Postprocessing) - from LA.UM.9.1.r1-10600-SMxxx0.0
+vendor/bin/hw/vendor.display.color@1.0-service|91e9e25ec4d64c4a7d5261899ca2cdb9cf29b695
+vendor/bin/ppd|57172f5d3b0b9bfc04f5eed93672d2b6f175d1f4
+vendor/bin/qdcmss|a1bb68e4508feac29c821eb791cae8b1db235e28
+vendor/etc/init/qdcmss.rc|53d78d686678c4f923a9ec4ace7d4d3575b13788
+vendor/etc/init/vendor.display.color@1.0-service.rc|5ad673f879b3685a0e79b5633437e5499cb94f48
+vendor/lib/libdisp-aba.so|539ac8ff89fd51fa0ce8a11d9c476843291392bc
+vendor/lib/libdisplayqos.so|1c01c72ca8e3ce28d3b0fb716e4d7ed21af44875
+vendor/lib/libdpps.so|4e91d4534a43879fca842ae45963b3c054961684
+vendor/lib/libmm-hdcpmgr.so|057fc29807be0f2527c3026d01dff98cfe9018ad
+vendor/lib/vendor.display.color@1.0.so|04498bbb161928fcc60bdec9a3a3a01b2a0984dc
+vendor/lib/vendor.display.color@1.1.so|dad895638c7cbf2770e28f61cbdd94dc5f063082
+vendor/lib/vendor.display.color@1.2.so|251cbeaef1690071f0ef637df0a4bf79286f635e
+vendor/lib/vendor.display.color@1.3.so|a17abb22378440a73dd9d6d466ffed202095f2b8
+vendor/lib/vendor.display.color@1.4.so|0107792a92013a27c471695ba2a05c4b66fe75f2
+vendor/lib/vendor.display.color@1.5.so|097e831a4d293389c47fde1976c6e462ae7375ff
+vendor/lib/vendor.display.postproc@1.0.so|4d3be1c84615ece5e510ba87c7055433a3bcc2c7
+vendor/lib64/libdisp-aba.so|44993853ff9d4340e856e6f53d802f10372442d3
+vendor/lib64/libdisplayqos.so|5548732c916e629f18f45ce257ce843b679a136a
+vendor/lib64/libdpps.so|51b2b46ea5b9779e38305c15b21486d3c0a18cf7
+vendor/lib64/libmm-hdcpmgr.so|70b7835af68eafc2140727463e47a7b26b6b4515
+vendor/lib64/vendor.display.color@1.0.so|f2af8d5ecc146560dca66895b5173e86e406e41e
+vendor/lib64/vendor.display.color@1.1.so|2cbb29aa26a15165a6b2f92065207930f4e050d9
+vendor/lib64/vendor.display.color@1.2.so|78875790131fffba844443bedb0f0f7e1d8ab47b
+vendor/lib64/vendor.display.color@1.3.so|8f3c1f9be4e9f7b684fef7aa5f585693a9c1127e
+vendor/lib64/vendor.display.color@1.4.so|35a82515000ec820e423d7770b750a46917c38c6
+vendor/lib64/vendor.display.color@1.5.so|4a21e97cd5b391634d52a48a3db59f89814eb5ca
+vendor/lib64/vendor.display.postproc@1.0.so|9c7232cd75fd9df83e4a7b28c5ee796f488a6985
 
 # DPM
 -framework/tcmclient.jar
