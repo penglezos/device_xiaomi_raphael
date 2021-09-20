@@ -847,16 +847,16 @@ vendor/firmware/a640_zap.mdt
 vendor/firmware/goodix_gt9886_limit_f11_first.tporder
 vendor/firmware/goodix_gt9886_limit_f11_second.tporder
 
-# FM
-system_ext/lib64/fm_helium.so
-system_ext/lib64/libfm-hci.so
--system_ext/lib64/vendor.qti.hardware.fm@1.0.so
-vendor/bin/fm_qsoc_patches
-vendor/bin/fmconfig
-vendor/bin/fmfactorytest
-vendor/bin/fmfactorytestserver
-vendor/etc/init/init.qti.fm.rc
-vendor/etc/init.qti.fm.sh
+# FM - from LA.UM.9.1.r1-10600-SMxxx0.0
+system_ext/lib64/fm_helium.so|0d810fb4f094daf6f399a3d13f379a13114b21a6
+system_ext/lib64/libfm-hci.so|66ccf3fc817cf744871ea4178702359bb8babbd5
+-system_ext/lib64/vendor.qti.hardware.fm@1.0.so|0bfc9d9097698b7cc8cb74721cb971a80f862720
+vendor/bin/fm_qsoc_patches|62afd65922ee1d8ae3f5d20f40014178bc4b7284
+vendor/bin/fmconfig|4199d024e6a8879713bfed8ca2c2126b60318abd
+vendor/bin/fmfactorytest|1057197fe8d566550b6392e2ee5b471b8a60154a
+vendor/bin/fmfactorytestserver|91cd34c70042068258f5217ee0dcbfd2e53e67ea
+vendor/etc/init/init.qti.fm.rc|4f5459058debbea76991e69f8522126f6655fd3b
+vendor/etc/init.qti.fm.sh|0ac820dd85ebdf5fa73b5e971f6787ff35ceb65d
 
 # FTM
 vendor/bin/ftmdaemon
