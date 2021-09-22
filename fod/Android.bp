@@ -16,7 +16,6 @@
 cc_binary {
     relative_install_path: "hw",
     defaults: ["hidl_defaults"],
-    vintf_fragments: ["vendor.lineage.biometrics.fingerprint.inscreen@1.0-service.raphael.xml"],
     name: "vendor.lineage.biometrics.fingerprint.inscreen@1.0-service.raphael",
     init_rc: ["vendor.lineage.biometrics.fingerprint.inscreen@1.0-service.raphael.rc"],
     srcs: [
@@ -42,5 +41,8 @@ cc_library_static {
     srcs: ["fod_extension.cpp"],
     include_dirs: [
         "frameworks/native/services/surfaceflinger/CompositionEngine/include"
+    ],
+    header_libs: [
+        "generated_kernel_headers",
     ],
 }

@@ -53,10 +53,8 @@ class FingerprintInscreen : public IFingerprintInscreen {
     Return<void> setCallback(const sp<IFingerprintInscreenCallback>& callback) override;
 
   private:
+    bool mFodCircleVisible;
     sp<IXiaomiFingerprint> xiaomiFingerprintService;
-
-    std::mutex mCallbackLock;
-    sp<IFingerprintInscreenCallback> mCallback;
 };
 
 }  // namespace implementation
