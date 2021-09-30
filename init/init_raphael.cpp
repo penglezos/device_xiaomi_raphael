@@ -105,16 +105,16 @@ void vendor_load_properties() {
     if (region == "GLOBAL") {
         model = "Mi 9T Pro";
         device = "raphael";
-        description = "raphael-user 11 RKQ1.200826.002 V12.5.1.0.RFKMIXM release-keys";
+        description = "raphael-user 11 RKQ1.200826.002 V12.5.2.0.RFKMIXM release-keys";
         mod_device = "raphael_global";
     } else if (region == "CN") {
         model = "Redmi K20 Pro";
         device = "raphael";
-        description = "raphael-user 11 RKQ1.200826.002 V12.5.4.0.RFKCNXM release-keys";
+        description = "raphael-user 11 RKQ1.200826.002 V12.5.5.0.RFKCNXM release-keys";
     } else if (region == "INDIA") {
         model = "Redmi K20 Pro";
         device = "raphaelin";
-        description = "raphaelin-user 10 QKQ1.190825.002 V12.0.6.0.QFKINXM release-keys";
+        description = "raphaelin-user 11 RKQ1.200826.002 V12.5.1.0.RFKINXM release-keys";
         mod_device = "raphaelin_in_global";
     }
 
