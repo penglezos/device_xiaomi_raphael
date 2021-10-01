@@ -68,6 +68,12 @@ on boot
 
     chown system system /sys/class/thermal/thermal_message/sconfig
 
+on charger
+    mkdir /mnt/vendor/persist
+    chown root system /mnt/vendor/persist
+    chmod 0771 /mnt/vendor/persist
+    mkdir /mnt/vendor/persist/subsys 0770 root system
+
 service remosaic_daemon /system/vendor/bin/remosaic_daemon
    class late_start
    user camera
