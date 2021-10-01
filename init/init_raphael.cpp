@@ -59,8 +59,7 @@ void load_dalvik_properties() {
     property_override("dalvik.vm.heapminfree", "8m");
 }
 
-void set_device_props(const std::string fingerprint, const std::string description,
-        const std::string brand, const std::string device, const std::string model) {
+void set_device_props(const std::string brand, const std::string device, const std::string model) {
     const auto set_ro_build_prop = [](const std::string &source,
                                       const std::string &prop,
                                       const std::string &value) {
@@ -76,38 +75,23 @@ void set_device_props(const std::string fingerprint, const std::string descripti
     };
 
     for (const auto &source : ro_props_default_source_order) {
-        set_ro_build_prop(source, "fingerprint", fingerprint);
         set_ro_product_prop(source, "brand", brand);
         set_ro_product_prop(source, "device", device);
         set_ro_product_prop(source, "model", model);
     }
-
-    property_override("ro.build.fingerprint", fingerprint.c_str());
-    property_override("ro.build.description", description.c_str());
-    property_override("ro.bootimage.build.fingerprint", fingerprint.c_str());
-    property_override("ro.system_ext.build.fingerprint", fingerprint.c_str());
 }
 
 void vendor_load_properties() {
-    char const fp[] = "Xiaomi/raphael/raphael:11/RKQ1.200826.002/V12.5.4.0.RFKCNXM:user/release-keys";
-    char const fp_desc[] = "raphael-user 11 RKQ1.200826.002 V12.5.4.0.RFKCNXM release-keys";
-
     std::string region = android::base::GetProperty("ro.boot.hwc", "");
 
     if (region == "INDIA") {
         set_device_props(
-            fp,
-            fp_desc,
             "Xiaomi", "raphaelin", "Redmi K20 Pro");
     } else if (region == "CN") {
         set_device_props(
-            fp,
-            fp_desc,
             "Xiaomi", "raphael", "Redmi K20 Pro");
     } else {
         set_device_props(
-            fp,
-            fp_desc,
             "Xiaomi", "raphael", "Mi 9T Pro");
     }
 
