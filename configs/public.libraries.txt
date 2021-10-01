@@ -6,10 +6,24 @@ libfastcvopt.so
 liblistensoundmodel2.so
 libOpenCL.so
 libnpu.so
+libmpbase.so 64
+libmialgoengine.so 64
 libVDClearShot.so
 libHalSuperSensorServer.so
 libSuperSensor.so
 libSuperSensorCPU.so
+libarcsoft_beautyshot.so 64
+libarcsoft_dualcam_refocus.so 64
+libarcsoft_dualcam_refocus_rear_t.so 64
+libarcsoft_dualcam_refocus_rear_w.so 64
+libarcsoft_dualcam_refocus_front.so 64
+libarcsoft_portrait_lighting.so 64
+libarcsoft_portrait_lighting_c.so 64
+libarcsoft_high_dynamic_range.so 64
+libarcsoft_low_light_hdr.so 64
+libmibokeh_855.so 64
+libarcsoft_distortion_correction.so 64
+libarcsoft_bodyslim.so 64
 libalCFR.so
 libcvp.so
 libcvp_stub.so
