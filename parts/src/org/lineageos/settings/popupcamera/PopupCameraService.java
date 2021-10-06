@@ -95,8 +95,8 @@ public class PopupCameraService extends Service implements Handler.Callback {
     private CameraManager.AvailabilityCallback availabilityCallback =
             new CameraManager.AvailabilityCallback() {
                 @Override
-                public void onCameraAvailable(@NonNull String cameraId) {
-                    super.onCameraAvailable(cameraId);
+                public void onCameraClosed(@NonNull String cameraId) {
+                    super.onCameraClosed(cameraId);
                     if (cameraId.equals(Constants.FRONT_CAMERA_ID)) {
                         mClosedEvent = SystemClock.elapsedRealtime();
                         if (SystemClock.elapsedRealtime() - mOpenEvent
@@ -110,8 +110,8 @@ public class PopupCameraService extends Service implements Handler.Callback {
                 }
 
                 @Override
-                public void onCameraUnavailable(@NonNull String cameraId) {
-                    super.onCameraAvailable(cameraId);
+                public void onCameraOpened(@NonNull String cameraId, @NonNull String packageId) {
+                    super.onCameraOpened(cameraId, packageId);
                     if (cameraId.equals(Constants.FRONT_CAMERA_ID)) {
                         mOpenEvent = SystemClock.elapsedRealtime();
                         if (SystemClock.elapsedRealtime() - mClosedEvent
