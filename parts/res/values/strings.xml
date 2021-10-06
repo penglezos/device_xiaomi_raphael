@@ -15,8 +15,11 @@
      limitations under the License.
 -->
 <resources>
+    <!-- Ambient settings -->
+    <string name="ambient_enable">Enable ambient display</string>
+
     <!-- Popup camera settings -->
-    <string name="popup_title">Front camera effects</string>
+    <string name="popup_title">Front camera settings</string>
     <string name="popup_led_title">Camera LED</string>
     <string name="popup_led_summary">Enable LED light while the front camera appears and retracts</string>
     <string name="popup_sound_title">Sound effects</string>
@@ -48,6 +51,7 @@
     <string name="thermal_streaming">Streaming</string>
 
     <!-- Dirac settings -->
+    <string name="dirac_enable">Enable dirac</string>
     <string name="dirac_title">Dirac sound enhancer</string>
     <string name="dirac_summary">Optimize sound quality with Dirac, Hi-Fi</string>
     <string name="dirac_headset_title">Headset type</string>
