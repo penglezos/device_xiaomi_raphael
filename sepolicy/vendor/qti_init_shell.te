@@ -1,0 +1,1 @@
+get_prop(vendor_qti_init_shell, radio_control_prop)
