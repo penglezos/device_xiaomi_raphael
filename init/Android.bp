@@ -10,7 +10,7 @@ cc_library_static {
     shared_libs: ["libbase"],
     recovery_available: true,
     include_dirs: [
-        "system/core/base/include",
-        "system/core/init"
+        "system/core/init",
+        "system/libbase/include"
     ]
 }
