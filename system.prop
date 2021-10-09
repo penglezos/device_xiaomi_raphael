@@ -97,6 +97,7 @@ persist.radio.dynamic_sar=false
 persist.radio.multisim.config=dsds
 persist.radio.NO_STAPA=1
 persist.radio.VT_HYBRID_ENABLE=1
+persist.sys.fflag.override.settings_provider_model=false
 ril.subscription.types=NV,RUIM
 rild.libpath=/vendor/lib64/libril-qc-hal-qmi.so
 ro.telephony.default_cdma_sub=0
