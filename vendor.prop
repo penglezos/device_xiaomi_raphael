@@ -98,6 +98,9 @@ drm.service.enabled=true
 # Factory Reset Protection
 ro.frp.pst=/dev/block/bootdevice/by-name/frp
 
+# FM
+vendor.hw.fm.init=0
+
 # Gatekeeper
 vendor.gatekeeper.disable_spu=true
 
