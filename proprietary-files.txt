@@ -807,15 +807,8 @@ vendor/lib64/libfastcvdsp_stub.so
 -vendor/lib64/libfastcvopt.so
 
 # Fingerprint
-vendor/bin/hw/android.hardware.biometrics.fingerprint@2.1-service
-vendor/etc/init/android.hardware.biometrics.fingerprint@2.1-service.rc
--vendor/etc/vintf/manifest/android.hardware.biometrics.fingerprint@2.1-service.xml
-vendor/lib/hw/fingerprint.goodix_fod.so
-vendor/lib/libgf_hal.so
 vendor/lib64/hw/fingerprint.goodix_fod.so:vendor/lib64/hw/fingerprint.goodix_fod.msmnile.so
-vendor/lib64/libarm_proxy_skel.so
 vendor/lib64/libgf_hal.so
-vendor/lib64/libhvx_proxy_stub.so
 
 # Firmware (ipa)
 vendor/firmware/ipa_uc.b00
