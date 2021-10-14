@@ -15,7 +15,7 @@
  * limitations under the License.
  */
 
-#define LOG_TAG "android.hardware.biometrics.fingerprint@2.1-service.raphael"
+#define LOG_TAG "android.hardware.biometrics.fingerprint@2.3-service.raphael"
 
 #include <android/log.h>
 #include <hidl/HidlTransportSupport.h>
@@ -27,7 +27,7 @@ using android::hardware::configureRpcThreadpool;
 using android::hardware::joinRpcThreadpool;
 
 // Generated HIDL files
-using android::hardware::biometrics::fingerprint::V2_1::implementation::BiometricsFingerprint;
+using android::hardware::biometrics::fingerprint::V2_3::implementation::BiometricsFingerprint;
 
 using android::status_t;
 

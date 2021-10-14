@@ -193,7 +193,7 @@ PRODUCT_PACKAGES += \
 
 # Fingerprint
 PRODUCT_PACKAGES += \
-    android.hardware.biometrics.fingerprint@2.1-service.raphael \
+    android.hardware.biometrics.fingerprint@2.3-service.raphael \
     vendor.lineage.biometrics.fingerprint.inscreen@1.0-service.raphael \
     vendor.goodix.hardware.biometrics.fingerprint@2.1.vendor \
     vendor.xiaomi.hardware.fingerprintextension@1.0.vendor
