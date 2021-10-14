@@ -16,3 +16,8 @@ set_prop(hal_fingerprint_default, vendor_fp_prop)
 
 # Allow hal_fingerprint_default to read fastrpc_shell_3
 allow hal_fingerprint_default public_adsprpcd_file:file r_file_perms;
+
+allow hal_fingerprint_default sysfs_fod:file rw_file_perms;
+
+allow hal_fingerprint_default vendor_sysfs_graphics:dir r_dir_perms;
+allow hal_fingerprint_default vendor_sysfs_graphics:file r_file_perms;
