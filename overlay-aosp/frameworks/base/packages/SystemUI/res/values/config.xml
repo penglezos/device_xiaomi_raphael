@@ -29,4 +29,8 @@
 
     <!-- FPSInfoService Fps file path -->
     <string name="config_fpsInfoSysNode" translatable="false">/sys/class/drm/card0/sde-crtc-0/measured_fps</string>
+
+    <!-- The battery current divider, some kernel report current value in mA other in µA.
+    Leave 1 if you have mA, put 1000 if you have µA-->
+    <integer name="config_battCurrentDivider" translatable="false">1000</integer>
 </resources>
