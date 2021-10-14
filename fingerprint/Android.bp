@@ -14,10 +14,10 @@
 // limitations under the License.
 
 cc_binary {
-    name: "android.hardware.biometrics.fingerprint@2.1-service.xiaomi_raphael",
+    name: "android.hardware.biometrics.fingerprint@2.3-service.xiaomi_raphael",
     relative_install_path: "hw",
     defaults: ["hidl_defaults"],
-    init_rc: ["android.hardware.biometrics.fingerprint@2.1-service.xiaomi_raphael.rc"],
+    init_rc: ["android.hardware.biometrics.fingerprint@2.3-service.xiaomi_raphael.rc"],
     srcs: ["service.cpp", "BiometricsFingerprint.cpp"],
     shared_libs: [
         "libbase",
@@ -27,6 +27,8 @@ cc_binary {
         "libutils",
         "libcutils",
         "android.hardware.biometrics.fingerprint@2.1",
+        "android.hardware.biometrics.fingerprint@2.2",
+        "android.hardware.biometrics.fingerprint@2.3",
         "vendor.xiaomi.hardware.fingerprintextension@1.0",
     ],
     proprietary: true,
