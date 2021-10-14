@@ -38,7 +38,7 @@ TARGET_2ND_CPU_VARIANT := cortex-a9
 TARGET_2ND_CPU_VARIANT_RUNTIME := cortex-a76
 
 # ANT+
-BOARD_ANT_WIRELESS_DEVICE := "qualcomm-hidl"
+BOARD_ANT_WIRELESS_DEVICE := "vfs-prerelease"
 
 # Assert
 TARGET_OTA_ASSERT_DEVICE := raphael,raphaelin
