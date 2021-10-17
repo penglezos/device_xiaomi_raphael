@@ -10,9 +10,3 @@ sh_binary {
     src: "init.qcom.usb.sh",
     vendor: true,
 }
-
-sh_binary {
-    name: "init.mi.usb.sh",
-    src: "init.mi.usb.sh",
-    vendor: true,
-}
