@@ -19,6 +19,9 @@
     <!-- Default radius of the software rounded corners. -->
     <dimen name="rounded_corner_radius">103px</dimen>
 
+    <!-- Adjustment for software rounded corners since corners aren't perfectly round. -->
+    <dimen name="rounded_corner_radius_adjustment">19px</dimen>
+
     <!-- Height of the status bar -->
     <dimen name="status_bar_height_portrait">35dp</dimen>
 </resources>
