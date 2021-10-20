@@ -32,7 +32,6 @@ persist.vendor.overlay.izat.optin=rro
 
 # Graphics
 ro.opengles.version=196610
-debug.sf.enable_hwc_vds=1
 debug.cpurend.vsync=false
 
 # HWUI
@@ -142,7 +141,3 @@ persist.timed.enable=true
 
 # WiFi
 config.disable_rtt=true
-
-# Wifi Display
-persist.debug.wfd.enable=1
-persist.sys.wfd.virtual=0

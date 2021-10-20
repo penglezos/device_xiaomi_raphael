@@ -77,11 +77,6 @@ It allows additional grants on top of privapp-permissions-platform.xml
         <permission name="android.permission.REBOOT"/>
     </privapp-permissions>
 
-    <privapp-permissions package="com.qualcomm.wfd.service">
-        <permission name="android.permission.READ_FRAME_BUFFER"/>
-        <permission name="android.permission.WRITE_MEDIA_STORAGE"/>
-    </privapp-permissions>
-
     <privapp-permissions package="com.android.mms">
         <permission name="android.permission.READ_PRIVILEGED_PHONE_STATE"/>
         <permission name="android.permission.WRITE_APN_SETTINGS"/>

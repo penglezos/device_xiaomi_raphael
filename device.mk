@@ -157,7 +157,10 @@ include vendor/qcom/opensource/commonsys-intf/display/config/display-interfaces-
 include vendor/qcom/opensource/commonsys-intf/display/config/display-product-system.mk
 
 PRODUCT_PACKAGES += \
-    libtinyxml
+    libtinyxml \
+    libdisplayconfig \
+    libqdMetaData \
+    libqdMetaData.system
 
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
     ro.surface_flinger.has_wide_color_display=true \
@@ -547,14 +550,6 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.wifi.direct.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.wifi.direct.xml \
     frameworks/native/data/etc/android.hardware.wifi.passpoint.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.wifi.passpoint.xml \
     frameworks/native/data/etc/android.hardware.wifi.rtt.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.wifi.rtt.xml
-
-# WiFi Display
-PRODUCT_PACKAGES += \
-    libnl \
-    libwfdaac_vendor
-
-PRODUCT_BOOT_JARS += \
-    WfdCommon
 
 # XiaomiParts
 PRODUCT_PACKAGES += \

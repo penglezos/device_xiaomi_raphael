@@ -60,10 +60,6 @@ function blob_fixup() {
             "${PATCHELF}" --remove-needed "libmegface.so" "${2}"
             "${PATCHELF}" --add-needed "libshim_megvii.so" "${2}"
             ;;
-            
-        system_ext/lib64/libwfdnative.so)
-            "${PATCHELF}" --remove-needed "android.hidl.base@1.0.so" "${2}"
-            ;;            
     esac
 }
 
