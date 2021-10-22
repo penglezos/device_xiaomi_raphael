@@ -146,6 +146,3 @@ config.disable_rtt=true
 # Wifi Display
 persist.debug.wfd.enable=1
 persist.sys.wfd.virtual=0
-
-# Zygote
-persist.device_config.runtime_native.usap_pool_enabled=true
