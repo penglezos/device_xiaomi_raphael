@@ -7,4 +7,3 @@ type public_adsprpcd_file, file_type;
 
 # Nodes
 type sysfs_fod, sysfs_type, fs_type;
-type sysfs_touchpanel, sysfs_type, fs_type;

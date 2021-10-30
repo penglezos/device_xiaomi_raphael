@@ -1,5 +1,3 @@
-genfscon sysfs /touchpanel                                              u:object_r:sysfs_touchpanel:s0
-
 genfscon sysfs /class/power_supply/battery/capacity                     u:object_r:sysfs_battery_supply:s0
 
 genfscon sysfs /devices/platform/soc/soc:qcom,dsi-display-primary       u:object_r:sysfs_graphics:s0
