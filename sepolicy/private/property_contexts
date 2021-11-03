@@ -1,7 +1,7 @@
 # Global
 ro.boot.hwc                     u:object_r:exported_default_prop:s0
 ro.build.flavor                 u:object_r:exported_default_prop:s0
-ro.product.mod_device           u:object_r:exported2_default_prop:s0
+ro.product.mod_device           u:object_r:build_prop:s0
 
 # IMEI
 persist.radio.imei              u:object_r:deviceid_prop:s0
