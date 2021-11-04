@@ -15,7 +15,10 @@
      See the License for the specific language governing permissions and
      limitations under the License.
 -->
-<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+<PreferenceScreen
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:title="@string/display_settings_title">
+
     <SwitchPreference
         android:key="dc_dimming_enable"
         android:defaultValue="false"

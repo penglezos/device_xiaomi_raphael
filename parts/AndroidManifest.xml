@@ -136,7 +136,7 @@
 		<activity
             android:name=".display.DisplaySettingsActivity"
             android:label="@string/display_settings_title"
-            android:theme="@style/Theme.Main">
+            android:theme="@style/Theme.SubSettingsBase">
             <intent-filter>
                 <action android:name="com.android.settings.action.IA_SETTINGS" />
             </intent-filter>
