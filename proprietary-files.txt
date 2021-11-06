@@ -2019,5 +2019,4 @@ vendor/lib64/vendor.qti.hardware.wifi.wifilearner@1.0.so
 
 # WiFi (Xiaomi)
 vendor/bin/cnss-daemon
-vendor/bin/cnss_diag
 vendor/bin/nv_mac
