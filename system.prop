@@ -84,6 +84,9 @@ ro.netflix.bsp_rev=Q855-16947-1
 # NFC
 ro.nfc.port=I2C
 
+# One handed mode
+ro.support_one_handed_mode=true
+
 # RCS
 persist.rcs.supported=1
 
