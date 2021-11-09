@@ -1060,94 +1060,42 @@ vendor/lib64/libmulawdec.so
 vendor/lib/hw/sound_trigger.primary.msmnile.so
 vendor/lib64/hw/sound_trigger.primary.msmnile.so
 
-# Media
-system_ext/lib/libmmosal.so
-system_ext/lib/libmmparser_lite.so
-system_ext/lib/libmmrtpdecoder.so
-system_ext/lib/libmmrtpencoder.so
-system_ext/lib64/libmmosal.so
-system_ext/lib64/libmmparser_lite.so
-system_ext/lib64/libmmrtpdecoder.so
-system_ext/lib64/libmmrtpencoder.so
-vendor/etc/configstore/vpp.configstore.xml
-vendor/etc/init/vppservice.rc
-vendor/bin/vppservice
-vendor/lib/libAlacSwDec.so
-vendor/lib/libApeSwDec.so
-vendor/lib/libFlacSwDec.so
-vendor/lib/libI420colorconvert.so
--vendor/lib/libMpeg4SwEncoder.so
-vendor/lib/libOmxAacDec.so
-vendor/lib/libOmxAlacDec.so
-vendor/lib/libOmxAlacDecSw.so
-vendor/lib/libOmxAmrDec.so
-vendor/lib/libOmxAmrwbplusDec.so
-vendor/lib/libOmxApeDec.so
-vendor/lib/libOmxApeDecSw.so
-vendor/lib/libOmxDsdDec.so
-vendor/lib/libOmxEvrcDec.so
-vendor/lib/libOmxG711Dec.so
-vendor/lib/libOmxQcelp13Dec.so
-vendor/lib/libOmxSwVdec.so
--vendor/lib/libOmxSwVencMpeg4.so
-vendor/lib/libOmxVideoDSMode.so
-vendor/lib/libOmxVpp.so
-vendor/lib/libOmxWmaDec.so
-vendor/lib/libFileMux_proprietary.so
-vendor/lib/libdsd2pcm.so
-vendor/lib/libmm-color-convertor.so
-vendor/lib/libmmrtpdecoder_proprietary.so
-vendor/lib/libmmrtpencoder_proprietary.so
-vendor/lib/libstagefright_soft_qtiflacdec.so
-vendor/lib/libswvdec.so
-vendor/lib/libvppclient.so
-vendor/lib/libvpphcp.so
-vendor/lib/libvpphvx.so
-vendor/lib/libvppimmotion.so
-vendor/lib/libvpplibrary.so
-vendor/lib/libvpptestutils.so
-vendor/lib/vendor.qti.hardware.vpp@1.1.so
-vendor/lib/vendor.qti.hardware.vpp@1.2.so
-vendor/lib/vendor.qti.hardware.vpp@1.3.so
-vendor/lib64/libAlacSwDec.so
-vendor/lib64/libApeSwDec.so
-vendor/lib64/libFlacSwDec.so
-vendor/lib64/libI420colorconvert.so
-vendor/lib64/libMpeg4SwEncoder.so
-vendor/lib64/libOmxAacDec.so
-vendor/lib64/libOmxAlacDec.so
-vendor/lib64/libOmxAlacDecSw.so
-vendor/lib64/libOmxAmrDec.so
-vendor/lib64/libOmxAmrwbplusDec.so
-vendor/lib64/libOmxApeDec.so
-vendor/lib64/libOmxApeDecSw.so
-vendor/lib64/libOmxEvrcDec.so
-vendor/lib64/libOmxG711Dec.so
-vendor/lib64/libOmxQcelp13Dec.so
-vendor/lib64/libOmxSwVdec.so
-vendor/lib64/libOmxSwVencMpeg4.so
-vendor/lib64/libOmxVpp.so
-vendor/lib64/libOmxWmaDec.so
-vendor/lib64/libmm-color-convertor.so
-vendor/lib64/libstagefright_soft_qtiflacdec.so
-vendor/lib64/libswvdec.so
-vendor/lib64/libvppclient.so
-vendor/lib64/libvpphcp.so
-vendor/lib64/libvpphvx.so
-vendor/lib64/libvppimmotion.so
-vendor/lib64/libvpplibrary.so
-vendor/lib64/libvpptestutils.so
-vendor/lib64/vendor.qti.hardware.vpp@1.1.so
-vendor/lib64/vendor.qti.hardware.vpp@1.2.so
-vendor/lib64/vendor.qti.hardware.vpp@1.3.so
+# Media - from LA.UM.9.1.r1-10200-SMxxx0.0
+system_ext/lib/libmmosal.so|d6fabd9084c804d0077e7c0e820cb76eae759479
+system_ext/lib/libmmparser_lite.so|b1cd09b8d73ce5a0e7357c6f50719233224f28bc
+system_ext/lib/libmmrtpdecoder.so|0b41da1c84e4a5abc01b4dba18a121f73ad0c409
+system_ext/lib/libmmrtpencoder.so|a14a07eefd96889a7287640341d9fff0a7a4bb11
+system_ext/lib64/libmmosal.so|a8021c7c2b2a0b9a34b3e75ef746247daaf5185f
+system_ext/lib64/libmmparser_lite.so|da37a5e52a05f17d90b84154db6bf8d8d8b4d03e
+system_ext/lib64/libmmrtpdecoder.so|b357af14455971d9f126a109d0214b63661dba40
+system_ext/lib64/libmmrtpencoder.so|31bdf1aeb6f5c183fc9fb2e63acc3a42f79759fb
+vendor/lib/libMpeg4SwEncoder.so|84a45ff9fe85103cbe37de2f52ff60a5d8f7e6c5
+vendor/lib/libOmxAacDec.so|1d5fbffbe09e8ea7524a3b1fed341dc9202cd319
+vendor/lib/libOmxAlacDec.so|db954ef8039b21fce7e7ef96d034192a27d5616b
+vendor/lib/libOmxAlacDecSw.so|150f1fee193918792a88797766ddf12d1a388efd
+vendor/lib/libOmxAmrDec.so|6b4e1e29f29c28d2bade194994a7a0745ca3d55f
+vendor/lib/libOmxAmrwbplusDec.so|b7d82d853fc6a1ad7ae2ac152c1db8302fe91bf1
+vendor/lib/libOmxApeDec.so|f15ad3d2b4d885d47f120e766a1f6528caeb2138
+vendor/lib/libOmxApeDecSw.so|f3e64e54808f57f146173532335ea45db1fb54f4
+vendor/lib/libOmxDsdDec.so|f74936badeb8303b2bb17475b9cd157b1c81131c
+vendor/lib/libOmxEvrcDec.so|1eb380db0b6d8b87b9ecdc3b7e09bf79cd3cee23
+vendor/lib/libOmxQcelp13Dec.so|d8ec31e17e7718cd55979bbe828c1aab146c4242
+vendor/lib/libOmxSwVdec.so|3e015d65a252425c70a52806d02d9d6bf6fed331
+vendor/lib/libOmxSwVencMpeg4.so|f645ef01c565fac2ade9779172a5b58859bcc9cb
+vendor/lib/libOmxWmaDec.so|0dbaff9013afdcee20df23531538ef19060aa168
+vendor/lib/libFileMux_proprietary.so|1e125137fcc2c1843cc14e3ec34fc1068fc6bc14
+vendor/lib/libdsd2pcm.so|c5ab1afd7a5a23bf83d80b5ac74247c3dd2085af
+vendor/lib/libmmosal.so|2d6f053f6aca1abb5f30d49cd80db5f9aafab426
+vendor/lib/libmmrtpdecoder_proprietary.so|227a26b9ec9ee6f2dc95de47b713b215e8b6c93e
+vendor/lib/libmmrtpencoder_proprietary.so|d0aec32b8e565912ecc475bad40ed626ac1ee04d
+vendor/lib/libswvdec.so|470a275b120633d7a0d756a7d30a817b25d2e54e
+vendor/lib64/libmmosal.so|204713e0ca5b03e9cf592c280148fdc21e0ed67f
 
-# Media (C2)
-vendor/bin/hw/vendor.qti.media.c2@1.0-service
-vendor/etc/init/vendor.qti.media.c2@1.0-service.rc
-vendor/lib/libqcodec2.so
-vendor/lib/libcodec2_vndk.so
-vendor/lib64/libqcodec2.so
-vendor/lib64/libcodec2_vndk.so
+# Media (C2) - from LA.UM.9.1.r1-10200-SMxxx0.0
+vendor/bin/hw/vendor.qti.media.c2@1.0-service|83c2effb6f76cb095bae840d95a2026014d92fe9
+vendor/etc/init/vendor.qti.media.c2@1.0-service.rc|11209316ba8aae64b689217bc13b0804f6620678
+vendor/lib/libqcodec2.so|099052ac9a36bda42430d46c4461bf7292244f63
+vendor/lib64/libqcodec2.so|384a1b19145abe1b19bc4979d8bec168a346cf4f
 
 # MDM
 vendor/bin/ks
@@ -1173,10 +1121,6 @@ vendor/etc/permissions/android.hardware.light.xml
 vendor/etc/permissions/vendor.qti.hardware.factory.xml
 vendor/lib64/vendor.qti.hardware.factory@1.0.so
 vendor/lib64/vendor.qti.hardware.factory@1.1.so
-
-# MM OSAL
-vendor/lib/libmmosal.so
-vendor/lib64/libmmosal.so
 
 # Neural-networks
 vendor/bin/hw/android.hardware.neuralnetworks@1.3-service-qti
@@ -2002,6 +1946,17 @@ vendor/lib64/libtime_genoff.so
 # TLOC
 vendor/bin/tloc_daemon
 vendor/etc/init/tloc_daemon.rc
+
+# VPP - from LA.UM.9.1.r1-10200-SMxxx0.0
+vendor/bin/vppservice|efabc747172cea9685838a411e6aca6e10a64b39
+vendor/etc/configstore/vpp.configstore.xml|ed961545186c66fd9523f25866c74f2e11ee63d7
+vendor/etc/init/vppservice.rc|24c089e0e413cbb3fa6daaf0af4215870bdf1b8e
+vendor/lib64/libvpphcp.so|6a2580bde806136a150b12cd67b287c8f6709f85
+vendor/lib64/libvpphvx.so|449c9d5448081aed1191c0478cd1e236eabf2a26
+vendor/lib64/libvpplibrary.so|5da45c57405856cda96ae3dfe37d5a9744d541e8
+vendor/lib64/vendor.qti.hardware.vpp@1.1.so|21dbff3b62de2d01b3dc1846c43df18443fbb12c
+vendor/lib64/vendor.qti.hardware.vpp@1.2.so|0c140119657c2271ef0fb6a094ee8bcfe0a8f24b
+vendor/lib64/vendor.qti.hardware.vpp@1.3.so|a04c0cab80abb6d8f823cab66a358401c71f53f9
 
 # WiFi
 vendor/bin/athdiag
