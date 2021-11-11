@@ -116,12 +116,12 @@
 
     <!-- DC dimming settings -->
     <string name="dc_dimming_enable_title">DC Dimming</string>
-    <string name="dc_dimming_enable_summary">DC Dimming reduces eye strain in low light conditions (Note: reduce image quality)</string>
+    <string name="dc_dimming_enable_summary">DC Dimming reduces eye strain in low light conditions (Note: reduces image quality)</string>
     <string name="dc_dimming_enable_summary_not_supported">DC Dimming is not currently supported by the kernel</string>
 
     <!-- HBM settings -->
     <string name="hbm_mode_title">High Brightness Mode</string>
-    <string name="hbm_mode_summary">High Brightness Mode allows the display panel brightness to go above the maximum stock value. Which helps in improving visibility in direct sunlight</string>
+    <string name="hbm_mode_summary">High Brightness Mode allows the display panel brightness to go above the maximum stock value, which helps in improving visibility in direct sunlight</string>
     <string name="hbm_enable_summary_not_supported">HBM is not currently supported by the kernel</string>
 
 </resources>
