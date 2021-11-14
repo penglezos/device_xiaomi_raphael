@@ -1176,7 +1176,7 @@ vendor/radio/qcril_database/upgrade/9_version_update_ecc_table.sql|4701219a79190
 
 # RIL (IMS) - from LA.UM.9.1.r1-10600-SMxxx0.0
 -system_ext/priv-app/ims/ims.apk|ed68ecd630ddbd49e88bd0b2e3b50ee35c334ef0
-system_ext/lib64/lib-imsvideocodec.so|ba0a0696b468ee2458c196b3d252656d20eb197f
+system_ext/lib64/lib-imsvideocodec.so|56b3130aa6eeac11fd1f3c70c0a1ef46880e9d5f
 system_ext/lib64/lib-imsvt.so|f795cc87119b49587dbb1f3e4349fcf67b0610ed
 system_ext/lib64/lib-imsvtextutils.so|50a092eb7b490f4307bddb3d5a4c595b458bc503
 system_ext/lib64/lib-imsvtutils.so|594714eb04346ca3e864b022251f866f85f0393d
