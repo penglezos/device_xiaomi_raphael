@@ -110,8 +110,12 @@ BiometricsFingerprint::BiometricsFingerprint() : mClientCallback(nullptr), mDevi
                 continue;
             }
 
-            mDevice->extCmd(mDevice, COMMAND_NIT,
-                            readBool(fd) ? PARAM_NIT_FOD : PARAM_NIT_NONE);
+            bool fingerDown = readBool(fd);
+            ALOGI("fod_ui status: %d", fingerDown);
+            mDevice->extCmd(mDevice, COMMAND_NIT, fingerDown ? PARAM_NIT_FOD : PARAM_NIT_NONE);
+            if (!fingerDown) {
+                set(FOD_STATUS_PATH, FOD_STATUS_OFF);
+            }
         }
     }).detach();
 }
@@ -470,7 +474,6 @@ Return<void> BiometricsFingerprint::onFingerDown(uint32_t /* x */, uint32_t /* y
 }
 
 Return<void> BiometricsFingerprint::onFingerUp() {
-    set(FOD_STATUS_PATH, FOD_STATUS_OFF);
     return Void();
 }
 
