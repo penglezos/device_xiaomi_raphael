@@ -616,9 +616,9 @@ vendor/lib64/vendor.display.color@1.4.so|35a82515000ec820e423d7770b750a46917c38c
 vendor/lib64/vendor.display.color@1.5.so|4a21e97cd5b391634d52a48a3db59f89814eb5ca
 vendor/lib64/vendor.display.postproc@1.0.so|9c7232cd75fd9df83e4a7b28c5ee796f488a6985
 
-# DPM - from LA.UM.9.1.r1-10600-SMxxx0.0
+# DPM - from LA.UM.9.1.r1-10900-SMxxx0.0
 framework/tcmclient.jar|cdd1ea7143a5a7acc3909b5cfa706650179647c7
-system_ext/bin/dpmd|e04b54867d3c1c5e6622e41bc052529a81c82e3c
+system_ext/bin/dpmd|3a21c928b0ed088ec1a093e580aaf8748dd41873
 system_ext/etc/dpm/dpm.conf|95e27da8c989e96c6faea6f0697bce11955b62a5
 system_ext/etc/init/dpmd.rc|738b638ff04cda368e22c03e16baf90ba157a6fc
 system_ext/etc/permissions/com.qti.dpmframework.xml|c4b7ad0879d00c1eba4f3fe3a88ddb8aa153629a
@@ -632,7 +632,7 @@ system_ext/lib64/libdpmframework.so|a9c419481262c5173b1eb0602a896fde638f8a22
 system_ext/lib64/libdpmtcm.so|653a713295c2445f242f2d873f47d679d027918d
 system_ext/lib64/vendor.qti.diaghal@1.0.so|1ac2da1470f3e94ec339c3860ddf617b86d659c6
 -system_ext/priv-app/dpmserviceapp/dpmserviceapp.apk|74ec0d8e2ef3d7e3b0a730da9b97237921778ac4
-vendor/bin/dpmQmiMgr|3c553042d4257161adb75c0979c829b0cb050639
+vendor/bin/dpmQmiMgr|61a421804559b0e461439c19088acc01b871982a
 vendor/etc/init/dpmQmiMgr.rc|1538743661a5c48c15cd105beaad20f72953885a
 vendor/lib/com.qualcomm.qti.dpm.api@1.0.so|8e97eba901841227ae7029f535a747fdefd6c369
 vendor/lib/libdpmqmihal.so|843d7bd2dee10e67531deeedc8cbda480c71679f
