@@ -1007,9 +1007,9 @@ vendor/lib64/vendor.qti.hardware.perf@2.0.so|b08deb0567cbbcb608eb2901d6e819b3c61
 vendor/lib64/vendor.qti.hardware.perf@2.1.so|90f9b92cd6af5fee83c6891d1ecd18c97624fb72
 vendor/lib64/vendor.qti.hardware.perf@2.2.so|f49863fd5313ccb7a0af2e16c0bae7d4de1ff5ca
 
-# Peripheral manager - from LA.UM.9.1.r1-10600-SMxxx0.0
-vendor/bin/pm-proxy|c36785c811db9af0d6d938cdbc6b90dedaaf706e
-vendor/bin/pm-service|c3d1b2f6e7f731b1328afbcf8e344405744528e3
+# Peripheral manager - from LA.UM.9.1.r1-10900-SMxxx0.0
+vendor/bin/pm-proxy|0704192692efb4b79e8cb1a2252625ad24468805
+vendor/bin/pm-service|1a48e2a015181b351374b99053fb5dee8e2750ee
 vendor/lib64/libperipheral_client.so|9bfd41e276e16b8f7c6808f3d87531fc5be4cdd5
 vendor/lib64/libspcom.so|7cc4390e7caf520586c22cdb7219842fa5d6ed2c
 
