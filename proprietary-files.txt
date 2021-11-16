@@ -831,11 +831,11 @@ vendor/lib64/libtinyxml2_1.so|ff32deb110acb02cb5def5f3404f9064c1276483
 vendor/lib/hw/vulkan.adreno.so|59bfdc56929cfa47b3bba5ffb1c79fbf0916e13f
 vendor/lib64/hw/vulkan.adreno.so|9f7f8af8ea2e0df4728c0414f504f6ea61b65614
 
-# IOP - from LA.UM.9.1.r1-10600-SMxxx0.0
+# IOP - from LA.UM.9.1.r1-10900-SMxxx0.0
 vendor/bin/hw/vendor.qti.hardware.iop@2.0-service|1eff9eb5e9879afa0df24243ec6a5c0d153b5200
 vendor/etc/init/vendor.qti.hardware.iop@2.0-service.rc|fd11367b2585702190ef2577ce2ce6fc68f3a2f8
 vendor/lib64/libqti-iopd-client.so|041e79a67f1537a0a77650d1f729d55f50f9b30b
-vendor/lib64/libqti-iopd.so|a030a2896c411fe746f440662fac1792309e6c0a
+vendor/lib64/libqti-iopd.so|337b353e72bf0ade636759e649475cb52221ea6f
 vendor/lib64/vendor.qti.hardware.iop@1.0.so|162a2488ad279f7582e05326e88b4ca12ae319a0
 vendor/lib64/vendor.qti.hardware.iop@2.0.so|a520fd07df2a5a6ea78372300978baf6deaf89da
 
