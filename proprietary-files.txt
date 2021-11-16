@@ -711,11 +711,11 @@ system_ext/lib64/libfm-hci.so|66ccf3fc817cf744871ea4178702359bb8babbd5
 -system_ext/lib64/vendor.qti.hardware.fm@1.0.so|0bfc9d9097698b7cc8cb74721cb971a80f862720
 
 
-# Gatekeeper - from LA.UM.9.1.r1-10600-SMxxx0.0
+# Gatekeeper - from LA.UM.9.1.r1-10900-SMxxx0.0
 vendor/bin/hw/android.hardware.gatekeeper@1.0-service-qti|2e33e885b92e413440511049025497945d6b8484
 vendor/etc/init/android.hardware.gatekeeper@1.0-service-qti.rc|1b8d5f58fe0a57906acf72b862c16a2521daa97b
-vendor/lib/hw/android.hardware.gatekeeper@1.0-impl-qti.so|b16c88007e9d207ad4134bd613118d9c75927604
-vendor/lib64/hw/android.hardware.gatekeeper@1.0-impl-qti.so|29c4e1e7d471778db3d9de34d58b7f9be2214e1d
+vendor/lib/hw/android.hardware.gatekeeper@1.0-impl-qti.so|6a90a3902fa4effa005fd58d7222fde6260d4fe4
+vendor/lib64/hw/android.hardware.gatekeeper@1.0-impl-qti.so|14819df15693c737fb2a51bf89fe826200286006
 
 # GPS
 vendor/bin/garden_app
