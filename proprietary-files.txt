@@ -927,16 +927,16 @@ vendor/lib64/vendor.xiaomi.hardware.mlipay@1.0.so
 vendor/lib64/vendor.xiaomi.hardware.mlipay@1.1.so
 vendor/lib64/vendor.xiaomi.hardware.mtdservice@1.0.so
 
-# Neural Networks - from LA.UM.9.1.r1-10600-SMxxx0.0
-vendor/bin/hw/android.hardware.neuralnetworks@1.3-service-qti|2becadf51aea3d9f3c6640a6e92fbf716e19593f
+# Neural Networks - from LA.UM.9.1.r1-10900-SMxxx0.0
+vendor/bin/hw/android.hardware.neuralnetworks@1.3-service-qti|726cff09d292b91d900c27bf06abf4b39ef7b531
 vendor/etc/init/android.hardware.neuralnetworks@1.3-service-qti.rc|4b7f2c5f914f3eef38f19936c0a06efc09b5b28c
 -vendor/etc/vintf/manifest/android.hardware.neuralnetworks@1.3-service-qti-hta.xml|57e182a296097870a4c4ed1579c67da20c2b69de
 -vendor/etc/vintf/manifest/android.hardware.neuralnetworks@1.3-service-qti.xml|ac07e83ba7c2a87a2f216f04ec84df4539ea8507
 vendor/lib64/libhexagon_nn_stub.so|6fdaffc1c9372c0e70bcd82f5d806162ca31c176
-vendor/lib64/libhta_hexagon_runtime.so|682859bff76c189f82ca53f23fd0b64a0fd2480d
-vendor/lib64/unnhal-acc-adreno.so|fcc7574b2d6f686e28dae4e42c04ceef5e790c10
+vendor/lib64/libhta_hexagon_runtime.so|0d6d16ce31d7698a2c913b0f97db57dec88ecdbe
+vendor/lib64/unnhal-acc-adreno.so|461821fa5e040623a4da8ce9c06345570057b0cc
 vendor/lib64/unnhal-acc-common.so|e37d2113f99506f1de85902a0fdee0b443342942
-vendor/lib64/unnhal-acc-hta.so|7e11ddb04581f172e69b3778e0b803ef5ec39382
+vendor/lib64/unnhal-acc-hta.so|6cb1ca10aa1c82e59641d545d9f1ac7f00df8621
 vendor/lib64/unnhal-acc-hvx.so|00eb79608cb6e3f19eaf9389632fdbfa03b2df62
 
 # NFC
