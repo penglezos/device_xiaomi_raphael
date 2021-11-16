@@ -1382,9 +1382,9 @@ vendor/etc/init/vendor.qti.hardware.soter@1.0-service.rc
 vendor/lib64/hw/vendor.qti.hardware.soter@1.0-impl.so
 vendor/lib64/vendor.qti.hardware.soter@1.0.so
 
-# Snapdragon Computer Vision Engine - from LA.UM.9.1.r1-10600-SMxxx0.0
+# Snapdragon Computer Vision Engine - from LA.UM.9.1.r1-10900-SMxxx0.0
 vendor/lib/libfastcvdsp_stub.so|7f27cee24281bc9bf4f08c6100cc66bd650d8efb
--vendor/lib/libfastcvopt.so|8312ecc86e885be1b0f2200ee49e7264133d9ab3
+-vendor/lib/libfastcvopt.so|26af067e8eccbc08709f5ce02d228114973cb658
 vendor/lib/libscveCommon_stub.so|4021305188cfd37dc4259e0468721799a07fd678
 vendor/lib/libscveCommon.so|4be56b846f71f4ba8032471abf9f02dc5b01810c
 vendor/lib/libscveObjectSegmentation_stub.so|d1f7b1c9cd9c527ed56a6328c71ad263390ab431
@@ -1392,7 +1392,7 @@ vendor/lib/libscveObjectSegmentation.so|b60b43377262ef6cc7882ff5cc49d35e4c516670
 vendor/lib/libscveObjectTracker_stub.so|cafdeed8fa0d51672806038065cf4ce38d442b6b
 vendor/lib/libscveObjectTracker.so|26318c862d3d56596fe7208ebcc3ae1900f7d55f
 vendor/lib64/libfastcvdsp_stub.so|af78b8104678b87fbe07d679448ae2f4bc5c461e
--vendor/lib64/libfastcvopt.so|2dcc6fa3549da4f9c6eb8bfc09c435c766296508
+-vendor/lib64/libfastcvopt.so|3dfc4166e55434dbe982b08be71669d1cc06a4ea
 vendor/lib64/libscveCommon_stub.so|05f190f1accbfb203f45173b08b78ef88dcc6434
 vendor/lib64/libscveCommon.so|1603e11f268390739f9d0297ab0b8e84886becab
 vendor/lib64/libscveObjectSegmentation_stub.so|ed93b42b3e45b030ca413cb8e82283363a95dbde
