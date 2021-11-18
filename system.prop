@@ -17,9 +17,6 @@ vendor.camera.aux.packagelist=org.codeaurora.snapcam,com.android.camera,org.line
 vendor.camera.enableNCSService=TRUE
 vendor.camera.enableTOFInterface=TRUE
 
-# CNE
-persist.vendor.cne.feature=1
-
 # Charger
 ro.charger.enable_suspend=true
 
