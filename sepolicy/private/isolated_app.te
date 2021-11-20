@@ -1,0 +1,1 @@
+allow isolated_app content_capture_service:service_manager { find };
