@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<config>
+  <hidden-api-whitelisted-app package="com.android.hotwordenrollment.okgoogle" />
+  <hidden-api-whitelisted-app package="com.android.hotwordenrollment.tgoogle" />
+  <hidden-api-whitelisted-app package="com.android.hotwordenrollment.xgoogle" />
+</config>

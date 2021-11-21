@@ -16,4 +16,8 @@ It allows additional grants on top of privapp-permissions-platform.xml
         <permission name="android.permission.KEYPHRASE_ENROLLMENT_APPLICATION"/>
         <permission name="android.permission.MANAGE_VOICE_KEYPHRASES"/>
     </privapp-permissions>
+
+    <privapp-permissions package="com.android.hotwordenrollment.tgoogle">
+        <permission name="android.permission.MANAGE_VOICE_KEYPHRASES"/>
+    </privapp-permissions>
 </permissions>
