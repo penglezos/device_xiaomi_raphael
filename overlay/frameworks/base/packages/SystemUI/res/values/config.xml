@@ -87,4 +87,14 @@
 
     <!-- Udfps vendor code -->
     <integer name="config_udfps_vendor_code">22</integer>
+
+    <!-- Location on the screen of the center of the physical power button. -->
+    <dimen name="physical_power_button_center_screen_location_y">950px</dimen>
+
+    <!-- Location on the screen of the center of the physical volume up/down buttons. -->
+    <dimen name="physical_volume_up_button_center_screen_location_y">525px</dimen>
+    <dimen name="physical_volume_down_button_center_screen_location_y">700px</dimen>
+
+    <!-- Location on the screen of the center of the fingerprint sensor. -->
+    <dimen name="physical_fingerprint_sensor_center_screen_location_y">1900px</dimen>
 </resources>
