@@ -17,6 +17,9 @@ $(call inherit-product, device/xiaomi/raphael/device.mk)
 
 $(call inherit-product, vendor/aosp/config/common_full_phone.mk)
 
+# Bootanimation Resolution
+TARGET_BOOT_ANIMATION_RES := 1080
+
 # Device identifier. This must come after all inclusions.
 PRODUCT_NAME := aosp_raphael
 PRODUCT_DEVICE := raphael
