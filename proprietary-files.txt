@@ -639,11 +639,37 @@ vendor/lib/libdpmqmihal.so|843d7bd2dee10e67531deeedc8cbda480c71679f
 vendor/lib64/com.qualcomm.qti.dpm.api@1.0.so|d9f1aa7f93b928f42499d613d20ccbc60f279097
 vendor/lib64/libdpmqmihal.so|41eb89e66ba065c43a5eb79cd3c72cef0ee167aa
 
+# DRM - from LA.UM.9.1.r1-10600-SMxxx0.0
+vendor/bin/hw/vendor.qti.hardware.qseecom@1.0-service|d3d6ed383483747f8bec574adcac1c24ef1ac3a4
+vendor/bin/qseecomd|6d31ccfedb02e540d33b68c311273eeb4ccbf98e
+vendor/etc/init/qseecomd.rc|0ebfb7c5d1d2459be4fdac951a182dc486f3bda7
+vendor/etc/init/vendor.qti.hardware.qseecom@1.0-service.rc|0f43244d70d5efc1e4f089b926a9dc4f59e53db1
+vendor/lib64/hw/vendor.qti.hardware.qseecom@1.0-impl.so|d660c3d3c1e849a1576b9d5f3f68322e78342f60
+vendor/lib64/libcpion.so|542fd1114d09ec5c0d6d8e44ed925a0ee226ce94
+vendor/lib64/libdrmfs.so|2e000862d1dba971796ba1223352af519ab86229
+vendor/lib64/libdrmtime.so|d7460a3d0d0a9ccc044688f960ca4b9c3c05cfd5
+vendor/lib64/libGPreqcancel_svc.so|527c49c8b833363ca7f7bf38170ace4286b935dd
+vendor/lib64/libGPreqcancel.so|b9efbc8623981e1249ad0a0f8964b2b655d2b334
+vendor/lib64/libops.so|55896a06897763dbb6cbf3268ba80b300b1fa7a7
+vendor/lib64/libqisl.so|c79719eebc094c2af9561e8df2c158638b111b70
+vendor/lib64/libQSEEComAPI.so|c4ace02e73f5443349f09d726162907d530ed5ac
+vendor/lib64/librpmb.so|02cffecdfcccc6a81bff353cdf29169c50d0e33f
+vendor/lib64/libsecureui_svcsock.so|d7588944eeb656ca48713dc4cfabc2c299029514
+vendor/lib64/libsecureui.so|2e30ef47cc78f5b69e084b696a4f6d3ab50ebc37
+vendor/lib64/libSecureUILib.so|a46edde15128b5a26ce3b273778652e5663c6628
+vendor/lib64/libspl.so|e2b3e2dd28b0eee567d72de696cd1e01288ae06f
+vendor/lib64/libssd.so|4a30f8df82c6fc816391e6a2858000e220c1e8cb
+vendor/lib64/libStDrvInt.so|c6866bfa63fa8ea4ac7ce8f3ea7daeabba90ae03
+vendor/lib64/libtzdrmgenprov.so|f533462498968c4d8539abf9ba60107ba2530be6
+vendor/lib64/vendor.qti.hardware.qseecom@1.0.so|ce94ef46eea7c32e8a0d47ce4aa372153cc339fb
+
 # DRM Widevine
 vendor/bin/hw/android.hardware.drm@1.3-service.widevine
 vendor/etc/init/android.hardware.drm@1.3-service.widevine.rc
 -vendor/etc/vintf/manifest/manifest_android.hardware.drm@1.3-service.widevine.xml
-vendor/lib64/libwvhidl.so
+
+# DRM Widevine - from LA.UM.9.1.r1-10600-SMxxx0.0
+vendor/lib64/libwvhidl.so|103f82b3706a415de82c981b632c2f9d89d4c863
 
 # DRM Widevine - from raphael-user-11-RKQ1.200826.002-V12.5.2.0.RFKMIXM-release-keys
 vendor/lib/liboemcrypto.so|bd6c31e31016704fdf58ce10e8787bdf0e8d6398
@@ -1042,21 +1068,6 @@ vendor/lib64/libGPTEE_vendor.so|527c8393ef416a9ddca4337fb4b5a1618551de44
 vendor/lib64/libQTEEConnector_vendor.so|22c4dfe5813f6f923a30ad9470227a65a217ab4a
 vendor/lib64/vendor.qti.hardware.qteeconnector@1.0.so|131cdee67110cd0af1708ba31d81aef85456081a
 
-# QSEECOM
-vendor/bin/hw/vendor.qti.hardware.qseecom@1.0-service
-vendor/bin/qseecomd
-vendor/etc/init/qseecomd.rc
-vendor/etc/init/vendor.qti.hardware.qseecom@1.0-service.rc
-vendor/lib64/hw/vendor.qti.hardware.qseecom@1.0-impl.so
-vendor/lib64/libGPreqcancel.so
-vendor/lib64/libGPreqcancel_svc.so
-vendor/lib64/libQSEEComAPI.so
-vendor/lib64/libdrmfs.so
-vendor/lib64/libdrmtime.so
-vendor/lib64/librpmb.so
-vendor/lib64/libssd.so
-vendor/lib64/vendor.qti.hardware.qseecom@1.0.so
-
 # Radio
 -system_ext/app/QtiTelephonyService/QtiTelephonyService.apk
 -system_ext/priv-app/qcrilmsgtunnel/qcrilmsgtunnel.apk
@@ -1385,24 +1396,13 @@ vendor/lib64/libscveObjectTracker.so|0cf7d3128ae0019d882da5c9d8d9186d549177d1
 vendor/lib/libminkdescriptor.so
 vendor/lib64/libminkdescriptor.so
 
-# SecureMSM (SECDISP)
-vendor/lib64/libSecureUILib.so
-vendor/lib64/libStDrvInt.so
-vendor/lib64/libsecureui_svcsock.so
-vendor/lib64/libsecureui.so
-
 # SecureMSM
 vendor/lib/libbase64.so
 #vendor/lib/liboemcrypto.so
 vendor/lib/libtrustedapploader.so
 vendor/lib64/libbase64.so
-vendor/lib64/libcpion.so
 #vendor/lib64/liboemcrypto.so
-vendor/lib64/libops.so
-vendor/lib64/libqisl.so
-vendor/lib64/libspl.so
 vendor/lib64/libtrustedapploader.so
-vendor/lib64/libtzdrmgenprov.so
 
 # SS Restart
 vendor/bin/ssr_setup
