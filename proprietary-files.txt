@@ -1,26 +1,19 @@
 # All unpinned blobs here are extracted from raphael-user 11 RKQ1.200826.002 V12.5.6.0.RFKCNXM release-keys
 
-# ADSPRPC
-vendor/bin/adsprpcd
-vendor/bin/cdsprpcd
-vendor/etc/init/vendor.qti.adsprpc-service.rc
-vendor/etc/init/vendor.qti.cdsprpc-service.rc
-vendor/etc/seccomp_policy/vendor.qti.hardware.dsp.policy
-vendor/lib/libadsp_default_listener.so
--vendor/lib/libadsprpc.so
-vendor/lib/libcdsp_default_listener.so
-vendor/lib/libcdsprpc.so
-vendor/lib/libfastcrc.so
-vendor/lib/libmdsprpc.so
--vendor/lib/libsdsprpc.so
-vendor/lib/vendor.qti.hardware.dsp@1.0.so
-vendor/lib64/libadsp_default_listener.so
--vendor/lib64/libadsprpc.so
-vendor/lib64/libcdsp_default_listener.so
-vendor/lib64/libcdsprpc.so
-vendor/lib64/libmdsprpc.so
--vendor/lib64/libsdsprpc.so
-vendor/lib64/vendor.qti.hardware.dsp@1.0.so
+# ADSP - from LA.UM.9.1.r1-10600-SMxxx0.0
+vendor/bin/adsprpcd|5e246a6f5d2dca27e29b233a17e4673532191b95
+vendor/etc/init/vendor.qti.adsprpc-service.rc|54588df8e7da58c66838028d2284986b966c2d37
+vendor/etc/seccomp_policy/vendor.qti.hardware.dsp.policy|f060101b26d3674bb173e5fc95e118f56a8ac15d
+vendor/lib/libadsp_default_listener.so|49d7644708419ea077ffd9d00901ebf6cdd4377c
+vendor/lib/libadsprpc.so|6a47314f941b74023a8642d5469ff75543fdcae9
+vendor/lib/libmdsprpc.so|4fa922a8d6e2c1f8746b2c575948da652c98d338
+vendor/lib/libsdsprpc.so|a541e199a2ddae8712f60440d7eeaf472b7fbebb
+vendor/lib/vendor.qti.hardware.dsp@1.0.so|bec8d99fd7f943a8fbf1239fa6793311ceadf93e
+vendor/lib64/libadsp_default_listener.so|3ebcf635d6cdc447b8ecd40ea76bda39bf82c308
+vendor/lib64/libadsprpc.so|f7207ee0e52438ca09cff7ebe013bf3b68f583d8
+vendor/lib64/libmdsprpc.so|c2b29e1a9c02148a6e0713541629cbc171aed45b
+vendor/lib64/libsdsprpc.so|a7b87698f6254f4705f66a7fdcd4656ae1e2db04
+vendor/lib64/vendor.qti.hardware.dsp@1.0.so|0af387d416acf6d697b9edd4090e3a6941696970
 
 # ADSP-Modules
 vendor/lib/rfsa/adsp/dirac_resource.dar
@@ -303,7 +296,6 @@ vendor/lib/libnanopb.so
 vendor/lib/libremosaic_daemon.so
 vendor/lib/libsns_device_mode_stub.so
 vendor/lib/libswregistrationalgo.so
-vendor/lib/libsysmon_cdsp_skel.so
 vendor/lib/vendor.qti.hardware.camera.device@1.0.so
 vendor/lib/vendor.qti.hardware.camera.device@2.0.so
 vendor/lib/vendor.qti.hardware.camera.device@3.5.so
@@ -464,7 +456,6 @@ vendor/lib64/libSNPE.so
 vendor/lib64/libsnpe_dsp_domains_v2.so
 vendor/lib64/libsns_device_mode_stub.so
 vendor/lib64/libswregistrationalgo.so
-vendor/lib64/libsysmon_cdsp_skel.so
 vendor/lib64/libtriplecam_optical_zoom_control.so
 vendor/lib64/libtriplecam_video_optical_zoom.so
 vendor/lib64/libvidhance.so
@@ -502,6 +493,19 @@ media/audio/ui/popup_muqin_down.ogg
 media/audio/ui/popup_muqin_up.ogg
 media/audio/ui/popup_yingyan_down.ogg
 media/audio/ui/popup_yingyan_up.ogg
+
+# CDSP - from LA.UM.9.1.r1-10600-SMxxx0.0
+vendor/bin/cdsprpcd|ea126ed2f1b11622547239f331b8013320c59ad2
+vendor/etc/init/vendor.qti.cdsprpc-service.rc|36772b70216796e8ef19376d9c6a81ee9ffff549
+vendor/lib/libcdsp_default_listener.so|6a3f97faf26da3d01f7895d37c09c8bc62030e0a
+vendor/lib/libcdsprpc.so|adad94cec468989b134119790939ef66c35a1594
+vendor/lib/libfastcrc.so|4048d4789828d7e356a2ace7d9a83db92e458173
+vendor/lib/libsysmon_cdsp_skel.so|b0dd56ca83493e68dc7610d44045849bb3bd8c38
+vendor/lib64/libcdfw.so|543b8282f4b6719113f04e14dd908137521e2bb5
+vendor/lib64/libcdfw_remote_api.so|558636f4fa4c17f29cb644c8c6e07766b7240005
+vendor/lib64/libcdsp_default_listener.so|81e5f4737bfb7e2f0a906183b2a8357a5053ee5c
+vendor/lib64/libcdsprpc.so|1ef851db431c4f89f8b0e8dbf90046ca52ca5ff1
+vendor/lib64/libsysmon_cdsp_skel.so|8a951e039071107317e0e7541ff4df7ad35d87ad
 
 # Charger (Battery Cryptographic)
 vendor/bin/batterysecret
@@ -743,8 +747,6 @@ vendor/lib64/hw/vendor.qti.gnss@4.0-impl.so
 vendor/lib64/libaoa.so
 vendor/lib64/libbatching.so
 vendor/lib64/libcacertclient.so
-vendor/lib64/libcdfw.so
-vendor/lib64/libcdfw_remote_api.so
 vendor/lib64/libdataitems.so
 vendor/lib64/libgarden.so
 vendor/lib64/libgarden_haltests_e2e.so
