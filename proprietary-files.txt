@@ -825,6 +825,14 @@ vendor/lib64/libsdm-diag.so|c21a643ab4ec151e0374df8ce5b839f71d07df90
 vendor/lib64/libsdmextension.so|e10d29f29b7a53b75369e58e8a165b2b86609f26
 vendor/lib64/libtinyxml2_1.so|ff32deb110acb02cb5def5f3404f9064c1276483
 
+# IOP - from LA.UM.9.1.r1-10600-SMxxx0.0
+vendor/bin/hw/vendor.qti.hardware.iop@2.0-service|1eff9eb5e9879afa0df24243ec6a5c0d153b5200
+vendor/etc/init/vendor.qti.hardware.iop@2.0-service.rc|fd11367b2585702190ef2577ce2ce6fc68f3a2f8
+vendor/lib64/libqti-iopd-client.so|041e79a67f1537a0a77650d1f729d55f50f9b30b
+vendor/lib64/libqti-iopd.so|a030a2896c411fe746f440662fac1792309e6c0a
+vendor/lib64/vendor.qti.hardware.iop@1.0.so|162a2488ad279f7582e05326e88b4ca12ae319a0
+vendor/lib64/vendor.qti.hardware.iop@2.0.so|a520fd07df2a5a6ea78372300978baf6deaf89da
+
 # Keymaster
 vendor/bin/hw/android.hardware.keymaster@4.0-service-qti
 vendor/bin/hw/android.hardware.keymaster@4.1-service-qti
@@ -951,10 +959,8 @@ vendor/lib64/libpdmapper.so
 vendor/lib64/libpdnotifier.so
 
 # Performance - from LA.UM.9.1.r1-10600-SMxxx0.0
-vendor/bin/hw/vendor.qti.hardware.iop@2.0-service|1eff9eb5e9879afa0df24243ec6a5c0d153b5200
 vendor/bin/hw/vendor.qti.hardware.perf@2.2-service|1084c4b0b18140cfc57ca1349cada93daf15d3f9
 vendor/bin/msm_irqbalance|b075c2f4092c175950a2c26d19bf2013e2efd6d5
-vendor/etc/init/vendor.qti.hardware.iop@2.0-service.rc|fd11367b2585702190ef2577ce2ce6fc68f3a2f8
 vendor/etc/init/vendor.qti.hardware.perf@2.2-service.rc|459b4c23550a56ac545f78c6d391f3d7dd9ba45b
 vendor/etc/lm/AdaptLaunchFeature.xml|ad4516342729e79a8914762c2737f7faa08b1e9d
 vendor/etc/lm/AppClassifierFeature.xml|80bcbf8fc50ed706e8549432140323dbb9e8ae4c
@@ -985,16 +991,12 @@ vendor/lib64/libmeters.so|7755c87fcbbc89aff53fa3957bcdf81832eca746
 vendor/lib64/libperfconfig.so|155e89154486397f0b7bb3bec4ada6984c0afb31
 vendor/lib64/libperfgluelayer.so|5ca8539fe9ff73d2f055e36bed27eab79d2a55b2
 vendor/lib64/libperfioctl.so|2d100455539eff776a993e1df6751cda6e584581
-vendor/lib64/libqti-iopd-client.so|041e79a67f1537a0a77650d1f729d55f50f9b30b
-vendor/lib64/libqti-iopd.so|a030a2896c411fe746f440662fac1792309e6c0a
 vendor/lib64/libqti-perfd-client.so|c626ee8739a4a181f7f3b92a91bc7442b73b6541
 vendor/lib64/libqti-perfd.so|44aecc9cac81bcc213a421d67c39ffc47d1df896
 vendor/lib64/libqti-util.so|c124ab8af6610d1bfce76272289a24f97f5f1a7d
 vendor/lib64/libqti-utils.so|1d68c0f5e6aa993d1ee17a1e085f510a6b2ea5a8
 vendor/lib64/libreffeature.so|c5666075d867d8d1c1514bc3763c3a23476d783e
 vendor/lib64/libskewknob.so|b44e11b2dec633950eb40a28b4e6be2d7a7e7da5
-vendor/lib64/vendor.qti.hardware.iop@1.0.so|162a2488ad279f7582e05326e88b4ca12ae319a0
-vendor/lib64/vendor.qti.hardware.iop@2.0.so|a520fd07df2a5a6ea78372300978baf6deaf89da
 vendor/lib64/vendor.qti.hardware.perf@2.0.so|b08deb0567cbbcb608eb2901d6e819b3c61b6f9e
 vendor/lib64/vendor.qti.hardware.perf@2.1.so|90f9b92cd6af5fee83c6891d1ecd18c97624fb72
 vendor/lib64/vendor.qti.hardware.perf@2.2.so|f49863fd5313ccb7a0af2e16c0bae7d4de1ff5ca
