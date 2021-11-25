@@ -1386,13 +1386,10 @@ vendor/lib/libminkdescriptor.so
 vendor/lib64/libminkdescriptor.so
 
 # SecureMSM (SECDISP)
-vendor/bin/hw/vendor.qti.hardware.tui_comm@1.0-service-qti
-vendor/etc/init/vendor.qti.hardware.tui_comm@1.0-service-qti.rc
 vendor/lib64/libSecureUILib.so
 vendor/lib64/libStDrvInt.so
 vendor/lib64/libsecureui_svcsock.so
 vendor/lib64/libsecureui.so
-vendor/lib64/vendor.qti.hardware.tui_comm@1.0.so
 
 # SecureMSM
 vendor/lib/libbase64.so
@@ -1443,6 +1440,11 @@ vendor/etc/thermald-devices.conf
 vendor/bin/time_daemon
 vendor/etc/init/init.time_daemon.rc
 vendor/lib64/libtime_genoff.so
+
+# Trusted User Interface - from LA.UM.9.1.r1-10600-SMxxx0.0
+vendor/bin/hw/vendor.qti.hardware.tui_comm@1.0-service-qti|15378114c18fd1b1c8f9671f656396285ad1de48
+vendor/etc/init/vendor.qti.hardware.tui_comm@1.0-service-qti.rc|2cfc563d7e1579374f001c94588fae7835a12ffc
+vendor/lib64/vendor.qti.hardware.tui_comm@1.0.so|938262f1c75299523dc8e5c4e6a793753b209c40
 
 # VPP - from LA.UM.9.1.r1-10200-SMxxx0.0
 vendor/bin/vppservice|efabc747172cea9685838a411e6aca6e10a64b39
