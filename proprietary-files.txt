@@ -1435,11 +1435,11 @@ vendor/etc/thermal-tgame.conf
 vendor/etc/thermal-youtobe.conf
 vendor/etc/thermald-devices.conf
 
-# Time Services
--vendor/app/TimeService/TimeService.apk
-vendor/bin/time_daemon
-vendor/etc/init/init.time_daemon.rc
-vendor/lib64/libtime_genoff.so
+# Time Services - from LA.UM.9.1.r1-10600-SMxxx0.0
+-vendor/app/TimeService/TimeService.apk|1a5f39aa2969feee50ff81ec870b5e2669ae515e
+vendor/bin/time_daemon|17377813bbc330c23d2fee77be21fe24d8aa131e
+vendor/etc/init/init.time_daemon.rc|b253ca2a498757e14e1d7a051bf504ae09218f51
+vendor/lib64/libtime_genoff.so|7b8bf7bf1eaa4df8f6613f4ece711a0797cd2e46
 
 # Trusted User Interface - from LA.UM.9.1.r1-10600-SMxxx0.0
 vendor/bin/hw/vendor.qti.hardware.tui_comm@1.0-service-qti|15378114c18fd1b1c8f9671f656396285ad1de48
