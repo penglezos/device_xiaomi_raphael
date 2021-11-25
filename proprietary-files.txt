@@ -867,7 +867,6 @@ vendor/lib/libgcs-ipc.so
 vendor/lib/libgcs-osal.so
 vendor/lib/libgcs.so
 vendor/lib/liblistensoundmodel2.so
-vendor/lib/libmulawdec.so
 vendor/lib/libsmwrapper.so
 vendor/lib64/hw/android.hardware.soundtrigger@2.2-impl.so
 vendor/lib64/hw/android.hardware.soundtrigger@2.3-impl.so
@@ -876,40 +875,50 @@ vendor/lib64/libgcs-ipc.so
 vendor/lib64/libgcs-osal.so
 vendor/lib64/libgcs.so
 vendor/lib64/liblistensoundmodel2.so
-vendor/lib64/libmulawdec.so
 
 # Listen (sound_trigger primary)
 vendor/lib/hw/sound_trigger.primary.msmnile.so
 vendor/lib64/hw/sound_trigger.primary.msmnile.so
 
-# Media - from LA.UM.9.1.r1-10200-SMxxx0.0
-system_ext/lib/libmmosal.so|d6fabd9084c804d0077e7c0e820cb76eae759479
+# Media - from LA.UM.9.1.r1-10600-SMxxx0.0
+system_ext/lib/libmmosal.so|e29bdf82903e2293dc3ee74a2b9d69a7f1df25dc
 system_ext/lib/libmmparser_lite.so|b1cd09b8d73ce5a0e7357c6f50719233224f28bc
-system_ext/lib64/libmmosal.so|a8021c7c2b2a0b9a34b3e75ef746247daaf5185f
+system_ext/lib64/libmmosal.so|bf992fb3f6394d0da09279aa496e44e10a149264
 system_ext/lib64/libmmparser_lite.so|da37a5e52a05f17d90b84154db6bf8d8d8b4d03e
+vendor/bin/vppservice|0f77fd06c6438ded5e5704769db6cb1154d96cbe
+vendor/etc/configstore/vpp.configstore.xml|ed961545186c66fd9523f25866c74f2e11ee63d7
+vendor/etc/init/vppservice.rc|24c089e0e413cbb3fa6daaf0af4215870bdf1b8e
 vendor/lib/libMpeg4SwEncoder.so|84a45ff9fe85103cbe37de2f52ff60a5d8f7e6c5
-vendor/lib/libOmxAacDec.so|1d5fbffbe09e8ea7524a3b1fed341dc9202cd319
-vendor/lib/libOmxAlacDec.so|db954ef8039b21fce7e7ef96d034192a27d5616b
+vendor/lib/libOmxAacDec.so|c975533c5d5834b89605643bb7f641d4d91fafd4
+vendor/lib/libOmxAlacDec.so|28bd9fde1ba28abb41cbe42c74aaaf064265ecd0
 vendor/lib/libOmxAlacDecSw.so|150f1fee193918792a88797766ddf12d1a388efd
-vendor/lib/libOmxAmrDec.so|6b4e1e29f29c28d2bade194994a7a0745ca3d55f
-vendor/lib/libOmxAmrwbplusDec.so|b7d82d853fc6a1ad7ae2ac152c1db8302fe91bf1
-vendor/lib/libOmxApeDec.so|f15ad3d2b4d885d47f120e766a1f6528caeb2138
+vendor/lib/libOmxAmrDec.so|18b3d65228dac408758ebb5850d230d2396e76b2
+vendor/lib/libOmxAmrwbplusDec.so|d13018687b8dc9979e438d6609a41d263e36be16
+vendor/lib/libOmxApeDec.so|0ff1b687558a8ab48a3ce0b5340142b23914fa68
 vendor/lib/libOmxApeDecSw.so|f3e64e54808f57f146173532335ea45db1fb54f4
 vendor/lib/libOmxDsdDec.so|f74936badeb8303b2bb17475b9cd157b1c81131c
 vendor/lib/libOmxEvrcDec.so|1eb380db0b6d8b87b9ecdc3b7e09bf79cd3cee23
 vendor/lib/libOmxQcelp13Dec.so|d8ec31e17e7718cd55979bbe828c1aab146c4242
-vendor/lib/libOmxSwVdec.so|3e015d65a252425c70a52806d02d9d6bf6fed331
-vendor/lib/libOmxSwVencMpeg4.so|f645ef01c565fac2ade9779172a5b58859bcc9cb
-vendor/lib/libOmxWmaDec.so|0dbaff9013afdcee20df23531538ef19060aa168
+vendor/lib/libOmxSwVdec.so|dde48ff6214f4e05ee65aa5e5d41e89dd83546ee
+vendor/lib/libOmxSwVencMpeg4.so|a0737ffc63669f97cedd214aefed15dbbd2726d9
+vendor/lib/libOmxWmaDec.so|2e099086fe38c1a3eed2fd46f42f12401f13c2b9
 vendor/lib/libdsd2pcm.so|c5ab1afd7a5a23bf83d80b5ac74247c3dd2085af
+vendor/lib/libmulawdec.so|89ebb1d9e77911f1abe37405016839d8436a9825
 vendor/lib/libswvdec.so|470a275b120633d7a0d756a7d30a817b25d2e54e
-vendor/lib64/libmmosal.so|204713e0ca5b03e9cf592c280148fdc21e0ed67f
+vendor/lib64/libmmosal.so|dc6b82fa8d1bd1e7ee0c9dba2ec45b6b032efff0
+vendor/lib64/libmulawdec.so|9a21d843c7bd2a516e0f1ce375855b767947b314
+vendor/lib64/libvpphcp.so|6a2580bde806136a150b12cd67b287c8f6709f85
+vendor/lib64/libvpphvx.so|449c9d5448081aed1191c0478cd1e236eabf2a26
+vendor/lib64/libvpplibrary.so|dbb78d73695c97465a005f97f4b1623a80d6bac8
+vendor/lib64/vendor.qti.hardware.vpp@1.1.so|d47fd7845c02aec702ab96569b90eb6bff2cee5c
+vendor/lib64/vendor.qti.hardware.vpp@1.2.so|13714cdc3a7a5aaa67e641034cb92e9fced28960
+vendor/lib64/vendor.qti.hardware.vpp@1.3.so|aea8a28f53263b5001df295d0a6eab0e8405693b
 
-# Media (C2) - from LA.UM.9.1.r1-10200-SMxxx0.0
+# Media (C2) - from LA.UM.9.1.r1-10600-SMxxx0.0
 vendor/bin/hw/vendor.qti.media.c2@1.0-service|83c2effb6f76cb095bae840d95a2026014d92fe9
 vendor/etc/init/vendor.qti.media.c2@1.0-service.rc|11209316ba8aae64b689217bc13b0804f6620678
-vendor/lib/libqcodec2.so|099052ac9a36bda42430d46c4461bf7292244f63
-vendor/lib64/libqcodec2.so|384a1b19145abe1b19bc4979d8bec168a346cf4f
+vendor/lib/libqcodec2.so|243b7e79fbd78c814c293dee7534718b6210890d
+vendor/lib64/libqcodec2.so|d6139d1b099df3eb1962dd12fba2ed61ea96dff6
 
 # MDM
 vendor/bin/ks
@@ -1453,17 +1462,6 @@ vendor/lib64/libtime_genoff.so|7b8bf7bf1eaa4df8f6613f4ece711a0797cd2e46
 vendor/bin/hw/vendor.qti.hardware.tui_comm@1.0-service-qti|15378114c18fd1b1c8f9671f656396285ad1de48
 vendor/etc/init/vendor.qti.hardware.tui_comm@1.0-service-qti.rc|2cfc563d7e1579374f001c94588fae7835a12ffc
 vendor/lib64/vendor.qti.hardware.tui_comm@1.0.so|938262f1c75299523dc8e5c4e6a793753b209c40
-
-# VPP - from LA.UM.9.1.r1-10200-SMxxx0.0
-vendor/bin/vppservice|efabc747172cea9685838a411e6aca6e10a64b39
-vendor/etc/configstore/vpp.configstore.xml|ed961545186c66fd9523f25866c74f2e11ee63d7
-vendor/etc/init/vppservice.rc|24c089e0e413cbb3fa6daaf0af4215870bdf1b8e
-vendor/lib64/libvpphcp.so|6a2580bde806136a150b12cd67b287c8f6709f85
-vendor/lib64/libvpphvx.so|449c9d5448081aed1191c0478cd1e236eabf2a26
-vendor/lib64/libvpplibrary.so|5da45c57405856cda96ae3dfe37d5a9744d541e8
-vendor/lib64/vendor.qti.hardware.vpp@1.1.so|21dbff3b62de2d01b3dc1846c43df18443fbb12c
-vendor/lib64/vendor.qti.hardware.vpp@1.2.so|0c140119657c2271ef0fb6a094ee8bcfe0a8f24b
-vendor/lib64/vendor.qti.hardware.vpp@1.3.so|a04c0cab80abb6d8f823cab66a358401c71f53f9
 
 # WiFi (Xiaomi)
 vendor/bin/cnss-daemon
