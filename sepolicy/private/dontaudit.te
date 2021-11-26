@@ -1,0 +1,10 @@
+# b/148033913
+dontaudit fsck self:capability kill;
+
+# b/151195350
+dontaudit linkerconfig self:capability kill;
+
+# b/152468658
+dontaudit vdc self:capability kill;
+
+dontaudit untrusted_app_all hal_memtrack_hwservice:hwservice_manager { find };

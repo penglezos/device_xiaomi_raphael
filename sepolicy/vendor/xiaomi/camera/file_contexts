@@ -1,0 +1,10 @@
+# Camera
+/mnt/vendor/persist/camera(/.*)?                                                   u:object_r:camera_persist_file:s0
+
+# Remosaic
+/vendor/bin/remosaic_daemon                                                        u:object_r:remosaic_daemon_exec:s0
+
+# Hexagon DSP-side executable needed for Halide operation
+# This is labeled as public_adsprpcd_file as it needs to be read by apps
+# (e.g. Google Camera App)
+/mnt/vendor/dsp/fastrpc_shell_3                                               u:object_r:public_adsprpcd_file:s0

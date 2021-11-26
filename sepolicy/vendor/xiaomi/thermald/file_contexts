@@ -1,0 +1,8 @@
+# Xiaomi thermal daemon
+/vendor/bin/mi_thermald                                            u:object_r:mi_thermald_exec:s0
+
+# Thermal data
+/data/vendor/thermal(/.*)?                                         u:object_r:vendor_thermal_data_file:s0
+
+# thermal v2.0 
+/(vendor|system/vendor)/bin/hw/android\.hardware\.thermal@2\.0-service\.xiaomi_msmnile                 u:object_r:hal_thermal_default_exec:s0

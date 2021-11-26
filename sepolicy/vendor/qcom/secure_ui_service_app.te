@@ -1,0 +1,10 @@
+type secure_ui_service_app, domain;
+
+app_domain(secure_ui_service_app);
+
+binder_call(secure_ui_service_app, system_server)
+binder_call(secure_ui_service_app, vendor_hal_tui_comm_qti)
+
+allow secure_ui_service_app app_api_service:service_manager find;
+
+allow secure_ui_service_app vendor_hal_tui_comm_hwservice:hwservice_manager find;

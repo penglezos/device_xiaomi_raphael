@@ -1,0 +1,2 @@
+# Allow hal_bluetooth_default to read BT MAC address
+r_dir_file(hal_bluetooth_default, vendor_wifi_vendor_data_file)

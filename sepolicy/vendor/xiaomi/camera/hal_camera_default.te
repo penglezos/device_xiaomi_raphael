@@ -1,0 +1,30 @@
+# Allow hal_camera_default to read and write to camera_persist_file
+allow hal_camera_default camera_persist_file:dir rw_dir_perms;
+allow hal_camera_default camera_persist_file:{
+  file
+  lnk_file
+} rw_file_perms;
+
+# Allow hal_camera_default to read and write to mnt/vendor/persist/camera
+allow hal_camera_default mnt_vendor_file:dir rw_dir_perms;
+allow hal_camera_default mnt_vendor_file:{
+  file
+  lnk_file
+} rw_file_perms;
+
+# For interfacing with PowerHAL
+hal_client_domain(hal_camera_default, hal_power)
+
+# Allow hal_camera_default to read files in kgsl sysfs
+r_dir_file(hal_camera_default, vendor_sysfs_kgsl)
+
+# Allow hal_camera_default to read vendor camera properties
+set_prop(hal_camera_default, vendor_camera_prop)
+
+# Get IRemosaicDaemon HIDL
+allow hal_camera_default remosaic_daemon_service:service_manager find;
+
+# Communicate with remosaic daemon via binder IPC
+binder_call(hal_camera_default, remosaic_daemon)
+
+allow hal_camera_default public_adsprpcd_file:file r_file_perms;

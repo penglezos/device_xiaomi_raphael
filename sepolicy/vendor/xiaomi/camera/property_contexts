@@ -1,0 +1,11 @@
+# vendor-camera.*
+vendor.camera.                     u:object_r:vendor_camera_prop:s0
+vendor.camera.aux.                 u:object_r:vendor_camera_prop:s0
+
+# ro-vendor-camera.*
+ro.vendor.camera.                  u:object_r:vendor_camera_prop:s0
+ro.camera.                         u:object_r:vendor_camera_prop:s0
+
+# persist-camera.*
+persist.camera.                    u:object_r:vendor_camera_prop:s0
+persist.vendor.camera              u:object_r:vendor_camera_prop:s0

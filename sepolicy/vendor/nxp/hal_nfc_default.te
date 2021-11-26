@@ -1,0 +1,9 @@
+# Allow NFC to read the firmware folder
+allow hal_nfc_default vendor_nfc_vendor_data_file:dir {
+  rw_file_perms
+  create_dir_perms
+};
+allow hal_nfc_default vendor_nfc_vendor_data_file:file create_file_perms;
+
+add_hwservice(hal_nfc_default, nxpnfc_hwservice)
+add_hwservice(hal_nfc_default, nxpese_hwservice)

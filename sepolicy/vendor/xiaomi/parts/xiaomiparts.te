@@ -1,0 +1,43 @@
+type xiaomiparts, domain;
+typeattribute xiaomiparts mlstrustedsubject;
+
+app_domain(xiaomiparts)
+
+# Allow xiaomiparts to find system services
+allow xiaomiparts {
+  app_api_service
+  audioserver_service
+  cameraserver_service
+  drmserver_service
+  mediaextractor_service
+  mediametrics_service
+  mediaserver_service
+}:service_manager find;
+
+# Allow xiaomiparts to access motor hal
+hal_client_domain(xiaomiparts, hal_motor)
+
+# Allow xiaomiparts read and write /data/data subdirectory
+allow xiaomiparts system_app_data_file:dir create_dir_perms;
+allow xiaomiparts system_app_data_file:{
+  file
+  lnk_file
+} create_file_perms;
+allow xiaomiparts system_data_file:dir search;
+
+# Allow binder communication with gpuservice/hal_motor
+binder_call(xiaomiparts, gpuservice)
+binder_call(xiaomiparts, hal_motor)
+
+# Allow xiaomiparts to read and write to cgroup/vendor_sysfs_graphics/sysfs_leds
+r_dir_file(xiaomiparts, sysfs_leds)
+r_dir_file(xiaomiparts, vendor_sysfs_graphics)
+allow xiaomiparts {
+  cgroup
+  sysfs_leds
+  vendor_sysfs_graphics
+  sysfs_thermal
+}:file rw_file_perms;
+
+# Allow xiaomiparts to write to mi_thermald
+allow xiaomiparts sysfs_thermal:file w_file_perms;

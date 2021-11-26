@@ -1,0 +1,5 @@
+# HALL Device
+type hall_device, dev_type;
+
+# Motor Device
+type motor_device, dev_type;

@@ -1,0 +1,60 @@
+# Define mi_thermald domain
+type mi_thermald, domain;
+type mi_thermald_exec, exec_type, vendor_file_type, file_type;
+init_daemon_domain(mi_thermald)
+
+# Allow mi_thermald to create files in /data/vendor/thermal/
+allow mi_thermald vendor_thermal_data_file:dir rw_dir_perms;
+allow mi_thermald vendor_thermal_data_file:file create_file_perms;
+
+allow mi_thermald self:capability {
+  chown
+  fowner
+  fsetid
+};
+
+# Allow mi_thermald to access leds sysfs
+r_dir_file(mi_thermald, sysfs_leds)
+allow mi_thermald sysfs_leds:{
+  file
+  lnk_file
+} rw_file_perms;
+
+# Allow mi_thermald to access thermal sysfs
+r_dir_file(mi_thermald, sysfs_thermal)
+allow mi_thermald sysfs_thermal:file rw_file_perms;
+
+# Allow mi_thermald to access system cpu sysfs
+r_dir_file(mi_thermald, sysfs_devices_system_cpu)
+allow mi_thermald sysfs_devices_system_cpu:file rw_file_perms;
+
+# Allow mi_thermald to access battery supply sysfs
+r_dir_file(mi_thermald, vendor_sysfs_battery_supply)
+allow mi_thermald vendor_sysfs_battery_supply:{
+  file
+  lnk_file
+} rw_file_perms;
+
+# Allow mi_thermald to access graphics sysfs
+r_dir_file(mi_thermald, vendor_sysfs_graphics)
+allow mi_thermald vendor_sysfs_graphics:{
+  file
+  lnk_file
+} rw_file_perms;
+
+# Allow mi_thermald to access kgsl sysfs
+r_dir_file(mi_thermald, vendor_sysfs_kgsl)
+allow mi_thermald vendor_sysfs_kgsl:{
+  file
+  lnk_file
+} rw_file_perms;
+
+# Allow mi_thermald to access sysfs
+r_dir_file(mi_thermald, sysfs)
+allow mi_thermald sysfs:{
+  file
+  lnk_file
+} rw_file_perms;
+
+# Allow mi_thermald to set thermal profile
+set_prop(mi_thermald, thermal_normal_prop)

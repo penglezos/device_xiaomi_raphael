@@ -1,0 +1,13 @@
+# Allow Audio HAL to access calibration files in /mnt/vendor/persist/audio
+r_dir_file(hal_audio_default, vendor_persist_audio_file)
+
+# Audio Socket
+allow hal_audio_default init:unix_stream_socket connectto;
+allow hal_audio_default property_socket:sock_file w_file_perms;
+allow hal_audio_default audio_socket:sock_file rw_file_perms;
+
+# Allow hal_audio_default to read audio_device
+allow hal_audio_default audio_device:dir r_dir_perms;
+
+# Allow HAL to set audio properties
+set_prop(hal_audio_default, vendor_audio_prop)

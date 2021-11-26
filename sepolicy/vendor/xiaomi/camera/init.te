@@ -1,0 +1,1 @@
+allow init adsprpcd_file:file mounton;

@@ -1,0 +1,6 @@
+/sys/devices/platform/soc/soc:qcom,dsi-display-primary/dimlayer_hbm                                    u:object_r:vendor_sysfs_fod:s0
+/sys/devices/platform/soc/soc:qcom,dsi-display-primary/fod_ui                                          u:object_r:vendor_sysfs_fod:s0
+/sys/devices/virtual/touch/tp_dev/fod_status                                                           u:object_r:vendor_sysfs_fod:s0
+
+# FOD HAL
+/vendor/bin/hw/android\.hardware\.biometrics\.fingerprint@2.3-service\.raphael                         u:object_r:hal_fingerprint_default_exec:s0

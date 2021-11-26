@@ -1,0 +1,3 @@
+# Allow hal_camera to set vendor camera props
+get_prop(hal_camera, vendor_camera_sensor_prop)
+set_prop(hal_camera, vendor_camera_sensor_prop)

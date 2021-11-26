@@ -1,0 +1,4 @@
+# Camera Persist
+type camera_persist_file, file_type, vendor_persist_type;
+
+type public_adsprpcd_file, file_type;

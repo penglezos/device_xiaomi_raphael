@@ -215,7 +215,7 @@ USE_SENSOR_MULTI_HAL := true
 
 # Sepolicy
 include device/qcom/sepolicy_vndr/SEPolicy.mk
-include device/xiaomi/raphael-sepolicy/raphael-sepolicy.mk
+include device/xiaomi/raphael/sepolicy/sepolicy.mk
 
 # SurfaceFlinger
 TARGET_USE_AOSP_SURFACEFLINGER := true

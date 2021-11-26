@@ -1,0 +1,2 @@
+# Fingerprint data
+type vendor_fingerprint_data_file, data_file_type, file_type, vendor_persist_type;
