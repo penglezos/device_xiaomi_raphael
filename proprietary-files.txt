@@ -777,53 +777,59 @@ vendor/lib64/vendor.qti.gnss@4.0-service.so
 vendor/lib64/vendor.qti.gnss@4.0.so
 vendor/lib64/vendor.qti.hardware.cacert@1.0.so
 
-# Graphics - from LA.UM.9.1.r1-10600-SMxxx0.0
+# Graphics - from LA.UM.9.1.r1-10900-SMxxx0.0
 -vendor/app/com.qualcomm.qti.gpudrivers.msmnile.api30/com.qualcomm.qti.gpudrivers.msmnile.api30.apk|48806ee3413a591ab35a262b3c0f88fd8ea85fbf
-vendor/lib/egl/eglSubDriverAndroid.so|be2f5c4b174bdfaabbe25adde568b72775ef4856
-vendor/lib/egl/libEGL_adreno.so|fb1d14334bf1730a9cffd76a7b22b45ceb0e67ce
+vendor/lib/egl/eglSubDriverAndroid.so|c37d7fd3383e16617dcb874eceffee6b5a3c67bf
+vendor/lib/egl/libEGL_adreno.so|b66364c940c6174910a6807322193b3fb0f5d6c7
 vendor/lib/egl/libGLESv1_CM_adreno.so|715f3463528f1e74ffa02627ee5916a09e0748f5
-vendor/lib/egl/libGLESv2_adreno.so|3626fc54d87f2e884cf1ea22b9e9631e57c41fa0
+vendor/lib/egl/libGLESv2_adreno.so|6d18a4545993f8064584038541b4a8b5660cc1b4
 vendor/lib/egl/libq3dtools_adreno.so|9ec9c053592e58be935e8ae5e0a9d362c101773a
-vendor/lib/egl/libq3dtools_esx.so|7d6605ec8dfd988156c960f63cd27944ed489857
-vendor/lib/hw/vulkan.adreno.so|413b2e49050bf20f5351b99240686abc56717e4d
+vendor/lib/egl/libq3dtools_esx.so|fded522f56793f09576ccd9864bed809b7657ae9
+vendor/lib/libadreno_utils.so|0dd605c378f38211fc13881fba384591f644c20a
 vendor/lib/libC2D2.so|91f015cad79024fdbb6a5603cce48693e58a4510
-vendor/lib/libCB.so|35d0e85ba05fa491b44381b8a112fa4c2daec150
-vendor/lib/libOpenCL.so|7e06bf784e1c4e1b89dbe811b038efcc7c1221a0
-vendor/lib/libVkLayer_q3dtools.so|716718c00e35e77f41c2f1f5b37b371bfa2cc419
-vendor/lib/libadreno_utils.so|90e17fa904b3bdd63f60375d894e0c427442ad91
 vendor/lib/libc2d30_bltlib.so|71703a543760e40ba26cde07c2d41416cc9331ec
-vendor/lib/libgpudataproducer.so|4be627d3f89383575226d718e336f0d30b45d77c
-vendor/lib/libgsl.so|3d7bd08c2245e8037f851260407ef74676eb8f56
-vendor/lib/libllvm-glnext.so|623190b84fb97c2a3d8410e285fd1c7f210e2ebb
-vendor/lib/libllvm-qcom.so|68a9e0594044ae947a9892d3d9e92c30de5b6990
-vendor/lib64/egl/eglSubDriverAndroid.so|4ea16e43015194042ac9b93a38ff77bfcfb9e514
-vendor/lib64/egl/libEGL_adreno.so|a663fb5631a29bd4deda59006ebe0cb7f507face
+vendor/lib/libCB.so|a02e5d2a19249b7b139c89048853ba8a1b9af82b
+vendor/lib/libgpudataproducer.so|8d43d432aed0a7ba5655c31f86ac99553abda1ed
+vendor/lib/libgsl.so|356a12b3938e5ed4c784a95b578c663951ea8ab6
+vendor/lib/libllvm-glnext.so|64f9777f7f36c23767fff28c78439e8edeb9ad9b
+vendor/lib/libllvm-qcom.so|482cc64d11301801299a786d65d2908a61c018ee
+vendor/lib/libOpenCL.so|087fe776117a61287e2301061feeeb060ebb60a9
+vendor/lib/libVkLayer_q3dtools.so|4c1484fa36815d7ec21637a0a27153fdcaa1b641
+vendor/lib64/egl/eglSubDriverAndroid.so|d35fe73d8885859748302e091788754d56364206
+vendor/lib64/egl/libEGL_adreno.so|1dc015c699cce26df3e2a9d97f2166f1e7f253b4
 vendor/lib64/egl/libGLESv1_CM_adreno.so|0a2a648ca2dcd887ea62860bbfa2ef397f01d42d
-vendor/lib64/egl/libGLESv2_adreno.so|639e9db8fd0b8beac0439f6c5dabaa1fe3d8ba10
+vendor/lib64/egl/libGLESv2_adreno.so|fef26fdb081b4f8a02b2a6d2a159dec37f8f3502
 vendor/lib64/egl/libq3dtools_adreno.so|189b9c3d400c6a98c87582b8df0910530cba6d44
-vendor/lib64/egl/libq3dtools_esx.so|5ddb53dc465490fc1b377d9f34b4c8353da0b20c
-vendor/lib64/hw/vulkan.adreno.so|52bd222b4e3f97f6714941b163dbcbc64f9f8b36
+vendor/lib64/egl/libq3dtools_esx.so|9f1f255d03435ea3b483c465665cf8f4d297a2ea
+vendor/lib64/libadreno_utils.so|57cb6438de8bc67d3006c3179074b2d9540e800f
 vendor/lib64/libC2D2.so|175115cc36fd471f9eb83af76be21b5f602b9460
-vendor/lib64/libCB.so|f8476a67300a054c6d3e64bf4a0cd237a035df49
-vendor/lib64/libOpenCL.so|5aecd08fbf5470c2ff467f2e54fb513c592d6272
-vendor/lib64/libVkLayer_q3dtools.so|7024616e581b1fcf66ef14eadc9dbc6fb12b9fa2
-vendor/lib64/libadreno_utils.so|71adfa0f8ecb6826ae6e5bc79787d31fbea6b50e
 vendor/lib64/libc2d30_bltlib.so|b7c7bbc41f317833927d9bf75fbf9b411dd63a96
-vendor/lib64/libgpudataproducer.so|24362ace99558111c019991f6b5c59a495a4b8f1
-vendor/lib64/libgsl.so|fbf75a9961a1f115a8a97018004e0f42928701c5
-vendor/lib64/libllvm-glnext.so|e4b5598ce35ea1d897519b767d60addc36f1fc64
-vendor/lib64/libllvm-qcom.so|2005348963b8a35a449372c91e0d7bf7d32120f6
+vendor/lib64/libCB.so|e65f3158acd06c63ba381380e9aabd4229fdfa27
+vendor/lib64/libgpudataproducer.so|38c41d92fae2bcad1fea2d367d01946bb0ae3f85
+vendor/lib64/libgsl.so|efac22df1084af13fa63cefa0435503250e3737d
+vendor/lib64/libllvm-glnext.so|7ed462c35f1322dfa0b29f030befd763c819f0a8
+vendor/lib64/libllvm-qcom.so|a9bc63754e842f7ce645c1dcd912ea0f89127bed
+vendor/lib64/libOpenCL.so|0c5d889028ecb59ed9bb0c7522094dbebc468954
+vendor/lib64/libVkLayer_q3dtools.so|a879bc4becdba6f4e58144d9f05cc4b241351176
 
-# Graphics (SDM) - from LA.UM.9.1.r1-10600-SMxxx0.0
+# Graphics (DRM) - from LA.UM.9.1.r1-10900-SMxxx0.0
+vendor/lib64/libsdedrm.so|c23f2440f01e7abab3b1d119541a6ee2309a32de
+
+# Graphics (HDR) - from LA.UM.9.1.r1-10900-SMxxx0.0
 vendor/lib64/libhdr_tm.so|b4d129efafedbc82e122ef7edff26ca65204b630
+
+# Graphics (SDM) - from from LA.UM.9.1.r1-10900-SMxxx0.0
 vendor/lib64/libqseed3.so|7f2a659fb9acd84d79c11dbd6901b816d5d1214f
-vendor/lib64/libsdedrm.so|37209eb580cebcea7e0057f8d72bd81234513910
-vendor/lib64/libsdm-color.so|a39b8aeeeec1fe99c76ffaccfa1f4c3756498264
+vendor/lib64/libsdm-color.so|4c61d8c1e82b673917356e6c210959c7795e5369
 vendor/lib64/libsdm-colormgr-algo.so|073245d67ec606f7b73c34e2b4956ebcc81b350c
-vendor/lib64/libsdm-diag.so|c21a643ab4ec151e0374df8ce5b839f71d07df90
--vendor/lib64/libsdm-disp-vndapis.so|4fbf76da3a9eb5d227f948521bd4c80842446bb4
-vendor/lib64/libsdmextension.so|e10d29f29b7a53b75369e58e8a165b2b86609f26
+vendor/lib64/libsdm-diag.so|ace628f2178ab6768f7318f36a9641ecaeb7b841
+vendor/lib64/libsdm-disp-vndapis.so|4fbf76da3a9eb5d227f948521bd4c80842446bb4
+vendor/lib64/libsdmextension.so|76ef1430f700480509b5f991e031447fea9ddb01
 vendor/lib64/libtinyxml2_1.so|ff32deb110acb02cb5def5f3404f9064c1276483
+
+# Graphics (Vulkan) - from LA.UM.9.1.r1-10900-SMxxx0.0
+vendor/lib/hw/vulkan.adreno.so|59bfdc56929cfa47b3bba5ffb1c79fbf0916e13f
+vendor/lib64/hw/vulkan.adreno.so|9f7f8af8ea2e0df4728c0414f504f6ea61b65614
 
 # IOP - from LA.UM.9.1.r1-10600-SMxxx0.0
 vendor/bin/hw/vendor.qti.hardware.iop@2.0-service|1eff9eb5e9879afa0df24243ec6a5c0d153b5200
