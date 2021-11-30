@@ -51,7 +51,6 @@ persist.vendor.qcom.bluetooth.soc=cherokee
 # Camera
 camera.disable_zsl_mode=true
 persist.camera.gyro.disable=0
-vendor.camera.aux.packagelist=org.lineageos.snap,org.codeaurora.snapcam
 
 # CNE
 persist.vendor.cne.feature=1
