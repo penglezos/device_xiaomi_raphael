@@ -8,11 +8,11 @@
         "target_path":  "vendor/xiaomi/raphael"
     },
     {
-        "repository":	"kdrag0n/proton-clang",
-        "remote":	"github",
+        "repository":	"Panchajanya1999/azure-clang",
+        "remote":	"gitlab",
         "clone-depth":	"1",
-        "target_path":	"prebuilts/clang/host/linux-x86/clang-proton",
-        "branch":	"master"
+        "target_path":	"prebuilts/clang/host/linux-x86/clang-azure",
+        "branch":	"main"
     },
     {
       "remote":"gitlab",
