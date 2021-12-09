@@ -1,2 +1,2 @@
-type thermal_normal_prop, property_type;
+type vendor_thermal_normal_prop, property_type;
 type vendor_fp_prop, property_type;
