@@ -947,16 +947,14 @@ vendor/bin/npu_launcher
 vendor/lib/libnpu.so
 vendor/lib64/libnpu.so
 
-# Pasrmanager
--vendor/app/pasrservice/pasrservice.apk
-vendor/bin/hw/vendor.qti.power.pasrmanager@1.0-service
-vendor/etc/init/vendor.qti.power.pasrmanager@1.0-service.rc
-vendor/lib/hw/vendor.qti.power.pasrmanager@1.0-impl.so
-vendor/lib/vendor.qti.memory.pasrmanager@1.0.so
-vendor/lib/vendor.qti.power.pasrmanager@1.0.so
-vendor/lib64/hw/vendor.qti.power.pasrmanager@1.0-impl.so
-vendor/lib64/vendor.qti.memory.pasrmanager@1.0.so
-vendor/lib64/vendor.qti.power.pasrmanager@1.0.so
+# Pasrmanager - from LA.UM.9.1.r1-10900-SMxxx0.0
+-vendor/app/pasrservice/pasrservice.apk|6d4e8bab2426b03231531ec09bce922601b8e8e6
+vendor/bin/hw/vendor.qti.power.pasrmanager@1.0-service|27dd1f54cfdc65f365c6b63e9b13bdb6ade5aa70
+vendor/etc/init/vendor.qti.power.pasrmanager@1.0-service.rc|b34c1b9179c89cd47adce145bae9a609e5141bc0
+vendor/lib64/hw/vendor.qti.power.pasrmanager@1.0-impl.so|dd02b85c8732e934d4054b413fdd718be147a5c0
+vendor/lib64/vendor.qti.memory.pasrmanager@1.0.so|f9daa32eae1410ecc258d1bede6b0b51289d6892
+vendor/lib64/vendor.qti.memory.pasrmanager@1.1.so|dab1ce59502c375105db1ca06c7048735ee024c0
+vendor/lib64/vendor.qti.power.pasrmanager@1.0.so|b65beb3fdad836dd56ae57e2bc54091ee0b2c5e9
 
 # Performance - from LA.UM.9.1.r1-10600-SMxxx0.0
 vendor/bin/hw/vendor.qti.hardware.perf@2.2-service|1084c4b0b18140cfc57ca1349cada93daf15d3f9
