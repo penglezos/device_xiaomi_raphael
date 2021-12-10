@@ -1,27 +1,8 @@
 [
     {
-        "repository":   "kernel_xiaomi_raphael",
-        "target_path":  "kernel/xiaomi/raphael"
-    },
-    {
-        "repository":   "vendor_xiaomi_raphael",
-        "target_path":  "vendor/xiaomi/raphael"
-    },
-    {
-        "repository":	"Panchajanya1999/azure-clang",
-        "remote":	"gitlab",
-        "clone-depth":	"1",
-        "target_path":	"prebuilts/clang/host/linux-x86/clang-azure",
-        "branch":	"main"
-    },
-    {
-      "remote":"gitlab",
-      "repository":"naveenjohnsonv/android_vendor_googlecamera",
-      "target_path":"vendor/GoogleCamera",
-      "branch":"master"
-    },
-    {
-      "repository": "android_device_xiaomi_extras",
-      "target_path": "device/xiaomi/extras"
-    },
+        "remote": "devices",
+        "repository": "android_vendor_xiaomi_raphael",
+        "target_path": "vendor/xiaomi/raphael",
+        "branch": "spark"
+    }
 ]
