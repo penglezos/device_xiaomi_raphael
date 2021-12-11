@@ -47,4 +47,9 @@
     <string name="always_on_camera_dialog_title">Front camera raise dialog</string>
     <string name="always_on_camera_dialog_summary_on">Always ask before opening</string>
     <string name="always_on_camera_dialog_summary_off">Only ask when the screen is off</string>
+
+    <!-- DC dimming settings -->
+    <string name="dc_dimming_enable_title">DC Dimming</string>
+    <string name="dc_dimming_enable_summary">Reduces eye strain in low light conditions</string>
+    <string name="dc_dimming_enable_summary_not_supported">DC Dimming is currently not supported by the kernel</string>
 </resources>
