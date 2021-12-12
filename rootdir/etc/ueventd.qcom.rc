@@ -180,25 +180,8 @@ firmware_directories /vendor/firmware_mnt/image/
 #qvr
 /dev/qvr_external_sensor_ioctl      0660  system  system
 /sys/kernel/qvr_external_sensor/fd  0660  system  system
-/dev/bus/usb/001/001      0660   system     system
-/dev/bus/usb/001/002      0660   system     system
-/dev/bus/usb/001/003      0660   system     system
-/dev/bus/usb/002/001      0660   system     system
-/dev/bus/usb/002/002      0660   system     system
-/dev/bus/usb/002/003      0660   system     system
-/dev/bus/usb/003/001      0660   system     system
-/dev/bus/usb/003/002      0660   system     system
-/dev/bus/usb/003/003      0660   system     system
-/dev/hidraw0              0660   system     system
-/dev/hidraw1              0660   system     system
-/dev/hidraw2              0660   system     system
-/dev/hidraw3              0660   system     system
-/dev/hidraw4              0660   system     system
-/dev/hidraw5              0660   system     system
-/dev/hidraw6              0660   system     system
-/dev/hidraw7              0660   system     system
-/dev/hidraw8              0660   system     system
-/dev/hidraw9              0660   system     system
+/dev/bus/usb/*                      0660  root    usb
+/dev/hidraw*                        0660  root    usb
 
 # wlan
 /dev/wcnss_wlan           0660   system     system
@@ -262,6 +245,7 @@ firmware_directories /vendor/firmware_mnt/image/
 /dev/avtimer              0660   system     audio
 /dev/spidev2.0            0660   system     audio
 /dev/spidev22.0           0660   system     audio
+/dev/spidev10.0           0660   system     audio
 
 # DVB devices
 /dev/dvb/adapter0/demux*  0440   media       media
