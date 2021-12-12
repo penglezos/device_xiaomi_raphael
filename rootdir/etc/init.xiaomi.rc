@@ -67,6 +67,7 @@ on boot
     mkdir /mnt/vendor/persist/camera 0755 system cameraserver
 
     chown system system /sys/class/thermal/thermal_message/sconfig
+    write /sys/class/thermal/thermal_message/sconfig 0
 
 on charger
     mkdir /mnt/vendor/persist
