@@ -138,6 +138,7 @@ case "$target" in
 	echo 4-7 > /dev/cpuset/foreground/boost/cpus
 	echo 0-2,4-7 > /dev/cpuset/foreground/cpus
 	echo 0-7 > /dev/cpuset/top-app/cpus
+        echo 0-3 > /dev/cpuset/restricted/cpus
 
 	# Turn off scheduler boost at the end
 	echo 0 > /proc/sys/kernel/sched_boost
