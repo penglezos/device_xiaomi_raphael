@@ -16,8 +16,5 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-    <style name="SystemAlertDialogTheme" parent="@*android:style/Theme.DeviceDefault.Dialog.Alert.DayNight">
-    </style>
-
     <style name="TextAppearance.Medium" parent="@android:style/TextAppearance.Material.Medium" />
 </resources>
