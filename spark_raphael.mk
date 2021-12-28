@@ -34,3 +34,4 @@ PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
 
 # SparkOS stuff
 SPARK_BUILD_TYPE := Official
+EXTRA_UDFPS_ANIMATIONS := true
