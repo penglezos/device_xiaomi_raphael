@@ -27,9 +27,6 @@ persist.vendor.dpm.nsrm.bkg.evt=3955
 # FUSE passthrough
 persist.sys.fuse.passthrough.enable=true
 
-# GPS
-persist.vendor.overlay.izat.optin=rro
-
 # Graphics
 ro.opengles.version=196610
 debug.cpurend.vsync=false
