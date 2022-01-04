@@ -154,6 +154,7 @@ ro.vendor.perf.scroll_opt=true
 persist.vendor.qcomsysd.enabled=1
 
 # RIL
+persist.vendor.radio.add_power_save=1
 persist.vendor.radio.apm_sim_not_pwdn=1
 persist.vendor.radio.atfwd.start=true
 persist.vendor.radio.custom_ecc=1
