@@ -3,6 +3,7 @@ persist.vendor.camera.privapp.list=com.android.camera
 
 # Display
 debug.sf.disable_backpressure=1
+ro.surface_flinger.max_frame_buffer_acquired_buffers=3
 
 # FUSE passthrough
 persist.sys.fuse.passthrough.enable=true
