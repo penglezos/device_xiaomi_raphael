@@ -605,9 +605,6 @@ vendor/etc/sdr_config.cfg
 vendor/bin/hw/vendor.display.color@1.0-service|91e9e25ec4d64c4a7d5261899ca2cdb9cf29b695
 vendor/bin/ppd|57172f5d3b0b9bfc04f5eed93672d2b6f175d1f4
 vendor/etc/init/vendor.display.color@1.0-service.rc|5ad673f879b3685a0e79b5633437e5499cb94f48
-vendor/lib64/libdisp-aba.so|44993853ff9d4340e856e6f53d802f10372442d3
-vendor/lib64/libdisplayqos.so|5548732c916e629f18f45ce257ce843b679a136a
-vendor/lib64/libdpps.so|51b2b46ea5b9779e38305c15b21486d3c0a18cf7
 vendor/lib64/vendor.display.color@1.0.so|f2af8d5ecc146560dca66895b5173e86e406e41e
 vendor/lib64/vendor.display.color@1.1.so|2cbb29aa26a15165a6b2f92065207930f4e050d9
 vendor/lib64/vendor.display.color@1.2.so|78875790131fffba844443bedb0f0f7e1d8ab47b
@@ -615,6 +612,17 @@ vendor/lib64/vendor.display.color@1.3.so|8f3c1f9be4e9f7b684fef7aa5f585693a9c1127
 vendor/lib64/vendor.display.color@1.4.so|35a82515000ec820e423d7770b750a46917c38c6
 vendor/lib64/vendor.display.color@1.5.so|4a21e97cd5b391634d52a48a3db59f89814eb5ca
 vendor/lib64/vendor.display.postproc@1.0.so|9c7232cd75fd9df83e4a7b28c5ee796f488a6985
+vendor/lib64/libdisp-aba.so|d904572dedd19e88053c3352d2a24c666362b23b
+vendor/lib64/libdisplayqos.so|3e95c6aedbfca5132ef75365e0a45a32c79b1fd6
+vendor/lib64/libhdr_tm.so|9977b4ccb6667d990210c1ac980e55325f7e7a50
+vendor/lib64/libqseed3.so|1395834daf3c6cd07acbdbc44110decb3be362c2
+vendor/lib64/libsdedrm.so|bccd71afeb56529b457699bdd179d571830caa16
+vendor/lib64/libsdm-color.so|e82ee94b86f9c59044017ab527261a7aacbd6083
+vendor/lib64/libsdm-colormgr-algo.so|11b65733d87ff65633a5fe8f4207dde12391625c
+vendor/lib64/libsdm-diag.so|55dafc05ba68666f10412a534f7122d7f45bf403
+vendor/lib64/libsdm-disp-vndapis.so|9ab6725a5efba29b77d1d6ab33e10e3ff3296960
+vendor/lib64/libsdmextension.so|c1425aae0475207054351c2bf16c18350ccf7570
+vendor/lib64/libtinyxml2_1.so|92101861d95cbdf9625d192d0b2295baa5960b68
 
 # DPM - from LA.UM.9.1.r1-10900-SMxxx0.0
 framework/tcmclient.jar|cdd1ea7143a5a7acc3909b5cfa706650179647c7
@@ -810,21 +818,6 @@ vendor/lib64/libllvm-glnext.so|7ed462c35f1322dfa0b29f030befd763c819f0a8
 vendor/lib64/libllvm-qcom.so|a9bc63754e842f7ce645c1dcd912ea0f89127bed
 vendor/lib64/libOpenCL.so|0c5d889028ecb59ed9bb0c7522094dbebc468954
 vendor/lib64/libVkLayer_q3dtools.so|a879bc4becdba6f4e58144d9f05cc4b241351176
-
-# Graphics (DRM) - from LA.UM.9.1.r1-10900-SMxxx0.0
-vendor/lib64/libsdedrm.so|c23f2440f01e7abab3b1d119541a6ee2309a32de
-
-# Graphics (HDR) - from LA.UM.9.1.r1-10900-SMxxx0.0
-vendor/lib64/libhdr_tm.so|b4d129efafedbc82e122ef7edff26ca65204b630
-
-# Graphics (SDM) - from from LA.UM.9.1.r1-10900-SMxxx0.0
-vendor/lib64/libqseed3.so|7f2a659fb9acd84d79c11dbd6901b816d5d1214f
-vendor/lib64/libsdm-color.so|4c61d8c1e82b673917356e6c210959c7795e5369
-vendor/lib64/libsdm-colormgr-algo.so|073245d67ec606f7b73c34e2b4956ebcc81b350c
-vendor/lib64/libsdm-diag.so|ace628f2178ab6768f7318f36a9641ecaeb7b841
-vendor/lib64/libsdm-disp-vndapis.so|4fbf76da3a9eb5d227f948521bd4c80842446bb4
-vendor/lib64/libsdmextension.so|76ef1430f700480509b5f991e031447fea9ddb01
-vendor/lib64/libtinyxml2_1.so|ff32deb110acb02cb5def5f3404f9064c1276483
 
 # Graphics (Vulkan) - from LA.UM.9.1.r1-10900-SMxxx0.0
 vendor/lib/hw/vulkan.adreno.so|59bfdc56929cfa47b3bba5ffb1c79fbf0916e13f
