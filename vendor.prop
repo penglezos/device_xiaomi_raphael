@@ -79,6 +79,7 @@ persist.vendor.qcom.bluetooth.twsp_state.enabled=true
 ro.bluetooth.a2dp_offload.supported=true
 ro.vendor.bluetooth.wipower=false
 vendor.qcom.bluetooth.soc=cherokee
+persist.vendor.service.bdroid.sibs=false
 
 # Camera
 camera.disable_zsl_mode=true
