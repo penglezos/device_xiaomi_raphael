@@ -1,0 +1,3 @@
+allow system_suspend sysfs:file {open getattr read};
+allow system_suspend sysfs:dir {read open};
+dontaudit system_suspend sysfs:file { open read };
