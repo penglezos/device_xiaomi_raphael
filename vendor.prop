@@ -113,6 +113,7 @@ vendor.gatekeeper.disable_spu=true
 
 # Graphics
 debug.egl.hw=0
+debug.hwui.renderer=skiavk
 debug.mdpcomp.logs=0
 debug.sdm.support_writeback=0
 debug.sf.hw=0
