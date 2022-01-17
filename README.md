@@ -1,6 +1,8 @@
-The Redmi K20 Pro / Mi 9T Pro (codenamed _"raphael"_) is a flagship smartphone from Xiaomi announced in June 2019.
+Copyright (C) 2021-2022 ArrowOS
 
-
+Device configuration for Redmi K20 Pro / Mi 9T Pro
+=========================================
+The Redmi K20 Pro / Mi 9T Pro (codenamed _"raphael"_) is a high-end smartphone from Xiaomi announced and released in June 2019.
 ## Device specifications
 
 | Device                  | Redmi K20 Pro / Mi 9T Pro                                       |
@@ -18,18 +20,3 @@ The Redmi K20 Pro / Mi 9T Pro (codenamed _"raphael"_) is a flagship smartphone f
 | Rear camera 2           | 8 MP                                                            |
 | Rear camera 3           | 13 MP                                                           |
 | Front camera            | Motorized pop-up 20 MP, HDR                                     |
-
-
-## Device picture
-
-![Redmi K20 Pro / Mi 9T Pro](https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/beee478168e5c4fd0d66369386fddbbe.jpg)
-
-
-## Copyright
-
-```
-#
-# Copyright (C) 2021 The LineageOS Project
-#
-# SPDX-License-Identifier: Apache-2.0
-#
