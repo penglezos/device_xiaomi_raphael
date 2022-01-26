@@ -41,3 +41,5 @@ allow xiaomiparts {
 
 # Allow xiaomiparts to write to mi_thermald
 allow xiaomiparts sysfs_thermal:file w_file_perms;
+
+allow xiaomiparts default_prop:file { read };

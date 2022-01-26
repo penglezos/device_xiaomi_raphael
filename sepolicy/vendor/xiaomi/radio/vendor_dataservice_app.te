@@ -1,0 +1,2 @@
+allow vendor_dataservice_app system_data_file:dir { search };
+allow vendor_dataservice_app user_profile_root_file:dir { search };

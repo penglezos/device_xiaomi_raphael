@@ -11,3 +11,5 @@ allow hal_audio_default audio_device:dir r_dir_perms;
 
 # Allow HAL to set audio properties
 set_prop(hal_audio_default, vendor_audio_prop)
+
+allow hal_audio_default default_prop:file { read };
