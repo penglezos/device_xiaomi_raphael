@@ -207,6 +207,25 @@
         <fqname>@1.0::IBluetoothAudio/default</fqname>
     </hal>
     <hal format="hidl">
+        <name>com.qualcomm.qti.imscmservice</name>
+        <transport>hwbinder</transport>
+        <version>2.2</version>
+        <interface>
+             <name>IImsCmService</name>
+             <instance>qti.ims.connectionmanagerservice</instance>
+       </interface>
+    </hal>
+    <hal format="hidl">
+        <name>com.qualcomm.qti.uceservice</name>
+        <transport>hwbinder</transport>
+        <version>2.2</version>
+        <interface>
+            <name>IUceService</name>
+            <instance>com.qualcomm.qti.uceservice</instance>
+        </interface>
+        <fqname>@2.2::IUceService/com.qualcomm.qti.uceservice</fqname>
+    </hal>
+    <hal format="hidl">
         <name>vendor.display.color</name>
         <transport>hwbinder</transport>
         <version>1.3</version>
@@ -296,6 +315,25 @@
         </interface>
         <fqname>@1.0::IAlarm/default</fqname>
     </hal>
+    <hal format="hidl">
+        <name>vendor.qti.ims.callinfo</name>
+        <transport>hwbinder</transport>
+        <version>1.0</version>
+        <interface>
+            <name>IService</name>
+            <instance>default</instance>
+        </interface>
+        <fqname>@1.0::IService/default</fqname>
+    </hal>
+    <hal format="hidl">
+       <name>vendor.qti.ims.factory</name>
+       <transport>hwbinder</transport>
+       <version>1.0</version>
+       <interface>
+         <name>IImsFactory</name>
+         <instance>default</instance>
+       </interface>
+   </hal>
     <hal format="hidl">
         <name>vendor.qti.hardware.audiohalext</name>
         <transport>hwbinder</transport>
