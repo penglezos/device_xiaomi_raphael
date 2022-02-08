@@ -15,6 +15,9 @@ $(call inherit-product, device/xiaomi/raphael/device.mk)
 # Inherit some common Arrow stuff.
 $(call inherit-product, vendor/arrow/config/common.mk)
 
+# Include Lawnchair
+$(call inherit-product-if-exists, vendor/lawnchair/lawnchair.mk)
+
 # Device identifier. This must come after all inclusions.
 PRODUCT_NAME := arrow_raphael
 PRODUCT_DEVICE := raphael
