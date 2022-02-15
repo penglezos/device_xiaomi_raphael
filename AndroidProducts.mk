@@ -13,9 +13,9 @@
 # limitations under the License.
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/spark_raphael.mk
+    $(LOCAL_DIR)/arrow_raphael.mk
 
 COMMON_LUNCH_CHOICES := \
-    spark_raphael-user \
-    spark_raphael-userdebug \
-    spark_raphael-eng
+    arrow_raphael-user \
+    arrow_raphael-userdebug \
+    arrow_raphael-eng
