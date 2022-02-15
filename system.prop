@@ -132,9 +132,3 @@ persist.timed.enable=true
 
 # WiFi
 config.disable_rtt=true
-
-# Spark-OS
-ro.spark.device.name=Redmi K20 Pro
-ro.spark.group.url=https://t.me/area51k20p
-ro.spark.maintainer=Naveen Johnson
-ro.spark.maintainer.username=naveenjohnson
