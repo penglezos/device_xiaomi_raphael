@@ -1,2 +1,0 @@
-genfscon sysfs /devices/platform/soc/soc:qcom,dsi-display-primary/msm_fb_ea_enable                                                                 u:object_r:vendor_sysfs_graphics:s0
-genfscon sysfs /devices/platform/soc/soc:qcom,dsi-display-primary/hbm                                                                              u:object_r:vendor_sysfs_graphics:s0
