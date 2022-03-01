@@ -127,10 +127,8 @@ case "$target" in
 	echo 95 95 > /proc/sys/kernel/sched_upmigrate
 	echo 85 85 > /proc/sys/kernel/sched_downmigrate
 	echo 100 > /proc/sys/kernel/sched_group_upmigrate
-	echo 15 > /proc/sys/kernel/sched_group_downmigrate
+	echo 10 > /proc/sys/kernel/sched_group_downmigrate
 	echo 1 > /proc/sys/kernel/sched_walt_rotate_big_tasks
-	echo 400000000 > /proc/sys/kernel/sched_coloc_downmigrate_ns
-	echo 30 > /proc/sys/kernel/sched_min_task_util_for_colocation 
 
 	# cpuset parameters
 	echo 0-2 > /dev/cpuset/background/cpus
@@ -138,7 +136,7 @@ case "$target" in
 	echo 4-7 > /dev/cpuset/foreground/boost/cpus
 	echo 0-2,4-7 > /dev/cpuset/foreground/cpus
 	echo 0-7 > /dev/cpuset/top-app/cpus
-        echo 0-3 > /dev/cpuset/restricted/cpus
+    echo 0-3 > /dev/cpuset/restricted/cpus
 
 	# Turn off scheduler boost at the end
 	echo 0 > /proc/sys/kernel/sched_boost
@@ -167,7 +165,7 @@ case "$target" in
 
 	# configure input boost settings
 	echo "0:1324800" > /sys/module/cpu_boost/parameters/input_boost_freq
-	echo 500 > /sys/module/cpu_boost/parameters/input_boost_ms
+	echo 120 > /sys/module/cpu_boost/parameters/input_boost_ms
         echo "0:0 1:0 2:0 3:0 4:2323200 5:0 6:0 7:2323200" > /sys/module/cpu_boost/parameters/powerkey_input_boost_freq
         echo 400 > /sys/module/cpu_boost/parameters/powerkey_input_boost_ms
 
