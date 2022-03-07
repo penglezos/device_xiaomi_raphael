@@ -220,6 +220,9 @@ on charger
     start vendor.qcom-post-boot
     start vendor.hvdcp_opti
 
+    chown system system /sys/class/leds/green/brightness
+    write /sys/class/leds/green/brightness 255
+
 service vendor.thermal-engine /vendor/bin/thermal-engine
    class main
    user root
