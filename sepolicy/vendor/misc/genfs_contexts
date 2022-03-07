@@ -1,2 +1,0 @@
-# FPS Info
-genfscon sysfs /class/drm/card0/sde-crtc-0/measured_fps    u:object_r:vendor_sysfs_graphics:s0
