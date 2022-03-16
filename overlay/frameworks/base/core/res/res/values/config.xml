@@ -593,6 +593,6 @@
         <!-- B y-intercept --> <item>-0.349361641294833436</item>
     </string-array>
 
-    <!-- Exempt ImsService from privacy (location) indicators -->
-    <string name="config_systemAudioIntelligence" translatable="false">org.codeaurora.ims</string>
+    <!-- Ignore CNE from privacy (location) indicators -->
+    <string name="config_systemAudioIntelligence" translatable="false">com.qualcomm.qti.cne</string>
 </resources>
