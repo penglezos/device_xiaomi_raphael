@@ -1,3 +1,6 @@
+# Bluetooth
+bluetooth.device.class_of_device=90,2,12
+
 # Camera
 vendor.camera.aux.packagelist=org.codeaurora.snapcam,com.android.camera,org.lineageos.snap,com.android.MGC
 
