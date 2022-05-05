@@ -172,6 +172,11 @@ debug.renderengine.backend=skiaglthreaded
 renderthread.skia.reduceopstasksplitting=true
 debug.hwui.renderer=skiagl
 
+# IFAAService
+persist.vendor.sys.fp.udfps.location.X_Y=445,1931
+persist.vendor.sys.fp.udfps.size.width_height=190,190
+ro.hardware.fp.udfps=true
+
 # Incremental
 ro.incremental.enable=1
 
