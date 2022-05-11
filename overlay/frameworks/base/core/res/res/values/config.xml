@@ -594,5 +594,5 @@
     </string-array>
 
     <!-- Ignore CNE from privacy (location) indicators -->
-    <string name="config_systemAudioIntelligence" translatable="false">com.qualcomm.qti.cne</string>
+    <string name="config_systemTelephonyPackage" translatable="false">com.qualcomm.qti.cne</string>
 </resources>
