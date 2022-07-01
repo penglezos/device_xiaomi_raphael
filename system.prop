@@ -15,6 +15,7 @@ vendor.camera.sat.fallback.luxindex=330
 vendor.camera.sat.fallback.lux.d=50
 vendor.camera.enableNCSService=TRUE
 vendor.camera.enableTOFInterface=TRUE
+log.tag.CHIUSECASE=ERROR
 
 # Charger
 ro.charger.enable_suspend=true
