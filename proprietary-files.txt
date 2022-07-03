@@ -801,10 +801,12 @@ vendor/lib64/libgsl.so
 vendor/lib64/libllvm-glnext.so
 vendor/lib64/libllvm-qcom.so
 
+# Graphics (SDM) - from qssi_NX627J-user 11 RKQ1.200826.002 nubia.20210420.160129 release-keys
+vendor/lib64/libsdedrm.so|582910d21139781ad9e414c35207584f51e035e2
+
 # Graphics (SDM)
 vendor/lib64/libhdr_tm.so
 vendor/lib64/libqseed3.so
-vendor/lib64/libsdedrm.so
 vendor/lib64/libsdm-color.so
 vendor/lib64/libsdm-colormgr-algo.so
 vendor/lib64/libsdm-diag.so
