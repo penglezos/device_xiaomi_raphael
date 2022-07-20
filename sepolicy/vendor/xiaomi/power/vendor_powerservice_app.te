@@ -1,1 +1,0 @@
-allow vendor_powerservice_app default_prop:file { read };

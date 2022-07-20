@@ -1,1 +1,0 @@
-allow platform_app hal_power_service:service_manager find;
