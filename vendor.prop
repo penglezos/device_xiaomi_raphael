@@ -58,13 +58,6 @@ ro.vendor.audio.us.proximity=false
 ro.vendor.audio.voice.change.support=true
 ro.vendor.audio.voice.volume.boost=manual
 
-# App launch prefetching (IORap)
-iorapd.perfetto.enable=true
-iorapd.readahead.enable=true
-persist.device_config.runtime_native_boot.iorap_perfetto_enable=true
-persist.device_config.runtime_native_boot.iorap_readahead_enable=true
-ro.iorapd.enable=true
-
 # Bluetooth
 persist.bluetooth.a2dp_offload.cap=sbc-aac-aptx-aptxhd-ldac
 persist.bluetooth.a2dp_offload.disabled=false
