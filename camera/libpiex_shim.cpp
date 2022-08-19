@@ -1,17 +1,16 @@
+/*
+ * Copyright (C) 2022 The LineageOS Project
+ *
+ * SPDX-License-Identifier: Apache-2.0
+ */
+
 #include <src/piex.h>
 
 namespace piex {
 
-using image_type_recognition::RawImageTypes;
-
-extern "C" void
-    _ZN4piex19GetPreviewImageDataEPNS_15StreamInterfaceEPNS_16PreviewImageDataEPNS_22image_type_recognition13RawImageTypesE(
-    StreamInterface* data, PreviewImageData* preview_image_data, RawImageTypes* output_type);
-
-
-extern "C" void _ZN4piex19GetPreviewImageDataEPNS_15StreamInterfaceEPNS_16PreviewImageDataE(
-    StreamInterface* data, PreviewImageData* preview_image_data) {
-	return _ZN4piex19GetPreviewImageDataEPNS_15StreamInterfaceEPNS_16PreviewImageDataEPNS_22image_type_recognition13RawImageTypesE(data, preview_image_data, nullptr);
+Error GetPreviewImageData(StreamInterface* data,
+                          PreviewImageData* preview_image_data) {
+    return GetPreviewImageData(data, preview_image_data, nullptr);
 }
 
 } // namespace piex
