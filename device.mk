@@ -176,6 +176,7 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     android.hardware.drm@1.0-impl \
     android.hardware.drm@1.0-service \
+    android.hardware.drm@1.4.vendor \
     android.hardware.drm@1.4-service.clearkey
 
 # Fingerprint
@@ -347,6 +348,7 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_PACKAGES += \
     android.hardware.nfc@1.2-service \
+    android.hardware.nfc@1.2.vendor \
     android.hardware.secure_element@1.2.vendor
 
 PRODUCT_COPY_FILES += \
