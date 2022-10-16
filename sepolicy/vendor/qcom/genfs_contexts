@@ -18,9 +18,7 @@ genfscon sysfs /devices/virtual/misc/msm_amrwbplus/wakeup                       
 genfscon sysfs /devices/virtual/misc/msm_ape/wakeup                                                                                                u:object_r:sysfs_wakeup:s0
 genfscon sysfs /devices/virtual/misc/msm_evrc/wakeup                                                                                               u:object_r:sysfs_wakeup:s0
 genfscon sysfs /devices/virtual/misc/msm_g711alaw/wakeup                                                                                           u:object_r:sysfs_wakeup:s0
-genfscon sysfs /devices/virtual/misc/msm_g711mlaw/wakeup                                                                                           u:object_r:sysfs_wakeup:s0
 genfscon sysfs /devices/virtual/misc/msm_mp3/wakeup                                                                                                u:object_r:sysfs_wakeup:s0
-genfscon sysfs /devices/virtual/misc/msm_multi_aac/wakeup                                                                                          u:object_r:sysfs_wakeup:s0
 genfscon sysfs /devices/virtual/misc/msm_qcelp/wakeup                                                                                              u:object_r:sysfs_wakeup:s0
 genfscon sysfs /devices/virtual/misc/msm_wma/wakeup                                                                                                u:object_r:sysfs_wakeup:s0
 genfscon sysfs /devices/virtual/misc/msm_wmapro/wakeup                                                                                             u:object_r:sysfs_wakeup:s0
