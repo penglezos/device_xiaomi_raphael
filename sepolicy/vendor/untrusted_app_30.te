@@ -1,0 +1,1 @@
+allow untrusted_app_30 debugfs_tracing_debug:file read;
