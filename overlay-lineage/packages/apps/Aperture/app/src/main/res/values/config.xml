@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     SPDX-FileCopyrightText: 2022 The LineageOS Project
+     SPDX-License-Identifier: Apache-2.0
+-->
+<resources>
+    <!-- Enable auxiliary cameras selector. -->
+    <bool name="config_enableAuxCameras">true</bool>
+
+    <!-- List of ID of auxiliary cameras that must be ignored by the app. -->
+    <string-array name="config_ignoredAuxCameraIds">
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>9</item>
+        <item>10</item>
+    </string-array>
+</resources>
