@@ -31,21 +31,17 @@
         android:summary="@string/ambient_display_always_on_summary"
         android:persistent="false" />
 
-    <SwitchPreference
-        android:key="raise_to_wake"
-        android:defaultValue="false"
-        android:title="@string/raise_to_wake_title"
-        android:summary="@string/raise_to_wake_summary" />
-
     <PreferenceCategory
         android:key="pickup_sensor"
         android:title="@string/pickup_sensor_title">
 
-        <SwitchPreference
-            android:key="gesture_pick_up"
-            android:defaultValue="false"
+        <ListPreference
+            android:key="gesture_pick_up_type"
+            android:defaultValue="0"
             android:title="@string/pick_up_gesture_title"
-            android:summary="@string/pick_up_gesture_summary" />
+            android:summary="%s"
+            android:entries="@array/pick_up_gesture_entries"
+            android:entryValues="@array/pick_up_gesture_values" />
 
     </PreferenceCategory>
 
