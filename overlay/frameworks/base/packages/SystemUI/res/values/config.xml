@@ -95,4 +95,8 @@
 
     <!-- Location on the screen of the center of the fingerprint sensor. -->
     <dimen name="physical_fingerprint_sensor_center_screen_location_y">1900px</dimen>
+     
+    <!-- Listen for fingerprints when screen is off -->
+    <bool name="config_fingerprintWakeAndUnlock">true</bool> 
+     
 </resources>
