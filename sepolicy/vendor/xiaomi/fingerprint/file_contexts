@@ -7,3 +7,4 @@
 /data/vendor/goodix(/.*)?                                                          u:object_r:vendor_fingerprint_data_file:s0
 /mnt/vendor/persist/fpc(/.*)?                                                      u:object_r:vendor_fingerprint_data_file:s0
 /mnt/vendor/persist/goodix(/.*)?                                                   u:object_r:vendor_fingerprint_data_file:s0
+/sys/devices/virtual/touch/tp_dev/fp_state                                         u:object_r:vendor_sysfs_sensors:s0
