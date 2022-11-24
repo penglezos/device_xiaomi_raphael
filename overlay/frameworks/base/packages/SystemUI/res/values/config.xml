@@ -77,9 +77,6 @@
     <!-- Color of the FOD view -->
     <color name="config_udfpsColor">#00ffffff</color>
 
-    <!-- Udfps vendor code -->
-    <integer name="config_udfpsVendorCode">22</integer>
-
     <!-- Location on the screen of the center of the physical power button. -->
     <dimen name="physical_power_button_center_screen_location_y">950px</dimen>
 
