@@ -52,7 +52,6 @@
         <item>restart</item>
         <item>restart_recovery</item>
         <item>restart_bootloader</item>
-        <item>restart_fastboot</item>
      </string-array>
 
      <!-- All the capabilities of the LEDs on this device, stored as a bit field.
