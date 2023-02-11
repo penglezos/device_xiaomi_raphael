@@ -120,10 +120,6 @@ void vendor_load_properties() {
 
     property_override("ro.apex.updatable", "false");
 
-    // SafetyNet workaround
-    property_override("ro.boot.verifiedbootstate", "green");
-    property_override("ro.debuggable", "0");
-    
     set_ro_product_prop("device", device);
     set_ro_product_prop("model", model);
     property_override("ro.build.description", description.c_str());
