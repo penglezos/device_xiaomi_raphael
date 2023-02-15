@@ -111,6 +111,9 @@ vendor.display.disable_ui_3d_tonemap=1
 vendor.display.enable_force_split=1
 vendor.display.enable_null_display=0
 vendor.display.enable_optimize_refresh=1
+persist.sys.sf.color_saturation=1.0
+vendor.display.qdcm.mode_combine=1
+persist.sys.sf.native_mode=2
 
 # Display post-processing
 ro.vendor.display.ad=1
@@ -137,7 +140,6 @@ debug.sdm.support_writeback=0
 debug.sf.hw=0
 debug.sf.latch_unsignaled=0
 debug.sf.enable_gl_backpressure=1
-persist.sys.sf.color_saturation=1.0
 ro.gfx.driver.1=com.qualcomm.qti.gpudrivers.msmnile.api30
 ro.hardware.egl=adreno
 ro.hardware.vulkan=adreno
