@@ -905,12 +905,6 @@ vendor/bin/mdm_helper
 vendor/bin/mdm_helper_proxy
 vendor/lib64/libmdmimgload.so
 
-# MDM
-vendor/bin/ks
-vendor/bin/mdm_helper
-vendor/bin/mdm_helper_proxy
-vendor/lib64/libmdmimgload.so
-
 # Mlipay
 vendor/bin/mlipayd@1.1
 vendor/etc/init/vendor.xiaomi.hardware.mlipay@1.1-service.rc
