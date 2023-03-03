@@ -136,6 +136,7 @@ vendor.display.enable_optimize_refresh=1
 persist.sys.sf.color_saturation=1.0
 vendor.display.qdcm.mode_combine=1
 persist.sys.sf.native_mode=2
+persist.sys.sf.color_mode=0
 
 # Display post-processing
 ro.vendor.display.ad=1
