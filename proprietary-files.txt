@@ -40,10 +40,6 @@ vendor/lib/rfsa/adsp/libsns_device_mode_skel.so
 vendor/lib/rfsa/adsp/libsns_low_lat_stream_skel.so
 vendor/lib/rfsa/adsp/misound_res.bin
 
-# AptX - from coral-user-11-RQ1A.210205.004-7038034-release-keys
-system_ext/lib64/libaptX_encoder.so|df1c89d7af1bb35808d5fe3496b04ba066c10cbc
-system_ext/lib64/libaptXHD_encoder.so|e13fa70c97caaa24d061678bdee608eb8850a69e
-
 # HotwordEnrollment - from raphael-user-11-RKQ1.200826.002-V12.5.2.0.RFKMIXM-release-keys
 -product/priv-app/HotwordEnrollmentOKGoogleHEXAGON/HotwordEnrollmentOKGoogleHEXAGON.apk|62e301d2f386771facd9a9aa546c0fcc241116da
 -product/priv-app/HotwordEnrollmentXGoogleHEXAGON/HotwordEnrollmentXGoogleHEXAGON.apk|8639661f6fad570723bc6f2759da76604bd804fa
