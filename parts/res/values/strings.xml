@@ -15,9 +15,6 @@
      limitations under the License.
 -->
 <resources>
-    <!-- Ambient settings -->
-    <string name="ambient_enable">Use ambient display</string>
-
     <!-- Popup camera settings -->
     <string name="popup_title">Popup camera</string>
     <string name="popup_led_title">Camera LED</string>
