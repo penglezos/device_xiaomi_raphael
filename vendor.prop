@@ -134,6 +134,7 @@ vendor.display.enable_force_split=1
 vendor.display.enable_null_display=0
 vendor.display.enable_optimize_refresh=1
 persist.sys.sf.color_saturation=1.0
+vendor.display.qdcm.disable_factory_mode=1
 vendor.display.qdcm.mode_combine=1
 persist.sys.sf.native_mode=2
 persist.sys.sf.color_mode=0
