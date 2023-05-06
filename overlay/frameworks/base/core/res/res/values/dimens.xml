@@ -35,5 +35,5 @@
     <dimen name="rounded_corner_radius">103px</dimen>
 
     <!-- Adjustment for software rounded corners since corners aren't perfectly round. -->
-    <dimen name="rounded_corner_radius_adjustment">19px</dimen>
+    <dimen name="rounded_corner_radius_adjustment">25px</dimen>
 </resources>
