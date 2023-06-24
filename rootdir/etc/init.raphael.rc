@@ -45,20 +45,3 @@ service vendor.motor /vendor/bin/hw/vendor.xiaomi.hardware.motor@1.0-service
     class hal
     user system
     group system
-
-on init && property:ro.boot.hwc=GLOBAL
-    setprop ro.boot.product.hardware.sku raphael
-
-on init && property:ro.boot.hwc=CN
-    setprop ro.boot.product.hardware.sku raphael
-
-on property:ro.boot.product.hardware.sku=raphael
-    enable vendor.nfc_hal_service
-
-service vendor.nfc_hal_service /vendor/bin/hw/android.hardware.nfc@1.2-service
-    override
-    class hal
-    user nfc
-    group nfc
-    writepid /dev/cpuset/system-background/tasks
-    disabled
