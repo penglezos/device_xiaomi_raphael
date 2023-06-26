@@ -611,4 +611,11 @@
 
     <!-- Ignore CNE from privacy (location) indicators -->
     <string name="config_systemTelephonyPackage" translatable="false">com.qualcomm.qti.cne</string>
+
+    <!-- Minimum color temperature, in Kelvin, supported by Night display. -->
+    <integer name="config_nightDisplayColorTemperatureMin">1600</integer>
+
+     <!-- Default color temperature, in Kelvin, to tint the screen when Night display is
+          activated. -->
+    <integer name="config_nightDisplayColorTemperatureDefault">2650</integer>
 </resources>
