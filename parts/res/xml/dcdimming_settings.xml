@@ -22,7 +22,6 @@
     <SwitchPreference
         android:key="dc_dimming_enable"
         android:defaultValue="false"
-        android:icon="@drawable/ic_dcdimming"
         android:title="@string/dc_dimming_enable_title"
         android:summary="@string/dc_dimming_enable_summary" />
 </PreferenceScreen>
