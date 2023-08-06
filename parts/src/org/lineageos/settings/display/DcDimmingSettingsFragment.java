@@ -31,7 +31,7 @@ public class DcDimmingSettingsFragment extends PreferenceFragment implements
 
     private SwitchPreference mDcDimmingPreference;
     private static final String DC_DIMMING_ENABLE_KEY = "dc_dimming_enable";
-    private static final String DC_DIMMING_NODE = "/sys/class/drm/card0-DSI-1/disp_param";
+    private static final String DC_DIMMING_NODE = "/sys/devices/platform/soc/soc:qcom,dsi-display-primary/msm_fb_ea_enable";
 
     @Override
     public void onCreatePreferences(Bundle savedInstanceState, String rootKey) {
@@ -49,7 +49,7 @@ public class DcDimmingSettingsFragment extends PreferenceFragment implements
     @Override
     public boolean onPreferenceChange(Preference preference, Object newValue) {
         if (DC_DIMMING_ENABLE_KEY.equals(preference.getKey())) {
-            FileUtils.writeLine(DC_DIMMING_NODE, (Boolean) newValue ? "0x40000":"0x50000");
+            FileUtils.writeLine(DC_DIMMING_NODE, (Boolean) newValue ? "1":"0");
         }
         return true;
     }
